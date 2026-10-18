@@ -1,9 +1,14 @@
-# Bitter Buffalo Art — Cloudflare Pages static site
+# Bitter Buffalo Art website
 
-Independent website (Phase 3, 2026-10-17). Not the Art Builder app.
+Independent repository: https://github.com/bitterbuffaloart/bitter-buffalo-art-website
+Source: this cloudflare-pages directory. Preserve Art Builder and Photo Culler.
 
-- Preview: https://bitter-buffalo-art.pages.dev/
-- Etsy: https://www.etsy.com/shop/BitterBuffaloArt
-- Build: `node ../working/build-static-site.js`
-- Deploy: `deploy-preview.cmd` or see DEPLOY.md
-- Maintenance notes for assistants: MAINTENANCE.md
+The committed HTML/CSS/JS and existing image derivatives are authoritative.
+Do not run working/build-static-site.js: it is a legacy Shopify extraction generator
+and does not include the subsequent hand-edited website fixes.
+
+From the repository root:
+- Validate: python working/qa-site.py cloudflare-pages
+- Contact checks (mock delivery): node working/test-contact.mjs
+- Package from a clean checkout: node working/stage-site.mjs
+- Deployment: see DEPLOY.md and the GitHub Actions workflow.

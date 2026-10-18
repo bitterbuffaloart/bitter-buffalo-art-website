@@ -1,223 +1,45 @@
-/**
- * Custom-order / contact bridge for Cloudflare Pages.
- *
- * Original system: Shopify theme contact forms (form_type=contact) that email
- * the store owner. File upload was never wired (Shopify Forms app block missing).
- *
- * While Shopify remains the live store, this function forwards submissions to
- * https://bitterbuffaloart.com/contact so Clyde still receives inquiries.
- *
- * Post-cutover (owner authorization): set RESEND_API_KEY + CONTACT_TO_EMAIL
- * secrets; the function will email via Resend instead of Shopify.
- */
-
-const SHOPIFY_CONTACT = 'https://bitterbuffaloart.com/contact';
-
+// Delivery requires an explicitly configured sender and recipient.
 function json(status, body) {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: {
-      'Content-Type': 'application/json; charset=utf-8',
-      'Cache-Control': 'no-store',
-    },
-  });
+  return new Response(JSON.stringify(body), { status, headers: {
+    'Content-Type': 'application/json; charset=utf-8', 'Cache-Control': 'no-store',
+    'X-Content-Type-Options': 'nosniff',
+  }});
 }
-
-async function parseBody(request) {
-  const ct = request.headers.get('content-type') || '';
-  if (ct.includes('application/json')) {
-    return await request.json();
-  }
-  const fd = await request.formData();
-  const data = {};
-  for (const [k, v] of fd.entries()) {
-    if (typeof v === 'string') data[k] = v;
-  }
-  return data;
-}
-
-function buildShopifyBody(data) {
-  const params = new URLSearchParams();
-  params.set('form_type', 'contact');
-  params.set('utf8', '✓');
-
-  const name = (data.name || data['contact[name]'] || '').trim();
-  const email = (data.email || data['contact[email]'] || '').trim();
-  const phone = (data.phone || data['contact[phone]'] || '').trim();
-  const formKind = (data.form_kind || 'general').trim();
-
-  params.set('contact[name]', name);
-  params.set('contact[email]', email);
-  if (phone) params.set('contact[phone]', phone);
-
-  if (formKind === 'custom-project') {
-    const category = (data.product_category || '').trim();
-    const description = (data.description || data.body || '').trim();
-    const notes = (data.additional_notes || '').trim();
-    const size = (data.size || '').trim();
-    const colors = (data.colors || '').trim();
-    const qty = (data.quantity || '').trim();
-    const budget = (data.budget_range || '').trim();
-    const needed = (data.needed_by || '').trim();
-    const method = (data.preferred_contact || '').trim();
-
-    params.set('contact[form_type]', 'custom-project-intake');
-    params.set('contact[Subject]', 'Custom project request');
-    params.set('contact[product_category]', category);
-    if (size) params.set('contact[size]', size);
-    if (colors) params.set('contact[colors]', colors);
-    if (qty) params.set('contact[quantity]', qty);
-    if (budget) params.set('contact[budget_range]', budget);
-    if (needed) params.set('contact[needed_by]', needed);
-    if (method) params.set('contact[preferred_contact]', method);
-    if (notes) params.set('contact[additional_notes]', notes);
-    params.set(
-      'contact[body]',
-      [
-        'CUSTOM PROJECT REQUEST (website)',
-        `Category: ${category}`,
-        size ? `Size: ${size}` : null,
-        colors ? `Colors: ${colors}` : null,
-        qty ? `Quantity: ${qty}` : null,
-        budget ? `Budget: ${budget}` : null,
-        needed ? `Needed by: ${needed}` : null,
-        method ? `Preferred contact: ${method}` : null,
-        '',
-        description,
-        notes ? `\nAdditional notes:\n${notes}` : null,
-      ]
-        .filter(Boolean)
-        .join('\n')
-    );
-    params.set('contact[tags]', 'custom-project-intake,website-pages');
-  } else if (formKind === 'laser-intake') {
-    const projectType = (data.project_type || '').trim();
-    const item = (data.requested_item || '').trim();
-    const size = (data.approximate_size || '').trim();
-    const qty = (data.quantity || '').trim();
-    const needed = (data.needed_by || '').trim();
-    const method = (data.preferred_contact || '').trim();
-    const notes = (data.description || data.body || '').trim();
-    params.set('contact[Subject]', 'Custom laser engraving intake');
-    params.set('contact[tags]', 'custom-laser-intake,website-pages');
-    params.set('contact[project_type]', projectType);
-    params.set('contact[requested_item]', item);
-    params.set('contact[approximate_size]', size);
-    params.set('contact[quantity]', qty);
-    params.set('contact[needed_by]', needed);
-    params.set('contact[preferred_contact]', method);
-    params.set(
-      'contact[body]',
-      [
-        'CUSTOM LASER ENGRAVING INTAKE (website)',
-        `Project type: ${projectType}`,
-        `Item/surface: ${item}`,
-        `Size: ${size}`,
-        `Quantity: ${qty}`,
-        `Needed by: ${needed}`,
-        `Preferred contact: ${method}`,
-        '',
-        notes,
-      ].join('\n')
-    );
-  } else {
-    const subject = (data.subject || 'General question').trim();
-    const message = (data.message || data.body || '').trim();
-    params.set('contact[Subject]', subject);
-    params.set('contact[body]', message);
-  }
-
-  return { params, name, email };
-}
-
-async function sendViaResend(env, data, summary) {
-  const key = env.RESEND_API_KEY;
-  const to = env.CONTACT_TO_EMAIL || 'backcountrytiedye@gmail.com';
-  const from = env.CONTACT_FROM_EMAIL || 'Bitter Buffalo Art Website <onboarding@resend.dev>';
-  if (!key) return null;
-
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${key}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from,
-      to: [to],
-      reply_to: data.email || undefined,
-      subject: summary.subject,
-      text: summary.text,
-    }),
-  });
-  if (!res.ok) {
-    const errText = await res.text();
-    throw new Error(`Resend failed: ${res.status} ${errText.slice(0, 200)}`);
-  }
-  return { channel: 'resend' };
-}
-
-export async function onRequestPost(context) {
+export async function onRequestPost({ request, env = {} }) {
+  let raw;
   try {
-    const data = await parseBody(context.request);
-
-    // Honeypot — bots fill hidden fields
-    if (data.website || data.company_url) {
-      return json(200, { ok: true, delivered: false, honeypot: true });
-    }
-
-    const name = (data.name || '').trim();
-    const email = (data.email || '').trim();
-    if (!name || !email) {
-      return json(400, { ok: false, error: 'Name and email are required.' });
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return json(400, { ok: false, error: 'Enter a valid email address.' });
-    }
-
-    const formKind = (data.form_kind || 'general').trim();
-    const { params } = buildShopifyBody(data);
-    const bodyText = params.get('contact[body]') || '';
-    const subject =
-      params.get('contact[Subject]') ||
-      (formKind === 'custom-project' ? 'Custom project request' : 'Website contact');
-
-    const env = context.env || {};
-    if (env.RESEND_API_KEY) {
-      await sendViaResend(env, data, {
-        subject: `[Bitter Buffalo Art] ${subject}`,
-        text: `From: ${name} <${email}>\nPhone: ${data.phone || '(none)'}\nForm: ${formKind}\n\n${bodyText}`,
-      });
-      return json(200, { ok: true, delivered: true, channel: 'resend' });
-    }
-
-    // Shopify Online Store contact rejects bare server-side POSTs (HTTP 403 / bot protection).
-    // Browser-native form posts to bitterbuffaloart.com/contact still work while Shopify hosts the live site.
-    // For Cloudflare-only delivery after cutover, set Pages secrets:
-    //   RESEND_API_KEY, CONTACT_TO_EMAIL, CONTACT_FROM_EMAIL (verified domain)
-    return json(503, {
-      ok: false,
-      error:
-        'Server email is not configured yet. The page will fall back to the live Shopify contact form, or email backcountrytiedye@gmail.com.',
-      needs: ['RESEND_API_KEY', 'CONTACT_TO_EMAIL', 'CONTACT_FROM_EMAIL'],
-      shopifyBridgeStatus: 'blocked-403-without-browser-session',
+    if (Number(request.headers.get('content-length')) > 24000) return json(413, { ok: false, error: 'Please shorten your request.' });
+    const text = await request.text();
+    if (new TextEncoder().encode(text).length > 24000) return json(413, { ok: false, error: 'Please shorten your request.' });
+    raw = request.headers.get('content-type')?.includes('application/json') ? JSON.parse(text) : Object.fromEntries(new URLSearchParams(text));
+    if (!raw || Array.isArray(raw) || typeof raw !== 'object' || Object.values(raw).some(v => typeof v !== 'string')) throw new Error('Invalid fields');
+  } catch { return json(400, { ok: false, error: 'Please enter a valid contact request.' }); }
+  const data = {};
+  for (const [key, value] of Object.entries(raw)) data[key.replace(/^contact\[(.+)\]$/, '$1')] = value.trim();
+  if (data.website || data.company_url) return json(200, { ok: true, delivered: false });
+  const kind = data.form_kind || 'general';
+  const message = data.body || data.message || data.description;
+  if (!data.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email || '') || !message) return json(400, { ok: false, error: 'Name, a valid email address, and a message are required.' });
+  if (!['general', 'custom-project', 'laser-intake'].includes(kind)) return json(400, { ok: false, error: 'Select a contact form.' });
+  const required = kind === 'custom-project' ? ['product_category', 'project_contact_ack'] : kind === 'laser-intake' ?
+    ['project_type', 'requested_item', 'approximate_size', 'quantity', 'needed_by', 'preferred_contact', 'owns_photo', 'request_not_order', 'approval_required', 'production_use'] : ['Subject'];
+  if (required.some(key => !data[key])) return json(400, { ok: false, error: 'Please complete the required project fields and permissions.' });
+  const permissions = kind === 'custom-project' ? ['project_contact_ack'] : kind === 'laser-intake' ? ['owns_photo', 'request_not_order', 'approval_required', 'production_use'] : [];
+  if (permissions.some(key => data[key] !== 'yes')) return json(400, { ok: false, error: 'Please confirm the required project permissions.' });
+  if (data.quantity && (!/^\d+$/.test(data.quantity) || Number(data.quantity) < 1)) return json(400, { ok: false, error: 'Quantity must be a positive whole number.' });
+  if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL) return json(503, { ok: false, delivered: false, error: 'Website sending is unavailable. Your request has not been sent. Use the email draft below or email backcountrytiedye@gmail.com.' });
+  const subject = kind === 'custom-project' ? 'Custom project request' : kind === 'laser-intake' ? 'Custom laser engraving intake' : (data.Subject || data.subject || 'General question');
+  const text = Object.entries(data).filter(([key]) => !['website', 'company_url', 'utf8', 'form_type'].includes(key)).map(([key,value]) => `${key}: ${value}`).join('\n');
+  try {
+    const response = await fetch('https://api.resend.com/emails', {
+      method: 'POST', headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ from: env.CONTACT_FROM_EMAIL, to: [env.CONTACT_TO_EMAIL], reply_to: data.email,
+        subject: `[Bitter Buffalo Art] ${subject.replace(/[\r\n]/g, ' ').slice(0,150)}`, text }),
+      signal: AbortSignal.timeout(12000),
     });
-  } catch (err) {
-    return json(500, {
-      ok: false,
-      error: 'Submission failed. Please email backcountrytiedye@gmail.com.',
-      detail: String(err && err.message ? err.message : err).slice(0, 200),
-    });
+    if (!response.ok) throw new Error('Provider rejected request');
+    return json(200, { ok: true, delivered: true, channel: 'resend' });
+  } catch {
+    return json(502, { ok: false, delivered: false, error: 'The email service could not accept your request. Your entries are retained; please use the email draft below.' });
   }
-}
-
-export async function onRequestOptions() {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  });
 }

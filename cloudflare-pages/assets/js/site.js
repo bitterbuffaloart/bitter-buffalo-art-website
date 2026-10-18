@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const open = nav.classList.toggle('is-open');
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); btn.focus();
+      }
+    });
   }
 
   const tabRoot = document.querySelector('[data-bb-contact-tabs]');
@@ -17,18 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const on = t.getAttribute('data-bb-contact-tab') === id;
         t.classList.toggle('is-active', on);
         t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
       });
       panels.forEach((p) => {
         const on = p.getAttribute('data-bb-contact-panel') === id;
         p.hidden = !on;
       });
     };
-    tabs.forEach((t) => t.addEventListener('click', () => activate(t.getAttribute('data-bb-contact-tab'))));
+    tabs.forEach((t, index) => {
+      t.addEventListener('click', () => activate(t.getAttribute('data-bb-contact-tab')));
+      t.addEventListener('keydown', (event) => {
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : event.key === 'ArrowRight' ? (index + 1) % tabs.length : event.key === 'ArrowLeft' ? (index + tabs.length - 1) % tabs.length : -1;
+        if (next >= 0) { event.preventDefault(); activate(tabs[next].getAttribute('data-bb-contact-tab')); tabs[next].focus(); }
+      });
+    });
+    activate('general');
     if (location.hash === '#start-custom-project') activate('project');
     if (location.hash === '#laser-intake') activate('laser');
   }
 
-  // Try Pages /api/contact (Resend when secrets set); else native Shopify contact POST.
+  // Retain the request on delivery failure and offer an explicit email draft.
   document.querySelectorAll('form[data-bb-form]').forEach((form) => {
     form.addEventListener('submit', async (e) => {
       const status = form.querySelector('[data-bb-form-status]');
@@ -47,6 +60,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
       e.preventDefault();
+      const submit = form.querySelector('button[type="submit"]');
+      if (submit.disabled) return;
+      submit.disabled = true;
+      form.querySelector('[data-email-draft]')?.remove();
       if (status) {
         status.hidden = false;
         status.textContent = 'Sending your request…';
@@ -79,9 +96,10 @@ document.addEventListener('DOMContentLoaded', () => {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
+          signal: AbortSignal.timeout(15000),
         });
         const data = await res.json().catch(() => ({}));
-        if (res.ok && data.ok) {
+        if (res.ok && data.ok && data.delivered) {
           if (status) {
             status.textContent = 'Thank you — your request was sent. We will reply by email.';
             status.classList.add('is-ok');
@@ -90,22 +108,19 @@ document.addEventListener('DOMContentLoaded', () => {
           form.reset();
           return;
         }
-        if (res.status === 503 || data.shopifyBridgeStatus) {
-          form.submit();
-          return;
-        }
-        throw new Error(data.error || 'Submission failed');
+        throw new Error(data.error || 'Your request could not be sent.');
       } catch (err) {
-        try {
-          form.submit();
-        } catch (_) {
-          if (status) {
-            status.textContent = 'Could not send through the website. Please email backcountrytiedye@gmail.com.';
-            status.classList.add('is-err');
-            status.classList.remove('is-ok');
-          }
+        if (status) {
+          status.textContent = 'Your request has not been sent. Your entries are still here. Open an email draft below, attach any reference images, and send it from your email app.';
+          status.classList.add('is-err'); status.classList.remove('is-ok');
         }
-      }
+        const draft = document.createElement('a');
+        draft.dataset.emailDraft = ''; draft.className = 'btn btn--ghost';
+        draft.textContent = 'Open email draft';
+        const lines = [...fd.entries()].filter(([key]) => key.startsWith('contact[')).map(([key, value]) => `${key.replace(/^contact\[(.+)\]$/, '$1')}: ${value}`);
+        draft.href = 'mailto:backcountrytiedye@gmail.com?subject=' + encodeURIComponent(payload.subject || 'Bitter Buffalo Art project request') + '&body=' + encodeURIComponent(lines.join('\n'));
+        form.append(draft);
+      } finally { submit.disabled = false; }
     });
   });
 });

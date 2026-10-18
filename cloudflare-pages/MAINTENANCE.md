@@ -1,44 +1,25 @@
-# Website maintenance guide (for ChatGPT / assistants)
+# Website maintenance
 
-Use this after Cursor access ends. Work only on the static website—not Art Builder, Trout, Lightroom, or Shopify DNS unless Clyde explicitly asks.
+Work only in bitterbuffaloart/bitter-buffalo-art-website on main.
+The authoritative source is cloudflare-pages/. Edit its existing HTML/CSS/JS directly.
+The legacy working/build-static-site.js would overwrite subsequent fixes; do not run it.
+Do not use Art Builder branches, archives, or project-record paths for website commits.
 
-## Locations
-| Item | Path / URL |
-|------|------------|
-| Local work copy | `C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\cloudflare-pages` |
-| Repo archive | `project-record/website-etsy-update-2026-10-17/` in BitterBuffaloArt |
-| Builder script | `../working/build-static-site.js` (from cloudflare-pages) |
-| Live domain (Shopify until cutover) | https://bitterbuffaloart.com |
-| Cloudflare Pages preview | https://bitter-buffalo-art.pages.dev/ |
-| Pages project | `bitter-buffalo-art` (account `f3ee68d66369fd4b2bc390d1dae218f6`) |
-| Etsy shop | https://www.etsy.com/shop/BitterBuffaloArt |
-| Git branch | `art-builder-ui-rebuild-local-2026-09-03` |
+Validate using working/qa-site.py and working/test-contact.mjs, then package with
+working/stage-site.mjs in a clean checkout. Commit explicit website paths only.
+Actions checks content and contact behavior, deploys a unique qa-<commit> candidate,
+and compares all public pages/assets before optional working-preview publication.
 
-## Safe edit workflow
-1. Edit `working/build-static-site.js` (preferred) or HTML/CSS under `cloudflare-pages/`.
-2. Rebuild: `node working/build-static-site.js` from the migration folder.
-3. Preview locally if needed (`npx serve cloudflare-pages -l 4173`).
-4. Deploy: `cloudflare-pages\\deploy-preview.cmd` (requires `npx wrangler login` once).
-5. Commit **only** files under `project-record/website-etsy-update-2026-10-17/`.
-6. Push development branch. Do not change production DNS without approval.
+Keep all approved artwork and photography bytes intact. Use only existing web images;
+do not open or edit Lightroom, original photography, Art Builder, or Photo Culler.
+All Etsy purchase links go to the verified shop home until individual listing IDs
+are verified. The 33 photographs remain portfolio previews, not purchasable listings.
+Never invent event history or confirmed appearances. Aspen rounds are decorative art.
 
-## Content rules
-- All purchase CTAs → verified Etsy shop URL unless an individual listing URL is independently verified.
-- Do not invent event history, booth photos, or product inventory.
-- Engraved aspen rounds = decorative artwork only (not food-safe / not cutting boards).
-- Photography: prefer portfolio wording until print listings are verified.
-- Never reintroduce Shopify cart, Free Shipping promos, Ground Builder, or Union Peaks giveaways.
-- Events stays a top-level nav item (calendar + vendor record).
-- Hero SVG editable source: `working/assets/hero-highcountry.svg` (copied to `assets/images/`).
+Contact failures retain all entries and offer an explicit email draft. Website sending
+requires RESEND_API_KEY, CONTACT_TO_EMAIL and CONTACT_FROM_EMAIL in Pages runtime settings.
+No keys in Git. No real email delivery is proven by mocked tests. No paid services.
+Keep direct email available. Never claim success after a provider rejection.
 
-## Contact / custom-order forms
-Original system = Shopify theme contact forms (`form_type=contact`) on `/pages/contact` and laser intake.
-While Shopify hosts the live store, static forms POST to `https://bitterbuffaloart.com/contact`.
-Cloudflare-only delivery (after cutover): set Pages secrets `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL` and wire `functions/api/contact.js`.
-Do not commit API keys. Reference photo upload was never enabled on the original Shopify Forms block.
-
-## Navigation (canonical)
-Home | Photography | Shop | Tie-Dye | Laser Art | Custom Art | Events | About | Contact | Shop Etsy
-
-## Hard restrictions
-No production DNS changes, Shopify cancel, PREVIEW2 publish, Worker deletion, Lightroom/archive edits, or unrelated art-builder changes unless Clyde authorizes.
+No DNS changes, live Shopify theme publishing or cancellation without explicit authority.
+Follow ../DOMAIN_CUTOVER_CHECKLIST.md only after the outstanding gates pass.

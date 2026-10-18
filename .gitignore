@@ -57,3 +57,8 @@ working/extract-event*
 working/collection-pillars*
 working/_pillars*
 working/config/
+
+# Isolated release packaging and local secrets
+.site-build/
+.dev.vars
+.dev.vars.*

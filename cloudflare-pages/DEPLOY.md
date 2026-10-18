@@ -1,45 +1,46 @@
-# Cloudflare Pages deployment — Bitter Buffalo Art
+# Deployment — existing Cloudflare Pages project
 
-## What this is
-Independent static website (no Shopify checkout, cart, or Liquid runtime).
-Commerce CTAs open `https://www.etsy.com/shop/BitterBuffaloArt`.
+Project: bitter-buffalo-art. Account: f3ee68d66369fd4b2bc390d1dae218f6.
+Working preview: https://bitter-buffalo-art.pages.dev/.
+Its Pages production branch is named preview; main is the GitHub source branch.
+Keep this mapping until a deliberate, verified change is made. Do not change DNS.
 
-## Source directory
-Deploy **only** `cloudflare-pages/` (must contain `index.html` + `assets/`).
+## GitHub Actions
 
-## GitHub (source of truth)
-Repository: https://github.com/bitterbuffaloart/bitter-buffalo-art-website  
-(Do **not** use `bitterbuffaloart/BitterBuffaloArt` — that is Art Builder.)
+Required repository secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
+Token permission: account Cloudflare Pages Edit only. No DNS/Workers permissions.
+The approved token expires January 15, 2027; rotate it in GitHub before expiry.
+Never copy local broad Wrangler OAuth credentials into Actions.
 
-Cloudflare Pages Git settings (when connected):
-- Production branch: `main`
-- Root directory: `cloudflare-pages`
-- Build command: *(empty — commit built static files)*
-- Output directory: *(empty / `/`)*
+The workflow on main first validates all nine pages, local links, Final 33, Events,
+and mocked contact behavior. It stages only public files and the contact Function,
+then uses Wrangler 4.151.1 from .site-build (Functions discovery root) to upload public/.
+The branch qa-<full commit SHA> is isolated from the working preview.
+It compares all public pages/assets by SHA-256 and checks invalid contact input returns
+JSON 400 without sending email. A failure prevents working-preview publication.
 
-## Preview deploy (no DNS change)
-```bat
-cd path\to\cloudflare-pages
-deploy-preview.cmd
-```
+ENABLE_PREVIEW_PUBLISH is initially unset. After the candidate passes browser QA,
+set this repository Actions variable to true to enable preview-branch publication
+after successful candidate verification. No DNS is changed by this workflow.
+Do not enable it before checking the candidate, branch mapping, and rollback target.
 
-Or:
-```powershell
-$env:CLOUDFLARE_ACCOUNT_ID='f3ee68d66369fd4b2bc390d1dae218f6'
-npx wrangler pages deploy . --project-name=bitter-buffalo-art --branch=main --commit-dirty=true
-```
+## Manual isolated candidate
 
-Project: `bitter-buffalo-art`  
-Preview: https://bitter-buffalo-art.pages.dev/
+From a clean checkout at repository root, run node working/stage-site.mjs.
+From .site-build, run:
 
-## Production cutover (OWNER APPROVAL REQUIRED)
-1. Confirm pages.dev preview on desktop + mobile.
-2. Cloudflare Pages → Custom domains → add `bitterbuffaloart.com` and `www`.
-3. Update DNS from Shopify A/CNAME to Pages targets.
-4. Keep Shopify online until verified; do not cancel Shopify in the same step.
-5. Do **not** delete existing Cloudflare Workers.
+    npx --yes wrangler@4.151.1 pages deploy public --project-name=bitter-buffalo-art --branch=qa-COMMIT
 
-## Rollback
-- DNS: apex A `23.227.38.65` / Shopify AAAA; `www` CNAME `shops.myshopify.com` (proxied: false).
-- Shopify MAIN theme `155995406503` remains live until DNS moves.
-- PREVIEW2 theme `157462167719` remains unpublished.
+Use the actual commit SHA in place of COMMIT. Validate the exact returned deployment URL
+with working/qa-site.py from the repository root, plus browser/mobile checks.
+Do not use the legacy deploy-preview scripts: those directly update the working alias.
+Do not create a replacement Pages project or attempt native Git conversion.
+Direct Upload projects cannot be switched to Git integration in place:
+https://developers.cloudflare.com/pages/get-started/direct-upload/
+
+## Runtime contact configuration and cutover
+
+Contact delivery is separate from deployment credentials. A verified sender/recipient
+and owner receipt test are required before declaring contact delivery operational.
+Current fallback is a user-triggered email draft; it does not depend on Shopify.
+Follow ../DOMAIN_CUTOVER_CHECKLIST.md after explicit cutover approval.

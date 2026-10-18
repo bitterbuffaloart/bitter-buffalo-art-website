@@ -1,3 +1,63 @@
+# Current checkpoint — 2026-10-17, America/Denver
+
+## Objective and boundaries
+Continue the existing permanent website migration before October 21, 2026.
+Independent repository: bitterbuffaloart/bitter-buffalo-art-website on main.
+Confirmed starting local AND remote HEAD: 53aa53be9e17e7d51ae6d59ab56a148ac5cbd971.
+Do not modify Art Builder, Photo Culler, live Shopify, DNS, Lightroom, or originals.
+No paid service was purchased or subscribed to.
+
+## Completed verification and fixes
+- Working preview baseline: all 55 public pages/assets returned 200 and matched local SHA-256.
+- Nine HTML pages pass local-link/fragment, title, description, viewport, canonical, active-nav,
+  image-alt, Final 33 uniqueness, Events restoration, and Etsy URL checks.
+- All nine pages checked in Chrome at 390 and 1280 widths: no horizontal overflow or broken eager images.
+- Corrected confirmed mobile hero clipping using layout only; mountain artwork is unchanged.
+- All 42 website image files remain byte-for-byte identical to starting source.
+- Corrected intrinsic image dimensions from existing web derivatives; portfolio uses contain,
+  preserving complete photographs rather than cropping them within cards.
+- Contact failures retain entries, offer a user-triggered email draft, and never silently
+  submit to Shopify. Required commission/laser consent, quantity, payload and email checks
+  run server-side; consent details are retained in delivery text. Duplicate sends disabled.
+- Mock contact tests pass; no real email sent and owner receipt is NOT proven.
+- Contact tabs support arrow/Home/End keys; mobile menu supports Escape.
+- Events keeps existing five appearances and two recovered booth photos; no new history invented.
+- Website copy no longer exposes restoration implementation details.
+- Deployment staging excludes maintenance documents, local scripts, and caches.
+- Pages Functions build compiled successfully with Wrangler 4.151.1.
+
+## Credential/deployment investigation
+- Prior Actions run 39090256715 failed because CLOUDFLARE_API_TOKEN was absent.
+- Repository admin access confirmed through existing GitHub authentication.
+- Initially no repository Actions secrets or variables existed.
+- User explicitly approved a 90-day token: account Cloudflare Pages Edit only, no DNS/Workers.
+- Created “Bitter Buffalo website GitHub Actions (Pages only)”, expiry January 15, 2027.
+- Encrypted token in memory using the repository public key; plaintext not saved or logged.
+- CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID now configured as repository secrets.
+- Existing local Wrangler OAuth is broad; it was NOT copied into GitHub Actions.
+- Current Pages working production deployment remains cf69ac66 on branch named preview.
+- New workflow: verify → isolated qa-<commit> deploy → complete HTTP comparison and invalid-input
+  API check → optional working-preview publish gated by ENABLE_PREVIEW_PUBLISH=true.
+- Gate initially unset; controlled push cannot update the existing working preview.
+- Actions end-to-end verification is IN PROGRESS. Do not infer success from secret setup.
+- Native Direct Upload → Git integration conversion is unsupported in place. Use Actions;
+  do not create a replacement project or change production branch as a routine fix.
+
+## Remaining cutover gates
+1. Prove the new Actions run and isolated deployment, then browser-check candidate.
+2. Configure owner-approved standalone email delivery on a free allowance and prove receipt,
+   or explicitly accept the email-draft workflow. No new email service account created.
+3. Verify shop-home availability in browser; individual listing links remain unpublished.
+4. Export live DNS and mail records; approve exact web-only cutover and rollback later.
+5. Keep Shopify available; no cancellation authorized.
+
+## Next actions
+Run controlled push on main with publication gate off; capture run and candidate URL.
+Update this checkpoint with actual outcomes. See cloudflare-pages/DEPLOY.md.
+
+---
+## Earlier handoff (historical; superseded where contradicted above)
+
 # Bitter Buffalo Art website update — status
 Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview live)**  
 **NEXT_ACTION:** see `NEXT_ACTION.md` in this folder.  

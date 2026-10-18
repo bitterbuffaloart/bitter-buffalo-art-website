@@ -1,43 +1,81 @@
-# Auto-deploy the static Cloudflare Pages site on push to main.
-# Uses Direct Upload (Wrangler) so the existing project `bitter-buffalo-art`
-# stays intact. Native Pages↔Git connect requires a one-time Cloudflare
-# GitHub App install in the bitterbuffaloart org (see DEPLOY.md).
-#
-# Required GitHub Actions secrets (repo Settings → Secrets):
-#   CLOUDFLARE_API_TOKEN   — Account permission: Cloudflare Pages Edit
-#   CLOUDFLARE_ACCOUNT_ID  — f3ee68d66369fd4b2bc390d1dae218f6
 name: Deploy Cloudflare Pages
-
 on:
   push:
     branches: [main]
-    paths:
-      - 'cloudflare-pages/**'
-      - '.github/workflows/deploy-pages.yml'
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
+  pull_request:
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   workflow_dispatch:
-
+permissions:
+  contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
+  verify:
+    runs-on: ubuntu-24.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
         with:
           node-version: '22'
-
-      - name: Verify site root
-        run: test -f cloudflare-pages/index.html
-
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Check pages, links, Final 33, and Events
+        run: python working/qa-site.py cloudflare-pages
+      - name: Check contact validation and failure handling without sending email
+        run: node working/test-contact.mjs
+      - name: Build deployable site only
+        run: node working/stage-site.mjs
+  deploy:
+    needs: verify
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Require scoped deployment credentials before any upload
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo '::error::Missing CLOUDFLARE_API_TOKEN (Account Cloudflare Pages Edit).'; exit 1; }
+          test "$CLOUDFLARE_ACCOUNT_ID" = 'f3ee68d66369fd4b2bc390d1dae218f6' || { echo '::error::Missing or unexpected Cloudflare account ID.'; exit 1; }
+      - run: node working/stage-site.mjs
+      - name: Deploy isolated candidate; preserve current pages.dev alias
+        id: candidate
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # Project production_branch is currently `preview` (Direct Upload era).
-          # Deploy to that branch so pages.dev updates until production_branch is switched to main in the dashboard.
-          command: pages deploy cloudflare-pages --project-name=bitter-buffalo-art --branch=preview
+          wranglerVersion: '4.151.1'
+          workingDirectory: .site-build
+          command: pages deploy public --project-name=bitter-buffalo-art --branch=qa-${{ github.sha }} --commit-hash=${{ github.sha }}
+      - name: Verify every candidate page and public asset matches this commit
+        env:
+          CANDIDATE_URL: ${{ steps.candidate.outputs.deployment-url }}
+        run: |
+          test -n "$CANDIDATE_URL"
+          python working/qa-site.py cloudflare-pages --base "$CANDIDATE_URL"
+      - name: Publish verified site to working preview only when enabled
+        if: vars.ENABLE_PREVIEW_PUBLISH == 'true'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.1'
+          workingDirectory: .site-build
+          command: pages deploy public --project-name=bitter-buffalo-art --branch=preview --commit-hash=${{ github.sha }}
+      - name: Verify working preview after publication
+        if: vars.ENABLE_PREVIEW_PUBLISH == 'true'
+        run: python working/qa-site.py cloudflare-pages --base https://bitter-buffalo-art.pages.dev
