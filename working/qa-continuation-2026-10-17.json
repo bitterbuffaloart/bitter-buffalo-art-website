@@ -1,0 +1,401 @@
+{
+  "pages": 9,
+  "resources": 55,
+  "portfolio_unique": 33,
+  "etsy_urls": [
+    "https://www.etsy.com/shop/BitterBuffaloArt"
+  ],
+  "errors": [],
+  "http": [
+    {
+      "path": "about/index.html",
+      "status": 200,
+      "bytes": 4753,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "assets/css/site.css",
+      "status": 200,
+      "bytes": 16028,
+      "matches_source": true,
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "assets/images/custom.png",
+      "status": 200,
+      "bytes": 2049803,
+      "matches_source": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/images/events/booth-market.jpg",
+      "status": 200,
+      "bytes": 342021,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/events/booth-tiedye.jpg",
+      "status": 200,
+      "bytes": 280127,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/hero-highcountry.svg",
+      "status": 200,
+      "bytes": 2670,
+      "matches_source": true,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "path": "assets/images/laser.png",
+      "status": 200,
+      "bytes": 1592714,
+      "matches_source": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/images/logo.png",
+      "status": 200,
+      "bytes": 150382,
+      "matches_source": true,
+      "content_type": "image/png"
+    },
+    {
+      "path": "assets/images/photography.jpg",
+      "status": 200,
+      "bytes": 235370,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/01.jpg",
+      "status": 200,
+      "bytes": 259914,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/02.jpg",
+      "status": 200,
+      "bytes": 254116,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/03.jpg",
+      "status": 200,
+      "bytes": 29537,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/04.jpg",
+      "status": 200,
+      "bytes": 29564,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/05.jpg",
+      "status": 200,
+      "bytes": 29318,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/06.jpg",
+      "status": 200,
+      "bytes": 29524,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/07.jpg",
+      "status": 200,
+      "bytes": 29803,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/08.jpg",
+      "status": 200,
+      "bytes": 29505,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/09.jpg",
+      "status": 200,
+      "bytes": 271052,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/10.jpg",
+      "status": 200,
+      "bytes": 17497,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/11.jpg",
+      "status": 200,
+      "bytes": 314656,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/12.jpg",
+      "status": 200,
+      "bytes": 29809,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/13.jpg",
+      "status": 200,
+      "bytes": 29529,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/14.jpg",
+      "status": 200,
+      "bytes": 29462,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/15.jpg",
+      "status": 200,
+      "bytes": 29250,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/16.jpg",
+      "status": 200,
+      "bytes": 29363,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/17.jpg",
+      "status": 200,
+      "bytes": 29758,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/18.jpg",
+      "status": 200,
+      "bytes": 504701,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/19.jpg",
+      "status": 200,
+      "bytes": 29401,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/20.jpg",
+      "status": 200,
+      "bytes": 29827,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/21.jpg",
+      "status": 200,
+      "bytes": 156261,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/22.jpg",
+      "status": 200,
+      "bytes": 29521,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/23.jpg",
+      "status": 200,
+      "bytes": 29768,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/24.jpg",
+      "status": 200,
+      "bytes": 484648,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/25.jpg",
+      "status": 200,
+      "bytes": 29534,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/26.jpg",
+      "status": 200,
+      "bytes": 29332,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/27.jpg",
+      "status": 200,
+      "bytes": 29985,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/28.jpg",
+      "status": 200,
+      "bytes": 29544,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/29.jpg",
+      "status": 200,
+      "bytes": 29524,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/30.jpg",
+      "status": 200,
+      "bytes": 213656,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/31.jpg",
+      "status": 200,
+      "bytes": 64513,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/32.jpg",
+      "status": 200,
+      "bytes": 263420,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/portfolio/33.jpg",
+      "status": 200,
+      "bytes": 29925,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/tapestries.jpg",
+      "status": 200,
+      "bytes": 180733,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/images/tie-dye.jpg",
+      "status": 200,
+      "bytes": 141823,
+      "matches_source": true,
+      "content_type": "image/jpeg"
+    },
+    {
+      "path": "assets/js/site.js",
+      "status": 200,
+      "bytes": 6367,
+      "matches_source": true,
+      "content_type": "application/javascript"
+    },
+    {
+      "path": "contact/index.html",
+      "status": 200,
+      "bytes": 18032,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "custom/index.html",
+      "status": 200,
+      "bytes": 4908,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "events/index.html",
+      "status": 200,
+      "bytes": 8393,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "bytes": 10837,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "laser-art/index.html",
+      "status": 200,
+      "bytes": 5954,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "photography/index.html",
+      "status": 200,
+      "bytes": 17437,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "robots.txt",
+      "status": 200,
+      "bytes": 73,
+      "matches_source": true,
+      "content_type": "text/plain; charset=utf-8"
+    },
+    {
+      "path": "shop/index.html",
+      "status": 200,
+      "bytes": 7275,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "bytes": 938,
+      "matches_source": true,
+      "content_type": "application/xml"
+    },
+    {
+      "path": "tie-dye/index.html",
+      "status": 200,
+      "bytes": 4684,
+      "matches_source": true,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "api/contact (invalid input only)",
+      "status": 400,
+      "validation_pass": true
+    }
+  ]
+}

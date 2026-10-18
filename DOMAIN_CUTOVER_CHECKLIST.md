@@ -6,6 +6,43 @@ The permanent website remains in `bitterbuffaloart/bitter-buffalo-art-website`, 
 from Art Builder and Photo Culler. GitHub Actions deploys through the existing Pages
 project `bitter-buffalo-art`. No new hosting project or paid subscription is needed.
 
+## Continuation checkpoint — October 17, 2026
+
+- Reconfirmed via service APIs: Actions run `39095427361` SUCCESS for `958d728`;
+  documentation HEAD `505c6a1`; canonical Pages deployment
+  `d5b50282-1c7f-4df6-9d7a-ed1031020d32`.
+- Current deployment URL: https://d5b50282.bitter-buffalo-art.pages.dev/.
+  Retain this as the current rollback candidate, subject to reconfirmation immediately
+  before cutover. The older `cf69ac66` deployment below is historical only.
+- Pages API still lists only `bitter-buffalo-art.pages.dev`; neither custom domain is attached.
+- Automatic contact delivery remains unconfigured. The signed-in Resend account has
+  no verified domains or keys. Its test sender can only target the account inbox;
+  this is not proof of permanent contact readiness. Domain sender verification must
+  not be bundled into this task's forbidden DNS changes.
+- Before any approved switch, record TTL, proxy state, all record values, active redirect/
+  origin rules, DNSSEC state, and the exact rollback procedure. Exporting DNS records
+  alone does not capture every Cloudflare routing setting.
+- Recheck CAA compatibility with Pages certificate issuance. If changes are needed,
+  present exact changes for approval; do not remove CAA or weaken policy automatically.
+- Treat `/products/*` and any additional indexed Shopify URLs as an outstanding
+  inventory item; existing collection redirects do not cover individual product URLs.
+- If launching with the fallback instead, test email-draft contents for all three forms
+  and explicitly accept that visitors must send the draft themselves. The user has now
+  requested actual delivery, so fallback-only launch is not the selected completion path.
+- Obtain separate approval for any sender DNS changes, domain attachment, apex/www DNS
+  replacement, or routing rules. Preparation and a green deployment are not approval.
+
+## Contact update — October 17, 2026
+
+Actual general/custom/laser delivery is now tested to `clyde@bitterbuffaloart.com`;
+all three messages reached INBOX and the owner confirmed receipt. Both Pages
+environments have the required configuration, with an encrypted sending-only key.
+This supersedes earlier statements that contact secrets are absent. It uses Resend's
+default **test sender**, restricted to the account owner inbox; a verified permanent
+sender remains a cutover-readiness item requiring separately authorized DNS changes.
+Neither temporary delivery nor sender verification authorizes domain cutover.
+Keep the existing Gmail direct-contact and email-draft fallback available.
+
 ## Gates before scheduling the domain switch
 
 1. Confirm the latest Actions run is green through both candidate verification and

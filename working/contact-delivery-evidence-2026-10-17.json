@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-17 America/Denver",
+  "recipient": "clyde@bitterbuffaloart.com",
+  "sender": "Bitter Buffalo Art <onboarding@resend.dev>",
+  "production_branch": "preview",
+  "domains": [
+    "bitter-buffalo-art.pages.dev"
+  ],
+  "deployment_id": "51426674-8cf1-4965-801b-e85820c34965",
+  "deployment_url": "https://51426674.bitter-buffalo-art.pages.dev",
+  "bindings": {
+    "production": {
+      "RESEND_API_KEY": "secret_text",
+      "CONTACT_TO_EMAIL": "plain_text",
+      "CONTACT_FROM_EMAIL": "plain_text"
+    },
+    "preview": {
+      "RESEND_API_KEY": "secret_text",
+      "CONTACT_TO_EMAIL": "plain_text",
+      "CONTACT_FROM_EMAIL": "plain_text"
+    }
+  },
+  "metadata_source": "Authenticated Cloudflare Pages dashboard",
+  "website_commit": "c605b247a4e152499aa111396ec7a629167c05e7",
+  "inbox_receipts": {
+    "general": "1a14d47ba8e7c650",
+    "custom-project": "1a14d47fd25abcec",
+    "laser-intake": "1a14d4852539b586"
+  },
+  "checks": [
+    "All three messages have INBOX label",
+    "To and Reply-To match submitted values",
+    "General subject/body retained",
+    "Custom project details and project_contact_ack retained",
+    "Laser dimensions/quantity/date and all four required permission fields retained",
+    "SPF, DKIM and DMARC pass for resend.dev",
+    "User confirmed receipt in chat"
+  ],
+  "limitations": [
+    "Resend default sender is for testing to account owner only; no verified custom sender domain",
+    "No DNS or domain cutover approval; Shopify remains live",
+    "Free plan and paid overage disabled unchanged",
+    "Public direct-email and failure fallback remain backcountrytiedye@gmail.com"
+  ]
+}
