@@ -14,3 +14,6 @@
 5. Rotate Pages-only Actions token before January 15, 2027.
 
 See WEBSITE_UPDATE_STATUS_2026-10-17.md and DOMAIN_CUTOVER_CHECKLIST.md for evidence and exact protections.
+
+## Current owner direction — 2026-10-18 photography / Etsy
+Cursor handles original-photo restoration, website updates, and Etsy draft assembly. ChatGPT handles names and stories after seeing the actual photographs. Read and execute CURSOR_PHOTOGRAPHY_HANDOFF_2026-10-18.md starting at Phase A; preserve all existing safeguards and completed work. Return the editorial-review JSON, numbered contact sheet, and checkpoint through this repository. This document records instructions; it does not assert that Cursor has received or started them.
