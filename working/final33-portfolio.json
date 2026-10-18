@@ -1,25 +1,25 @@
 {
   "updated": "2026-10-18",
-  "featured_rank": 2,
+  "featured_rank": 1,
   "etsy_shop": "https://www.etsy.com/shop/BitterBuffaloArt",
   "collector_rule": "66 signed collector prints total per photograph across all materials and sizes",
   "photos": [
-    {
-      "rank": 2,
-      "title": "Maroon Bells reflection",
-      "web_image": "/assets/images/portfolio/02.jpg",
-      "image_kind": "web_from_jpeg",
-      "source": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\phase5-etsy-lumaprints\\working\\02_Maroon_Bells_DSC_7500-HDR.jpg",
-      "etsy_listing_url": "",
-      "purchase_status": "UNPUBLISHED_PORTFOLIO_ONLY",
-      "featured": true
-    },
     {
       "rank": 1,
       "title": "Grand Tetons",
       "web_image": "/assets/images/portfolio/01.jpg",
       "image_kind": "web_from_jpeg",
       "source": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\01 - DSC_2626-Edit-no water mark.jpg",
+      "etsy_listing_url": "",
+      "purchase_status": "UNPUBLISHED_PORTFOLIO_ONLY",
+      "featured": true
+    },
+    {
+      "rank": 2,
+      "title": "Maroon Bells reflection",
+      "web_image": "/assets/images/portfolio/02.jpg",
+      "image_kind": "web_from_jpeg",
+      "source": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\phase5-etsy-lumaprints\\working\\02_Maroon_Bells_DSC_7500-HDR.jpg",
       "etsy_listing_url": "",
       "purchase_status": "UNPUBLISHED_PORTFOLIO_ONLY",
       "featured": false

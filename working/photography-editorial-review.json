@@ -1,9 +1,9 @@
 {
   "updated": "2026-10-18T08:38:42-06:00",
-  "featured_rank": 2,
+  "featured_rank": 1,
   "gallery_order": [
-    2,
     1,
+    2,
     3,
     4,
     5,
@@ -37,7 +37,7 @@
     33
   ],
   "contact_sheet": "working/photography-review/contact-sheet.jpg",
-  "note": "Titles are the recorded portfolio names. No new story copy was written. Maroon Bells Reflection remains the first gallery photograph (rank 02).",
+  "note": "Titles are the recorded portfolio names. No new story copy was written. Grand Tetons is the first gallery photograph (rank 01). Display order only; photograph IDs, sources, and titles are unchanged.",
   "photos": [
     {
       "rank": 1,
