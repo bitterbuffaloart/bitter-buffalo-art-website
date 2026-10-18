@@ -1,12 +1,13 @@
-# Cursor + ChatGPT photography and Etsy handoff
+# NEW Cursor project — Bitter Buffalo Etsy Launch
 Date: 2026-10-18, America/Denver
-Owner instruction: Cursor restores the correct photographs and builds Etsy listings; ChatGPT writes the photograph names and stories from the actual images. Continue the existing work.
+Owner instruction: Cursor restores the correct photographs and builds Etsy listings; ChatGPT writes the photograph names and stories from the actual images. Create a separate Cursor workspace for this task; the other Cursor project is working on Photo Culler and must continue independently.
 
 ## Roles and shared source
 - Cursor: local original-photo lookup, verified web exports, website implementation, Etsy draft assembly, checkpoints.
 - ChatGPT: review the actual photos, write suggested artistic titles and truthful story descriptions, and return structured copy keyed by the existing rank.
 - Shared repository: bitterbuffaloart/bitter-buffalo-art-website.
-- Existing Windows website project: C:\Users\bitte\bitter-buffalo-website-etsy-update-2026-10-17. Confirm the actual checkout and Git status first; do not start a new website or discard local changes.
+- New, separate Cursor project/workspace: C:\Users\bitte\bitter-buffalo-etsy-launch. Create it if absent; otherwise inspect and resume its checkpoints. Keep its code, editorial data, and export scripts independently backed up with Git. Keep credentials and full-resolution print masters out of public Git.
+- Existing website is an integration destination, not the workspace to use for Photo Culler. Reuse the website repository for bounded website changes when the photo assets and copy are verified. Inspect the existing local website checkout if present at C:\Users\bitte\bitter-buffalo-website-etsy-update-2026-10-17; preserve uncommitted work.
 - Photo folder recorded in existing project: C:\Users\bitte\OneDrive\Desktop\Portfolio for Etsy.
 - Read WEBSITE_UPDATE_STATUS_2026-10-17.md, NEXT_ACTION.md, working/final33-portfolio.json, the existing Phase 5/Etsy/LumaPrints records in the Windows photo folder, and any applicable AGENTS.md before work.
 
@@ -19,7 +20,7 @@ Owner instruction: Cursor restores the correct photographs and builds Etsy listi
 - Existing apparel, laser, and painting galleries and links are completed work; retain them.
 
 ## Phase A — restore the correct photographs now
-1. Inspect Git status and active tasks first. Preserve completed work and unrelated changes. Fetch remote changes and integrate normally; no reset, force-push, duplicate worker, or legacy whole-site rebuild.
+1. Open/create the separate C:\Users\bitte\bitter-buffalo-etsy-launch project. Inspect its files and checkpoints first. Leave the separate Photo Culler project and all its running processes alone. Retrieve the shared website records and this handoff, preserving any local changes; no reset, force-push, competing Photo Culler worker, or legacy whole-site rebuild.
 2. Inspect the recorded Desktop Portfolio for Etsy folder and its existing Phase 5 records. Locate the actual ranked originals/exports for all 33, prioritizing the 22 missing ranks. Existing records and established rank mappings are the authority; filenames alone are not proof of identity when ambiguous.
 3. If a source is unavailable locally, check whether the OneDrive file is online-only. Report its exact status/path rather than claiming it is missing globally. Do not invent replacement images or select a different photograph to fill a slot.
 4. Export appropriate sRGB web derivatives from the matching existing image files with preserved aspect ratios and no new creative edit/crop. Website derivatives may replace only their known placeholder derivative at cloudflare-pages/assets/images/portfolio/NN.jpg. Keep all originals and print masters unchanged. Do not use small website JPEGs as print masters.
@@ -29,7 +30,7 @@ Owner instruction: Cursor restores the correct photographs and builds Etsy listi
 8. Run the existing QA/contact mock/staging checks and normal GitHub deployment workflow. Verify actual image display, aspect ratios, navigation, and print-format layout; HTTP 200 alone is not photo verification.
 
 ## Phase A return package for ChatGPT
-Commit these to this same repository:
+Keep launch-project work and checkpoints in the separate launch workspace. Commit the following small editorial handoff artifacts to this shared website repository so ChatGPT can read them (web-sized previews only; no print masters or credentials):
 - working/photography-editorial-review.json: all 33 ranks, current title, source match status, web asset path, original/print dimensions, derivative dimensions and SHA-256, available Etsy draft/listing ID if any, verified factual location/subject notes, and exact blockers. Do not include credentials.
 - A readable numbered contact sheet from the actual restored photographs, split into manageable pages if needed. Keep rank numbers visible. Include individual web-image paths so ChatGPT can inspect each photograph.
 - A checkpoint containing actual restored count, unresolved ranks, checks, deployment URL and run ID, and any remaining blocker.
@@ -53,7 +54,7 @@ Save the result as working/photography-listing-copy.json keyed by rank for Curso
 - Return actual draft IDs/URLs, matched source rank, assets used, completed fields, and missing fields. Only link the website to a product URL after its live publication is verified.
 
 ## Boundaries
-- Leave F:\Masters, F:\Portfolio, Photo Culler, all source photographs, Lightroom, ratings, and completed analysis untouched.
+- Leave C:\Users\bitte\bitter-buffalo-ai-photo-culler, all of its workers, F:\Masters, F:\Portfolio, all source photographs, Lightroom, ratings, and completed analysis untouched. Do not stop or repurpose the other Cursor project.
 - No deletion/moving/overwriting of original photographs. No DNS change, Shopify cancellation, new subscription, credential change, or extra account creation.
 - Contact email request remains bitteebuffalophoto@gmail.com. Prior Cloudflare dashboard access was denied by the browser origin gate. Do not treat this document as permission to bypass that gate. Record contact setup separately from the photography work.
 - Never claim a photograph is restored, an export is full-resolution, a draft exists, or a deployment works without direct evidence.
