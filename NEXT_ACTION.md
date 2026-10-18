@@ -1,22 +1,22 @@
 # Website migration — next action
 Updated: 2026-10-17 (America/Denver)
 
-## Immediate (this session / next agent)
-1. Confirm GitHub push to `bitterbuffaloart/bitter-buffalo-art-website` succeeded.  
-2. Connect Cloudflare Pages project `bitter-buffalo-art` → that repo  
-   - Production branch: `main`  
-   - Root directory: `cloudflare-pages`  
-   - Empty build command (deploy committed static output)  
-3. Push a tiny docs-only commit and verify a **github**-triggered deployment appears.  
-4. Spot-check https://bitter-buffalo-art.pages.dev/ desktop + phone.  
+## Owner (5–10 minutes) — unlock auto-deploy
+1. GitHub → `bitterbuffaloart/bitter-buffalo-art-website` → Settings → Secrets and variables → Actions  
+   - `CLOUDFLARE_API_TOKEN` = API token with **Account → Cloudflare Pages → Edit**  
+   - `CLOUDFLARE_ACCOUNT_ID` = `f3ee68d66369fd4b2bc390d1dae218f6`  
+2. Actions → **Deploy Cloudflare Pages** → Run workflow (or push a tiny change).  
+3. Confirm a new successful deploy and https://bitter-buffalo-art.pages.dev/ updates.  
+
+## Optional (dashboard)
+- Install Cloudflare Workers & Pages GitHub App on org `bitterbuffaloart` for native Git builds.  
+- When ready, set production branch to `main` (today production_branch is still `preview`).  
 
 ## Before Oct 21, 2026
-- Owner visual QA on Events, Contact, Photography (Final 33).  
-- Confirm Etsy listing URLs in a logged-in browser when ready.  
-- Follow `DOMAIN_CUTOVER_CHECKLIST.md` only after owner approval (DNS still blocked).  
+- Phone QA: nav, Events gallery, Contact tabs, Photography Final 33.  
+- Follow `DOMAIN_CUTOVER_CHECKLIST.md` only after explicit DNS approval.  
 
 ## Do not
-- Touch `bitterbuffaloart/BitterBuffaloArt` (Art Builder).  
+- Touch `bitterbuffaloart/BitterBuffaloArt`.  
 - Change `bitterbuffaloart.com` DNS.  
-- Publish Shopify theme or cancel Shopify.  
-- Open Lightroom / Photo Culler for website assets.
+- Publish Shopify theme or cancel Shopify.
