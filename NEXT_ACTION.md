@@ -1,18 +1,16 @@
-# Current next actions — 2026-10-17
+# Current next actions — 2026-10-17 late evening
 
-Auto-deploy is VERIFIED, including publication to the working preview.
-Successful run: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39094227881
-Published commit e90c888; Pages production deployment ab4e5847.
-Existing preview https://bitter-buffalo-art.pages.dev/ has passed independent checks.
+## Auto-deploy: VERIFIED again
+- Push `958d728` → Actions https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39095427361 SUCCESS
+- Working Pages deploy `d5b50282` / https://bitter-buffalo-art.pages.dev/
+- Secrets + `ENABLE_PREVIEW_PUBLISH=true` in place. Do not recreate credentials casually.
+- Token expires 2027-01-15. Rotate before then.
+- Keep GitHub `main` → Pages branch name `preview` until a deliberate change.
 
-Do not recreate deployment credentials or change the main → preview branch mapping.
-ENABLE_PREVIEW_PUBLISH=true. Every source push checks an isolated candidate first.
-Token expires January 15, 2027. Rotate before then.
+## Before Oct 21 cutover readiness
+1. Decide contact path: configure Resend (or other free allowance) on Pages and prove inbox receipt for all three forms, **or** accept the proven email-draft workflow for launch.
+2. Export authoritative DNS/mail records; follow `DOMAIN_CUTOVER_CHECKLIST.md` only after explicit approval.
+3. Optional phone QA of Events booth images and Contact tabs.
+4. Keep Shopify live; no DNS change authorized yet.
 
-Remaining: automatic contact email delivery/real recipient tests; authoritative DNS/mail
-export; explicit later domain-cutover approval. Follow DOMAIN_CUTOVER_CHECKLIST.md.
-The manual email-draft fallback works; no real email delivery has been claimed.
-Final 33 remain portfolio previews until photography Etsy listings are published.
-Preserve live Shopify, DNS, Art Builder, Photo Culler, Lightroom, and originals.
-
-Read WEBSITE_UPDATE_STATUS_2026-10-17.md for evidence and prior checkpoints.
+Read `WEBSITE_UPDATE_STATUS_2026-10-17.md` for evidence.
