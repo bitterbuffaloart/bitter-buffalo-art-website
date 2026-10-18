@@ -1,3 +1,21 @@
+# Latest deployment checkpoint — 2026-10-17, America/Denver
+
+- Controlled push aa4e0e7aefb3b47e3c58aeca8da5962164cbb533 → Actions run
+  https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39093752970
+  completed SUCCESS. Verification and deploy jobs both passed.
+- Isolated deployment: https://e910e249.bitter-buffalo-art.pages.dev/.
+- All 55 public resources and invalid contact input passed the deployed smoke check.
+- Browser verification of all 9 deployed pages at actual 390 and 1280 pixel widths passed:
+  no overflow or broken eager images. Mobile menu open/Escape behavior passed.
+- ENABLE_PREVIEW_PUBLISH now true following successful candidate verification. Next push
+  will verify a fresh isolated candidate before updating the working pages.dev alias.
+- Working-preview publication is IN PROGRESS until its own Actions run and HTTP check pass.
+- Contact provider delivery is still unconfigured/unproven. Email-draft fallback works;
+  no test email was sent. Contact receipt remains a cutover gate.
+- Original cf69ac66 deployment retained for rollback. No DNS, Shopify, Art Builder,
+  Photo Culler, Lightroom, original-photo, or paid-service changes.
+
+---
 # Current checkpoint — 2026-10-17, America/Denver
 
 ## Objective and boundaries

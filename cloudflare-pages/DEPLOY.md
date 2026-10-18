@@ -19,9 +19,10 @@ The branch qa-<full commit SHA> is isolated from the working preview.
 It compares all public pages/assets by SHA-256 and checks invalid contact input returns
 JSON 400 without sending email. A failure prevents working-preview publication.
 
-ENABLE_PREVIEW_PUBLISH is initially unset. After the candidate passes browser QA,
-set this repository Actions variable to true to enable preview-branch publication
-after successful candidate verification. No DNS is changed by this workflow.
+ENABLE_PREVIEW_PUBLISH is now true after successful Actions run 39093752970 and
+browser QA of https://e910e249.bitter-buffalo-art.pages.dev/ at 390 and 1280 pixels.
+Subsequent main pushes publish to the preview branch only after candidate verification.
+Set the variable to false to suspend working-preview publication. No DNS is changed by this workflow.
 Do not enable it before checking the candidate, branch mapping, and rollback target.
 
 ## Manual isolated candidate
