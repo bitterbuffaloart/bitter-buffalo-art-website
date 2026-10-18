@@ -62,3 +62,6 @@ working/config/
 .site-build/
 .dev.vars
 .dev.vars.*
+
+# This is the website endpoint regression check, not Shopify mutation scratch.
+!working/test-contact.mjs

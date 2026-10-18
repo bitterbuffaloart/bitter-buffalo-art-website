@@ -116,3 +116,12 @@ Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview
 
 ## Protections honored
 No DNS change · no Shopify cancel/theme publish · Art Builder repo not overwritten · Photo Culler/Lightroom untouched · no invented Etsy listing URLs · no paid subscriptions created
+
+## Independent verification addendum — 2026-10-17 evening
+
+- Verified GitHub repository ownership and `main` HEAD `53aa53b` through the connected GitHub account.
+- **GitHub Actions deployment is FAILED, not green.** Workflow run [39090256715](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39090256715) failed in Wrangler with missing `CLOUDFLARE_API_TOKEN`. Checkout, Node setup, and static root verification passed. A later successful run has not been evidenced.
+- Inspected `cloudflare-pages/functions/api/contact.js` and `cloudflare-pages/assets/js/site.js`. Without Cloudflare-native email credentials, the Function returns 503 and the browser submits to Shopify. Thus delivery from the site after a DNS migration **is NOT VERIFIED and blocks cutover**. All three form types must pass a real recipient-delivery test before the domain switch.
+- The existing Pages deployment and new-route HTTP 200 evidence are reported in this status from the local worker. This independent GitHub audit did not create a new Cloudflare deployment or independently execute the published URLs (Pages host inaccessible through its external fetch environment).
+- No source code, DNS, Shopify themes, original photographs, Art Builder, Photo Culler, or Lightroom were modified by this audit.
+
