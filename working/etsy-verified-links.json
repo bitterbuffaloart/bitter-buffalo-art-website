@@ -1,0 +1,11 @@
+{
+  "updated": "2026-10-17",
+  "shop_home": {
+    "url": "https://www.etsy.com/shop/BitterBuffaloArt",
+    "verified": true,
+    "method": "owner-known shop + prior migration docs; automated HEAD returned 403 from bots",
+    "used_on_site": true
+  },
+  "individual_listings": [],
+  "policy": "Only shop_home is linked until each listing URL is confirmed in a logged-in browser. Never invent listing IDs."
+}

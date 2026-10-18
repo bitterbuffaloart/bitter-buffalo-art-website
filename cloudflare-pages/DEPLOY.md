@@ -7,6 +7,16 @@ Commerce CTAs open `https://www.etsy.com/shop/BitterBuffaloArt`.
 ## Source directory
 Deploy **only** `cloudflare-pages/` (must contain `index.html` + `assets/`).
 
+## GitHub (source of truth)
+Repository: https://github.com/bitterbuffaloart/bitter-buffalo-art-website  
+(Do **not** use `bitterbuffaloart/BitterBuffaloArt` — that is Art Builder.)
+
+Cloudflare Pages Git settings (when connected):
+- Production branch: `main`
+- Root directory: `cloudflare-pages`
+- Build command: *(empty — commit built static files)*
+- Output directory: *(empty / `/`)*
+
 ## Preview deploy (no DNS change)
 ```bat
 cd path\to\cloudflare-pages
@@ -16,7 +26,7 @@ deploy-preview.cmd
 Or:
 ```powershell
 $env:CLOUDFLARE_ACCOUNT_ID='f3ee68d66369fd4b2bc390d1dae218f6'
-npx wrangler pages deploy . --project-name=bitter-buffalo-art --branch=preview --commit-dirty=true
+npx wrangler pages deploy . --project-name=bitter-buffalo-art --branch=main --commit-dirty=true
 ```
 
 Project: `bitter-buffalo-art`  

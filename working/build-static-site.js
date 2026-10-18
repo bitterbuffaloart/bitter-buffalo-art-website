@@ -879,12 +879,18 @@ async function main() {
 
     <section class="prose event-section" id="gallery">
       <h2>Event Gallery &amp; References</h2>
-      <p class="event-intro">Booth photographs, art displays, and vendor setup images documenting actual event participation—kept ready for promoters reviewing Bitter Buffalo Art.</p>
-      <div class="event-empty">
-        <p><strong>No dedicated booth or display photographs were present on the live Events page or in the website migration assets.</strong></p>
-        <p>Recovered: five verified past-event records (text + official links where published). Not recovered: booth photos, display photos, or festival setup images. Lightroom / original photo archives were not modified or searched for this restoration.</p>
+      <p class="event-intro">Booth and market photographs recovered from the published Bitter Buffalo Art website assets (Shopify CDN). Lightroom and original photo archives were not opened for this restoration.</p>
+      <div class="gallery gallery--events">
+        <figure>
+          <img src="../assets/images/events/booth-market.jpg" alt="Outdoor market booth with tents and shoppers" loading="lazy" width="1200" height="800" />
+          <figcaption>Market booth — outdoor vendor setting</figcaption>
+        </figure>
+        <figure>
+          <img src="../assets/images/events/booth-tiedye.jpg" alt="Colorful tie-dye shirts displayed under a canopy tent" loading="lazy" width="1200" height="800" />
+          <figcaption>Tie-dye display under canopy</figcaption>
+        </figure>
       </div>
-      <p><a class="btn btn--ghost" href="../contact/">Contact for festival / promoter references</a></p>
+      <p style="margin-top:1.25rem"><a class="btn btn--ghost" href="../contact/">Contact for festival / promoter references</a></p>
     </section>`,
     })
   );
@@ -1021,20 +1027,24 @@ a { color: var(--teal); }
 .nav-toggle:focus-visible { outline: 3px solid var(--teal-bright); outline-offset: 2px; }
 .hero { position: relative; background: #2d2418; color: #fff; overflow: hidden; }
 .hero-art { width: 100%; display: block; min-height: 420px; }
+.hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, rgba(45,36,24,.18) 0%, rgba(45,36,24,.55) 55%, rgba(45,36,24,.78) 100%);
+}
 .hero__content {
-  position: absolute; inset: auto 0 0 0; padding: 1.5rem 1.25rem 2rem;
-  background: linear-gradient(to top, rgba(16,12,9,.88) 0%, rgba(16,12,9,.35) 55%, transparent 100%);
+  position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1.5rem 1.25rem 2rem;
+  background: linear-gradient(to top, rgba(16,12,9,.92) 0%, rgba(16,12,9,.45) 55%, transparent 100%);
   max-width: 1200px; margin: 0 auto; right: 0; left: 0;
   width: min(1200px, 100%);
   box-sizing: border-box;
 }
 .hero__panel {
-  max-width: 34rem;
-  padding: 1.15rem 1.25rem 1.35rem;
-  background: rgba(20,16,12,.82);
-  border: 1px solid rgba(243,231,207,.35);
-  box-shadow: 0 8px 28px rgba(0,0,0,.35);
-  backdrop-filter: blur(2px);
+  max-width: 36rem;
+  padding: 1.25rem 1.35rem 1.45rem;
+  background: rgba(14,11,8,.9);
+  border: 1px solid rgba(243,231,207,.45);
+  box-shadow: 0 10px 32px rgba(0,0,0,.45);
+  backdrop-filter: blur(3px);
 }
 .eyebrow { margin: 0 0 .65rem; }
 .eyebrow__mark {
@@ -1050,7 +1060,7 @@ a { color: var(--teal); }
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(2.15rem, 5.5vw, 3.35rem);
   line-height: 1.08; margin: 0 0 .45rem; color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,.45);
+  text-shadow: 0 2px 4px rgba(0,0,0,.65), 0 0 24px rgba(0,0,0,.35);
   letter-spacing: .01em;
 }
 .page-hero h1 { color: var(--ink); text-shadow: none; }
@@ -1298,10 +1308,9 @@ const JS = `document.addEventListener('DOMContentLoaded', () => {
     if (location.hash === '#laser-intake') activate('laser');
   }
 
-  // Forms post to the live Shopify contact endpoint (original delivery path) while Shopify hosts
-  // the store. Optional /api/contact + RESEND_API_KEY is for Cloudflare-only delivery after cutover.
+  // Try Pages /api/contact (Resend when secrets set); else native Shopify contact POST.
   document.querySelectorAll('form[data-bb-form]').forEach((form) => {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       const status = form.querySelector('[data-bb-form-status]');
       if (form.querySelector('input[name="website"]')?.value) {
         e.preventDefault();
@@ -1317,11 +1326,65 @@ const JS = `document.addEventListener('DOMContentLoaded', () => {
         }
         return;
       }
+      e.preventDefault();
       if (status) {
         status.hidden = false;
         status.textContent = 'Sending your request…';
         status.classList.add('is-ok');
         status.classList.remove('is-err');
+      }
+      const fd = new FormData(form);
+      const payload = {};
+      fd.forEach((v, k) => { if (typeof v === 'string') payload[k] = v; });
+      payload.name = payload.name || payload['contact[name]'] || '';
+      payload.email = payload.email || payload['contact[email]'] || '';
+      payload.phone = payload.phone || payload['contact[phone]'] || '';
+      payload.message = payload.message || payload['contact[body]'] || '';
+      payload.subject = payload.subject || payload['contact[Subject]'] || '';
+      payload.description = payload.description || payload['contact[body]'] || '';
+      payload.product_category = payload.product_category || payload['contact[product_category]'] || '';
+      payload.additional_notes = payload.additional_notes || payload['contact[additional_notes]'] || '';
+      payload.size = payload.size || payload['contact[size]'] || '';
+      payload.colors = payload.colors || payload['contact[colors]'] || '';
+      payload.quantity = payload.quantity || payload['contact[quantity]'] || '';
+      payload.budget_range = payload.budget_range || payload['contact[budget_range]'] || '';
+      payload.needed_by = payload.needed_by || payload['contact[needed_by]'] || '';
+      payload.preferred_contact = payload.preferred_contact || payload['contact[preferred_contact]'] || '';
+      payload.project_type = payload.project_type || payload['contact[project_type]'] || '';
+      payload.requested_item = payload.requested_item || payload['contact[requested_item]'] || '';
+      payload.approximate_size = payload.approximate_size || payload['contact[approximate_size]'] || '';
+      payload.body = payload['contact[body]'] || payload.message || '';
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.ok) {
+          if (status) {
+            status.textContent = 'Thank you — your request was sent. We will reply by email.';
+            status.classList.add('is-ok');
+            status.classList.remove('is-err');
+          }
+          form.reset();
+          return;
+        }
+        if (res.status === 503 || data.shopifyBridgeStatus) {
+          form.submit();
+          return;
+        }
+        throw new Error(data.error || 'Submission failed');
+      } catch (err) {
+        try {
+          form.submit();
+        } catch (_) {
+          if (status) {
+            status.textContent = 'Could not send through the website. Please email backcountrytiedye@gmail.com.';
+            status.classList.add('is-err');
+            status.classList.remove('is-ok');
+          }
+        }
       }
     });
   });
@@ -1337,6 +1400,16 @@ Commerce CTAs open \`${ETSY}\`.
 ## Source directory
 Deploy **only** \`cloudflare-pages/\` (must contain \`index.html\` + \`assets/\`).
 
+## GitHub (source of truth)
+Repository: https://github.com/bitterbuffaloart/bitter-buffalo-art-website  
+(Do **not** use \`bitterbuffaloart/BitterBuffaloArt\` — that is Art Builder.)
+
+Cloudflare Pages Git settings (when connected):
+- Production branch: \`main\`
+- Root directory: \`cloudflare-pages\`
+- Build command: *(empty — commit built static files)*
+- Output directory: *(empty / \`/\`)*
+
 ## Preview deploy (no DNS change)
 \`\`\`bat
 cd path\\to\\cloudflare-pages
@@ -1346,7 +1419,7 @@ deploy-preview.cmd
 Or:
 \`\`\`powershell
 $env:CLOUDFLARE_ACCOUNT_ID='f3ee68d66369fd4b2bc390d1dae218f6'
-npx wrangler pages deploy . --project-name=bitter-buffalo-art --branch=preview --commit-dirty=true
+npx wrangler pages deploy . --project-name=bitter-buffalo-art --branch=main --commit-dirty=true
 \`\`\`
 
 Project: \`bitter-buffalo-art\`  
