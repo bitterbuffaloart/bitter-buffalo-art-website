@@ -95,3 +95,16 @@ Shopify remains on the live domain.
 - Working production then: https://ab4e5847.bitter-buffalo-art.pages.dev/.
 - Contact provider delivery was unconfigured; email-draft fallback used.
 - Older historical sections below retained for audit trail.
+
+
+---
+# Photography repair — 2026-10-18 (America/Denver)
+
+- Root cause: working/final33-portfolio.json identifies 11 web_from_jpeg entries and 22 placeholder_no_jpeg_export entries with empty source paths. Loading the placeholder JPGs does not restore a photograph.
+- Public photography gallery now renders only the 11 recorded real exports, retaining their original rank numbers and titles. All 33 authoritative records and all image files remain unchanged; the missing 22 are pending their matching original exports.
+- Repaired the malformed closing gallery section tag and stray footer text, so print formats sit outside the grid.
+- Updated the photography generator and QA to enforce real-export eligibility and preserve the complete 33-record manifest. Did not run the legacy full-site generator.
+- Prior product galleries remain 20 apparel, 8 laser/wood items, and 3 paintings with existing verified Etsy links.
+- Contact inbox change remains blocked: public/fallback links still use backcountrytiedye@gmail.com; last recorded form recipient is clyde@bitterbuffaloart.com. User requests bitteebuffalophoto@gmail.com. Cloud browser access to dash.cloudflare.com was denied by its origin approval gate; no dashboard retry or recipient workaround was attempted.
+- No DNS, Shopify, Etsy listing, Lightroom, source-photo, or photograph-file changes.
+- Release checks and deployment are recorded by the corresponding GitHub Actions run; this checkpoint does not claim publication before that run succeeds.

@@ -380,58 +380,34 @@ async function main() {
     })
   );
 
-  // PHOTOGRAPHY — Final 33 curated portfolio (Maroon #02 featured). No fictional Etsy listing URLs.
+  // PHOTOGRAPHY — render recorded real exports only; retain all 33 records.
   const portfolio = loadFinal33Portfolio();
-  const featured =
-    (portfolio && portfolio.photos.find((x) => x.featured)) ||
-    (portfolio && portfolio.photos[0]);
+  const photoDimensions = {"1":[1400,933],"2":[1400,933],"9":[1400,933],"10":[1400,788],"11":[1400,933],"18":[1400,935],"21":[1400,935],"24":[1400,935],"30":[1400,467],"31":[933,1400],"32":[1400,672]};
   const galleryFigures = (portfolio ? portfolio.photos : [])
-    .map((ph) => {
-      const badge =
-        ph.purchase_status === 'UNPUBLISHED_PORTFOLIO_ONLY'
-          ? '<span class="portfolio-badge">Portfolio preview · not yet listed on Etsy</span>'
-          : '';
-      const imgSrc = `../assets/images/portfolio/${String(ph.rank).padStart(2, '0')}.jpg`;
-      return `<figure class="portfolio-card${ph.featured ? ' portfolio-card--featured' : ''}">
-        <img src="${imgSrc}" alt="${ph.title}" loading="${ph.featured ? 'eager' : 'lazy'}" width="1400" height="933" />
-        <figcaption><strong>#${String(ph.rank).padStart(2, '0')} · ${ph.title}</strong>${badge}</figcaption>
+    .filter((ph) => ph.image_kind === 'web_from_jpeg' && ph.source)
+    .map((ph, index) => {
+      const dimensions = photoDimensions[ph.rank] || [1400, 933];
+      return `      <figure class="portfolio-card">
+        <img src="../assets/images/portfolio/${String(ph.rank).padStart(2, '0')}.jpg" alt="${ph.title}" loading="${index < 3 ? 'eager' : 'lazy'}" decoding="async" width="${dimensions[0]}" height="${dimensions[1]}" />
+        <figcaption><strong>#${String(ph.rank).padStart(2, '0')} · ${ph.title}</strong><span class="portfolio-badge">Portfolio preview · not yet listed on Etsy</span></figcaption>
       </figure>`;
-    })
-    .join('\n      ');
+    }).join('\n');
 
-  fs.writeFileSync(
-    path.join(ROOT, 'photography', 'index.html'),
-    layout({
-      title: 'Photography Portfolio | Bitter Buffalo Art',
-      description:
-        'Final 33 curated landscape photography portfolio from Bitter Buffalo Art—featuring Maroon Bells Reflection. Prints coming to Etsy.',
-      pathPrefix: '..',
-      active: 'photo',
-      body: `
+  fs.writeFileSync(path.join(ROOT, 'photography', 'index.html'), layout({
+    title: 'Photography Portfolio | Bitter Buffalo Art',
+    description: 'Selected landscape and wildlife photographs from Bitter Buffalo Art, featuring Maroon Bells Reflection. Explore the Colorado High Country and Southwest.',
+    pathPrefix: '..',
+    active: 'photo',
+    body: `
     <section class="page-hero">
       <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Fine Art Photography</span></p>
       <h1>Photography Portfolio</h1>
-      <p class="lede">Curated Final 33 collection from Colorado and the Southwest. Featured first: <strong>Maroon Bells Reflection</strong>. Browse the portfolio here. Individual print listings open on Etsy only after publication—unpublished variants are not offered for purchase on this site.</p>
-      <div class="hero__actions" style="justify-content:flex-start;margin-top:1rem">
-        <a class="btn btn--ghost" href="${ETSY}" target="_blank" rel="noopener noreferrer">Visit Etsy Shop</a>
-        <a class="btn" href="../shop/">Print formats &amp; shopping</a>
-      </div>
+      <p class="lede">Landscapes, wildlife, and quiet moments from Colorado and the Southwest. Begin with <strong>Maroon Bells Reflection</strong> and explore the collection below. Photography print listings will be linked here as they become available on Etsy.</p>
+      <div class="hero__actions" style="justify-content:flex-start;margin-top:1rem"><a class="btn btn--solid-ink" href="#final-33">Browse photographs ↓</a><a class="btn btn--ghost" href="../shop/">Print formats &amp; shopping</a></div>
     </section>
-    ${
-      featured
-        ? `<section class="portfolio-feature" aria-label="Featured photograph">
-      <figure>
-        <img src="../assets/images/portfolio/${String(featured.rank).padStart(2, '0')}.jpg" alt="${featured.title}" width="1400" height="933" />
-        <figcaption>
-          <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Featured · #${String(featured.rank).padStart(2, '0')}</span></p>
-          <h2>${featured.title}</h2>
-          <p>Open-edition and signed collector-edition prints are prepared through our Phase 5 photography program. Collector editions are limited to <strong>66 total signed prints per photograph</strong> across all materials and sizes.</p>
-          <p class="portfolio-badge">Not yet published on Etsy — portfolio preview only</p>
-        </figcaption>
-      </figure>
-    </section>`
-        : ''
-    }
+    <section class="gallery gallery--portfolio" id="final-33" aria-label="Selected photographs">
+${galleryFigures}
+    </section>
     <section class="prose formats-block">
       <h2>Print formats (when published)</h2>
       <ul class="checklist">
@@ -442,13 +418,10 @@ async function main() {
         <li>Aluminum metal prints</li>
         <li>Acrylic face-mount — future offering (not currently available for purchase)</li>
       </ul>
-      <p>Exact sizes and prices follow the approved Phase 5 records. Do not treat unpublished combinations as buyable until linked from a live Etsy listing.</p>
+      <p>Check each live Etsy listing for available sizes, materials, and prices. Unpublished combinations are not offered for purchase.</p>
     </section>
-    <section class="gallery gallery--portfolio" aria-label="Final 33 portfolio">
-      ${galleryFigures || `<figure><img src="../assets/images/photography.jpg" alt="Colorado high-country photography" loading="lazy" /><figcaption>Portfolio images pending build step</figcaption></figure>`}
-    </section>`,
-    })
-  );
+    `,
+  }));
 
   // SHOP — category trailhead to verified Etsy shop only (no invented listing URLs)
   fs.writeFileSync(

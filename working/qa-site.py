@@ -70,7 +70,13 @@ def check(root, base=None):
     if etsy!=allowed_etsy: errors.append(f'Unexpected Etsy links: {etsy ^ allowed_etsy}')
     if len(etsy_images)!=31: errors.append(f'Expected 31 live Etsy product images, got {len(etsy_images)}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
-    if set(re.findall(r'portfolio/(\d+)\.jpg',photo))!={f'{n:02}' for n in range(1,34)}: errors.append('Portfolio must contain exactly Final 33')
+    manifest=json.loads((root.parent/'working/final33-portfolio.json').read_text(encoding='utf-8'))
+    records=manifest['photos']
+    if len(records)!=33 or {p['rank'] for p in records}!=set(range(1,34)): errors.append('Preserve all Final 33 portfolio records')
+    expected={f"{p['rank']:02}" for p in records if p.get('image_kind')=='web_from_jpeg' and p.get('source')}
+    rendered=re.findall(r'portfolio/(\d+)\.jpg',photo)
+    if set(rendered)!=expected or len(rendered)!=len(expected): errors.append('Gallery must show each recorded real photo exactly once, without placeholders')
+    if len(re.findall(r'<section(?:\s|>)',photo))!=photo.count('</section>') or re.search(r'</sect\s',photo): errors.append('Photography section tags are unbalanced')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')
     resources.update(['index.html','robots.txt','sitemap.xml'])
@@ -104,7 +110,7 @@ def check(root, base=None):
         except Exception: valid=False
         http.append({'path':'api/contact (invalid input only)','status':status,'validation_pass':valid})
         if not valid: errors.append(f'Contact Function must return JSON 400 for invalid input (got HTTP {status})')
-    return {'pages':len(pages),'resources':len(resources),'portfolio_unique':33,'etsy_urls':sorted(etsy),'etsy_product_images':len(etsy_images),'errors':errors,'http':http}
+    return {'pages':len(pages),'resources':len(resources),'portfolio_unique':len(set(rendered)),'portfolio_records':len(records),'etsy_urls':sorted(etsy),'etsy_product_images':len(etsy_images),'errors':errors,'http':http}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(); p.add_argument('root'); p.add_argument('--base'); p.add_argument('--output'); a=p.parse_args()
