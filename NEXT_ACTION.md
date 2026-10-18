@@ -17,3 +17,5 @@ See WEBSITE_UPDATE_STATUS_2026-10-17.md and DOMAIN_CUTOVER_CHECKLIST.md for evid
 
 ## Current owner direction — 2026-10-18 photography / Etsy
 Cursor handles original-photo restoration, website updates, and Etsy draft assembly. ChatGPT handles names and stories after seeing the actual photographs. Read and execute CURSOR_PHOTOGRAPHY_HANDOFF_2026-10-18.md starting at Phase A; preserve all existing safeguards and completed work. Return the editorial-review JSON, numbered contact sheet, and checkpoint through this repository. This document records instructions; it does not assert that Cursor has received or started them.
+
+Owner clarification 2026-10-18 08:09 Mountain: use a NEW separate Cursor project at C:\Users\bitte\bitter-buffalo-etsy-launch for the photo-to-Etsy work. The existing Photo Culler project and workers continue independently and must not be stopped or repurposed. Updated handoff includes this separation.
