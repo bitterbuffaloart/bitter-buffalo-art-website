@@ -108,3 +108,11 @@ Shopify remains on the live domain.
 - Contact inbox change remains blocked: public/fallback links still use backcountrytiedye@gmail.com; last recorded form recipient is clyde@bitterbuffaloart.com. User requests bitteebuffalophoto@gmail.com. Cloud browser access to dash.cloudflare.com was denied by its origin approval gate; no dashboard retry or recipient workaround was attempted.
 - No DNS, Shopify, Etsy listing, Lightroom, source-photo, or photograph-file changes.
 - Release checks and deployment are recorded by the corresponding GitHub Actions run; this checkpoint does not claim publication before that run succeeds.
+
+## Photography release verification — 2026-10-18, 08:00–08:04 Mountain
+
+- Merged PR #3 as d3fcfe081ac0401b94b263fb92298efb213fbf64.
+- Actions run 39134002269 completed SUCCESS: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39134002269.
+- Candidate https://b4e370e9.bitter-buffalo-art.pages.dev and working publication https://36213f35.bitter-buffalo-art.pages.dev both passed HTTP source comparison. Working alias https://bitter-buffalo-art.pages.dev/ passed: 9 pages, 55 resources, 11 rendered photos, 33 retained records, 31 Etsy product images, 0 errors.
+- Browser independently inspected https://bitter-buffalo-art.pages.dev/photography/#final-33 after scrolling: exactly 11 gallery images, all 11 loaded with nonzero natural dimensions; no failed images. Gallery shows actual photographs, and print formats are outside the grid.
+- Remaining 22 entries still need the matching original exports; no source files were substituted or modified. Contact recipient remains unmodified because dashboard origin approval was denied. No DNS cutover performed.
