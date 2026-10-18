@@ -1,0 +1,1458 @@
+{
+  "updated": "2026-10-18T08:38:42-06:00",
+  "featured_rank": 2,
+  "gallery_order": [
+    2,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33
+  ],
+  "contact_sheet": "working/photography-review/contact-sheet.jpg",
+  "note": "Titles are the recorded portfolio names. No new story copy was written. Maroon Bells Reflection remains the first gallery photograph (rank 02).",
+  "photos": [
+    {
+      "rank": 1,
+      "current_title": "Grand Tetons",
+      "etsy_title_recorded": "Grand Tetons \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\01 - DSC_2626-Edit-no water mark.jpg",
+      "recorded_catalog_path": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 2 2014-06-17\\DSC_2626-Edit-no water mark.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/01.jpg",
+      "public_image_path": "/assets/images/portfolio/01.jpg",
+      "original_dimensions": [
+        5746,
+        3831
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "b455de1e83a389727d6a6d7703d84b6dead8c37269f681120bb521f9b1f7a8da",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Grand Tetons",
+        "recorded_filename": "DSC_2626-Edit-no water mark.jpg",
+        "folder_labels": [
+          "2014",
+          "Grand Teton 2014",
+          "Grand_Teton Day 2 2014-06-17",
+          "DSC_2626-Edit-no water mark.jpg"
+        ],
+        "print_best": "OK_through_12x18",
+        "print_holds": "HOLD_20x30_below_200ppi",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 2,
+      "current_title": "Maroon Bells reflection",
+      "etsy_title_recorded": "Maroon Bells reflection \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\02 - DSC_7500-HDR.tif",
+      "recorded_catalog_path": "K:\\2014\\Fall\\2014-09-23\\DSC_7500-HDR.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/02.jpg",
+      "public_image_path": "/assets/images/portfolio/02.jpg",
+      "original_dimensions": [
+        10800,
+        7201
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "549994d6bb7c53a945dffa31d9608be208b8bdd6c752de7400b74833772142dd",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Maroon Bells reflection",
+        "recorded_filename": "DSC_7500-HDR.tif",
+        "folder_labels": [
+          "2014",
+          "Fall",
+          "2014-09-23",
+          "DSC_7500-HDR.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24|20x30"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 3,
+      "current_title": "Horseshoe Bend",
+      "etsy_title_recorded": "Horseshoe Bend \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\03 - DSC_5436.tif",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5436.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/03.jpg",
+      "public_image_path": "/assets/images/portfolio/03.jpg",
+      "original_dimensions": [
+        15105,
+        10253
+      ],
+      "web_dimensions": [
+        1400,
+        950
+      ],
+      "web_sha256": "d6f7f66a135e9d1dc27294c54e9b014fd3adf7a7b9e3a2435a38b0f3a625a24d",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Horseshoe Bend",
+        "recorded_filename": "DSC_5436.tif",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_5436.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24|20x30|24x36"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Recorded sizes have no price in the 12x18/16x24/20x30 schedule: 12x18|16x24|20x30|24x36"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 4,
+      "current_title": "Mesa Arch sunrise",
+      "etsy_title_recorded": "Mesa Arch sunrise \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\04 - DSC_4048-HDR-Edit.tif",
+      "recorded_catalog_path": "K:\\2016\\2016-02-29\\DSC_4048-HDR-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/04.jpg",
+      "public_image_path": "/assets/images/portfolio/04.jpg",
+      "original_dimensions": [
+        7500,
+        5000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "120d4319cf5cf820b4aff0c7152cd0af867dd7e011dc42fb21b01604a1e04e6c",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Mesa Arch sunrise",
+        "recorded_filename": "DSC_4048-HDR-Edit.tif",
+        "folder_labels": [
+          "2016",
+          "2016-02-29",
+          "DSC_4048-HDR-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 5,
+      "current_title": "Zion river",
+      "etsy_title_recorded": "Zion river \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\05 - DSC_2357-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\Bryce Canyon 2015-10-12\\DSC_2357-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/05.jpg",
+      "public_image_path": "/assets/images/portfolio/05.jpg",
+      "original_dimensions": [
+        9001,
+        6000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "cabfabb075e375b411ad81e350d4f1bbb1921e069dea4a1a8d541bd6bf793d1f",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Zion river",
+        "recorded_filename": "DSC_2357-Edit-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "Bryce Canyon 2015-10-12",
+          "DSC_2357-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 6,
+      "current_title": "Teton reflection",
+      "etsy_title_recorded": "Teton reflection \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\06 - DSC_6599-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 3 2014-06-19\\DSC_6599-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/06.jpg",
+      "public_image_path": "/assets/images/portfolio/06.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "c4acaef3913ca8f3c5da63715d0f04114be26a14470537b1737c680f597cd3bb",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Teton reflection",
+        "recorded_filename": "DSC_6599-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "Grand Teton 2014",
+          "Grand_Teton Day 3 2014-06-19",
+          "DSC_6599-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 7,
+      "current_title": "Autumn Range Panorama",
+      "etsy_title_recorded": "Autumn Range Panorama \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\07 - DSC_4251-HDR-Pano-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2016\\2016-09-22\\DSC_4251-HDR-Pano-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/07.jpg",
+      "public_image_path": "/assets/images/portfolio/07.jpg",
+      "original_dimensions": [
+        11255,
+        6956
+      ],
+      "web_dimensions": [
+        1400,
+        865
+      ],
+      "web_sha256": "c7e43e1bfac2f491a82d0cd36827d2e854c8668ad17b0f2737f2a31e451a2d73",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Autumn Range Panorama",
+        "recorded_filename": "DSC_4251-HDR-Pano-Edit-Edit.tif",
+        "folder_labels": [
+          "2016",
+          "2016-09-22",
+          "DSC_4251-HDR-Pano-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 8,
+      "current_title": "Canyon Sunstar",
+      "etsy_title_recorded": "Canyon Sunstar \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\08 - DSC_1751-HDR-Pano-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\Bryce Canyon 2015-10-12\\DSC_1751-HDR-Pano-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/08.jpg",
+      "public_image_path": "/assets/images/portfolio/08.jpg",
+      "original_dimensions": [
+        14400,
+        4800
+      ],
+      "web_dimensions": [
+        1400,
+        467
+      ],
+      "web_sha256": "fcac41d5dfb1f767e4b5d47ba0433585cca30f234c668461cfd7765589ddf6c8",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Canyon Sunstar",
+        "recorded_filename": "DSC_1751-HDR-Pano-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "Bryce Canyon 2015-10-12",
+          "DSC_1751-HDR-Pano-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "WIDE_PANORAMA_crop_needed_for_3x2|PANORAMA_SIZING_REVIEW|PANORAMA_SIZING_REVIEW_Canyon_Sunstar",
+        "size_matrix_traditional": "10x30|12x36|20x60"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: WIDE_PANORAMA_crop_needed_for_3x2|PANORAMA_SIZING_REVIEW|PANORAMA_SIZING_REVIEW_Canyon_Sunstar",
+        "Recorded sizes have no price in the 12x18/16x24/20x30 schedule: 10x30|12x36|20x60"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 9,
+      "current_title": "Miner's Exchange",
+      "etsy_title_recorded": "Miner's Exchange \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\09 - DSC_1677.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_1677.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/09.jpg",
+      "public_image_path": "/assets/images/portfolio/09.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "a33a3ef5f94480b35ad49138b26c1840e3732235ed7d863614c0037a853cf594",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Miner's Exchange",
+        "recorded_filename": "DSC_1677.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_1677.jpg"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 10,
+      "current_title": "Solitude (High Country)",
+      "etsy_title_recorded": "Solitude (High Country) \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\10 - DSC_0192-Edit-16x9-solitude .jpg",
+      "recorded_catalog_path": "K:\\2016\\2016-05-11\\DSC_0192-Edit-16x9-solitude .jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/10.jpg",
+      "public_image_path": "/assets/images/portfolio/10.jpg",
+      "original_dimensions": [
+        9000,
+        5063
+      ],
+      "web_dimensions": [
+        1400,
+        788
+      ],
+      "web_sha256": "460ea66f8ea5bf52b8c61f7ec53daee21fa5b58e943d27b08efb8f39d9c1bc89",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Solitude (High Country)",
+        "recorded_filename": "DSC_0192-Edit-16x9-solitude .jpg",
+        "folder_labels": [
+          "2016",
+          "2016-05-11",
+          "DSC_0192-Edit-16x9-solitude .jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "SHARPNESS_OWNER_REVIEW_Solitude|SHARPNESS_OWNER_REVIEW_Solitude",
+        "size_matrix_traditional": "12x20"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: SHARPNESS_OWNER_REVIEW_Solitude|SHARPNESS_OWNER_REVIEW_Solitude",
+        "Recorded sizes have no price in the 12x18/16x24/20x30 schedule: 12x20"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 11,
+      "current_title": "Bull elk",
+      "etsy_title_recorded": "Bull elk \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\11 - DSC_9390.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9390.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/11.jpg",
+      "public_image_path": "/assets/images/portfolio/11.jpg",
+      "original_dimensions": [
+        8256,
+        5504
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "2fb0af7fb7e8a72a11b3814ce281f77bb2e3d68c37e500233652c187b2c3ebba",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Bull elk",
+        "recorded_filename": "DSC_9390.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_9390.jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "NOTE_second_elk_now_at_slot_21",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: NOTE_second_elk_now_at_slot_21"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 12,
+      "current_title": "Mountain Goat and Kid",
+      "etsy_title_recorded": "Mountain Goat and Kid \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\12 - DSC_2486-Edit.tif",
+      "recorded_catalog_path": "K:\\2016\\2016-06-21\\DSC_2486-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/12.jpg",
+      "public_image_path": "/assets/images/portfolio/12.jpg",
+      "original_dimensions": [
+        4916,
+        3593
+      ],
+      "web_dimensions": [
+        1400,
+        1023
+      ],
+      "web_sha256": "9b68f3fce67f6e9bea6cd69c9c6bd80db7f0c39a00b4ed70a3ed74e8d7276a23",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Mountain Goat and Kid",
+        "recorded_filename": "DSC_2486-Edit.tif",
+        "folder_labels": [
+          "2016",
+          "2016-06-21",
+          "DSC_2486-Edit.tif"
+        ],
+        "print_best": "OK_through_12x18",
+        "print_holds": "HOLD_20x30_below_200ppi|HOLD_20x30_mountain_goat",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi|HOLD_20x30_mountain_goat"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 13,
+      "current_title": "Sandhill cranes",
+      "etsy_title_recorded": "Sandhill cranes \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\13 - DSC_4394-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2017\\2017-03-20\\DSC_4394-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/13.jpg",
+      "public_image_path": "/assets/images/portfolio/13.jpg",
+      "original_dimensions": [
+        5760,
+        3840
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "85c5bf2e237f457ebcd6fc7fb56ceca017081fff4e6fe3fc2231f3b1f255f005",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Sandhill cranes",
+        "recorded_filename": "DSC_4394-Edit-Edit.tif",
+        "folder_labels": [
+          "2017",
+          "2017-03-20",
+          "DSC_4394-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "HOLD_20x30_below_200ppi",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 14,
+      "current_title": "Horse portrait",
+      "etsy_title_recorded": "Horse portrait \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\14 - DSC_2108-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\Mustangs 2015-03-24\\DSC_2108-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/14.jpg",
+      "public_image_path": "/assets/images/portfolio/14.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "0e7f7a2b0950a329bc4b5677c499bc838e7c79797f5042f6484911d0b44dd528",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Horse portrait",
+        "recorded_filename": "DSC_2108-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "Mustangs 2015-03-24",
+          "DSC_2108-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 15,
+      "current_title": "Tractor",
+      "etsy_title_recorded": "Tractor \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\15 - DSC_1989-Edit-B+W-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\Mustangs 2015-03-24\\DSC_1989-Edit-B+W-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/15.jpg",
+      "public_image_path": "/assets/images/portfolio/15.jpg",
+      "original_dimensions": [
+        7500,
+        5000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "8365d8e001e7e38564ed28efbbe1166b733bf06cc29f3bd3478ad31f5fc4eb24",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Tractor",
+        "recorded_filename": "DSC_1989-Edit-B+W-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "Mustangs 2015-03-24",
+          "DSC_1989-Edit-B+W-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 16,
+      "current_title": "Waterfall",
+      "etsy_title_recorded": "Waterfall \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\16 - DSC_9267-Edit-2.tif",
+      "recorded_catalog_path": "K:\\2014\\2014-07-27\\DSC_9267-Edit-2.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/16.jpg",
+      "public_image_path": "/assets/images/portfolio/16.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "4532eecde0c823084b5e44ae37c9e7ab22e7ecf8e9c3b18bc48437ca01afd526",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Waterfall",
+        "recorded_filename": "DSC_9267-Edit-2.tif",
+        "folder_labels": [
+          "2014",
+          "2014-07-27",
+          "DSC_9267-Edit-2.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 17,
+      "current_title": "Star trails over the lake",
+      "etsy_title_recorded": "Star trails over the lake \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\17 - DSC_9015-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2016\\Star Trails 2016-02-09\\DSC_9015-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/17.jpg",
+      "public_image_path": "/assets/images/portfolio/17.jpg",
+      "original_dimensions": [
+        7500,
+        5001
+      ],
+      "web_dimensions": [
+        1400,
+        934
+      ],
+      "web_sha256": "3f9dfdf875b1c7f6ff5578eb52558ba35744d84e9eaf8de1ddbf6447eb45e894",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Star trails over the lake",
+        "recorded_filename": "DSC_9015-Edit-Edit.tif",
+        "folder_labels": [
+          "2016",
+          "Star Trails 2016-02-09",
+          "DSC_9015-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 18,
+      "current_title": "Shiprock star trails",
+      "etsy_title_recorded": "Shiprock star trails \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\18 - DSC_9535-Edit-2.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\Live Photos\\Ready for print\\uploaded\\DSC_9535-Edit-2.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/18.jpg",
+      "public_image_path": "/assets/images/portfolio/18.jpg",
+      "original_dimensions": [
+        6016,
+        4016
+      ],
+      "web_dimensions": [
+        1400,
+        935
+      ],
+      "web_sha256": "0bb561dea86beb5110869922fd84884f0f6aab1b1e09d22173245e61169274bb",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Shiprock star trails",
+        "recorded_filename": "DSC_9535-Edit-2.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "Live Photos",
+          "Ready for print",
+          "uploaded",
+          "DSC_9535-Edit-2.jpg"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 19,
+      "current_title": "Snow cabins",
+      "etsy_title_recorded": "Snow cabins \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\19 - DSC_3229-Edit.tif",
+      "recorded_catalog_path": "K:\\2013\\2013-10-17\\DSC_3229-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/19.jpg",
+      "public_image_path": "/assets/images/portfolio/19.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "07efc3521ee01b0b92a2218a57c9028d298ae153dfc8ebe682c9dc9ad6308044",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Snow cabins",
+        "recorded_filename": "DSC_3229-Edit.tif",
+        "folder_labels": [
+          "2013",
+          "2013-10-17",
+          "DSC_3229-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 20,
+      "current_title": "Storm over the yellow house",
+      "etsy_title_recorded": "Storm over the yellow house \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\20 - DSC_1492-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\St. Elmo 2014-08-17\\DSC_1492-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/20.jpg",
+      "public_image_path": "/assets/images/portfolio/20.jpg",
+      "original_dimensions": [
+        5982,
+        3987
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "97e86afafc7e497d6ea72bc134a40304dbeb1d323f73982c39c03414d8fe2e0a",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Storm over the yellow house",
+        "recorded_filename": "DSC_1492-Edit-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "St. Elmo 2014-08-17",
+          "DSC_1492-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "HOLD_20x30_below_200ppi",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 21,
+      "current_title": "Into The Mist",
+      "etsy_title_recorded": "Into The Mist \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\21 - Into The Mist.jpg",
+      "recorded_catalog_path": "K:\\2017\\2017-11-06\\Into The Mist.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/21.jpg",
+      "public_image_path": "/assets/images/portfolio/21.jpg",
+      "original_dimensions": [
+        7520,
+        5020
+      ],
+      "web_dimensions": [
+        1400,
+        935
+      ],
+      "web_sha256": "3d4c6b5cb8c463a30daaba482a9cc3cef03c96b19926920288cfa0605e698e9e",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Into The Mist",
+        "recorded_filename": "Into The Mist.jpg",
+        "folder_labels": [
+          "2017",
+          "2017-11-06",
+          "Into The Mist.jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "SUBJECT_OVERLAP_elk_with_slot_11|SUBJECT_OVERLAP_elk_with_slot_11",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: SUBJECT_OVERLAP_elk_with_slot_11|SUBJECT_OVERLAP_elk_with_slot_11"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 22,
+      "current_title": "Mining dredge",
+      "etsy_title_recorded": "Mining dredge \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\22 - DSC_6683-Edit-Edit-2-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\Fall\\2014-09-20\\DSC_6683-Edit-Edit-2-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/22.jpg",
+      "public_image_path": "/assets/images/portfolio/22.jpg",
+      "original_dimensions": [
+        5949,
+        3967
+      ],
+      "web_dimensions": [
+        1400,
+        934
+      ],
+      "web_sha256": "ebfbe2eb6a58077bb3db3f451cd49cde34dcbe0c55a43aaba42dab13a9a70a87",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Mining dredge",
+        "recorded_filename": "DSC_6683-Edit-Edit-2-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "Fall",
+          "2014-09-20",
+          "DSC_6683-Edit-Edit-2-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "HOLD_20x30_below_200ppi",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 23,
+      "current_title": "Mountain Gas Station",
+      "etsy_title_recorded": "Mountain Gas Station \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\23 - DSC_7149-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\Fall\\2014-09-22\\DSC_7149-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/23.jpg",
+      "public_image_path": "/assets/images/portfolio/23.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "16cdf4739aed971be8233a49472aeb496a853b82a9f1fbbce6d784621f8bfd30",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Mountain Gas Station",
+        "recorded_filename": "DSC_7149-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "Fall",
+          "2014-09-22",
+          "DSC_7149-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 24,
+      "current_title": "Aspen valley",
+      "etsy_title_recorded": "Aspen valley \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\24 - DSC_0240_1-Edit-Edit.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\Live Photos\\Ready for print\\uploaded\\DSC_0240_1-Edit-Edit.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/24.jpg",
+      "public_image_path": "/assets/images/portfolio/24.jpg",
+      "original_dimensions": [
+        6034,
+        4028
+      ],
+      "web_dimensions": [
+        1400,
+        935
+      ],
+      "web_sha256": "b670ea60e598d7fb6b7ad3c943897936a6f3c7c97fcf68e60e477fd73f094c9c",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Aspen valley",
+        "recorded_filename": "DSC_0240_1-Edit-Edit.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "Live Photos",
+          "Ready for print",
+          "uploaded",
+          "DSC_0240_1-Edit-Edit.jpg"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 25,
+      "current_title": "Cabin at sunset",
+      "etsy_title_recorded": "Cabin at sunset \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\25 - DSC_6980-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\2015-07-17 17.46.34\\DSC_6980-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/25.jpg",
+      "public_image_path": "/assets/images/portfolio/25.jpg",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "f425efe0c532afdb87538c1a21fdfb7756d194389986ce4a32b1345927c1310a",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Cabin at sunset",
+        "recorded_filename": "DSC_6980-Edit-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "2015-07-17 17.46.34",
+          "DSC_6980-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 26,
+      "current_title": "Locomotive",
+      "etsy_title_recorded": "Locomotive \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\26 - DSC_0375-HDR-Edit-Edit-2.tif",
+      "recorded_catalog_path": "K:\\2015\\2015-05-26\\2015\\2015-05-26\\DSC_0375-HDR-Edit-Edit-2.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/26.jpg",
+      "public_image_path": "/assets/images/portfolio/26.jpg",
+      "original_dimensions": [
+        4886,
+        7330
+      ],
+      "web_dimensions": [
+        933,
+        1400
+      ],
+      "web_sha256": "161a4f73a1bfe4c21b9ca2121408b6d22362e9f396f35e431e7726ec6d306252",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Locomotive",
+        "recorded_filename": "DSC_0375-HDR-Edit-Edit-2.tif",
+        "folder_labels": [
+          "2015",
+          "2015-05-26",
+          "2015",
+          "2015-05-26",
+          "DSC_0375-HDR-Edit-Edit-2.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 27,
+      "current_title": "Weathered Caboose in Winter",
+      "etsy_title_recorded": "Weathered Caboose in Winter \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\27 - DSC_2943-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2015\\2015-03-25\\DSC_2943-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/27.jpg",
+      "public_image_path": "/assets/images/portfolio/27.jpg",
+      "original_dimensions": [
+        6264,
+        4055
+      ],
+      "web_dimensions": [
+        1400,
+        906
+      ],
+      "web_sha256": "8f84702f818e3ffe39dda8cd31811a8acef8945e27385b38b6c5e2e2daf8edbb",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Weathered Caboose in Winter",
+        "recorded_filename": "DSC_2943-Edit-Edit.tif",
+        "folder_labels": [
+          "2015",
+          "2015-03-25",
+          "DSC_2943-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 28,
+      "current_title": "Barn and Tetons",
+      "etsy_title_recorded": "Barn and Tetons \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\28 - DSC_6751-HDR.tif",
+      "recorded_catalog_path": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 4 2014-06-20\\DSC_6751-HDR.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/28.jpg",
+      "public_image_path": "/assets/images/portfolio/28.jpg",
+      "original_dimensions": [
+        10800,
+        4712
+      ],
+      "web_dimensions": [
+        1400,
+        611
+      ],
+      "web_sha256": "2105a0bcdfe9af4188182e5d601878f2f295f09c64b6f67a660e10303f1c4340",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Barn and Tetons",
+        "recorded_filename": "DSC_6751-HDR.tif",
+        "folder_labels": [
+          "2014",
+          "Grand Teton 2014",
+          "Grand_Teton Day 4 2014-06-20",
+          "DSC_6751-HDR.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 29,
+      "current_title": "Wooden chapel",
+      "etsy_title_recorded": "Wooden chapel \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\29 - DSC_6525-HDR-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\Moab\\2014-03-09\\DSC_6525-HDR-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/29.jpg",
+      "public_image_path": "/assets/images/portfolio/29.jpg",
+      "original_dimensions": [
+        7531,
+        3600
+      ],
+      "web_dimensions": [
+        1400,
+        669
+      ],
+      "web_sha256": "261c31d5dd9b8485189d8a1a0cc22ca26ff0bb0a1da713649fe3bc567e073bd4",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Wooden chapel",
+        "recorded_filename": "DSC_6525-HDR-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "Moab",
+          "2014-03-09",
+          "DSC_6525-HDR-Edit.tif"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 30,
+      "current_title": "Wildflower Range Panorama",
+      "etsy_title_recorded": "Wildflower Range Panorama \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\30 - DSC_2138-Pano-2-Edit.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_2138-Pano-2-Edit.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/30.jpg",
+      "public_image_path": "/assets/images/portfolio/30.jpg",
+      "original_dimensions": [
+        20044,
+        6681
+      ],
+      "web_dimensions": [
+        1400,
+        467
+      ],
+      "web_sha256": "6e8b450424f56292981a9dea392f8eb744e83245243ac3d118b8b5f05ebdca9b",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Wildflower Range Panorama",
+        "recorded_filename": "DSC_2138-Pano-2-Edit.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_2138-Pano-2-Edit.jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "WIDE_PANORAMA_crop_needed_for_3x2",
+        "size_matrix_traditional": "10x30"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: WIDE_PANORAMA_crop_needed_for_3x2",
+        "Recorded sizes have no price in the 12x18/16x24/20x30 schedule: 10x30"
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 31,
+      "current_title": "Wild Iris at Dusk",
+      "etsy_title_recorded": "Wild Iris at Dusk \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\31 - DSC_5166.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5166.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/31.jpg",
+      "public_image_path": "/assets/images/portfolio/31.jpg",
+      "original_dimensions": [
+        5504,
+        8256
+      ],
+      "web_dimensions": [
+        933,
+        1400
+      ],
+      "web_sha256": "002588fa1f0fc016316b905bf3ff514178926f2c97be0feb9ba97510cea33857",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Wild Iris at Dusk",
+        "recorded_filename": "DSC_5166.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_5166.jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 32,
+      "current_title": "Autumn Valley After the Storm",
+      "etsy_title_recorded": "Autumn Valley After the Storm \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "existing_website_export_retained_source_sha256_matches_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\32 - DSC_0168_1.jpg",
+      "recorded_catalog_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_0168_1.jpg",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/32.jpg",
+      "public_image_path": "/assets/images/portfolio/32.jpg",
+      "original_dimensions": [
+        11562,
+        5551
+      ],
+      "web_dimensions": [
+        1400,
+        672
+      ],
+      "web_sha256": "ed90347ca80ce7352e6bb60abcc1cb0afff38f7161ef1e7c13b4f4ab2f3ee395",
+      "color": "existing_website_jpeg_not_reexported",
+      "verified_facts": {
+        "recorded_title": "Autumn Valley After the Storm",
+        "recorded_filename": "DSC_0168_1.jpg",
+        "folder_labels": [
+          "C:\\",
+          "Users",
+          "bitte",
+          "OneDrive",
+          "Desktop",
+          "Portfiolo",
+          "DSC_0168_1.jpg"
+        ],
+        "print_best": "OK_through_20x30",
+        "print_holds": "",
+        "size_matrix_traditional": "12x18|16x24"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only."
+      ],
+      "onedrive_online_only_at_read": false
+    },
+    {
+      "rank": 33,
+      "current_title": "Main Street, Still Standing",
+      "etsy_title_recorded": "Main Street, Still Standing \u2014 Fine Art Print (Open & Collector)",
+      "source_match": "sha256_and_dimensions_match_final33_manifest",
+      "source_path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\33 - DSC_1482-Edit-Edit.tif",
+      "recorded_catalog_path": "K:\\2014\\St. Elmo 2014-08-17\\DSC_1482-Edit-Edit.tif",
+      "web_asset": "cloudflare-pages/assets/images/portfolio/33.jpg",
+      "public_image_path": "/assets/images/portfolio/33.jpg",
+      "original_dimensions": [
+        5998,
+        3997
+      ],
+      "web_dimensions": [
+        1400,
+        933
+      ],
+      "web_sha256": "147ea33d44e6bcf153376254d9f499ec65ee4409470e2b5e472c0149844f56da",
+      "color": "icc_to_srgb",
+      "verified_facts": {
+        "recorded_title": "Main Street, Still Standing",
+        "recorded_filename": "DSC_1482-Edit-Edit.tif",
+        "folder_labels": [
+          "2014",
+          "St. Elmo 2014-08-17",
+          "DSC_1482-Edit-Edit.tif"
+        ],
+        "print_best": "OK_through_16x24",
+        "print_holds": "HOLD_20x30_below_200ppi",
+        "size_matrix_traditional": "12x18"
+      },
+      "etsy_listing_id": null,
+      "blockers": [
+        "No photograph story is recorded.",
+        "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
+        "Shipping calculator and package weight are not verified.",
+        "No Etsy seller API token is available, so no draft listing was created.",
+        "Acrylic face-mount stays future-only.",
+        "Print holds: HOLD_20x30_below_200ppi"
+      ],
+      "onedrive_online_only_at_read": false
+    }
+  ]
+}
