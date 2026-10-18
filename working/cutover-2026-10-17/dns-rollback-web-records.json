@@ -1,0 +1,47 @@
+{
+  "exported_at_utc": "2026-10-18T05:44:32Z",
+  "zone_id": "535e11cdec117601ae9a8b2e33d4092b",
+  "zone": "bitterbuffaloart.com",
+  "account_id": "f3ee68d66369fd4b2bc390d1dae218f6",
+  "nameservers_do_not_change": ["burt.ns.cloudflare.com", "melina.ns.cloudflare.com"],
+  "dnssec_status": "active",
+  "dmarc": null,
+  "caa": null,
+  "web_records_to_restore_on_rollback": [
+    {
+      "id": "1e7592cf3be35c100236aa755fabe217",
+      "type": "A",
+      "name": "bitterbuffaloart.com",
+      "content": "23.227.38.65",
+      "ttl": 1,
+      "proxied": false
+    },
+    {
+      "id": "16fbdd808a7907022bbbf82918504739",
+      "type": "AAAA",
+      "name": "bitterbuffaloart.com",
+      "content": "2620:127:f00f:5::",
+      "ttl": 1,
+      "proxied": false
+    },
+    {
+      "id": "af7572b2d6d89744d10b84711dbf23de",
+      "type": "CNAME",
+      "name": "www.bitterbuffaloart.com",
+      "content": "shops.myshopify.com",
+      "ttl": 1,
+      "proxied": false
+    }
+  ],
+  "mail_and_verification_preserve_exactly": [
+    {"type": "MX", "name": "bitterbuffaloart.com", "content": "smtp.google.com", "priority": 1, "ttl": 1, "id": "2f60eca194500c788f68ea06707efbfc"},
+    {"type": "TXT", "name": "bitterbuffaloart.com", "content": "v=spf1 include:_spf.google.com ~all", "id": "e42a98c7a54f2d5ae3da5074db78e295"},
+    {"type": "TXT", "name": "bitterbuffaloart.com", "content": "openai-domain-verification=dv-v5aF591nx7yXYLF9iO5vpKNx", "id": "6db7ac9c21a3bb4236aa01c7df89b259"},
+    {"type": "TXT", "name": "google._domainkey.bitterbuffaloart.com", "id": "bdc4383354189f64d3df79be2fb89f28"},
+    {"type": "TXT", "name": "cf2024-1._domainkey.bitterbuffaloart.com", "id": "2a44e7dc8dc64ae5a9d37433abe41ed3"},
+    {"type": "TXT", "name": "_github-pages-challenge-bitterbuffaloart.bitterbuffaloart.com", "id": "292d0ec50fbb28368013fcc18ce6058a"}
+  ],
+  "pages_rollback_deployment": "51426674-8cf1-4965-801b-e85820c34965",
+  "verified_source_commit": "c605b247a4e152499aa111396ec7a629167c05e7",
+  "actions_run": "39097826959"
+}

@@ -1,0 +1,37 @@
+# One-shot authorized cutover helper. Uses existing Pages-scoped token.
+# Does not print secret values. Manual workflow_dispatch only.
+name: Cutover custom domains
+on:
+  workflow_dispatch:
+    inputs:
+      step:
+        description: 'export | add-domains | set-web-dns | status'
+        required: true
+        default: 'status'
+permissions:
+  contents: read
+jobs:
+  cutover:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Require credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test "$CLOUDFLARE_ACCOUNT_ID" = 'f3ee68d66369fd4b2bc390d1dae218f6'
+      - name: Run cutover step
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CUTOVER_STEP: ${{ inputs.step }}
+          ZONE_ID: '535e11cdec117601ae9a8b2e33d4092b'
+          PROJECT: 'bitter-buffalo-art'
+        run: node working/cutover-domains.mjs

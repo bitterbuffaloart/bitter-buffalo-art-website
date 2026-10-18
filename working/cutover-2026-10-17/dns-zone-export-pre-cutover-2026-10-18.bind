@@ -1,0 +1,30 @@
+;;
+;; Domain:     bitterbuffaloart.com.
+;; Exported:   2026-10-18 05:44:32
+;; Pre-cutover authoritative export for rollback.
+;;
+;; SOA Record
+bitterbuffaloart.com	3600	IN	SOA	burt.ns.cloudflare.com. dns.cloudflare.com. 2054396887 10000 2400 604800 3600
+
+;; NS Records
+bitterbuffaloart.com.	86400	IN	NS	burt.ns.cloudflare.com.
+bitterbuffaloart.com.	86400	IN	NS	melina.ns.cloudflare.com.
+
+;; A Records
+bitterbuffaloart.com.	1	IN	A	23.227.38.65 ; cf_tags=cf-proxied:false
+
+;; AAAA Records
+bitterbuffaloart.com.	1	IN	AAAA	2620:127:f00f:5:: ; cf_tags=cf-proxied:false
+
+;; CNAME Records
+www.bitterbuffaloart.com.	1	IN	CNAME	shops.myshopify.com. ; cf_tags=cf-proxied:false
+
+;; MX Records
+bitterbuffaloart.com.	1	IN	MX	1 smtp.google.com.
+
+;; TXT Records
+bitterbuffaloart.com.	1	IN	TXT	"openai-domain-verification=dv-v5aF591nx7yXYLF9iO5vpKNx"
+bitterbuffaloart.com.	1	IN	TXT	"v=spf1 include:_spf.google.com ~all"
+cf2024-1._domainkey.bitterbuffaloart.com.	1	IN	TXT	"v=DKIM1; h=sha256; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiweykoi+o48IOGuP7GR3X0MOExCUDY/BCRHoWBnh3rChl7WhdyCxW3jgq1daEjPPqoi7sJvdg5hEQVsgVRQP4DcnQDVjGMbASQtrY4WmB1VebF+RPJB2ECPsEDTpeiI5ZyUAwJaVX7r6bznU67g7LvFq35yIo4sdlmtZGV+i0H4cpYH9+3JJ78k" "m4KXwaf9xUJCWF6nxeD+qG6Fyruw1Qlbds2r85U9dkNDVAS3gioCvELryh1TxKGiVTkg4wqHTyHfWsp7KD3WQHYJn0RyfJJu6YEmL77zonn7p2SRMvTMP3ZEXibnC9gz3nnhR6wcYL8Q7zXypKTMD58bTixDSJwIDAQAB"
+_github-pages-challenge-bitterbuffaloart.bitterbuffaloart.com.	1	IN	TXT	"678e4f96d39069f8dcbb83f11ebe90"
+google._domainkey.bitterbuffaloart.com.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAst+vHidq6ZFztj/NC9u+aXhJghnEaFHX2gsq8owXkKyZczEm97zQKC0mDGgwBo9XWoIyvbYDpiBqxRlCfDsrd/HZEA5VPqg+HurbxR4dNnxQMEHNHu3Ue9PtDCt0jn0vZxxhSv2U9wCkQztZr2BP3wV9S3wYO2VYW/5RPDXjrMcaUd1ebOt+YFG+/Q5zXLsUV" "QJ7XOHDDOMe1cPXAcSe0DVIldhga17ulJQ/NWa99G+OjMjk3szY917L180gcQTu8RH+eMXCU0mhS929vw9kyRvjYSOsD+/qwbr+XHmZMkBFsK85taZtmClTUh6ZFUAaHDqhSTa5MuoNwPKKBZmw3QIDAQAB"
