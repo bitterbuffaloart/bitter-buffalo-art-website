@@ -14,23 +14,23 @@ Only work in the independent website repository. Never touch DNS/Shopify/origina
 Updated: 2026-10-17 (America/Denver)
 
 ## Owner (5–10 minutes) — unlock auto-deploy
-1. GitHub → `bitterbuffaloart/bitter-buffalo-art-website` → Settings → Secrets and variables → Actions  
-   - `CLOUDFLARE_API_TOKEN` = API token with **Account → Cloudflare Pages → Edit**  
-   - `CLOUDFLARE_ACCOUNT_ID` = `f3ee68d66369fd4b2bc390d1dae218f6`  
-2. Actions → **Deploy Cloudflare Pages** → Run workflow (or push a tiny change).  
-3. Confirm a new successful deploy and https://bitter-buffalo-art.pages.dev/ updates.  
+1. GitHub → `bitterbuffaloart/bitter-buffalo-art-website` → Settings → Secrets and variables → Actions
+   - `CLOUDFLARE_API_TOKEN` = API token with **Account → Cloudflare Pages → Edit**
+   - `CLOUDFLARE_ACCOUNT_ID` = `f3ee68d66369fd4b2bc390d1dae218f6`
+2. Actions → **Deploy Cloudflare Pages** → Run workflow (or push a tiny change).
+3. Confirm a new successful deploy and https://bitter-buffalo-art.pages.dev/ updates.
 
 ## Optional (dashboard)
-- Install Cloudflare Workers & Pages GitHub App on org `bitterbuffaloart` for native Git builds.  
-- When ready, set production branch to `main` (today production_branch is still `preview`).  
+- Install Cloudflare Workers & Pages GitHub App on org `bitterbuffaloart` for native Git builds.
+- When ready, set production branch to `main` (today production_branch is still `preview`).
 
 ## Before Oct 21, 2026
-- Phone QA: nav, Events gallery, Contact tabs, Photography Final 33.  
-- Follow `DOMAIN_CUTOVER_CHECKLIST.md` only after explicit DNS approval.  
+- Phone QA: nav, Events gallery, Contact tabs, Photography Final 33.
+- Follow `DOMAIN_CUTOVER_CHECKLIST.md` only after explicit DNS approval.
 
 ## Do not
-- Touch `bitterbuffaloart/BitterBuffaloArt`.  
-- Change `bitterbuffaloart.com` DNS.  
+- Touch `bitterbuffaloart/BitterBuffaloArt`.
+- Change `bitterbuffaloart.com` DNS.
 - Publish Shopify theme or cancel Shopify.
 
 ## Independent GitHub QA — 2026-10-17 evening
@@ -40,4 +40,3 @@ Updated: 2026-10-17 (America/Denver)
 **Contact delivery is a cutover blocker (source verified, delivery NOT TESTED):** `cloudflare-pages/functions/api/contact.js` currently returns HTTP 503 unless `RESEND_API_KEY` is configured. `cloudflare-pages/assets/js/site.js` then falls back to a browser POST at `https://bitterbuffaloart.com/contact`, which currently relies on Shopify. Once the domain moves to Cloudflare that fallback cannot be assumed to deliver. Configure a verified Cloudflare-native message delivery method, conduct a real owner-approved test of all three form types, and verify the messages arrive before moving DNS. If a Pages Function test fails, preserve a clearly visible email contact route rather than implying successful delivery.
 
 **Production cutover remains UNAUTHORIZED.** Do not alter live Shopify, Cloudflare custom-domain DNS, Art Builder, Photo Culler, or Lightroom. The existing Pages Direct Upload deployment can remain as-is until auto-deploy and contact delivery are proven.
-

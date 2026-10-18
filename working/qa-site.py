@@ -46,13 +46,18 @@ def check(root, base=None):
             try:
                 req=urllib.request.Request(url,headers={'User-Agent':'BitterBuffalo-QA/2.0'})
                 with urllib.request.urlopen(req,timeout=30) as r: body=r.read(); status=r.status; mime=r.headers.get('Content-Type','')
-                same=hashlib.sha256(body).digest()==hashlib.sha256((root/path).read_bytes()).digest()
+                expected=(root/path).read_bytes()
+                # Git checks text out with CRLF on Windows and LF on Linux runners.
+                if pathlib.Path(path).suffix in ['.html','.css','.js','.svg','.txt','.xml']:
+                    body_for_hash=body.replace(b'\r\n',b'\n');expected=expected.replace(b'\r\n',b'\n')
+                else: body_for_hash=body
+                same=hashlib.sha256(body_for_hash).digest()==hashlib.sha256(expected).digest()
                 return {'path':path,'status':status,'bytes':len(body),'matches_source':same,'content_type':mime}
             except Exception as e: return {'path':path,'error':str(e)}
         with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool: http=list(pool.map(fetch,sorted(resources)))
         errors.extend(f'HTTP mismatch: {x}' for x in http if x.get('status')!=200 or not x.get('matches_source'))
         # Invalid input never delivers mail; this also proves Functions were bundled.
-        req=urllib.request.Request(base.rstrip('/')+'/api/contact',data=b'{}',headers={'Content-Type':'application/json'},method='POST')
+        req=urllib.request.Request(base.rstrip('/')+'/api/contact',data=b'{}',headers={'Content-Type':'application/json','User-Agent':'BitterBuffalo-QA/2.0'},method='POST')
         try:
             with urllib.request.urlopen(req,timeout=20) as r: status=r.status; body=r.read()
         except urllib.error.HTTPError as e: status=e.code; body=e.read()
@@ -60,7 +65,7 @@ def check(root, base=None):
         try: valid=status==400 and json.loads(body).get('ok') is False
         except Exception: valid=False
         http.append({'path':'api/contact (invalid input only)','status':status,'validation_pass':valid})
-        if not valid: errors.append('Contact Function must return JSON 400 for invalid input')
+        if not valid: errors.append(f'Contact Function must return JSON 400 for invalid input (got HTTP {status})')
     return {'pages':len(pages),'resources':len(resources),'portfolio_unique':33,'etsy_urls':sorted(etsy),'errors':errors,'http':http}
 
 if __name__=='__main__':

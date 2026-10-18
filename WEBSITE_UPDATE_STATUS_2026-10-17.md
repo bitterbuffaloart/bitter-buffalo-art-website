@@ -43,6 +43,22 @@ No paid service was purchased or subscribed to.
 - Native Direct Upload → Git integration conversion is unsupported in place. Use Actions;
   do not create a replacement project or change production branch as a routine fix.
 
+## Controlled push checkpoint
+- Pushed merge commit 0ed86b50ec4aaefde9a9e75504857a9ad89c373e, preserving remote audit
+  commits 0441d15 and b25be63. No history overwritten.
+- Actions run 39092650707 passed source validation, mock contact tests, packaging,
+  credential checks, and actual Pages upload. Candidate: https://ba725c9f.bitter-buffalo-art.pages.dev/.
+- Its final smoke check blocked publication: Python's default User-Agent received Cloudflare
+  403/1010 on the invalid contact request. Static assets all passed in CI.
+- Fixed the smoke request to use the same explicit QA User-Agent as asset requests.
+  Independent recheck: all 55 public resources pass; contact invalid-input returns JSON 400.
+- Added text line-ending normalization for independent Windows-vs-Linux comparisons.
+  Binary image checks remain exact. This does not loosen content checks or suppress errors.
+- Working preview stayed on cf69ac66; no production update was attempted.
+- Etsy shop opened successfully in authenticated Chrome, showing BitterBuffaloArt and 31 items.
+  Every existing website shopping link resolves to this exact shop URL. No unverified listing
+  links were added, and the 33 portfolio photographs are still not asserted to be listed.
+
 ## Remaining cutover gates
 1. Prove the new Actions run and isolated deployment, then browser-check candidate.
 2. Configure owner-approved standalone email delivery on a free allowance and prove receipt,
@@ -59,8 +75,8 @@ Update this checkpoint with actual outcomes. See cloudflare-pages/DEPLOY.md.
 ## Earlier handoff (historical; superseded where contradicted above)
 
 # Bitter Buffalo Art website update — status
-Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview live)**  
-**NEXT_ACTION:** see `NEXT_ACTION.md` in this folder.  
+Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview live)**
+**NEXT_ACTION:** see `NEXT_ACTION.md` in this folder.
 **Master handoff:** Art Builder `project-record/BITTER_BUFFALO_MASTER_HANDOFF_2026-10-17.md`
 
 ## Live environment
@@ -79,19 +95,19 @@ Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview
 | Art Builder GitHub | https://github.com/bitterbuffaloart/BitterBuffaloArt (**do not overwrite**) |
 
 ## Architecture
-- Cloudflare Pages = permanent public website hosting (Direct Upload today)  
-- GitHub `bitter-buffalo-art-website` = website source of truth  
-- Auto-deploy path A: GitHub Actions → Wrangler Direct Upload (workflow committed; needs repo secrets)  
-- Auto-deploy path B: Native Pages↔Git (blocked until Cloudflare GitHub App is installed on org + project converted/connected in dashboard)  
-- Etsy = merchandise, payments, checkout  
-- No Shopify cart on the static site  
+- Cloudflare Pages = permanent public website hosting (Direct Upload today)
+- GitHub `bitter-buffalo-art-website` = website source of truth
+- Auto-deploy path A: GitHub Actions → Wrangler Direct Upload (workflow committed; needs repo secrets)
+- Auto-deploy path B: Native Pages↔Git (blocked until Cloudflare GitHub App is installed on org + project converted/connected in dashboard)
+- Etsy = merchandise, payments, checkout
+- No Shopify cart on the static site
 
 ## Completed this session
-1. Confirmed independent repo `bitterbuffaloart/bitter-buffalo-art-website` (empty → pushed website history).  
-2. Pushed commits `8a103bc` + `c6918e0` (events booth photos, hero legibility, contact `/api/contact` fallback, Actions workflow, verify script).  
-3. Redeployed complete site to Pages production alias (`cf69ac66`, branch `preview`).  
-4. HTTP verify: all key routes **200**; Events booth images live; Final 33 portfolio refs present; Etsy shop-home links on pages.  
-5. Contact / custom / laser forms complete with Pages Function + Shopify browser fallback.  
+1. Confirmed independent repo `bitterbuffaloart/bitter-buffalo-art-website` (empty → pushed website history).
+2. Pushed commits `8a103bc` + `c6918e0` (events booth photos, hero legibility, contact `/api/contact` fallback, Actions workflow, verify script).
+3. Redeployed complete site to Pages production alias (`cf69ac66`, branch `preview`).
+4. HTTP verify: all key routes **200**; Events booth images live; Final 33 portfolio refs present; Etsy shop-home links on pages.
+5. Contact / custom / laser forms complete with Pages Function + Shopify browser fallback.
 6. DNS / Shopify / Art Builder / Photo Culler / Lightroom untouched.
 
 ## Verified URLs (2026-10-17 evening)
@@ -106,12 +122,12 @@ Date: 2026-10-17 (America/Denver) — **permanent migration in progress (preview
 | https://www.etsy.com/shop/BitterBuffaloArt | bot GET 403 — shop home still the only linked URL (owner-known) |
 
 ## Remaining blockers
-1. **GitHub Actions secrets** (owner, free): add `CLOUDFLARE_API_TOKEN` (Pages Edit) + `CLOUDFLARE_ACCOUNT_ID`=`f3ee68d66369fd4b2bc390d1dae218f6` so push→deploy works.  
-2. **Optional native Git connect:** Cloudflare dashboard → Workers & Pages → install “Cloudflare Workers and Pages” app on org `bitterbuffaloart` → grant `bitter-buffalo-art-website`. Note: existing project is Direct Upload; connecting Git may require a new Pages project or dashboard-managed conversion — do not guess.  
-3. Switch Pages `production_branch` from `preview` → `main` in dashboard when ready (API patch returned auth error from MCP).  
-4. Individual Etsy listing URLs (bot 403) before deep-linking.  
-5. MX/SPF/DKIM inventory + owner DNS cutover approval (`DOMAIN_CUTOVER_CHECKLIST.md`).  
-6. Optional Resend secrets for Cloudflare-native contact email (no paid plan purchased by agent).  
+1. **GitHub Actions secrets** (owner, free): add `CLOUDFLARE_API_TOKEN` (Pages Edit) + `CLOUDFLARE_ACCOUNT_ID`=`f3ee68d66369fd4b2bc390d1dae218f6` so push→deploy works.
+2. **Optional native Git connect:** Cloudflare dashboard → Workers & Pages → install “Cloudflare Workers and Pages” app on org `bitterbuffaloart` → grant `bitter-buffalo-art-website`. Note: existing project is Direct Upload; connecting Git may require a new Pages project or dashboard-managed conversion — do not guess.
+3. Switch Pages `production_branch` from `preview` → `main` in dashboard when ready (API patch returned auth error from MCP).
+4. Individual Etsy listing URLs (bot 403) before deep-linking.
+5. MX/SPF/DKIM inventory + owner DNS cutover approval (`DOMAIN_CUTOVER_CHECKLIST.md`).
+6. Optional Resend secrets for Cloudflare-native contact email (no paid plan purchased by agent).
 7. Do not cancel Shopify until cutover verified.
 
 ## Protections honored
@@ -124,4 +140,3 @@ No DNS change · no Shopify cancel/theme publish · Art Builder repo not overwri
 - Inspected `cloudflare-pages/functions/api/contact.js` and `cloudflare-pages/assets/js/site.js`. Without Cloudflare-native email credentials, the Function returns 503 and the browser submits to Shopify. Thus delivery from the site after a DNS migration **is NOT VERIFIED and blocks cutover**. All three form types must pass a real recipient-delivery test before the domain switch.
 - The existing Pages deployment and new-route HTTP 200 evidence are reported in this status from the local worker. This independent GitHub audit did not create a new Cloudflare deployment or independently execute the published URLs (Pages host inaccessible through its external fetch environment).
 - No source code, DNS, Shopify themes, original photographs, Art Builder, Photo Culler, or Lightroom were modified by this audit.
-
