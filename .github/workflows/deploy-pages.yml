@@ -66,7 +66,16 @@ jobs:
           CANDIDATE_URL: ${{ steps.candidate.outputs.deployment-url }}
         run: |
           test -n "$CANDIDATE_URL"
-          python working/qa-site.py cloudflare-pages --base "$CANDIDATE_URL"
+          ok=0
+          for attempt in 1 2 3 4 5 6; do
+            if python working/qa-site.py cloudflare-pages --base "$CANDIDATE_URL"; then
+              ok=1
+              break
+            fi
+            echo "Candidate not ready (attempt $attempt); waiting 15s"
+            sleep 15
+          done
+          test "$ok" = 1
       - name: Publish verified site to working preview only when enabled
         if: vars.ENABLE_PREVIEW_PUBLISH == 'true'
         uses: cloudflare/wrangler-action@v4
@@ -78,4 +87,14 @@ jobs:
           command: pages deploy public --project-name=bitter-buffalo-art --branch=preview --commit-hash=${{ github.sha }}
       - name: Verify working preview after publication
         if: vars.ENABLE_PREVIEW_PUBLISH == 'true'
-        run: python working/qa-site.py cloudflare-pages --base https://bitter-buffalo-art.pages.dev
+        run: |
+          ok=0
+          for attempt in 1 2 3 4 5 6; do
+            if python working/qa-site.py cloudflare-pages --base https://bitter-buffalo-art.pages.dev; then
+              ok=1
+              break
+            fi
+            echo "Working preview not ready (attempt $attempt); waiting 15s"
+            sleep 15
+          done
+          test "$ok" = 1
