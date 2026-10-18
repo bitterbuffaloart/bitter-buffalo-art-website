@@ -47,7 +47,8 @@ working/push-index*
 working/retarget-*
 working/run-upsert*
 working/strip-*
-working/verify-*
+working/verify-restore.js
+working/verify-theme-query.js
 working/test-contact*
 working/parse-events*
 working/patch-settings*

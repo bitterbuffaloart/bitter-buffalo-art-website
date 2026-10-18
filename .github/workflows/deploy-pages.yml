@@ -1,0 +1,43 @@
+# Auto-deploy the static Cloudflare Pages site on push to main.
+# Uses Direct Upload (Wrangler) so the existing project `bitter-buffalo-art`
+# stays intact. Native Pages↔Git connect requires a one-time Cloudflare
+# GitHub App install in the bitterbuffaloart org (see DEPLOY.md).
+#
+# Required GitHub Actions secrets (repo Settings → Secrets):
+#   CLOUDFLARE_API_TOKEN   — Account permission: Cloudflare Pages Edit
+#   CLOUDFLARE_ACCOUNT_ID  — f3ee68d66369fd4b2bc390d1dae218f6
+name: Deploy Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cloudflare-pages/**'
+      - '.github/workflows/deploy-pages.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Verify site root
+        run: test -f cloudflare-pages/index.html
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # Project production_branch is currently `preview` (Direct Upload era).
+          # Deploy to that branch so pages.dev updates until production_branch is switched to main in the dashboard.
+          command: pages deploy cloudflare-pages --project-name=bitter-buffalo-art --branch=preview

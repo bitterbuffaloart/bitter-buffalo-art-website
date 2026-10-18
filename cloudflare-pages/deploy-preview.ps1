@@ -9,6 +9,8 @@
 $ErrorActionPreference = 'Stop'
 
 $Project = 'bitter-buffalo-art'
+# Pages project production_branch is still `preview` (Direct Upload).
+# Deploying to `preview` updates https://bitter-buffalo-art.pages.dev/
 $Branch = 'preview'
 $AccountId = if ($env:CLOUDFLARE_ACCOUNT_ID) { $env:CLOUDFLARE_ACCOUNT_ID } else { 'f3ee68d66369fd4b2bc390d1dae218f6' }
 $env:CLOUDFLARE_ACCOUNT_ID = $AccountId
