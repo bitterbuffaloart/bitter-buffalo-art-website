@@ -5,6 +5,10 @@ Working preview: https://bitter-buffalo-art.pages.dev/.
 Its Pages production branch is named preview; main is the GitHub source branch.
 Keep this mapping until a deliberate, verified change is made. Do not change DNS.
 
+Proven Actions publication: run 39094227881 (commit e90c888) → working deploy ab4e5847.
+Repository secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID are configured;
+ENABLE_PREVIEW_PUBLISH=true. Rotate the Pages-only token before 2027-01-15.
+
 ## GitHub Actions
 
 Required repository secrets: CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID.
