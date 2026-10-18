@@ -1,3 +1,55 @@
+# Verified current state — 2026-10-17, America/Denver
+
+## Outcome
+- Independent website repo: https://github.com/bitterbuffaloart/bitter-buffalo-art-website.
+- Starting HEAD 53aa53b confirmed locally and remotely. Preserved subsequent remote audit
+  commits 0441d15 and b25be63 with a normal merge; no force push or rewritten history.
+- Published website commit: e90c8887190dcd7b176afbd93064450cfd761d2a.
+- Full automatic publication run SUCCESS:
+  https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39094227881.
+- That push ran validation, candidate upload, 55-resource and contact checks, working-preview
+  publication, and working-preview checks. Every step passed.
+- Candidate from that run: https://57214fe3.bitter-buffalo-art.pages.dev/.
+- Working production deployment: https://ab4e5847.bitter-buffalo-art.pages.dev/.
+- Working preview alias: https://bitter-buffalo-art.pages.dev/.
+- GitHub source branch main → Pages production branch named preview. This mapping is
+  deliberately preserved; ENABLE_PREVIEW_PUBLISH=true. Candidate verification always precedes publication.
+- A separate independent HTTP check of the working alias passed all 55 resources and
+  JSON 400 invalid contact input after publication. Text comparisons normalize only
+  platform line endings; binary image comparisons remain exact.
+
+## Website and credentials
+- Fixed clipped mobile headline without changing approved mountain artwork.
+- All 42 existing image files unchanged byte for byte; Final 33 portfolio maintained.
+- Existing five event-history entries and two booth photos preserved and rendered.
+- All nine deployed pages browser-checked at actual 390 and 1280 pixel widths, with no
+  horizontal overflow or broken eager images; mobile menu and keyboard tabs checked.
+- Contact failures retain entries and offer an email draft; no Shopify-domain fallback.
+  Server validation and mocked delivery checks pass. Production Pages runtime has NO secrets;
+  automatic inbox delivery is NOT configured or proven. No real test message sent.
+- Etsy shop home verified in Chrome (31 items visible). Every existing purchase CTA uses
+  that exact URL. No individual photography listings asserted to be published.
+- Account Pages-Edit-only token approved by user, encrypted into repository Actions
+  secrets, expires January 15, 2027. No DNS or Workers permission; no OAuth token reused.
+- Deployment notes updated to this independent repo; legacy extraction generator must
+  not be run over the hand-edited static site. Packaged assets exclude docs/scripts/caches.
+
+## Remaining blockers and next actions
+1. Choose/configure owner-approved free email delivery and verify receipt for all three
+   form types, or explicitly choose to launch with the tested manual email-draft workflow.
+2. Export complete DNS/mail records, including DKIM/CAA; public read-only snapshot confirms
+   Shopify A/AAAA/www, Cloudflare nameservers, Google MX and SPF. No DMARC TXT returned.
+3. Approve exact domain cutover later. Follow DOMAIN_CUTOVER_CHECKLIST.md, including HTTPS,
+   mail preservation, redirect inventory, and rollback. No domain has been attached to Pages.
+4. Publish and verify photography Etsy listings separately when ready; portfolio is functional.
+5. Rotate Actions deployment token before January 15, 2027.
+
+## Protections
+No DNS write, live Shopify theme publish/cancellation, Art Builder or Photo Culler changes,
+Lightroom/original-photo access or edits, paid services, or invented artwork/event history.
+Shopify remains on the live domain. Older state entries below are historical and superseded.
+
+---
 # Latest deployment checkpoint — 2026-10-17, America/Denver
 
 - Controlled push aa4e0e7aefb3b47e3c58aeca8da5962164cbb533 → Actions run
