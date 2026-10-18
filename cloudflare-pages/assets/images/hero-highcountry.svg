@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 820" preserveAspectRatio="xMidYMid meet" focusable="false" aria-hidden="true">
+  <!-- Editable source: homepage mountain / alpine pond / stream (Phase 4).
+       Pond sits on a mid-slope shelf; stream exits downhill — not from the summit. -->
+  <rect width="1600" height="820" fill="#F7F4EE"/>
+  <rect width="1600" height="820" fill="#F3E7CF" fill-opacity="0.28"/>
+  <path fill="none" stroke="#2D2418" stroke-opacity="0.18" stroke-width="1" d="M0 86 Q220 58 420 90 T860 78 T1280 96 T1600 70"/>
+  <path fill="none" stroke="#A5522E" stroke-opacity="0.16" stroke-width="0.9" d="M0 118 Q260 92 520 122 T1040 108 T1600 126"/>
+  <circle cx="1288" cy="108" r="46" fill="#C4A35A" fill-opacity="0.88"/>
+  <circle cx="1288" cy="108" r="68" fill="none" stroke="#C4A35A" stroke-opacity="0.35" stroke-width="1.4"/>
+  <!-- Far ridges (summits stay dry) -->
+  <path fill="#2D2418" d="M-40 412 168 248l112 86L448 168l150 118 168-132L940 246l150-96 170 110 180-78L1640 268v552H-40z"/>
+  <path fill="#A5522E" d="M-40 498 210 348l128 78L520 318l168 102 186-94 176 86 188-72 172 78 250-54 210 96v282H-40z"/>
+  <!-- Mid-slope foothill shelf for the spring -->
+  <path fill="#3A2A22" d="M-40 596 148 478l132 62L464 452l154 86 176-70 168 74 190-58 186 70 230-40L1640 612v208H-40z"/>
+  <!-- Small alpine pond / spring on the mid-slope shelf (below rust ridge peaks) -->
+  <ellipse cx="742" cy="468" rx="58" ry="24" fill="#065F66" fill-opacity="0.5"/>
+  <ellipse cx="742" cy="464" rx="48" ry="18" fill="#087C85"/>
+  <ellipse cx="730" cy="458" rx="20" ry="7" fill="#7EC8CE" fill-opacity="0.55"/>
+  <!-- Downhill outlet on the lower-left rim -->
+  <path fill="#087C85" d="M694 474c-8 10-14 18-16 28h30c4-10 2-18-2-28z"/>
+  <!-- Stream follows downhill terrain from the pond toward the forest edge -->
+  <path fill="none" stroke="#087C85" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"
+        d="M688 498c-22 36-8 70-18 108s-28 72 2 110 10 74-8 112"/>
+  <path fill="none" stroke="#38A6AD" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"
+        d="M688 498c-22 36-8 70-18 108s-28 72 2 110 10 74-8 112"/>
+  <path fill="none" stroke="#F3E7CF" stroke-opacity="0.35" stroke-width="2.5" stroke-linecap="round"
+        d="M688 498c-22 36-8 70-18 108s-28 72 2 110"/>
+  <!-- Foreground pines -->
+  <path fill="#2D2418" d="m84 820 46-168 46 168zm96 0 28-104 28 104zm132 0 38-140 38 140zm108 0 22-86 22 86zm980 0 54-188 54 188zm-92 0 32-118 32 118zm-78 0 24-92 24 92zm-620 0 42-152 42 152zm72 0 26-98 26 98z"/>
+  <path fill="#087C85" d="m98 820 32-104 32 104zm1112 0 36-118 36 118zm-516 0 26-92 26 92z"/>
+</svg>

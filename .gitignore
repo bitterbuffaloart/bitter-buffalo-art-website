@@ -1,0 +1,15 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.wrangler/
+cloudflare-pages/.wrangler/
+working/pull-tmp/
+working/theme-push/
+working/backups/
+.env
+.env.*
+!.env.example
+**/secrets*
+**/*credential*
+**/*token*

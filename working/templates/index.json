@@ -1,0 +1,455 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "homepage_atmosphere": {
+      "type": "homepage-atmosphere",
+      "name": "Homepage atmosphere",
+      "settings": {}
+    },
+    "homepage_hero": {
+      "type": "homepage-hero",
+      "name": "Homepage hero",
+      "settings": {}
+    },
+    "custom_liquid_Ae4HNa": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<style>\n  .bb-trust-bar {\n    display: grid;\n    grid-template-columns: repeat(3, 1fr);\n    gap: 18px;\n    padding: 22px 5%;\n    background: #087C85;\n    color: #F3E7CF;\n    text-align: center;\n    border-bottom: 0;\n  }\n\n  .bb-trust-item {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    gap: 12px;\n    font-weight: 700;\n    letter-spacing: .03em;\n    color: #F3E7CF;\n  }\n\n  .bb-trust-item svg {\n    width: 34px;\n    height: 34px;\n    flex: 0 0 34px;\n    color: #C4A35A;\n  }\n\n  @media screen and (max-width: 749px) {\n    .bb-trust-bar {\n      grid-template-columns: 1fr;\n      gap: 16px;\n    }\n  }\n</style>\n\n<div class=\"bb-trust-bar\">\n\n  <div class=\"bb-trust-item\">\n    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M7 7.5 4.5 5 3 6.5l2.2 3.2M17 7.5 19.5 5 21 6.5l-2.2 3.2\"/>\n      <path d=\"M7.2 8.2c0-3 2-4.7 4.8-4.7s4.8 1.7 4.8 4.7c0 3-1.6 5.6-3.3 7.1v4.2L12 22l-1.5-2.5v-4.2c-1.7-1.5-3.3-4.1-3.3-7.1Z\"/>\n      <path d=\"M9.2 10.5h.1M14.7 10.5h.1M10.3 14.2l1.7 1.2 1.7-1.2\"/>\n    </svg>\n    <span>Original Bitter Buffalo Art</span>\n  </div>\n\n  <div class=\"bb-trust-item\">\n    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"M12 21V5.5a2.5 2.5 0 0 1 5 0v3.2\"/>\n      <path d=\"M17 8.7v2.8a2 2 0 0 1-4 0\"/>\n      <path d=\"M12 13.5a2 2 0 0 1-4 0v-3a2.5 2.5 0 0 0-5 0V14\"/>\n      <path d=\"M3 14a2 2 0 0 0 4 0v-1.5M12 21H6M18 21h-3\"/>\n    </svg>\n    <span>Handmade in Colorado</span>\n  </div>\n\n  <div class=\"bb-trust-item\">\n    <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n      <path d=\"m2 20 6.2-10 3.2 4.6L15 8l7 12H2Z\"/>\n      <path d=\"m6.7 12.5 1.5 1.2 1.4-1M13.2 10.7 15 12l1.8-1.3\"/>\n      <path d=\"M2 20h20\"/>\n    </svg>\n    <span>Built to Live With &amp; Love</span>\n  </div>\n\n</div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "bb_event_home_cta": {
+      "type": "bb-event-home-cta",
+      "name": "Homepage giveaway CTA",
+      "settings": {},
+      "disabled": true
+    },
+    "image_banner_nwLmpC": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_dnpBBV": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_HmKPaR": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_tVkDbV": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_dnpBBV",
+        "text_HmKPaR",
+        "buttons_tVkDbV"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/780580746_2093940871191790_975045172898657249_n.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": true,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "trust_badges_dpPqeC": {
+      "type": "trust-badges",
+      "blocks": {
+        "trust_badge_KLFypC": {
+          "type": "trust_badge",
+          "settings": {
+            "svg_code": "<svg viewbox=\"0 0 24 24\"><path d=\"M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18s-.41-.06-.57-.18l-7.9-4.44A.991.991 0 013 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18s.41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9zM12 4.15L5.4 7.86l6.6 3.71 6.6-3.71L12 4.15zm0 15.7l6-3.38V9.73l-6 3.38v6.74zm-2-6.74l-6-3.38v6.74l6 3.38v-6.74z\"></path></svg>",
+            "text": "Handcrafted Wood Art"
+          }
+        },
+        "trust_badge_EjKAiX": {
+          "type": "trust_badge",
+          "settings": {
+            "svg_code": "<svg viewbox=\"0 0 24 24\"><path d=\"M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z\"></path></svg>",
+            "text": "Colorado Inspired"
+          }
+        },
+        "trust_badge_VxCgyG": {
+          "type": "trust_badge",
+          "settings": {
+            "svg_code": "<svg viewbox=\"0 0 24 24\"><path d=\"M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z\"></path></svg>",
+            "text": "Made With Love"
+          }
+        }
+      },
+      "block_order": [
+        "trust_badge_KLFypC",
+        "trust_badge_EjKAiX",
+        "trust_badge_VxCgyG"
+      ],
+      "disabled": true,
+      "name": "Trust Badges (Slider)",
+      "settings": {
+        "bg_color": "#008ba2",
+        "text_color": "#ffffff",
+        "icon_color": "#ffffff",
+        "border_color": "#1e362d",
+        "icon_size": 32,
+        "text_size_desktop": 20,
+        "text_size_mobile": 16,
+        "gap_desktop": 100,
+        "gap_mobile": 20,
+        "marquee_speed": 15,
+        "padding_top": 5,
+        "padding_bottom": 5
+      }
+    },
+    "featured_collection_KXpwUk": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "new-arrivals",
+        "products_to_show": 12,
+        "title": "New Arrivals",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "subtitle",
+        "columns_desktop": 2,
+        "enable_desktop_slider": true,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-00bc27e8-4693-4c6e-a32e-d236c1e38092",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "all-products": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "all",
+        "products_to_show": 12,
+        "title": "Featured collection",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": true,
+        "description_style": "subtitle",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "collection_pillars_zEFkgR": {
+      "type": "collection-pillars",
+      "blocks": {
+        "collection_card_ecxKXX": {
+          "type": "collection_card",
+          "disabled": true,
+          "settings": {
+            "collection": "laser-wood-art",
+            "custom_image": "shopify://shop_images/ac02b167-a1cd-4e54-9bf7-5422b4a3e617.png",
+            "custom_title": "LASER WOOD ART",
+            "description": "Coming soon. Preview selected studio concepts.",
+            "button_text": "Coming Soon"
+          }
+        },
+        "collection_card_P6zCeb": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "fine-art-photography",
+            "custom_image": "shopify://shop_images/DSC_0604-2_ac9ba187-41ea-429b-81d4-390c8815aef3.jpg",
+            "custom_title": "PHOTOGRAPHY",
+            "description": "",
+            "button_text": "Shop Photography"
+          }
+        },
+        "collection_card_jzHtHR": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "tie-dye-archive",
+            "custom_image": "shopify://shop_images/backcountry-tie-dye-earth-tone-shirt.jpg",
+            "custom_title": "TIE-DYE",
+            "description": "",
+            "button_text": "View Tie-Dye Portfolio"
+          }
+        },
+        "collection_card_YgUQTw": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "custom-engraving",
+            "custom_image": "shopify://shop_images/fd5fc78e-526f-48c7-b33a-dfd4165c4c7f.png",
+            "custom_title": "CUSTOM ART",
+            "description": "",
+            "button_text": "View Custom Art",
+            "custom_url": "shopify://pages/custom-orders"
+          }
+        },
+        "collection_card_ghfdRq": {
+          "type": "collection_card",
+          "settings": {
+            "collection": "tapestries",
+            "custom_image": "shopify://shop_images/20260609_140756.jpg",
+            "custom_title": "TAPESTRIES",
+            "description": "",
+            "button_text": "Shop on Etsy",
+            "custom_url": "https://www.etsy.com/shop/BitterBuffaloArt"
+          }
+        },
+        "collection_card_qk9jwt": {
+          "type": "collection_card",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "custom_image": "shopify://shop_images/Firefly_Gemini_Flash_68.png",
+            "custom_title": "",
+            "description": "Discover our handcrafted selection.",
+            "button_text": "Shop Now"
+          }
+        },
+        "collection_card_HzKrP9": {
+          "type": "collection_card",
+          "disabled": true,
+          "settings": {
+            "collection": "",
+            "custom_title": "",
+            "description": "Discover our handcrafted selection.",
+            "button_text": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "collection_card_ecxKXX",
+        "collection_card_P6zCeb",
+        "collection_card_jzHtHR",
+        "collection_card_YgUQTw",
+        "collection_card_ghfdRq",
+        "collection_card_qk9jwt",
+        "collection_card_HzKrP9"
+      ],
+      "name": "Collection Pillars",
+      "settings": {
+        "heading": "Explore Our Collections",
+        "max_width": 1400,
+        "columns_desktop": 3,
+        "columns_mobile": "1",
+        "image_ratio": "square",
+        "heading_size_desktop": 48,
+        "card_title_size_desktop": 24,
+        "card_desc_size_desktop": 16,
+        "btn_size_desktop": 16,
+        "heading_size_mobile": 32,
+        "card_title_size_mobile": 20,
+        "card_desc_size_mobile": 14,
+        "btn_size_mobile": 14,
+        "bg_color": "#F7F4EE",
+        "heading_color": "#2D2418",
+        "overlay_text_color": "#f7f4ee",
+        "btn_bg_color": "#A5522E",
+        "btn_text_color": "#F7F4EE",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "image_banner_gjQcxY": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_iBPCA3": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_N3rwpJ": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "buttons_PjQBnC": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_iBPCA3",
+        "text_N3rwpJ",
+        "buttons_PjQBnC"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/36936610-ff9a-4703-ba4f-5d47ccab81e5.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "brandstory_PMJH7N": {
+      "type": "brandstory",
+      "name": "Brand Story",
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_Jun_3_2026_10_27_08_AM_2b790526-f6f1-4ba6-8a80-6332197764f9.png",
+        "image_ratio": "square",
+        "image_position": "right",
+        "subheading": "Meet the Maker",
+        "heading": "Crafted with love in Breckenridge, CO.",
+        "text": "<p>Created in Breckenridge, Colorado, Bitter Buffalo Art brings together original high-country photography, laser-cut woodwork, custom commissions, and one-of-a-kind hand-dyed cloth. Every piece is designed, photographed, dyed, cut, engraved, assembled, or finished by hand.</p>",
+        "heading_size_desktop": 40,
+        "heading_size_mobile": 32,
+        "subheading_size": 14,
+        "text_size": 18,
+        "btn_size": 16,
+        "button_label": "Read Our Story",
+        "button_link": "shopify://pages/about",
+        "bg_color": "#A5522E",
+        "heading_color": "#F3E7CF",
+        "text_color": "#F3E7CF",
+        "btn_bg_color": "#2D2418",
+        "btn_text_color": "#F3E7CF",
+        "padding_top": 55,
+        "padding_bottom": 50
+      }
+    },
+    "gallery_aqrQ3c": {
+      "type": "gallery",
+      "blocks": {
+        "image_TLqF8b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Firefly_Gemini_Flash_Now_make_it_a_full_vintage_illustration_no_writing_no_buildings_385189_1_1.png"
+          }
+        },
+        "image_fG4cxN": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20260627_113911.jpg"
+          }
+        },
+        "image_4depPd": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20260628_143532.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_TLqF8b",
+        "image_fG4cxN",
+        "image_4depPd"
+      ],
+      "disabled": true,
+      "name": "Masonry Gallery",
+      "settings": {
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "featured_blog_dzAt69": {
+      "type": "featured-blog",
+      "disabled": true,
+      "name": "t:sections.featured-blog.presets.name",
+      "settings": {
+        "blog": "news",
+        "post_limit": 3,
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "columns_desktop": 3,
+        "show_view_all": true,
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "homepage_atmosphere",
+    "custom_liquid_Ae4HNa",
+    "homepage_hero",
+    "bb_event_home_cta",
+    "image_banner_nwLmpC",
+    "trust_badges_dpPqeC",
+    "featured_collection_KXpwUk",
+    "all-products",
+    "collection_pillars_zEFkgR",
+    "image_banner_gjQcxY",
+    "brandstory_PMJH7N",
+    "gallery_aqrQ3c",
+    "featured_blog_dzAt69"
+  ]
+}
