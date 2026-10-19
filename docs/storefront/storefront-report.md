@@ -1,41 +1,45 @@
 # Grand Tetons pilot
 
-Rechecked 2026-10-19: `LUMAPRINTS_API_KEY` and `LUMAPRINTS_API_SECRET` are still unset in the Windows user environment, and the gitignored website `.env` does not exist. The sandbox API was not called.
+Sandbox `GET /stores` returned HTTP 200. Store id **90604**, name Bitter Buffalo Art. No order was created. No payment was taken. 16×24 retail stays **$199.33**. 20×30 stays unavailable at about 191.5 PPI. Owner-reported **$90.13** is not an API cost. The $34.39 figure is the API base only.
 
-Public title: Grand Tetons, photograph #01, DSC_2626. 20×30 stays unavailable.
+## Configuration
 
-## Verified costs
+Subcategory **101003**, `1.50in Stretched Canvas`.
 
-| Size | Retail | Stretch base, before foamcore and hardware | Full production | Shipping |
-| --- | --- | --- | --- | --- |
-| 12×18 | Not verified | $26.49 | Not recorded | Not a calculator quote |
-| 16×24 | $199.33 | $34.39 | Not recorded | Not a calculator quote |
-| 20×30 | Not verified | $50.37 | Not recorded | Not a calculator quote |
+| Piece | Catalog result |
+| --- | --- |
+| 1.5-inch canvas | Confirmed. Subcategory 101003. |
+| Mirror wrap | Confirmed. Canvas Border option 2. Price $0. |
+| Foamcore | Confirmed. Canvas Underlayer option 10. |
+| Backing and hanging hardware | Confirmed as one option, id 7: Black Backboard backing with hanging wire installed. The catalog does not sell backing and wire as two separate groups. |
+| Canvas finish | Not confirmed. The group lists Semi-Glossy option 212 (default) and Matte option 213. Neither appeared in the price response. |
 
-`13_PREMIUM_CANVAS_CONFIGURATION.md` and `14_LUMAPRINTS_PRICING_VERIFICATION.md` record the 1.5-inch mirror-wrap stretch base only. Foamcore, black backboard, and installed wire are the selected upgrades, and their dollar amounts are blank (`TBD_CART` / `INCLUDED_OR_TBD`). The cart-quote table is empty. No record states a fully upgraded 16×24 total near $90–$92. The worksheet’s $22 customer-shipping figure for 16×24 is marked `ESTIMATED_NOT_CALCULATOR`. The 1.5-inch floating-frame base of $74.01 is a different SKU and is still before foamcore.
+## Costs returned by the sandbox
 
-Detail: `profitability.md`.
+| Size | Base `price` | Backboard and wire | Foamcore | Sum of returned lines | Sale |
+| --- | --- | --- | --- | --- | --- |
+| 12×18 | $26.49 | $9.08 | $4.92 | $40.49 | Closed. Retail not verified. |
+| 16×24 | $34.39 | $9.08 | $7.04 | $50.51 | Closed. Retail $199.33. |
+| 20×30 | $50.37 | $9.08 | $9.76 | $69.21 | Unavailable. About 191.5 PPI. |
 
-## Real integration results
+## Shipping
 
-- LumaPrints sandbox catalog and `POST /pricing/products` were not called. `LUMAPRINTS_API_KEY` and `LUMAPRINTS_API_SECRET` are unset in the process, user, and machine environment, and no `.env` file exists.
-- Square sandbox was not called. `SQUARE_ACCESS_TOKEN` and `SQUARE_LOCATION_ID` are unset. No payment link was created.
-- `node --test working/test-print-storefront.mjs`: 15 passed, 0 failed. These are local unit tests, not sandbox orders or payments.
-- `npx wrangler whoami` (wrangler 4.151.1): not logged in. The saved auth token has expired and could not be refreshed. The session is non-interactive. `CLOUDFLARE_API_TOKEN` is unset. D1 database `bitter-buffalo-prints` and R2 bucket `bitter-buffalo-print-masters` were not created. Bindings `PRINTS_DB` and `PRINT_MASTERS` are not on the Pages project.
-- The print master is on disk (`01 - DSC_2626-Edit-no water mark.jpg`, 14,172,423 bytes). It was not uploaded and it is not in git.
-- `GET /api/prints/master` can serve that object only with an HMAC token that expires within 15 minutes, and only after `PRINT_MASTERS` exists. That route is not deployed. No fulfillment URL was issued to LumaPrints.
-- Customer checkout remains refused. No production order was submitted.
+Quoted separately to the LumaPrints documentation sample address in Anaheim, CA 92805, not to a Breckenridge address.
 
-## Current blockers
+| Size | Lowest returned method | Ground economy | USPS Ground Advantage |
+| --- | --- | --- | --- |
+| 12×18 | USPS Ground Advantage $8.65 | $10.42 | $8.65 |
+| 16×24 | Ground economy $10.42 | $10.42 | $13.53 |
+| 20×30 | FedEx/UPS/GLS ground $13.94 | $20.70 | $14.62 |
 
-- LumaPrints sandbox API key and secret are missing, so the full production cost is still unknown.
-- Square sandbox access token, location id, and webhook signature key are missing.
-- Cloudflare auth is expired, so D1 and the private master bucket were not created.
-- Foamcore, hardware, and shipping have no verified dollar amounts.
-- 12×18 and 20×30 retail are not verified.
-- 20×30 remains below 200 PPI.
-- Purchases and production submission stay off until pricing, private master storage, and an authenticated sandbox test have passed.
+16×24 also returned USPS Priority $15.64, 2-day $35.47, overnight $45.29, and USPS Priority Express $31.62. No method is selected.
 
-## Next action
+## Unresolved
 
-Set `LUMAPRINTS_API_KEY` and `LUMAPRINTS_API_SECRET` in the Windows user environment or in the gitignored website `.env`, using the sandbox key pair only, and do not commit the values.
+- Canvas finish price.
+- The $39.62 difference between the 16×24 line sum of $50.51 and the owner-reported $90.13.
+- Shipping to the real destination.
+- Square fee and tax. Square was not called. `SQUARE_LOCATION_ID` is unset.
+- 12×18 and 20×30 retail.
+
+Detail is in `profitability.md`.

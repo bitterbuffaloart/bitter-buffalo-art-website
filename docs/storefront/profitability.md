@@ -1,42 +1,56 @@
 # Profitability — Grand Tetons canvas
 
-Public title remains Grand Tetons, photograph #01, DSC_2626. 16×24 retail stays $199.33. That retail was not calculated from the canvas base. 20×30 stays unavailable: local minimum about 191.5 PPI on the 5746×3831 file. The master was not upscaled or altered.
+Sandbox store returned by `GET /stores`: store id **90604**, name Bitter Buffalo Art. The response had no separate store-type field. No order was created.
 
-The pilot SKU is the stretched canvas, not the floating frame.
+Public title remains Grand Tetons. 16×24 retail stays **$199.33**. 20×30 stays unavailable at about 191.5 PPI. The master was not changed. Owner-reported **$90.13** is not an API cost.
 
-## What the records say
+## Configuration the sandbox catalog returned
 
-`13_PREMIUM_CANVAS_CONFIGURATION.md` (2026-10-17, draft):
+Subcategory **101003**, name `1.50in Stretched Canvas`, category Canvas id 101, required DPI 200. Landscape inches sent: 18×12, 24×16, 30×20.
 
-- Product: stretched canvas, 1.5-inch wood bars. Not 0.75 inch.
-- Edge: mirror wrap when the image allows it.
-- Canvas: archival poly-cotton 360 gsm, 0.48 mm, from the public canvas page.
-- Foamcore underlayer: available on 1.5-inch stretched canvas. Public price not listed. Marked TBD cart quote. Do not assume $0.
-- Backing: black backboard preferred. Confirm in the order UI. No dollar amount.
-- Hanging hardware: installed wire or upgraded hardware. Wire plus black backboard preferred. Three-point security may add cost. No dollar amount.
-- Spacer bars: not a separate LumaPrints line item.
-- Stretch base, before foamcore and hardware: 12×18 $26.49, 16×24 $34.39, 20×30 $50.37.
-- A different SKU, 1.5-inch floating frame, has its own base: 16×24 $74.01. 20×30 framed is an $88.00 estimate. That SKU is not this pilot.
+Options returned for that subcategory and used in the price request:
 
-`14_LUMAPRINTS_PRICING_VERIFICATION.md` reconfirms those same base figures. Its cart-quote table for foamcore, hardware, and shipping is empty. It says dollar add-ons are not on the public table. Shipping calculator quotes are still required. Worksheets stay `ESTIMATED_NOT_CALCULATOR`.
+| Group | Option id | Name | Selected |
+| --- | --- | --- | --- |
+| Canvas Border | 2 | Mirror Wrap | Yes |
+| Canvas Hanging Hardware | 7 | Black Backboard backing with hanging wire installed | Yes. This one option is both the black backboard and the installed wire. |
+| Canvas Underlayer | 10 | Foamcore Underlayer | Yes |
+| Canvas Finish | 212 Semi-Glossy (default), 213 Matte | Not confirmed. Sending either id did not add a finish line to the price response. |
 
-`Pricing_Worksheet_Five_Formats.csv`, row `canvas_1_5_stretched` / 16×24:
+Other hardware names exist and were not selected: sawtooth, wire only, backboard with sawtooth, loose wire, three-point security. Framed canvas is a different category. Its 1.50-inch subcategory is 102003 and was not priced.
 
-- Production $34.39, provenance `VERIFIED_pricing_page_1.5in`.
-- Foamcore column: `TBD_CART`.
-- Hardware column: `INCLUDED_OR_TBD`.
-- Customer shipping estimate $22.00. Seller-paid shipping $0.00 on the open row and $22.00 on the collector row.
-- Shipping status: `ESTIMATED_NOT_CALCULATOR`.
-- Note: mirror wrap plus black backboard and wire preferred; foamcore cost TBD in cart.
+## Sandbox product prices, 2026-10-19
 
-Those files do not record a fully upgraded 16×24 production total near $90–$92. They do not record a foamcore price or a hardware price. $34.39 is the stretch base only. $74.01 is the framed base, still before foamcore. Neither is the full production cost. The $22 shipping figure is an estimate, not a LumaPrints calculator quote.
+`POST /pricing/products` returned HTTP 200. The `price` field matches the recorded stretch base. Option prices came back on separate lines. The API did not return a combined total.
 
-## Verified costs
+| Size | API `price` (base) | Mirror Wrap | Black backboard with hanging wire | Foamcore | Sum of those returned lines |
+| --- | --- | --- | --- | --- | --- |
+| 12×18 | $26.49 | $0 | $9.08 | $4.92 | $40.49 |
+| 16×24 | $34.39 | $0 | $9.08 | $7.04 | $50.51 |
+| 20×30 | $50.37 | $0 | $9.08 | $9.76 | $69.21 |
 
-| Size | Retail | Stretch base | Foamcore | Hardware | Shipping | Full production | Sale |
+$34.39 stays labeled base-only. $50.51 is the sum of the 16×24 lines above. It is not $90.13. The gap from $50.51 to $90.13 is $39.62 and is not explained by this response.
+
+## Shipping quotes
+
+Separate `POST /pricing/shipping` calls returned HTTP 200. Destination was the address in the LumaPrints shipping documentation sample, Anaheim, CA 92805. No Breckenridge street is on file, so this is not a Breckenridge quote.
+
+| Size | Ground economy | USPS Ground Advantage | USPS Priority | FedEx/UPS/GLS ground | 2-day | Overnight | USPS Priority Express |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12×18 | Not verified | $26.49 | Not recorded | Not recorded | Estimate $14, not a calculator quote | Not recorded | Closed |
-| 16×24 | $199.33 | $34.39 | Not recorded | Not recorded | Estimate $22, not a calculator quote | Not recorded | Closed |
-| 20×30 | Not verified | $50.37 | Not recorded | Not recorded | Estimate $35, not a calculator quote | Not recorded | Unavailable, about 191.5 PPI |
+| 12×18 | $10.42 | $8.65 | $9.86 | $13.94 | $35.47 | $45.29 | $25.41 |
+| 16×24 | $10.42 | $13.53 | $15.64 | $13.94 | $35.47 | $45.29 | $31.62 |
+| 20×30 | $20.70 | $14.62 | $17.45 | $13.94 | $35.47 | $45.29 | $41.16 |
 
-No sandbox pricing response was added. Contribution stays blocked.
+No shipping method has been chosen.
+
+## Unresolved price components
+
+- Canvas finish, Semi-Glossy or Matte. Not present in the price lines.
+- Why the owner-reported $90.13 differs from the $50.51 sum.
+- A shipping quote to the real destination. The Anaheim figures are a documentation-sample quote.
+- Square processing fee. Square was not called. Location id is unset.
+- Tax.
+- 12×18 and 20×30 retail.
+- 20×30 remains unsellable on resolution, even though the sandbox returned a production price.
+
+16×24 contribution is still blocked. Retail $199.33 minus the $50.51 sum is not a margin, because finish, destination shipping, fee, and tax are unresolved.
