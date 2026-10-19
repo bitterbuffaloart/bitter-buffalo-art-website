@@ -32,8 +32,9 @@ for (const size of ['12x18', '16x24', '20x30']) assert.match(photography, new Re
 assert.match(photography, /option value="stretched-canvas"/);
 assert.doesNotMatch(photography, /Zno is under evaluation/);
 
-assert.match(photography, /Real LumaPrints Product Examples/);
-assert.equal((photography.match(/data-supplier-src=/g) || []).length, 16);
+assert.match(photography, /LumaPrints Materials & Product Examples/);
+assert.equal((photography.match(/<figure><a href="\/assets\/images\/lumaprints\//g) || []).length, 15);
+assert.doesNotMatch(photography, /<figure hidden>|data-supplier-src=/);
 assert.match(photography, /The sample artwork in these manufacturer photographs is not Bitter Buffalo Art photography/);
 assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com/i);
 assert.match(photography, /<option value="#14 · Horse portrait" disabled>/);
@@ -53,7 +54,15 @@ assert.equal(works.works.some((work) => /Whispers of the Hidden Forest|mystical 
 
 const laser = readFileSync('cloudflare-pages/laser-art/index.html', 'utf8');
 assert.match(laser, /https:\/\/www\.etsy\.com\/shop\/BitterBuffaloArt/);
-assert.match(laser, /complete sets together/);
+assert.match(laser, /COASTER-4PC-001/);
+assert.match(laser, /COASTER-4PC-002/);
+assert.match(laser, /COASTER-5PC-001/);
 assert.doesNotMatch(laser.slice(laser.indexOf('id="coaster-sets"'), laser.indexOf('id="engraved-wood"')), /<img/);
 
-console.log('PASS print catalog: 30 fixed-priced standard options, three print holds, four homepage cards, verified sketchbook titles, no invented coaster image.');
+for (const work of works.works.filter(w => w.categories.includes('paintings'))) {
+  assert.match(work.etsyUrl, /^https:\/\/www\.etsy\.com\/listing\/\d+\//);
+}
+const sketch = readFileSync('cloudflare-pages/sketchbook/index.html', 'utf8');
+assert.match(sketch, /sketch-etsy-link/);
+assert.match(sketch, /View Original on Etsy/);
+console.log('PASS print catalog: 30 prices, 15 visible supplier images, 3 painting Etsy links, three coaster set records.');
