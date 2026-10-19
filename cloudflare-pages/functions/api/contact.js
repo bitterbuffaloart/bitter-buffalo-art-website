@@ -10,9 +10,11 @@ export async function onRequestGet({ env = {} }) {
   return json(200, { ok: true, configured, channel: configured ? 'resend' : null });
 }
 
-const PRINT_MATERIALS = new Set(['framed-canvas', 'stretched-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
+const PRINT_MATERIALS = new Set(["framed-canvas","stretched-canvas","metal","giclee","hot-press","cold-press","somerset","traditional","glossy","metallic","acrylic"]);
 const PRINT_SIZES = new Set(['12x18', '16x24', '20x30', 'quote']);
-const PRINT_UNAVAILABLE = new Set(['#14 · Horse portrait', '#18 · Shiprock star trails']);
+// Server-authoritative open-edition retail values; tests enforce parity with public catalog.
+const PRINT_RETAIL_USD = {"framed-canvas":{"12x18":159.33,"16x24":199.33,"20x30":299.33},"stretched-canvas":{"12x18":109.33,"16x24":149.33,"20x30":219.33},"metal":{"12x18":179.99,"16x24":249.99,"20x30":359.99},"giclee":{"12x18":89.99,"16x24":129.99,"20x30":199.99},"hot-press":{"12x18":99.99,"16x24":149.99,"20x30":219.99},"cold-press":{"12x18":99.99,"16x24":149.99,"20x30":219.99},"somerset":{"12x18":109.99,"16x24":159.99,"20x30":249.99},"traditional":{"12x18":69.99,"16x24":109.99,"20x30":189.99},"glossy":{"12x18":79.99,"16x24":119.99,"20x30":199.99},"metallic":{"12x18":109.99,"16x24":169.99,"20x30":269.99}};
+const PRINT_UNAVAILABLE = new Set(['#14 · Horse portrait', '#18 · Shiprock star trails', '#24 · Aspen valley']);
 
 export async function onRequestPost({ request, env = {} }) {
   let raw;
@@ -28,19 +30,18 @@ export async function onRequestPost({ request, env = {} }) {
   if (data.website || data.company_url) return json(200, { ok: true, delivered: false });
   const kind = data.form_kind || 'general';
   if (kind === 'print-inquiry') {
-    const confirmedCanvas = data.material === 'framed-canvas' && data.size === '16x24';
+    const unitRetail = PRINT_RETAIL_USD[data.material]?.[data.size];
+    const count = Number(data.quantity || 0);
+    const retailNote = unitRetail === undefined ? 'retail_price: Special request — individually quoted' : `retail_price: ${unitRetail.toFixed(2)} USD each; print_subtotal: ${(unitRetail * count).toFixed(2)} USD, shipping not included`;
     data.body = [
       'Photography print inquiry. This is not a payment and does not place a supplier order.',
       `photograph: ${data.photograph || ''}`,
       `material: ${data.material || ''}`,
       `size: ${data.size || ''}`,
       `quantity: ${data.quantity || ''}`,
-      confirmedCanvas
-        ? 'retail_price: 199.33 USD for the 16x24 premium framed canvas only'
-        : 'retail_price: Request a Quote',
-      'production_cost: Request a Quote',
-      'shipping_cost: Request a Quote',
-      'production_time: Request a Quote',
+      retailNote,
+      'shipping: Confirmed before payment',
+      'supplier_order: Not placed',
       `postal_code: ${data.postal_code || ''}`,
       `instructions: ${data.instructions || ''}`,
     ].join('\n');
