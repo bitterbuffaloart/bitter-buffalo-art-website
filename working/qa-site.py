@@ -91,10 +91,10 @@ def check(root, base=None):
         if 'The sample artwork in these manufacturer photographs is not Bitter Buffalo Art photography' not in supplier_section:
             errors.append('Supplier example gallery must clearly distinguish sample art from studio photography')
         if not set(paths) <= {
-            'metal/metal-silver-glossy.jpg','metal/metal-vivid-details.webp','metal/metal-room-display.jpg','metal/metal-mounted-gallery.webp',
-            'paper/somerset-velvet.jpg','paper/paper-finishes.webp',
-            'canvas/stretched-canvas.jpg','canvas/mirror-wrap.jpg','canvas/solid-border-wrap.jpg','canvas/canvas-surface.webp',
-            'canvas/stretcher-profile.webp','canvas/foamcore-reinforcement.jpg',
+            'metal/metal-silver-glossy.jpg','metal/metal-vivid-details.png','metal/metal-room-display.jpg','metal/metal-mounted-gallery.webp',
+            'paper/somerset-velvet.jpg','paper/paper-finishes.png',
+            'canvas/stretched-canvas.jpg','canvas/mirror-wrap.jpg','canvas/solid-border-wrap.jpg','canvas/canvas-surface.png',
+            'canvas/stretcher-profile.png','canvas/foamcore-reinforcement.jpg',
             'framed/1-50-floating-frame.webp','framed/black-floating-frame.jpg','framed/hanging-wire.webp','framed/0-75-frame-comparison.webp'
         }:
             errors.append('Supplier gallery includes unreviewed source assets')
