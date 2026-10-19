@@ -155,7 +155,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="${p}/assets/css/site.css" />
 </head>
-<body>
+<body${active === 'shop' ? '' : ' class="western-page"'}>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header__inner">
@@ -203,6 +203,9 @@ ${body}
       </div>
     </div>
     <p class="site-footer__note">Purchases are fulfilled through our <a href="${ETSY}" target="_blank" rel="noopener noreferrer">Etsy shop</a>. This website does not process checkout.</p>
+    <div class="site-footer__land" aria-hidden="true">
+      <img src="${p}/assets/images/western-footer-landscape.svg" alt="" width="1600" height="360" />
+    </div>
   </footer>
   <script src="${p}/assets/js/site.js"></script>
 </body>
@@ -265,6 +268,9 @@ async function main() {
 
   const heroSvg = loadHeroSvg();
   fs.writeFileSync(path.join(ROOT, 'assets', 'images', 'hero-highcountry.svg'), fs.readFileSync(HERO_SVG_PATH));
+  for (const name of ['western-footer-landscape.svg', 'western-topo.svg', 'western-tumbleweed.svg']) {
+    fs.copyFileSync(path.join(__dirname, 'assets', name), path.join(ROOT, 'assets', 'images', name));
+  }
   fs.writeFileSync(path.join(ROOT, 'assets', 'css', 'site.css'), CSS);
   fs.writeFileSync(path.join(ROOT, 'assets', 'js', 'site.js'), JS);
   fs.writeFileSync(
@@ -1248,6 +1254,52 @@ a { color: var(--teal); }
   .hero h1 { font-size: clamp(1.85rem, 8vw, 2.4rem); overflow-wrap: anywhere; }
   .hero__disciplines { font-size: .95rem; }
   .event-grid, .contact-hub__choices, .bb-form__grid { grid-template-columns: 1fr; }
+}
+
+.western-page {
+  background-color: #f7f4ee;
+  background-image:
+    url("../images/western-topo.svg"),
+    radial-gradient(ellipse at 12% 0%, rgba(196,163,90,.16), transparent 42%),
+    radial-gradient(ellipse at 90% 30%, rgba(165,82,46,.07), transparent 36%);
+  background-size: 520px 520px, auto, auto;
+}
+.western-page::before,
+.western-page::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  background: url("../images/western-tumbleweed.svg") center / contain no-repeat;
+}
+.western-page::before {
+  width: 84px; height: 84px; left: 0; bottom: 22vh; opacity: .2;
+  animation: tumble-drift 46s ease-in-out infinite;
+}
+.western-page::after {
+  width: 58px; height: 58px; right: 1.5vw; top: 42vh; opacity: .14;
+  animation: tumble-drift 58s ease-in-out infinite reverse;
+}
+.site-header, main, .site-footer { position: relative; z-index: 1; }
+.site-footer { padding-bottom: 0; background: #efe6d4; }
+.site-footer__land {
+  margin: 1.5rem -1.25rem 0;
+  line-height: 0;
+  pointer-events: none;
+}
+.site-footer__land img { width: 100%; height: auto; display: block; }
+@keyframes tumble-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(16px, 6px, 0) rotate(10deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@media (max-width: 780px) {
+  .western-page::before { width: 52px; height: 52px; opacity: .14; bottom: 14vh; }
+  .western-page::after { width: 40px; height: 40px; opacity: .12; }
+  .site-footer__land { margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .western-page::before, .western-page::after { animation: none; }
 }
 `;
 

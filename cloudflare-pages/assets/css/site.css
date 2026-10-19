@@ -373,3 +373,54 @@ a { color: var(--teal); }
 @media (max-width: 900px) { .gallery--products { grid-template-columns: repeat(2,minmax(0,1fr)); } }
 @media (max-width: 620px) { .gallery--products { grid-template-columns: 1fr; } .product-card { display: grid; grid-template-columns: minmax(120px,42%) 1fr; } .product-card__image img { height: 100%; aspect-ratio: 1; } .product-card figcaption { align-self: center; padding: .7rem; } .product-card h3 { font-size: 1rem; } }
 @media (prefers-reduced-motion: reduce) { .product-card__image img { transition: none; } }
+
+/* Western page atmosphere. Decorative only — never intercepts clicks. */
+.western-page {
+  background-color: #f7f4ee;
+  background-image:
+    url("../images/western-topo.svg"),
+    radial-gradient(ellipse at 12% 0%, rgba(196,163,90,.16), transparent 42%),
+    radial-gradient(ellipse at 90% 30%, rgba(165,82,46,.07), transparent 36%);
+  background-size: 520px 520px, auto, auto;
+}
+.western-page::before,
+.western-page::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  background: url("../images/western-tumbleweed.svg") center / contain no-repeat;
+}
+.western-page::before {
+  width: 84px; height: 84px; left: 0; bottom: 22vh; opacity: .2;
+  animation: tumble-drift 46s ease-in-out infinite;
+}
+.western-page::after {
+  width: 58px; height: 58px; right: 1.5vw; top: 42vh; opacity: .14;
+  animation: tumble-drift 58s ease-in-out infinite reverse;
+}
+.site-header, main, .site-footer { position: relative; z-index: 1; }
+.site-footer { padding-bottom: 0; background: #efe6d4; }
+.site-footer__land {
+  margin: 1.5rem -1.25rem 0;
+  line-height: 0;
+  pointer-events: none;
+}
+.site-footer__land img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@keyframes tumble-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(16px, 6px, 0) rotate(10deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@media (max-width: 780px) {
+  .western-page::before { width: 52px; height: 52px; opacity: .14; bottom: 14vh; }
+  .western-page::after { width: 40px; height: 40px; opacity: .12; }
+  .site-footer__land { margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .western-page::before, .western-page::after { animation: none; }
+}
