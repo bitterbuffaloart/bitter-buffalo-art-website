@@ -617,3 +617,43 @@ body { color: var(--espresso); line-height: 1.65; }
   .site-footer__nav { gap: .2rem .65rem; }
   .site-footer__nav a, .site-footer__note { font-size: .82rem; }
 }
+
+/* Four original-art collections only: image-led cards on textured parchment. */
+.collections { max-width:1200px; margin:0 auto; padding:2.75rem 1.25rem 3.5rem; }
+.collections h2 { font:700 clamp(1.9rem,3.5vw,2.8rem)/1.2 var(--font-display); text-align:center; color:var(--espresso); margin:0 0 1.8rem; }
+.collections__grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.6rem; }
+.collection-card { display:flex; flex-direction:column; min-width:0; color:var(--espresso); text-decoration:none; padding:.8rem; background:linear-gradient(142deg,rgba(246,233,207,.93),rgba(228,204,162,.76)); border:1px solid rgba(77,53,30,.4); box-shadow:inset 0 0 0 3px rgba(244,234,214,.38); transition:border-color .2s ease,transform .2s ease; }
+.collection-card:hover { border-color:var(--teal); transform:translateY(-2px); }
+.collection-card:focus-visible { outline:3px solid var(--teal); outline-offset:4px; }
+.collection-card__art { display:block; overflow:hidden; aspect-ratio:16/10; background:rgba(228,204,162,.3); }
+.collection-card__art img { display:block; width:100%; height:100%; object-fit:cover; }
+.collection-card--sketchbook .collection-card__art img { object-fit:contain; padding:.45rem; }
+.collection-card__title { display:block; text-align:center; padding:1.1rem .3rem .7rem; font:700 clamp(1.1rem,2.3vw,1.5rem)/1.3 var(--font-display); text-wrap:balance; }
+@media(max-width:780px) { .collections__grid { grid-template-columns:1fr; gap:1.1rem; } .collections { padding:2rem 1rem 2.5rem; } }
+@media(prefers-reduced-motion:reduce) { .collection-card { transition:none; } }
+
+/* Portfolio galleries: no white boxes or printed listing names over the artwork.
+   Accessible titles remain in the DOM; artwork opens via existing links. */
+.western-page .gallery--portfolio { align-items:start; }
+.western-page .gallery--portfolio figure,
+.western-page .portfolio-feature figure { margin:0; border:0; box-shadow:none; background:transparent; }
+.western-page .gallery--portfolio img,
+.western-page .portfolio-feature img { display:block; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; background:transparent; }
+.western-page .gallery--portfolio figcaption,
+.western-page .gallery--products .product-card figcaption {
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+.western-page .gallery--products { align-items:start; }
+.western-page .gallery--products .product-card,
+.western-page .gallery--archive .product-card {
+  position:relative; display:block; border:0; background:transparent; box-shadow:none; overflow:visible;
+}
+.western-page .gallery--products .product-card__image { background:rgba(234,217,184,.36); border:1px solid rgba(77,53,30,.2); }
+.western-page .gallery--products .product-card__image:focus-visible { outline:3px solid var(--teal); outline-offset:3px; }
+.western-page .gallery--products .product-card__image img { display:block; width:100%; height:auto; aspect-ratio:1; object-fit:contain; }
+@media(max-width:620px) {
+  .western-page .gallery--products .product-card { display:block; }
+  .western-page .gallery--products { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.8rem; }
+  .western-page .gallery--products .product-card__image img { height:auto; }
+}
