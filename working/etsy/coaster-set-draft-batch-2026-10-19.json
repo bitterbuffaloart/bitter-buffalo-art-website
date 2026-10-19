@@ -11,7 +11,8 @@
     "Inspect current Etsy active/draft listings before creating to avoid duplicates",
     "Do not use cutting-board or food-safe claims; no unverified finish/sealant claims",
     "Use authenticated Etsy seller editor via Work mode or owner-approved browser automation; do not bypass login",
-    "Save draft ID/URL after Etsy explicitly confirms saved draft; do not publish without approval"
+    "Save draft ID/URL after Etsy explicitly confirms saved draft; do not publish without approval",
+    "Confirm Etsy Creativity Standards and accurate maker/process description; laser-engraved is not hand-carved"
   ],
   "listings": [
     {
@@ -23,7 +24,7 @@
         "usd": 33.33,
         "status": "Existing owner 4/$33.33 event bundle baseline; confirm online pricing before publishing"
       },
-      "description": "Four coordinating laser-engraved wooden drink coasters featuring a geometric deer motif. The clean lines and woodland symbolism make this set a warm accent for a cabin, coffee table or home bar.\n\nHand-engraved wooden coasters from Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one coordinated four-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
+      "description": "Four coordinating laser-engraved wooden drink coasters featuring a geometric deer motif. The clean lines and woodland symbolism make this set a warm accent for a cabin, coffee table or home bar.\n\nLaser-engraved wooden coasters prepared by Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one coordinated four-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
       "photoStatus": "4-piece group photographed; select actual SKU frames from Oct 18 photo shoot"
     },
     {
@@ -35,7 +36,7 @@
         "usd": 33.33,
         "status": "Existing owner 4/$33.33 event bundle baseline; confirm online pricing before publishing"
       },
-      "description": "A matching set of four laser-engraved wooden drink coasters featuring the Tree of Life design. Branches and roots create a natural, detailed centerpiece that works with rustic and modern settings.\n\nHand-engraved wooden coasters from Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one coordinated four-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
+      "description": "A matching set of four laser-engraved wooden drink coasters featuring the Tree of Life design. Branches and roots create a natural, detailed centerpiece that works with rustic and modern settings.\n\nLaser-engraved wooden coasters prepared by Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one coordinated four-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
       "photoStatus": "4-piece group photographed; match actual SKU files from Oct 18 photo shoot"
     },
     {
@@ -47,7 +48,7 @@
         "usd": null,
         "status": "Five-piece price not explicitly approved; quote from owner or preserve any verified original record. Do NOT substitute 4-piece price."
       },
-      "description": "A coordinated five-piece set of engraved wooden coasters featuring a bison skull motif with a Western character. The design brings a High Country feel to a home bar, studio or gathering space.\n\nHand-engraved wooden coasters from Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one complete five-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
+      "description": "A coordinated five-piece set of engraved wooden coasters featuring a bison skull motif with a Western character. The design brings a High Country feel to a home bar, studio or gathering space.\n\nLaser-engraved wooden coasters prepared by Bitter Buffalo Art in Breckenridge, Colorado. The photographs show the exact design included in this set. Natural wood varies from piece to piece. Use for cups and drinkware; do not soak. See the listing photographs for condition and pattern.\n\nIncludes: one complete five-coaster set. Exact dimensions, wood species and finish will be verified before publication.",
       "photoStatus": "five-piece group verified in 20261018_085503.jpg; earlier 2-/4-piece frames are extras"
     }
   ]
