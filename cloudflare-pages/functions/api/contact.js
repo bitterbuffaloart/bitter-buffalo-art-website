@@ -10,8 +10,8 @@ export async function onRequestGet({ env = {} }) {
   return json(200, { ok: true, configured, channel: configured ? 'resend' : null });
 }
 
-const PRINT_MATERIALS = new Set(['framed-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
-const PRINT_SIZES = new Set(['16x24', 'quote']);
+const PRINT_MATERIALS = new Set(['framed-canvas', 'stretched-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
+const PRINT_SIZES = new Set(['12x18', '16x24', '20x30', 'quote']);
 const PRINT_UNAVAILABLE = new Set(['#14 · Horse portrait', '#18 · Shiprock star trails']);
 
 export async function onRequestPost({ request, env = {} }) {
