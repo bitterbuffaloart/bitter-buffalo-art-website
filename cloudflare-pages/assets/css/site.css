@@ -639,11 +639,12 @@ body { color: var(--espresso); line-height: 1.65; }
 .western-page .portfolio-feature figure { margin:0; border:0; box-shadow:none; background:transparent; }
 .western-page .gallery--portfolio img,
 .western-page .portfolio-feature img { display:block; width:100%; height:auto; aspect-ratio:auto; object-fit:contain; background:transparent; }
-.western-page .gallery--portfolio figcaption,
-.western-page .gallery--products .product-card figcaption {
+.western-page .gallery--portfolio figcaption {
   position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
   clip:rect(0,0,0,0); white-space:nowrap; border:0;
 }
+/* Product photos are the only visible click targets; hide duplicate links to avoid invisible tab stops. */
+.western-page .gallery--products .product-card figcaption { display:none; }
 .western-page .gallery--products { align-items:start; }
 .western-page .gallery--products .product-card,
 .western-page .gallery--archive .product-card {
