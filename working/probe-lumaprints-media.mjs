@@ -27,8 +27,8 @@ for(const page of pages){
   try{
     const res=await fetch(page,{headers:{'User-Agent':'Mozilla/5.0 (compatible; BitterBuffaloStudio/1.0)'},signal:AbortSignal.timeout(20000)});
     const body=await res.text();
-    let matches=[...body.matchAll(/(?:https?:\\/\\/www\\.lumaprints\\.com)?\\/wp-content\\/uploads\\/[^"'\\s<>\\\\]+/gi)].map(x=>x[0].replaceAll('&amp;','&').split('?')[0]);
-    for(let url of matches){if(url.startsWith('/'))url='https://www.lumaprints.com'+url;urls.add(url)}
+    const matches=body.split('https://www.lumaprints.com/wp-content/uploads/').slice(1).map(chunk => 'https://www.lumaprints.com/wp-content/uploads/'+chunk.split('"')[0].split("'")[0].split(' ')[0].split('<')[0].split('>')[0].split('?')[0].replaceAll('&amp;','&'));
+    for(const url of matches)urls.add(url);
     console.log(JSON.stringify({page,status:res.status,htmlBytes:body.length,mediaURLs:matches.length}));
   }catch(e){console.log(JSON.stringify({page,error:String(e)}))}
 }
