@@ -805,3 +805,22 @@ body { color: var(--espresso); line-height: 1.65; }
   .print-pricing-table thead th { font-size: .76rem; }
   .print-pricing-table tbody td { font-weight: 700; }
 }
+
+/* LumaPrints product reference gallery — preserve proportions of actual supplier photos. */
+.supplier-gallery { padding: clamp(1rem,2.5vw,2.5rem); color:var(--espresso); background:var(--paper); }
+.supplier-gallery > h2 { margin:0 0 .65rem; }
+.supplier-gallery > p { max-width:76ch; }
+.supplier-gallery__group { margin:1.6rem 0 2.2rem; }
+.supplier-gallery__group h3 { margin:0 0 .8rem; border-bottom:1px solid rgba(45,36,24,.25); padding-bottom:.4rem; }
+.supplier-gallery__grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:1rem; align-items:start; }
+.supplier-gallery__grid figure { margin:0; border:1px solid rgba(45,36,24,.2); border-radius:8px; overflow:hidden; background:var(--cream); }
+.supplier-gallery__grid figure[hidden] { display:none; }
+.supplier-gallery__grid img { display:block; width:100%; height:220px; object-fit:contain; background:#fff; }
+.supplier-gallery__grid figcaption { padding:.55rem .7rem .7rem; color:var(--espresso); font:400 .86rem/1.35 var(--font-body); }
+.supplier-gallery__credit { font-size:.8rem; line-height:1.45; opacity:.8; }
+@media (max-width:540px) {
+  .supplier-gallery { padding:1rem .7rem; }
+  .supplier-gallery__grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem; }
+  .supplier-gallery__grid img { height:160px; }
+  .supplier-gallery__grid figcaption { font-size:.78rem; padding:.45rem; }
+}
