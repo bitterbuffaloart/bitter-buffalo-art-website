@@ -76,9 +76,28 @@ def check(root, base=None):
     gallery=re.search(r'id="final-33".*?</section>',photo,re.S)
     rendered=re.findall(r'portfolio/(\d+)\.jpg',gallery.group(0) if gallery else '')
     if set(rendered)!=expected or len(rendered)!=len(expected): errors.append('Gallery must show each recorded real photo exactly once, without placeholders')
+    # Real manufacturer product photos are separate from the owner's Final 33 art.
     mockups=re.search(r'class="print-mockups".*?</section>',photo,re.S)
-    mock_ranks=re.findall(r'portfolio/(\d+)\.jpg',mockups.group(0) if mockups else '')
-    if not mock_ranks or set(mock_ranks)-set(rendered): errors.append('Print mockups must reuse Final 33 photographs only')
+    if mockups:
+        mock_ranks=re.findall(r'portfolio/(\d+)\.jpg',mockups.group(0))
+        if not mock_ranks or set(mock_ranks)-set(rendered):
+            errors.append('Illustrative art mockups must reuse Final 33 photographs only')
+    supplier=re.search(r'<section class="supplier-gallery".*?</section>',photo,re.S)
+    if supplier:
+        supplier_section=supplier.group(0)
+        paths=re.findall(r'data-supplier-src="/assets/images/lumaprints/([^"]+)"',supplier_section)
+        if len(paths)!=16 or len(set(paths))!=16:
+            errors.append('Expected 16 distinct manufacturer product examples in the supplier gallery')
+        if 'The sample artwork in these manufacturer photographs is not Bitter Buffalo Art photography' not in supplier_section:
+            errors.append('Supplier example gallery must clearly distinguish sample art from studio photography')
+        if not set(paths) <= {
+            'metal/metal-silver-glossy.jpg','metal/metal-vivid-details.webp','metal/metal-room-display.jpg','metal/metal-mounted-gallery.webp',
+            'paper/somerset-velvet.jpg','paper/paper-finishes.webp',
+            'canvas/stretched-canvas.jpg','canvas/mirror-wrap.jpg','canvas/solid-border-wrap.jpg','canvas/canvas-surface.webp',
+            'canvas/stretcher-profile.webp','canvas/foamcore-reinforcement.jpg',
+            'framed/1-50-floating-frame.webp','framed/black-floating-frame.jpg','framed/hanging-wire.webp','framed/0-75-frame-comparison.webp'
+        }:
+            errors.append('Supplier gallery includes unreviewed source assets')
     if len(re.findall(r'<section(?:\s|>)',photo))!=photo.count('</section>') or re.search(r'</sect\s',photo): errors.append('Photography section tags are unbalanced')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')
