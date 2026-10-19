@@ -1,5 +1,7 @@
 # Grand Tetons pilot
 
+Rechecked 2026-10-19: `LUMAPRINTS_API_KEY` and `LUMAPRINTS_API_SECRET` are still unset in the Windows user environment, and the gitignored website `.env` does not exist. The sandbox API was not called.
+
 Public title: Grand Tetons, photograph #01, DSC_2626. 20×30 stays unavailable.
 
 ## Verified costs
