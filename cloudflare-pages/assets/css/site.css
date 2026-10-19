@@ -626,7 +626,10 @@ body { color: var(--espresso); line-height: 1.65; }
 }
 .site-footer__nav a:hover { color: var(--rust); }
 .site-footer__nav a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
-.event-card img { width: 100%; height: auto; margin: 0 0 .8rem; }
+.event-card img { width: 100%; height: auto; object-fit: contain; margin: 0 0 .8rem; }
+.event-card figure { margin: 0 0 1rem; }
+.event-card figure img { margin: 0; }
+.event-card figcaption { margin: .35rem 0 0; font-weight: 700; }
 @media (max-width: 700px) {
   .site-footer__copy {
     width: 100%;
