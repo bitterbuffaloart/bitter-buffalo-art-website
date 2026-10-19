@@ -12,10 +12,14 @@ walk(catalog);
 assert.deepEqual(prices, [199.33]);
 assert.equal(catalog.checkout, false);
 assert.equal(catalog.ordersPlacedWithSupplier, false);
-assert.deepEqual(catalog.products.map((product) => product.id), ['framed-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
+assert.deepEqual(catalog.products.map((product) => product.id), ['framed-canvas', 'stretched-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
 assert.equal(catalog.products.every((product) => product.productionCost == null && product.inquiry === true), true);
 assert.equal(catalog.products[0].sizes[0].productionCost, null);
 assert.equal(catalog.products[0].sizes[0].shippingCost, null);
+assert.equal(catalog.products.find(p => p.id === 'metal').supplier, 'LumaPrints');
+assert.equal(catalog.products.find(p => p.id === 'acrylic').availability, 'special-request');
+assert.equal(catalog.products.find(p => p.id === 'traditional').supplier, 'LumaPrints');
+
 assert.deepEqual(catalog.photographsUnavailableForPrint.map((item) => item.portfolio), ['#14', '#18']);
 assert.equal(catalog.photographsUnavailableForPrint.every((item) => item.replacement === null), true);
 
@@ -27,6 +31,10 @@ for (const href of ['/photography/', '/tie-dye/', '/laser-art/', '/sketchbook/']
 const photography = readFileSync('cloudflare-pages/photography/index.html', 'utf8');
 assert.deepEqual(photography.match(/\$\d+(?:\.\d+)?/g), ['$199.33', '$199.33', '$199.33']);
 assert.match(photography, /Request a Quote/);
+for (const size of ['12x18', '16x24', '20x30']) assert.match(photography, new RegExp('option value="' + size + '"'));
+assert.match(photography, /option value="stretched-canvas"/);
+assert.doesNotMatch(photography, /Zno is under evaluation/);
+
 assert.match(photography, /illustrative/i);
 assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com|lumaprints\.com\/.*\.(jpg|png|webp)/i);
 assert.match(photography, /<option value="#14 · Horse portrait" disabled>/);
@@ -48,4 +56,4 @@ assert.match(laser, /https:\/\/www\.etsy\.com\/shop\/BitterBuffaloArt/);
 assert.match(laser, /complete sets together/);
 assert.doesNotMatch(laser.slice(laser.indexOf('id="coaster-sets"'), laser.indexOf('id="engraved-wood"')), /<img/);
 
-console.log('PASS print catalog: one confirmed price, five inquiry formats, four homepage cards, verified sketchbook titles, no invented coaster image.');
+console.log('PASS print catalog: one confirmed price, six inquiry formats, four homepage cards, verified sketchbook titles, no invented coaster image.');
