@@ -164,6 +164,9 @@ a { color: var(--teal); }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
 }
 .pillars__grid--three { grid-template-columns: repeat(3, 1fr); }
+.pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pillar--mark { background: #f6efe2; }
+.pillar--mark img { object-fit: contain; background: #f6efe2; padding: 8%; }
 .pillar {
   position: relative; outline: 5px solid var(--accent, var(--rust)); background: #111; color: #fff;
   min-height: 400px; overflow: hidden; display: flex; flex-direction: column;
@@ -377,9 +380,9 @@ a { color: var(--teal); }
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
   background-color: #ead9b8;
-  background-image: url("../images/western-topo.svg?v=20261018b");
-  background-repeat: repeat;
-  background-size: 920px auto;
+  background-image: url("../images/western-topo.svg?v=20261019b");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   background-position: center top;
   background-attachment: scroll;
 }
@@ -396,7 +399,7 @@ a { color: var(--teal); }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 .site-footer { padding-bottom: 0; background: rgba(234,217,184,.58); }
 @media (max-width: 900px) {
-  .western-page { background-size: 680px auto; }
+  .western-page { background-size: 100% auto; }
 }
 .site-footer__land {
   margin: 1.5rem -1.25rem 0;
@@ -408,15 +411,17 @@ a { color: var(--teal); }
   height: auto;
   display: block;
 }
-.page-hero { position: relative; }
+.page-hero { position: relative; overflow: visible; }
 .western-page .page-hero::before {
   content: "";
   display: block;
-  width: 168px;
-  height: 128px;
-  margin: 0 0 .85rem;
-  background: url("../images/western-skull.svg") left center / contain no-repeat;
+  width: min(340px, 100%);
+  aspect-ratio: 440 / 360;
+  height: auto;
+  margin: 0 0 1.1rem;
+  background: url("../images/western-skull.svg?v=20261019a") center / contain no-repeat;
   pointer-events: none;
+  overflow: visible;
 }
 .studio-land {
   max-width: 1200px;
@@ -500,7 +505,24 @@ a { color: var(--teal); }
   .site-footer__land { margin-top: 1rem; }
   .artist-story { grid-template-columns: 1fr; }
   .gallery--archive { grid-template-columns: 1fr; }
+  .pillars__grid--home { grid-template-columns: 1fr; }
 }
+.sketch-feature { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+.sketch-feature h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 .75rem;
+  color: var(--ink);
+  letter-spacing: .03em;
+}
+.sketch-feature__more { margin: 1.1rem 0 0; }
+.sketch-feature__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.sketch-feature figure { margin: 0; background: rgba(247,244,238,.88); border: 1px solid rgba(45,36,24,.16); }
+.sketch-feature a { display: block; background: #f7f4ee; }
+.sketch-feature img { width: 100%; height: auto; display: block; object-fit: contain; }
+.sketch-feature figcaption { padding: .7rem .8rem .9rem; font-weight: 700; }
+@media (max-width: 900px) { .sketch-feature__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 620px) { .sketch-feature__grid { grid-template-columns: 1fr; } }
 @media (max-width: 900px) {
   .gallery--archive { grid-template-columns: 1fr; }
 }

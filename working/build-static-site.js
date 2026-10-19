@@ -118,6 +118,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   const nav = [
     { href: `${p}/`, id: 'home', label: 'Home' },
     { href: `${p}/photography/`, id: 'photo', label: 'Photography' },
+    { href: `${p}/sketchbook/`, id: 'sketch', label: 'Sketchbook' },
     { href: `${p}/shop/`, id: 'shop', label: 'Shop' },
     { href: `${p}/tie-dye/`, id: 'tiedye', label: 'Tie-Dye' },
     { href: `${p}/laser-art/`, id: 'laser', label: 'Laser Art' },
@@ -153,7 +154,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261018b" />
+  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261019a" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -186,6 +187,7 @@ ${body}
         <h3>Explore</h3>
         <ul>
           <li><a href="${p}/photography/">Photography</a></li>
+          <li><a href="${p}/sketchbook/">Sketchbook</a></li>
           <li><a href="${p}/shop/">Shop</a></li>
           <li><a href="${p}/tie-dye/">Tie-Dye</a></li>
           <li><a href="${p}/laser-art/">Laser Art</a></li>
@@ -206,8 +208,8 @@ ${body}
     <div class="site-footer__land" aria-hidden="true">
       <!-- Newly drawn provisional farm landscape. The original farmer illustration was not recovered. -->
       <picture>
-        <source media="(max-width: 700px)" srcset="${p}/assets/images/western-footer-mobile.svg?v=20261018b" />
-        <img src="${p}/assets/images/western-footer-landscape.svg?v=20261018b" alt="" width="1600" height="680" />
+        <source media="(max-width: 700px)" srcset="${p}/assets/images/western-footer-mobile.svg?v=20261019a" />
+        <img src="${p}/assets/images/western-footer-landscape.svg?v=20261019a" alt="" width="1600" height="680" />
       </picture>
     </div>
   </footer>
@@ -317,7 +319,7 @@ async function main() {
         <div class="hero__panel">
           <p class="eyebrow"><span class="eyebrow__mark">Bitter Buffalo Art · Breckenridge, Colorado</span></p>
           <h1>Art Born in the High Country</h1>
-          <p class="hero__disciplines">Photography · Tie-Dye · Laser Art</p>
+          <p class="hero__disciplines">Photography · Sketchbook · Tie-Dye · Laser Art</p>
           <p class="hero__support">Choose Your Trail</p>
           <div class="hero__actions">
             <a class="btn btn--solid" href="/photography/">View Photography Portfolio</a>
@@ -333,22 +335,27 @@ async function main() {
       <div>Handmade in Colorado</div>
       <div>Built to Live With &amp; Love</div>
     </section>
-    <section class="studio-land" aria-labelledby="studio-land-title">
-      <div class="studio-land__copy">
-        <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Provisional drawing</span></p>
-        <h2 id="studio-land-title">The high-country farm</h2>
-        <p>The original farmer-and-plow illustration has not been recovered. This scene is a new studio drawing for review: buffalo skulls with a turquoise mark, topographic contours, crosshatched tumbleweeds, mountains, fields, furrows, and hay.</p>
+    <section class="sketch-feature" aria-labelledby="sketch-feature-title">
+      <h2 id="sketch-feature-title">The Bitter Buffalo Sketchbook</h2>
+      <div class="sketch-feature__grid">
+        <figure>
+          <a href="/sketchbook/#fox-geometry"><img src="/assets/sketchbook/thumbs/fox-geometry.jpg" alt="A colored drawing of a fox in a forest with mushrooms and a geometric star." width="483" height="640" loading="lazy" decoding="async" /></a>
+          <figcaption>Fox and sacred geometry</figcaption>
+        </figure>
+        <figure>
+          <a href="/sketchbook/#frog-mushroom"><img src="/assets/sketchbook/thumbs/frog-mushroom.jpg" alt="A square drawing of a frog among mushrooms, with looping ink lines." width="640" height="640" loading="lazy" decoding="async" /></a>
+          <figcaption>Frog and mushroom</figcaption>
+        </figure>
+        <figure>
+          <a href="/sketchbook/#red-field"><img src="/assets/sketchbook/thumbs/red-field.jpg" alt="Vertical artwork in red, black, turquoise, green, and magenta." width="445" height="640" loading="lazy" decoding="async" /></a>
+          <figcaption>Psychedelic abstract</figcaption>
+        </figure>
       </div>
-      <figure>
-        <picture>
-          <source media="(max-width: 700px)" srcset="/assets/images/western-footer-mobile.svg?v=20261018b" />
-          <img src="/assets/images/western-footer-landscape.svg?v=20261018b" alt="Provisional drawing of a farmer plowing a high-country field, with hay bales, mountains, buffalo skulls, and tumbleweeds." width="1600" height="680" />
-        </picture>
-      </figure>
+      <p class="sketch-feature__more"><a class="btn btn--solid-ink" href="/sketchbook/">View the Sketchbook</a></p>
     </section>
     <section class="pillars">
       <h2>Explore Our Collections</h2>
-      <div class="pillars__grid pillars__grid--three">
+      <div class="pillars__grid pillars__grid--home">
         <article class="pillar" style="--accent:#38a6ad">
           <img src="${photoImg}" alt="Colorado fine art photography" width="800" height="1000" loading="lazy" />
           <div class="pillar__body">
@@ -376,6 +383,16 @@ async function main() {
             <div class="pillar__actions">
               <a class="btn btn--solid" href="${ETSY}" target="_blank" rel="noopener noreferrer">Shop Laser Art on Etsy</a>
               <a class="btn" href="/laser-art/">View Laser Art</a>
+            </div>
+          </div>
+        </article>
+        <article class="pillar pillar--mark" style="--accent:#c4a35a">
+          <img src="/assets/images/western-skull.svg?v=20261019a" alt="" width="440" height="360" loading="lazy" />
+          <div class="pillar__body">
+            <h3>Sketchbook</h3>
+            <p class="pillar__note">Drawings, paintings, and mixed-media work from the studio.</p>
+            <div class="pillar__actions">
+              <a class="btn btn--solid" href="/sketchbook/">View the Sketchbook</a>
             </div>
           </div>
         </article>
@@ -898,6 +915,7 @@ ${galleryFigures}
   const sitePaths = [
     '/',
     '/photography/',
+    '/sketchbook/',
     '/shop/',
     '/tie-dye/',
     '/laser-art/',
@@ -1277,9 +1295,9 @@ a { color: var(--teal); }
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
   background-color: #ead9b8;
-  background-image: url("../images/western-topo.svg?v=20261018b");
-  background-repeat: repeat;
-  background-size: 920px auto;
+  background-image: url("../images/western-topo.svg?v=20261019b");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
   background-position: center top;
   background-attachment: scroll;
 }
@@ -1296,7 +1314,7 @@ a { color: var(--teal); }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 .site-footer { padding-bottom: 0; background: rgba(234,217,184,.58); }
 @media (max-width: 900px) {
-  .western-page { background-size: 680px auto; }
+  .western-page { background-size: 100% auto; }
 }
 .site-footer__land {
   margin: 1.5rem -1.25rem 0;
@@ -1308,15 +1326,17 @@ a { color: var(--teal); }
   height: auto;
   display: block;
 }
-.page-hero { position: relative; }
+.page-hero { position: relative; overflow: visible; }
 .western-page .page-hero::before {
   content: "";
   display: block;
-  width: 168px;
-  height: 128px;
-  margin: 0 0 .85rem;
-  background: url("../images/western-skull.svg") left center / contain no-repeat;
+  width: min(340px, 100%);
+  aspect-ratio: 440 / 360;
+  height: auto;
+  margin: 0 0 1.1rem;
+  background: url("../images/western-skull.svg?v=20261019a") center / contain no-repeat;
   pointer-events: none;
+  overflow: visible;
 }
 .studio-land {
   max-width: 1200px;
@@ -1404,6 +1424,26 @@ a { color: var(--teal); }
 @media (max-width: 900px) {
   .gallery--archive { grid-template-columns: 1fr; }
 }
+.pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pillar--mark { background: #f6efe2; }
+.pillar--mark img { object-fit: contain; background: #f6efe2; padding: 8%; }
+.sketch-feature { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
+.sketch-feature h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 0 0 .75rem;
+  color: var(--ink);
+  letter-spacing: .03em;
+}
+.sketch-feature__more { margin: 1.1rem 0 0; }
+.sketch-feature__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.sketch-feature figure { margin: 0; background: rgba(247,244,238,.88); border: 1px solid rgba(45,36,24,.16); }
+.sketch-feature a { display: block; background: #f7f4ee; }
+.sketch-feature img { width: 100%; height: auto; display: block; object-fit: contain; }
+.sketch-feature figcaption { padding: .7rem .8rem .9rem; font-weight: 700; }
+@media (max-width: 900px) { .sketch-feature__grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 780px) { .pillars__grid--home { grid-template-columns: 1fr; } }
+@media (max-width: 620px) { .sketch-feature__grid { grid-template-columns: 1fr; } }
 `;
 
 const JS = `document.addEventListener('DOMContentLoaded', () => {
