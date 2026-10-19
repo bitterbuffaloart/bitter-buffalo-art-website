@@ -55,32 +55,3 @@ assert.match(laser, /complete sets together/);
 assert.doesNotMatch(laser.slice(laser.indexOf('id="coaster-sets"'), laser.indexOf('id="engraved-wood"')), /<img/);
 
 console.log('PASS print catalog: 30 fixed-priced standard options, three print holds, four homepage cards, verified sketchbook titles, no invented coaster image.');
- + size.retailPrice.toFixed(2).replace('.', '\\.') ));
-assert.match(photography, /PRINT_RETAIL_USD|retailMatrix/);
-assert.match(photography, /Request a Quote/);
-for (const size of ['12x18', '16x24', '20x30']) assert.match(photography, new RegExp('option value="' + size + '"'));
-assert.match(photography, /option value="stretched-canvas"/);
-assert.doesNotMatch(photography, /Zno is under evaluation/);
-
-assert.match(photography, /illustrative/i);
-assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com|lumaprints\.com\/.*\.(jpg|png|webp)/i);
-assert.match(photography, /<option value="#14 · Horse portrait" disabled>/);
-assert.match(photography, /<option value="#18 · Shiprock star trails" disabled>/);
-assert.equal((photography.match(/Not available for print until a clean original is reviewed/g) || []).length, 2);
-
-const works = JSON.parse(readFileSync('cloudflare-pages/assets/sketchbook/works.json', 'utf8'));
-const titles = Object.fromEntries(works.works.map((work) => [work.id, work.title]));
-assert.equal(titles['red-field'], 'The Amanita Paradox');
-assert.equal(titles['fox-geometry'], 'The Fox & the Sacred Pattern');
-assert.equal(titles['frog-mushroom'], 'The Fifth Dimension');
-assert.equal(titles['sky-within'], 'The Sky Within');
-assert.equal(titles['grit-grin'], 'Grit & Grin');
-assert.equal(titles['static-mischief'], 'Static Mischief');
-assert.equal(works.works.some((work) => /Whispers of the Hidden Forest|mystical forest/i.test(`${work.id} ${work.title}`)), false);
-
-const laser = readFileSync('cloudflare-pages/laser-art/index.html', 'utf8');
-assert.match(laser, /https:\/\/www\.etsy\.com\/shop\/BitterBuffaloArt/);
-assert.match(laser, /complete sets together/);
-assert.doesNotMatch(laser.slice(laser.indexOf('id="coaster-sets"'), laser.indexOf('id="engraved-wood"')), /<img/);
-
-console.log('PASS print catalog: one confirmed price, six inquiry formats, four homepage cards, verified sketchbook titles, no invented coaster image.');
