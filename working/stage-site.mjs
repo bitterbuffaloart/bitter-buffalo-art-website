@@ -10,5 +10,7 @@ for (const item of readdirSync(source,{withFileTypes:true})) {
 }
 cpSync(join(source,'functions'),join(build,'functions'),{recursive:true});
 writeFileSync(join(build,'public','_routes.json'),JSON.stringify({version:1,include:['/api/*'],exclude:[]}));
+// Fetch 15 verified LumaPrints supplier reference images into the release; no remote hotlink dependency.
+await import('./stage-lumaprints-examples.mjs');
 writeFileSync(join(build,'public','404.html'),'<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Page not found | Bitter Buffalo Art</title><main><h1>Page not found</h1><p><a href="/">Return to Bitter Buffalo Art</a></p></main></html>');
 console.log('Prepared .site-build/public and .site-build/functions; deployment notes and local scripts excluded.');
