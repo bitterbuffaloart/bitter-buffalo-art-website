@@ -1,0 +1,6 @@
+# Copy to cloudflare-pages/.dev.vars before `npx wrangler pages dev`.
+# .dev.vars is gitignored. Cloudflare Pages uses environment bindings, not this file.
+LUMAPRINTS_API_KEY=
+LUMAPRINTS_API_SECRET=
+LUMAPRINTS_ENVIRONMENT=sandbox
+LUMAPRINTS_ADMIN_TOKEN=
