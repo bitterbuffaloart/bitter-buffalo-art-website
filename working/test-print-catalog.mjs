@@ -26,7 +26,7 @@ for (const href of ['/photography/', '/tie-dye/', '/laser-art/', '/sketchbook/']
 const photography = readFileSync('cloudflare-pages/photography/index.html', 'utf8');
 // Every priced row is visible to customers for all three sizes.
 assert.equal((photography.match(/<tr><th scope="row">/g) || []).length, 10);
-for (const p of priced) for (const size of p.sizes) assert.match(photography, new RegExp('\\
+for (const p of priced) for (const size of p.sizes) assert.ok(photography.includes('$' + size.retailPrice.toFixed(2)), p.name + ' ' + size.id + ' missing price');
 assert.doesNotMatch(photography, /Other size — Request a Quote/);
 for (const size of ['12x18', '16x24', '20x30']) assert.match(photography, new RegExp('option value="' + size + '"'));
 assert.match(photography, /option value="stretched-canvas"/);
