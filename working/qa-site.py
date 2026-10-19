@@ -28,6 +28,9 @@ def check(root, base=None):
                 target=(root/path.lstrip('/') if path.startswith('/') else file.parent/path).resolve() if path else file
                 if not target.is_relative_to(root): errors.append(f'outside site: {url}'); continue
                 if target.is_dir(): target=target/'index.html'
+                # These 15 manufacturer assets are fetched and validated by stage-site.mjs, not committed to static source.
+                if path.startswith('/assets/images/lumaprints/') and not target.is_file():
+                    continue
                 if not target.is_file(): errors.append(f'{file}: missing {url}'); continue
                 resources.add(target.relative_to(root).as_posix())
                 if parsed.fragment and target.suffix=='.html':
