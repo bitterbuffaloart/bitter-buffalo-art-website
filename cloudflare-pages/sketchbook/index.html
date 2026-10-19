@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/site.css?v=20261019w" />
-  <link rel="stylesheet" href="../assets/css/sketchbook.css?v=20261019w" />
+  <link rel="stylesheet" href="../assets/css/sketchbook.css?v=20261019etsy" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -47,7 +47,7 @@
   <main id="main">
     <section class="page-hero">
       <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Studio drawings and paintings</span></p>
-      <p class="lede">Original drawings, paintings, and mixed-media work from the studio. Nothing on this page is for sale. New pieces are added in the sketchbook manifest, without a new layout.</p>
+      <p class="lede">Original drawings, paintings, and mixed-media work from the studio. Browse original drawings and paintings. Selected original paintings are available through their individual Etsy listings.</p>
     </section>
     <div class="sketch-filters" role="toolbar" aria-label="Artwork categories">
       <button type="button" data-filter="all" aria-pressed="true">All Artwork</button>
@@ -138,6 +138,16 @@
       note.className = 'sketch-note';
       note.textContent = metaLine(work);
       cap.append(title, note);
+      if (work.etsyUrl) {
+        const shop = document.createElement('a');
+        shop.href = work.etsyUrl;
+        shop.target = '_blank';
+        shop.rel = 'noopener noreferrer';
+        shop.className = 'sketch-etsy-link';
+        shop.textContent = 'View Original on Etsy ↗';
+        shop.setAttribute('aria-label', 'View ' + work.title + ' original painting on Etsy');
+        cap.append(shop);
+      }
       figure.append(button, cap);
       return figure;
     }
@@ -161,6 +171,11 @@
       document.getElementById('sketch-dialog-title').textContent = work.title;
       document.getElementById('sketch-meta').textContent = metaLine(work);
       document.getElementById('sketch-story').textContent = work.story || '';
+      const inquiry = document.getElementById('sketch-inquire');
+      inquiry.href = work.etsyUrl || '../contact/';
+      inquiry.textContent = work.etsyUrl ? 'View Original on Etsy ↗' : 'Inquire About This Artwork';
+      inquiry.target = work.etsyUrl ? '_blank' : '_self';
+      inquiry.rel = work.etsyUrl ? 'noopener noreferrer' : '';
       stage.classList.remove('is-zoomed');
       zoomBtn.textContent = 'View larger';
       zoomBtn.setAttribute('aria-pressed', 'false');
