@@ -1,7 +1,8 @@
 // Server-only LumaPrints client. Credentials stay in the Pages env binding.
 // Documented reads: GET /api/v1/products/categories,
 // GET /api/v1/products/categories/{categoryId}/subcategories,
-// GET /api/v1/products/subcategories/{subcategoryId}/options.
+// GET /api/v1/products/subcategories/{subcategoryId}/options,
+// GET /api/v1/stores (Standard Stores only).
 // Quotes, not orders: POST /api/v1/pricing/product and POST /api/v1/pricing/shipping.
 // https://api-docs.lumaprints.com/doc-420489
 
@@ -10,6 +11,7 @@ const HOSTS = {
   production: 'us.api.lumaprints.com',
 };
 const CATEGORIES_PATH = '/api/v1/products/categories';
+const STORES_PATH = '/api/v1/stores';
 const MAX_UPSTREAM = 48;
 const MAX_LABEL = 160;
 
@@ -86,7 +88,7 @@ function basicHeader(key, secret) {
 }
 
 function allowed(method, path) {
-  if (method === 'GET' && path === CATEGORIES_PATH) return true;
+  if (method === 'GET' && (path === CATEGORIES_PATH || path === STORES_PATH)) return true;
   if (method === 'GET' && /^\/api\/v1\/products\/categories\/[1-9]\d{0,11}\/subcategories$/.test(path)) return true;
   if (method === 'GET' && /^\/api\/v1\/products\/subcategories\/[1-9]\d{0,11}\/options$/.test(path)) return true;
   if (method === 'POST' && (path === '/api/v1/pricing/product' || path === '/api/v1/pricing/shipping')) return true;
@@ -253,6 +255,14 @@ async function requireAdmin(request, env = {}) {
   return null;
 }
 
+function mapStores(payload, secrets) {
+  if (!Array.isArray(payload)) return null;
+  return payload.map(store => ({
+    storeId: positiveId(store?.storeId),
+    storeName: cleanLabel(store?.storeName, secrets),
+  })).filter(store => store.storeId && store.storeName);
+}
+
 async function checkConnection(env) {
   const request = { method: 'GET', path: CATEGORIES_PATH };
   const result = await lumaRequest(env, 'GET', CATEGORIES_PATH);
@@ -260,6 +270,15 @@ async function checkConnection(env) {
   const categories = Array.isArray(result.json) ? result.json : null;
   if (!categories) {
     return jsonResponse(502, failureBody(env, { errorClass: 'provider', upstreamStatus: result.upstreamStatus, message: 'The print service returned an unexpected catalog.' }, request));
+  }
+  const storesRequest = { method: 'GET', path: STORES_PATH };
+  const storesResult = await lumaRequest(env, 'GET', STORES_PATH);
+  if (storesResult.errorClass !== 'ok') {
+    return jsonResponse(httpStatusFor(storesResult.errorClass, storesResult.upstreamStatus), failureBody(env, storesResult, storesResult.called ? storesRequest : null));
+  }
+  const stores = mapStores(storesResult.json, secretValues(env));
+  if (!stores) {
+    return jsonResponse(502, failureBody(env, { errorClass: 'provider', upstreamStatus: storesResult.upstreamStatus, message: 'The print service returned an unexpected store list.' }, storesRequest));
   }
   return jsonResponse(200, {
     ok: true,
@@ -269,6 +288,9 @@ async function checkConnection(env) {
     request,
     upstreamStatus: 200,
     categoryCount: categories.length,
+    stores,
+    storeCount: stores.length,
+    standardStore: stores.length > 0,
     message: null,
   });
 }

@@ -141,8 +141,37 @@ assert.equal(response.json.host, 'us.api-sandbox.lumaprints.com');
 assert.equal(response.json.upstreamStatus, 200);
 assert.equal(response.json.categoryCount, 1);
 assert.equal(response.json.credentials.apiKey, 'PRESENT');
+assert.equal(response.json.standardStore, false);
+assert.equal(response.json.storeCount, 0);
+assert.equal(calls.length, 2);
 assert.equal(calls[0].url, 'https://us.api-sandbox.lumaprints.com/api/v1/products/categories');
+assert.equal(calls[1].url, 'https://us.api-sandbox.lumaprints.com/api/v1/stores');
 assert.equal(calls[0].authorization, 'Basic THVtYXByaW50czpSb2Nrcw==');
+assert.equal(calls[1].authorization, calls[0].authorization);
+assertSilent(response.text);
+
+stub((url) => {
+  if (url.endsWith('/api/v1/products/categories')) return new Response(JSON.stringify([{ id: 101, name: 'Canvas' }]), { status: 200 });
+  if (url.endsWith('/api/v1/stores')) return new Response(JSON.stringify([{ storeId: 42, storeName: 'Studio Standard' }, { storeId: 0, storeName: 'Skipped' }]), { status: 200 });
+  throw new Error('unexpected path');
+});
+response = await bodyOf(await statusGet({ request: new Request('https://example.com/api/lumaprints/status', { headers: authed() }), env: env() }));
+assert.equal(response.status, 200);
+assert.equal(response.json.standardStore, true);
+assert.equal(response.json.storeCount, 1);
+assert.equal(response.json.stores[0].storeId, 42);
+assert.equal(response.json.stores[0].storeName, 'Studio Standard');
+assertSilent(response.text);
+
+stub((url) => {
+  if (url.endsWith('/api/v1/products/categories')) return new Response(JSON.stringify([{ id: 101, name: 'Canvas' }]), { status: 200 });
+  if (url.endsWith('/api/v1/stores')) return new Response(JSON.stringify({ storeId: 42 }), { status: 200 });
+  throw new Error('unexpected path');
+});
+response = await bodyOf(await statusGet({ request: new Request('https://example.com/api/lumaprints/status', { headers: authed() }), env: env() }));
+assert.equal(response.status, 502);
+assert.equal(response.json.errorClass, 'provider');
+assert.equal(response.json.request.path, '/api/v1/stores');
 assertSilent(response.text);
 
 stub(() => new Response(JSON.stringify({ statusCode: 401, message: 'Unauthorized' }), { status: 401 }));

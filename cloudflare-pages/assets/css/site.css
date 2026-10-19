@@ -164,7 +164,7 @@ a { color: var(--teal); }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
 }
 .pillars__grid--three { grid-template-columns: repeat(3, 1fr); }
-.pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pillars__grid--home { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .pillar--mark { background: #f6efe2; }
 .pillar--mark img { object-fit: contain; background: #f6efe2; padding: 8%; }
 .pillar {
@@ -180,6 +180,19 @@ a { color: var(--teal); }
 .pillar__note { font-size: .92rem; margin: 0 0 .85rem; color: #f3e7cf; }
 .pillar__actions { display: flex; flex-direction: column; gap: .5rem; }
 .pillar .btn { width: 100%; }
+.pillar--home { min-height: 360px; }
+.pillar--home h3 { font-size: clamp(1.15rem, 1.6vw, 1.45rem); line-height: 1.15; }
+.pillar--home .pillar__body { padding: 1rem 1rem 1.1rem; }
+.pillar--home .pillar__note { font-size: .86rem; }
+.pillar__link {
+  position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column;
+  color: inherit; text-decoration: none;
+}
+.pillar__link:focus-visible { outline: 3px solid var(--gold); outline-offset: -6px; }
+.pillar--etsy .pillar__body { padding-bottom: 4.4rem; }
+.pillar__etsy {
+  position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2; width: auto;
+}
 .secondary-links__grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
@@ -313,6 +326,9 @@ a { color: var(--teal); }
 .site-footer a:hover { color: var(--rust); }
 .site-footer a:focus-visible { outline: 3px solid var(--teal-bright); outline-offset: 2px; }
 .site-footer__note { max-width: 1200px; margin: 0 auto; font-size: .9rem; color: #3a2f22; }
+@media (max-width: 1100px) {
+  .pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 960px) {
   .pillars__grid, .pillars__grid--three { grid-template-columns: 1fr 1fr; }
   .secondary-links__grid { grid-template-columns: 1fr 1fr; }
@@ -330,6 +346,7 @@ a { color: var(--teal); }
   .site-header__inner { flex-wrap: wrap; }
   .nav-link, .nav-link--etsy { width: 100%; text-align: left; margin-left: 0; }
   .pillars__grid, .pillars__grid--three, .gallery, .secondary-links__grid { grid-template-columns: 1fr; }
+  .pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brand__text { font-size: 1.15rem; }
   .hero__content { padding: 1rem .85rem 1.35rem; }
   .hero__panel { padding: 1rem 1rem 1.15rem; max-width: none; width: 100%; }
@@ -494,7 +511,10 @@ a { color: var(--teal); }
   .site-footer__land { margin-top: 1rem; }
   .artist-story { grid-template-columns: 1fr; }
   .gallery--archive { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
   .pillars__grid--home { grid-template-columns: 1fr; }
+  .pillar--home { min-height: 300px; }
 }
 .sketch-feature { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
 .sketch-feature h2 {
