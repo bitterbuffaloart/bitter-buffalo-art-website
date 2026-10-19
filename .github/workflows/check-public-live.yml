@@ -38,16 +38,16 @@ jobs:
               print('SUPPLIER_ASSET',response.status,asset,len(content),response.headers.get('Content-Type'))
               assert response.status==200 and len(content)>5000, 'Supplier product example missing or incomplete: '+asset
           print('VERIFIED_SUPPLIER_IMAGES',len(assets))
-          with urllib.request.urlopen('https://bitterbuffaloart.com/photography/?releasecheck='+sha,timeout=30) as response:
+          with urllib.request.urlopen(urllib.request.Request('https://bitterbuffaloart.com/photography/?releasecheck='+sha,headers={'User-Agent':'BitterBuffalo-Public-Release-Check/1.0','Cache-Control':'no-cache'}),timeout=30) as response:
             photo_html=response.read().decode('utf-8','replace')
           assert 'LumaPrints Materials & Product Examples' in photo_html
           assert photo_html.count('<figure><a href="/assets/images/lumaprints/')==15
           assert '<figure hidden>' not in photo_html
-          with urllib.request.urlopen('https://bitterbuffaloart.com/assets/sketchbook/works.json?releasecheck='+sha,timeout=30) as response:
+          with urllib.request.urlopen(urllib.request.Request('https://bitterbuffaloart.com/assets/sketchbook/works.json?releasecheck='+sha,headers={'User-Agent':'BitterBuffalo-Public-Release-Check/1.0','Cache-Control':'no-cache'}),timeout=30) as response:
             works=json.load(response)['works']
           listed={work['id']:work.get('etsyUrl','') for work in works if work['id'] in ('sky-within','grit-grin','static-mischief')}
           assert len(listed)==3 and all(url.startswith('https://www.etsy.com/listing/') for url in listed.values()), listed
-          with urllib.request.urlopen('https://bitterbuffaloart.com/laser-art/?releasecheck='+sha,timeout=30) as response:
+          with urllib.request.urlopen(urllib.request.Request('https://bitterbuffaloart.com/laser-art/?releasecheck='+sha,headers={'User-Agent':'BitterBuffalo-Public-Release-Check/1.0','Cache-Control':'no-cache'}),timeout=30) as response:
             laser_html=response.read().decode('utf-8','replace')
           for sku in ('COASTER-4PC-001','COASTER-4PC-002','COASTER-5PC-001'):
             assert sku in laser_html, sku+' missing from live laser gallery'
