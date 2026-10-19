@@ -29,4 +29,14 @@ jobs:
           print(json.dumps(result,indent=2))
           assert result.get('/',{}).get('four_card'), 'Custom domain still serves the old home or request failed'
           assert result.get('/photography/',{}).get('prices'), 'Custom domain still serves old photo pricing page or request failed'
+          assets=["metal/metal-silver-glossy.jpg","metal/metal-vivid-details.png","metal/metal-room-display.jpg","paper/somerset-velvet.jpg","paper/paper-finishes.png","canvas/stretched-canvas.jpg","canvas/mirror-wrap.jpg","canvas/solid-border-wrap.jpg","canvas/canvas-surface.png","canvas/stretcher-profile.png","canvas/foamcore-reinforcement.jpg","framed/black-floating-frame.jpg","framed/1-50-floating-frame.webp","framed/hanging-wire.webp","framed/0-75-frame-comparison.webp"]
+          for asset in assets:
+            uri='https://bitterbuffaloart.com/assets/images/lumaprints/'+asset+'?releasecheck='+sha
+            request=urllib.request.Request(uri,headers={'User-Agent':'BitterBuffalo-Public-Release-Check/1.0'})
+            with urllib.request.urlopen(request,timeout=30) as response:
+              content=response.read()
+              print('SUPPLIER_ASSET',response.status,asset,len(content),response.headers.get('Content-Type'))
+              assert response.status==200 and len(content)>5000, 'Supplier product example missing or incomplete: '+asset
+          print('VERIFIED_SUPPLIER_IMAGES',len(assets))
+
           PY
