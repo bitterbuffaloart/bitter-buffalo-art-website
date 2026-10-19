@@ -34,7 +34,7 @@ assert.equal(calls, callsBeforePrint);
 assert.equal((await post(printInquiry, env)).status, 200);
 assert.match(sent.subject, /not an order/);
 assert.match(sent.text, /199\.33 USD/);
-assert.match(sent.text, /print_subtotal: \$199\.33 USD/);
+assert.match(sent.text, /print_subtotal: 199\.33 USD/);
 assert.equal((await post({ ...printInquiry, material: 'canvas' }, env)).status, 400);
 assert.equal((await post({ ...printInquiry, photograph: 'Grand Tetons' }, env)).status, 400);
 const held14 = await post({ ...printInquiry, photograph: '#14 · Horse portrait' }, env);
@@ -54,10 +54,10 @@ assert.equal((await post({ ...printInquiry, material: 'metal', size: 'quote' }, 
 assert.match(sent.text, /Special request — individually quoted/);
 assert.doesNotMatch(sent.text, /199\.33/);
 assert.equal((await post({ ...printInquiry, material: 'metal', size: '20x30', quantity: '2' }, env)).status, 200);
-assert.match(sent.text, /retail_price: \$359\.99 USD each/);
-assert.match(sent.text, /print_subtotal: \$719\.98 USD/);
+assert.match(sent.text, /retail_price: 359\.99 USD each/);
+assert.match(sent.text, /print_subtotal: 719\.98 USD/);
 assert.equal((await post({ ...printInquiry, material: 'somerset', size: '12x18', quantity: '1' }, env)).status, 200);
-assert.match(sent.text, /retail_price: \$109\.99 USD each/);
+assert.match(sent.text, /retail_price: 109\.99 USD each/);
 
 const encoded=new URLSearchParams({'contact[name]':'QA','contact[email]':'qa@example.com','contact[body]':'Message','contact[Subject]':'Question'});
 assert.equal((await onRequestPost({request:new Request('https://example.com/api/contact',{method:'POST',body:encoded}),env})).status,200);
