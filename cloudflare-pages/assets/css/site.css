@@ -380,7 +380,7 @@ a { color: var(--teal); }
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
   background-color: #ead9b8;
-  background-image: url("../images/western-topo.svg?v=20261019b");
+  background-image: url("../images/western-topo.svg?v=20261019c");
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: center top;
@@ -419,7 +419,7 @@ a { color: var(--teal); }
   aspect-ratio: 440 / 360;
   height: auto;
   margin: 0 0 1.1rem;
-  background: url("../images/western-skull.svg?v=20261019a") center / contain no-repeat;
+  background: url("../images/western-skull.svg?v=20261019c") center / contain no-repeat;
   pointer-events: none;
   overflow: visible;
 }

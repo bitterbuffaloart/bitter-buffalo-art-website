@@ -154,7 +154,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261019a" />
+  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261019c" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -205,13 +205,7 @@ ${body}
       </div>
     </div>
     <p class="site-footer__note">Purchases are fulfilled through our <a href="${ETSY}" target="_blank" rel="noopener noreferrer">Etsy shop</a>. This website does not process checkout.</p>
-    <div class="site-footer__land" aria-hidden="true">
-      <!-- Newly drawn provisional farm landscape. The original farmer illustration was not recovered. -->
-      <picture>
-        <source media="(max-width: 700px)" srcset="${p}/assets/images/western-footer-mobile.svg?v=20261019a" />
-        <img src="${p}/assets/images/western-footer-landscape.svg?v=20261019a" alt="" width="1600" height="680" />
-      </picture>
-    </div>
+
   </footer>
   <script src="${p}/assets/js/site.js"></script>
 </body>
@@ -307,9 +301,9 @@ async function main() {
   fs.writeFileSync(
     path.join(ROOT, 'index.html'),
     layout({
-      title: 'Bitter Buffalo Art | Art Born in the High Country',
+      title: 'Bitter Buffalo Art | Art from the High Country',
       description:
-        'Art born in the high country—fine-art photography, hand-dyed textiles, and laser woodwork from Breckenridge, Colorado. Shop on Etsy.',
+        'Art from the high country—fine-art photography, hand-dyed textiles, and laser woodwork from Breckenridge, Colorado. Shop on Etsy.',
       pathPrefix: '',
       active: 'home',
       body: `
@@ -318,7 +312,7 @@ async function main() {
       <div class="hero__content">
         <div class="hero__panel">
           <p class="eyebrow"><span class="eyebrow__mark">Bitter Buffalo Art · Breckenridge, Colorado</span></p>
-          <h1>Art Born in the High Country</h1>
+          <h1>Art from the High Country</h1>
           <p class="hero__disciplines">Photography · Sketchbook · Tie-Dye · Laser Art</p>
           <p class="hero__support">Choose Your Trail</p>
           <div class="hero__actions">
@@ -387,7 +381,7 @@ async function main() {
           </div>
         </article>
         <article class="pillar pillar--mark" style="--accent:#c4a35a">
-          <img src="/assets/images/western-skull.svg?v=20261019a" alt="" width="440" height="360" loading="lazy" />
+          <img src="/assets/images/western-skull.svg?v=20261019c" alt="" width="440" height="360" loading="lazy" />
           <div class="pillar__body">
             <h3>Sketchbook</h3>
             <p class="pillar__note">Drawings, paintings, and mixed-media work from the studio.</p>
@@ -1295,7 +1289,7 @@ a { color: var(--teal); }
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
   background-color: #ead9b8;
-  background-image: url("../images/western-topo.svg?v=20261019b");
+  background-image: url("../images/western-topo.svg?v=20261019c");
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: center top;
@@ -1334,7 +1328,7 @@ a { color: var(--teal); }
   aspect-ratio: 440 / 360;
   height: auto;
   margin: 0 0 1.1rem;
-  background: url("../images/western-skull.svg?v=20261019a") center / contain no-repeat;
+  background: url("../images/western-skull.svg?v=20261019c") center / contain no-repeat;
   pointer-events: none;
   overflow: visible;
 }
