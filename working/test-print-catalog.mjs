@@ -32,8 +32,10 @@ for (const size of ['12x18', '16x24', '20x30']) assert.match(photography, new Re
 assert.match(photography, /option value="stretched-canvas"/);
 assert.doesNotMatch(photography, /Zno is under evaluation/);
 
-assert.match(photography, /illustrative/i);
-assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com|lumaprints\.com\/.*\.(jpg|png|webp)/i);
+assert.match(photography, /Real LumaPrints Product Examples/);
+assert.equal((photography.match(/data-supplier-src=/g) || []).length, 16);
+assert.match(photography, /The sample artwork in these manufacturer photographs is not Bitter Buffalo Art photography/);
+assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com/i);
 assert.match(photography, /<option value="#14 · Horse portrait" disabled>/);
 assert.match(photography, /<option value="#18 · Shiprock star trails" disabled>/);
 assert.match(photography, /<option value="#24 · Aspen valley" disabled>/);
