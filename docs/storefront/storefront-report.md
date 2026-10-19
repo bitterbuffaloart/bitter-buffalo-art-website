@@ -27,6 +27,8 @@ The requested pilot name is Stormborn Grand Tetons. The approved photograph titl
 - `noindex` until the sale is actually available
 - One `h1`: Grand Tetons
 - Local preview: `http://127.0.0.1:8765/photography/prints/grand-tetons/`
+- Draft pull request (not merged): https://github.com/bitterbuffaloart/bitter-buffalo-art-website/pull/5
+- Branch `cursor/photography-storefront-pilot-3433`, pilot commit `5b53547`
 
 The source file on disk is `C:\Users\bitte\OneDrive\Desktop\Portfolio for Etsy\01 - DSC_2626-Edit-no water mark.jpg`, 5746×3831, ratio about 1.4996 (3:2). It is not in git. The page shows `assets/images/portfolio/01.jpg` (1400×933, about 260 KB) and says that JPEG is not the print file.
 
