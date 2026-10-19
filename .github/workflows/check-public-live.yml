@@ -1,0 +1,32 @@
+name: Check live custom domain
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/check-public-live.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-custom-domain:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Check live HTML and report release fingerprints
+        env:
+          SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import os, urllib.request, json, re, time
+          sha=os.environ['SHA'][:12]
+          result={}
+          for path in ('/','/photography/'):
+            url='https://bitterbuffaloart.com'+path+'?releasecheck='+sha
+            req=urllib.request.Request(url,headers={'User-Agent':'BitterBuffalo-Public-Release-Check/1.0','Cache-Control':'no-cache'})
+            try:
+              with urllib.request.urlopen(req,timeout=30) as response:
+                html=response.read().decode('utf-8','replace')
+                result[path]=dict(status=response.status,bytes=len(html),cf_cache_status=response.headers.get('cf-cache-status'),server=response.headers.get('server'),four_card='Sketchbook' in html and 'Explore Our Collections' in html and html.count('collection-card')>=4,prices='$199.33' in html and '$359.99' in html,supplier_gallery='Real LumaPrints Product Examples' in html,old_print_page='Print formats (when published)' in html,heading=re.search(r'<title>(.*?)</title>',html,re.I|re.S).group(1) if re.search(r'<title>(.*?)</title>',html,re.I|re.S) else 'not found')
+            except Exception as e: result[path]=dict(error=str(e))
+          print(json.dumps(result,indent=2))
+          assert result.get('/',{}).get('four_card'), 'Custom domain still serves the old home or request failed'
+          assert result.get('/photography/',{}).get('prices'), 'Custom domain still serves old photo pricing page or request failed'
+          PY
