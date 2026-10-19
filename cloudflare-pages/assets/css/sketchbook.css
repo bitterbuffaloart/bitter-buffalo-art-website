@@ -67,7 +67,7 @@
   font-size: 1.25rem;
   margin: .2rem 0 .35rem;
 }
-.sketch-card p { margin: 0 0 .45rem; color: #3a2f22; }
+.sketch-card p { margin: 0 0 .45rem; color: #241910; line-height: 1.6; }
 .sketch-note { font-size: .92rem; }
 .sketch-empty {
   max-width: 40rem;

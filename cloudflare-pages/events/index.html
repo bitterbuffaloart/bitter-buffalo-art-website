@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/css/site.css?v=20261019e" />
+  <link rel="stylesheet" href="../assets/css/site.css?v=20261019t" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -55,10 +55,14 @@
     <section class="prose event-section" id="upcoming">
       <h2>Upcoming Events</h2>
       <p class="event-intro">Only confirmed festivals, art markets, and exhibitions are listed here. Applications and tentative bookings are never shown as confirmed.</p>
-      <div class="event-empty">
-        <p><strong>No confirmed upcoming events are published at this time.</strong></p>
-        <p>As dates are confirmed, they will appear here with event name, date, location, and verified event links.</p>
-      </div>
+      <article class="event-card">
+        <img src="../assets/images/events/holiday-kickoff-market.jpg" alt="Holiday Kickoff Market flyer for Saturday, November 21" width="1115" height="627" />
+        <h3>Holiday Kickoff Market</h3>
+        <p class="event-card__meta">Saturday, November 21, 2026</p>
+        <p class="event-card__meta">10 a.m. to 3 p.m.</p>
+        <p class="event-card__meta">Summit County Community &amp; Senior Center</p>
+        <p>Presented by Treetop Child Advocacy Center.</p>
+      </article>
     </section>
 
     <section class="prose event-section" id="past">
@@ -88,22 +92,24 @@
           <a class="btn btn--ghost" href="https://wildoriafestival.com" target="_blank" rel="noopener noreferrer">Official event information</a>
         </article>
         <article class="event-card">
-          <h3>Black Uhru</h3>
+          <h3>Black Uhuru</h3>
           <p class="event-card__meta">July 12, 2026</p>
           <p class="event-card__meta">Levitt Pavilion Denver</p>
           <p>Bitter Buffalo Art appeared with tie-dye shirts and women’s apparel.</p>
           <p class="event-card__badge">Past appearance</p>
+          <a class="btn btn--ghost" href="https://www.levittdenver.org" target="_blank" rel="noopener noreferrer">Official event information</a>
         </article>
         <article class="event-card">
-          <h3>Questing the Wilderealm</h3>
+          <h3>Questing the WildeRealm</h3>
           <p class="event-card__meta">July 16–18, 2026</p>
-          <p class="event-card__meta">Moffett, Colorado</p>
+          <p class="event-card__meta">Moffat, Colorado</p>
           <p class="event-card__badge">Past appearance</p>
         </article>
         <article class="event-card">
           <h3>Elevate Love</h3>
           <p class="event-card__meta">July 31–August 2, 2026</p>
           <p class="event-card__badge">Past appearance</p>
+          <a class="btn btn--ghost" href="https://www.elevatelove2026.com" target="_blank" rel="noopener noreferrer">Official event information</a>
         </article>
       </div>
     </section>
@@ -125,39 +131,27 @@
     </section>
   </main>
   <footer class="site-footer">
-    <div class="site-footer__grid">
-      <div>
-        <h2>Bitter Buffalo Art</h2>
-        <p>Original art from the Colorado High Country—fine-art photography, hand-dyed textiles, laser woodwork, and custom commissions from Breckenridge.</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="../photography/">Photography</a></li>
-          <li><a href="../sketchbook/">Sketchbook</a></li>
-          <li><a href="../shop/">Shop</a></li>
-          <li><a href="../tie-dye/">Tie-Dye</a></li>
-          <li><a href="../laser-art/">Laser Art</a></li>
-          <li><a href="../events/">Events</a></li>
-          <li><a href="../about/">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Work With Us</h3>
-        <ul>
-          <li><a href="../custom/">Custom Art</a></li>
-          <li><a href="../contact/">Contact</a></li>
-          <li><a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Shop on Etsy</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="site-footer__note">Purchases are fulfilled through our <a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Etsy shop</a>. This website does not process checkout.</p>
-
     <div class="site-footer__land" aria-hidden="true">
       <picture>
         <source media="(max-width: 700px)" srcset="../assets/images/western-footer-mobile.svg?v=20261019f" />
         <img src="../assets/images/western-footer-landscape.svg?v=20261019f" alt="" width="1600" height="680" />
       </picture>
+    </div>
+    <div class="site-footer__copy">
+      <p class="site-footer__blurb">Original art from the Colorado High Country—fine-art photography, hand-dyed textiles, laser woodwork, and custom commissions from Breckenridge.</p>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <a href="../photography/">Photography</a>
+        <a href="../sketchbook/">Sketchbook</a>
+        <a href="../shop/">Shop</a>
+        <a href="../tie-dye/">Tie-Dye</a>
+        <a href="../laser-art/">Laser Art</a>
+        <a href="../events/">Events</a>
+        <a href="../about/">About</a>
+        <a href="../custom/">Custom Art</a>
+        <a href="../contact/">Contact</a>
+        <a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Shop on Etsy</a>
+      </nav>
+      <p class="site-footer__note">Purchases are fulfilled through our <a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Etsy shop</a>. This website does not process checkout.</p>
     </div>
   </footer>
   <script src="../assets/js/site.js"></script>

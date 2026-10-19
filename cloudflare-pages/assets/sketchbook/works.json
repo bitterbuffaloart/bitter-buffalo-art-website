@@ -3,7 +3,9 @@
     {
       "id": "red-field",
       "title": "Psychedelic abstract",
-      "categories": ["drawings"],
+      "categories": [
+        "drawings"
+      ],
       "medium": null,
       "year": null,
       "dimensions": null,
@@ -19,7 +21,9 @@
     {
       "id": "fox-geometry",
       "title": "Fox and sacred geometry",
-      "categories": ["drawings"],
+      "categories": [
+        "drawings"
+      ],
       "medium": null,
       "year": null,
       "dimensions": null,
@@ -35,7 +39,9 @@
     {
       "id": "frog-mushroom",
       "title": "Frog and mushroom",
-      "categories": ["drawings"],
+      "categories": [
+        "drawings"
+      ],
       "medium": null,
       "year": null,
       "dimensions": null,
@@ -52,10 +58,12 @@
       "id": "sky-within",
       "title": "The Sky Within",
       "titleStatus": "listed",
-      "categories": ["paintings"],
+      "categories": [
+        "paintings"
+      ],
       "medium": "Painting on canvas",
       "year": null,
-      "dimensions": "11×14",
+      "dimensions": "11\u00d714",
       "availability": null,
       "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
       "alt": "A canvas painting of an eye inside a pink diamond, on a blue sky with clouds and ink marks.",
@@ -69,10 +77,12 @@
       "id": "grit-grin",
       "title": "Grit & Grin",
       "titleStatus": "listed",
-      "categories": ["paintings"],
+      "categories": [
+        "paintings"
+      ],
       "medium": "Painting on canvas",
       "year": null,
-      "dimensions": "5×7",
+      "dimensions": "5\u00d77",
       "availability": null,
       "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
       "alt": "A small blue canvas painted with rows of teeth in thick black outlines.",
@@ -86,18 +96,21 @@
       "id": "static-mischief",
       "title": "Static Mischief",
       "titleStatus": "listed",
-      "categories": ["paintings", "mixed"],
+      "categories": [
+        "paintings",
+        "mixed"
+      ],
       "medium": "Mixed media on canvas",
       "year": null,
-      "dimensions": "8×10",
+      "dimensions": "8\u00d710",
       "availability": null,
       "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
       "alt": "A dark mixed-media canvas with neon scribbles, a bottle cap, and a small grinning figure.",
-      "thumb": "/assets/sketchbook/thumbs/static-mischief.jpg",
-      "display": "/assets/sketchbook/display/static-mischief.jpg",
-      "zoom": "/assets/sketchbook/zoom/static-mischief.jpg",
-      "width": 1600,
-      "height": 1200
+      "thumb": "/assets/sketchbook/thumbs/static-mischief.jpg?v=20261019r",
+      "display": "/assets/sketchbook/display/static-mischief.jpg?v=20261019r",
+      "zoom": "/assets/sketchbook/zoom/static-mischief.jpg?v=20261019r",
+      "width": 1200,
+      "height": 1600
     }
   ]
 }

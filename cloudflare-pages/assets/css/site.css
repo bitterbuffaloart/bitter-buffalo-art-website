@@ -79,7 +79,7 @@ a { color: var(--teal); }
   background: #8a4224 !important; color: #fff !important;
 }
 .nav-toggle {
-  display: none; background: #fff; border: 2px solid var(--ink);
+  display: none; background: var(--cream); border: 2px solid var(--ink);
   color: var(--ink); padding: .45rem .85rem; font: inherit; font-weight: 700;
 }
 .nav-toggle:focus-visible { outline: 3px solid var(--teal-bright); outline-offset: 2px; }
@@ -87,22 +87,22 @@ a { color: var(--teal); }
 .hero-art { width: 100%; display: block; min-height: 420px; }
 .hero::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, rgba(45,36,24,.18) 0%, rgba(45,36,24,.55) 55%, rgba(45,36,24,.78) 100%);
+  background: linear-gradient(180deg, rgba(45,36,24,.04) 0%, rgba(45,36,24,.12) 70%, rgba(45,36,24,.28) 100%);
 }
 .hero__content {
   position: absolute; inset: auto 0 0 0; z-index: 2; padding: 1.5rem 1.25rem 2rem;
-  background: linear-gradient(to top, rgba(16,12,9,.92) 0%, rgba(16,12,9,.45) 55%, transparent 100%);
+  background: linear-gradient(to top, rgba(36,25,16,.18) 0%, rgba(36,25,16,0) 70%);
   max-width: 1200px; margin: 0 auto; right: 0; left: 0;
   width: min(1200px, 100%);
   box-sizing: border-box;
 }
 .hero__panel {
-  max-width: 36rem;
+  max-width: 38rem;
   padding: 1.25rem 1.35rem 1.45rem;
-  background: rgba(14,11,8,.9);
-  border: 1px solid rgba(243,231,207,.45);
-  box-shadow: 0 10px 32px rgba(0,0,0,.45);
-  backdrop-filter: blur(3px);
+  background: rgba(244,234,214,.94);
+  border: 1px solid rgba(45,36,24,.16);
+  box-shadow: none;
+  color: #241910;
 }
 .eyebrow { margin: 0 0 .65rem; }
 .eyebrow__mark {
@@ -117,18 +117,18 @@ a { color: var(--teal); }
 .hero h1, .page-hero h1 {
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(2.15rem, 5.5vw, 3.35rem);
-  line-height: 1.08; margin: 0 0 .45rem; color: #fff;
-  text-shadow: 0 2px 4px rgba(0,0,0,.65), 0 0 24px rgba(0,0,0,.35);
+  line-height: 1.12; margin: 0 0 .45rem; color: #241910;
+  text-shadow: none;
   letter-spacing: .03em;
 }
 .page-hero h1 { color: var(--ink); text-shadow: none; }
 .hero__disciplines {
   margin: 0 0 .55rem; font-weight: 700; font-size: 1.05rem;
-  letter-spacing: .04em; color: #f3e7cf;
+  letter-spacing: .04em; color: #3a2e22;
 }
 .hero__support {
   font-family: var(--font-display); font-size: clamp(1.15rem, 2.6vw, 1.55rem);
-  margin: 0 0 .9rem; color: #e8d9b8; font-weight: 600;
+  margin: 0 0 .9rem; color: #241910; font-weight: 600;
 }
 .lede { max-width: 40rem; font-size: 1.12rem; margin: 0 0 1.25rem; color: #f7f4ee; }
 .page-hero .lede { color: #3a2f22; }
@@ -394,7 +394,7 @@ a { color: var(--teal); }
 .western-page .brandstory p,
 .western-page .prose p,
 .western-page .product-collection__intro p {
-  text-shadow: 0 0 10px #f7f4ee, 0 0 18px #f7f4ee, 0 1px 0 #f7f4ee;
+  text-shadow: none;
 }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 .site-footer { padding-bottom: 0; background: rgba(234,217,184,.58); }
@@ -514,4 +514,106 @@ a { color: var(--teal); }
 @media (max-width: 620px) { .sketch-feature__grid { grid-template-columns: 1fr; } }
 @media (max-width: 900px) {
   .gallery--archive { grid-template-columns: 1fr; }
+}
+
+/* Readability: parchment panels, espresso type, footer drawn into the farm. */
+:root {
+  --espresso: #241910;
+  --parchment: #f4ead6;
+  --sand: #e7d3b4;
+}
+body { color: var(--espresso); line-height: 1.65; }
+.brand img { background: var(--parchment); }
+.nav-link.is-active {
+  box-shadow: inset 0 -3px 0 var(--teal);
+}
+.hero .btn { color: var(--espresso); background: transparent; border-color: var(--espresso); }
+.hero .btn:hover { background: rgba(36,25,16,.06); }
+.hero .btn--solid { background: var(--espresso); color: var(--parchment); border-color: var(--espresso); }
+.hero .btn--solid:hover { background: #1a140e; color: var(--parchment); }
+.western-page .page-hero,
+.western-page .brandstory,
+.western-page .prose,
+.western-page .product-collection,
+.western-page .split,
+.western-page .pillars,
+.western-page .secondary-links,
+.western-page .artist-story,
+.western-page .portfolio-nav {
+  background: radial-gradient(ellipse 92% 88% at 50% 42%, rgba(244,234,214,.95) 0%, rgba(236,220,190,.78) 58%, rgba(236,220,190,0) 100%);
+}
+.western-page .lede,
+.western-page .brandstory p,
+.western-page .prose p,
+.western-page .artist-story__copy p,
+.western-page .product-collection__intro p,
+.western-page .split p,
+.product-card figcaption p {
+  color: var(--espresso);
+  line-height: 1.7;
+  max-width: 42rem;
+}
+.brandstory h2, .page-hero h1, .prose h2, .product-collection__intro h2 { color: var(--espresso); }
+.product-card,
+.bb-form,
+.event-card,
+.event-empty {
+  background: var(--parchment);
+  box-shadow: none;
+}
+.product-card figcaption p,
+.event-card__meta,
+.product-collection__intro p,
+.bb-form__hint { color: #2c241c; }
+.site-footer {
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+}
+.site-footer__land { margin: 0; }
+.site-footer__copy {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: min(46rem, 62%);
+  padding: 1rem 4rem 3.2rem 1.25rem;
+  background: linear-gradient(100deg, rgba(244,234,214,.96) 0%, rgba(244,234,214,.92) 58%, rgba(244,234,214,.4) 80%, rgba(244,234,214,0) 100%);
+  pointer-events: none;
+}
+.site-footer__copy a,
+.site-footer__nav { pointer-events: auto; }
+.site-footer__blurb,
+.site-footer__note {
+  margin: 0 0 .65rem;
+  max-width: 34rem;
+  color: var(--espresso);
+  line-height: 1.55;
+}
+.site-footer__note { margin: .7rem 0 0; font-size: .92rem; }
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .85rem;
+  max-width: 32rem;
+}
+.site-footer__nav a {
+  color: var(--espresso);
+  font-weight: 700;
+  text-decoration: none;
+}
+.site-footer__nav a:hover { color: var(--rust); }
+.site-footer__nav a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.event-card img { width: 100%; height: auto; margin: 0 0 .8rem; }
+@media (max-width: 700px) {
+  .site-footer__copy {
+    width: 100%;
+    padding: .55rem .8rem 1.2rem;
+    background: linear-gradient(180deg, rgba(244,234,214,.94) 0%, rgba(244,234,214,.72) 62%, rgba(244,234,214,0) 100%);
+  }
+  .site-footer__blurb { display: none; }
+  .site-footer__nav { gap: .2rem .65rem; }
+  .site-footer__nav a, .site-footer__note { font-size: .82rem; }
 }
