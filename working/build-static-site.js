@@ -333,6 +333,19 @@ async function main() {
       <div>Handmade in Colorado</div>
       <div>Built to Live With &amp; Love</div>
     </section>
+    <section class="studio-land" aria-labelledby="studio-land-title">
+      <div class="studio-land__copy">
+        <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Provisional drawing</span></p>
+        <h2 id="studio-land-title">The high-country farm</h2>
+        <p>The original farmer-and-plow illustration has not been recovered. This scene is a new studio drawing for review: buffalo skulls with a turquoise mark, topographic contours, crosshatched tumbleweeds, mountains, fields, furrows, and hay.</p>
+      </div>
+      <figure>
+        <picture>
+          <source media="(max-width: 700px)" srcset="/assets/images/western-footer-mobile.svg" />
+          <img src="/assets/images/western-footer-landscape.svg" alt="Provisional drawing of a farmer plowing a high-country field, with hay bales, mountains, buffalo skulls, and tumbleweeds." width="1600" height="680" />
+        </picture>
+      </figure>
+    </section>
     <section class="pillars">
       <h2>Explore Our Collections</h2>
       <div class="pillars__grid pillars__grid--three">
@@ -351,8 +364,8 @@ async function main() {
           <div class="pillar__body">
             <h3>Tie-Dye Clothing &amp; Textile Art</h3>
             <div class="pillar__actions">
-              <a class="btn btn--solid" href="${ETSY}" target="_blank" rel="noopener noreferrer">Shop Tie-Dye on Etsy</a>
-              <a class="btn" href="/tie-dye/">View Portfolio</a>
+              <a class="btn btn--solid" href="/tie-dye/">View Tie-Dye Portfolio</a>
+              <a class="btn" href="${ETSY}" target="_blank" rel="noopener noreferrer">Shop Tie-Dye on Etsy</a>
             </div>
           </div>
         </article>
@@ -1262,15 +1275,14 @@ a { color: var(--teal); }
 }
 
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
+/* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
-  background-color: #f7f4ee;
-  background-image:
-    url("../images/western-topo.svg"),
-    radial-gradient(ellipse at 12% 0%, rgba(196,163,90,.16), transparent 42%),
-    radial-gradient(ellipse at 88% 18%, rgba(165,82,46,.08), transparent 36%);
-  background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: min(1600px, 140%) auto, auto, auto;
-  background-position: center -4rem, 0 0, 0 0;
+  background-color: #f3e7cf;
+  background-image: url("../images/western-topo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
 }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 .site-footer { padding-bottom: 0; background: #efe6d4; }
@@ -1285,20 +1297,35 @@ a { color: var(--teal); }
   display: block;
 }
 .page-hero { position: relative; }
-@media (min-width: 900px) {
-  .western-page .page-hero { padding-right: 8.5rem; }
-  .western-page .page-hero::after {
-    content: "";
-    position: absolute;
-    right: 1.25rem;
-    top: 2.4rem;
-    width: 112px;
-    height: 88px;
-    background: url("../images/western-skull.svg") center / contain no-repeat;
-    opacity: .28;
-    pointer-events: none;
-  }
+.western-page .page-hero::before {
+  content: "";
+  display: block;
+  width: 168px;
+  height: 128px;
+  margin: 0 0 .85rem;
+  background: url("../images/western-skull.svg") left center / contain no-repeat;
+  pointer-events: none;
 }
+.studio-land {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1rem;
+}
+.studio-land__copy { max-width: 46rem; margin: 0 auto 1rem; text-align: center; }
+.studio-land__copy h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: .4rem 0 .6rem;
+  color: var(--ink);
+  letter-spacing: .04em;
+}
+.studio-land__copy p { margin: 0 auto; color: #3a2f22; font-size: 1.05rem; }
+.studio-land figure {
+  margin: 1.25rem 0 0;
+  background: #efe6d4;
+  border: 1px solid rgba(45,36,24,.2);
+}
+.studio-land img { width: 100%; height: auto; display: block; }
 .portfolio-nav {
   max-width: 1200px;
   margin: 0 auto;

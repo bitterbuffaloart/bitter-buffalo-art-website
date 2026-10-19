@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="presentation" focusable="false">
   <!-- One contour map. Not a tile. Newly drawn. -->
-  <g fill="none" stroke="#2d2418" stroke-linecap="round" opacity=".22">
+  <g fill="none" stroke="#2d2418" stroke-linecap="round" opacity=".62">
     <path stroke-width="1.15" d="M180 220 C260 120 420 90 560 150 C740 230 700 380 540 430 C360 490 140 390 180 220Z"/>
     <path stroke-width="1" d="M230 250 C300 170 430 160 520 210 C640 280 610 370 500 400 C360 440 190 360 230 250Z"/>
     <path stroke-width=".9" d="M280 280 C330 230 420 230 470 270 C530 320 500 370 430 380 C340 395 250 340 280 280Z"/>
@@ -14,7 +14,7 @@
     <path stroke-width="1" d="M1480 480 C1360 540 1500 680 1580 620"/>
     <path stroke-width=".8" d="M760 80 C820 160 700 220 760 300 C820 380 980 340 940 240 C910 160 820 40 760 80Z"/>
   </g>
-  <g fill="none" stroke="#087c85" stroke-linecap="round" opacity=".28">
+  <g fill="none" stroke="#087c85" stroke-linecap="round" opacity=".72">
     <path stroke-width="1.35" d="M210 240 C310 150 470 150 560 230 C670 330 600 430 470 450 C310 476 150 360 210 240Z"/>
     <path stroke-width="1.25" d="M1020 210 C1160 140 1360 200 1400 340 C1450 520 1260 560 1120 500 C1000 448 960 300 1020 210Z"/>
   </g>
