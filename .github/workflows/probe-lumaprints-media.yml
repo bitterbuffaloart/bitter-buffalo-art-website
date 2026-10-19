@@ -5,6 +5,7 @@ on:
     paths:
       - '.github/workflows/probe-lumaprints-media.yml'
       - 'working/probe-lumaprints-media.mjs'
+      - 'working/stage-lumaprints-examples.mjs'
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,4 +18,6 @@ jobs:
         with:
           node-version: '22'
       - name: Probe sixteen manufacturer image assets without posting or ordering
-        run: node working/probe-lumaprints-media.mjs
+        run: |
+          node working/probe-lumaprints-media.mjs
+          node working/stage-lumaprints-examples.mjs /tmp/bitter-buffalo-lumaprints
