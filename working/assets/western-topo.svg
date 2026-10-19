@@ -5,21 +5,6 @@
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/>
       <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.26  0 0 0 0 0.16  0 0 0 0.22 0"/>
     </filter>
-    <symbol id="map-skull" viewBox="-40 -12 312 220">
-      <path d="M70 108 C36 96 4 70 -8 36 C-16 16 6 8 22 28 C40 52 58 78 82 104Z" fill="#f6efe2" stroke="#2d2418" stroke-width="3"/>
-      <path d="M150 108 C184 96 216 70 228 36 C236 16 214 8 198 28 C180 52 162 78 138 104Z" fill="#f6efe2" stroke="#2d2418" stroke-width="3"/>
-      <path d="M48 98 C48 34 78 12 110 12 C142 12 172 34 172 98 C172 136 144 158 110 164 C76 158 48 136 48 98Z" fill="#f7f1e4" stroke="#2d2418" stroke-width="3"/>
-      <ellipse cx="82" cy="96" rx="16" ry="22" fill="#2d2418"/>
-      <ellipse cx="138" cy="96" rx="16" ry="22" fill="#2d2418"/>
-      <path d="M96 124 C96 150 110 162 110 162 C110 162 124 150 124 124 C124 112 118 106 110 106 C102 106 96 112 96 124Z" fill="#2d2418"/>
-      <path d="M108 46 L120 64 L108 82 L96 64Z" fill="#087c85"/>
-      <circle cx="110" cy="64" r="16" fill="none" stroke="#c4a35a" stroke-width="1.6"/>
-      <g fill="none" stroke="#2d2418" stroke-width="1.1" opacity=".55">
-        <path d="M70 70 L92 88 M150 70 L128 88 M78 120 L96 108 M142 120 L124 108"/>
-        <path d="M58 48 C78 40 72 62 92 54 M168 46 C186 36 180 64 198 52"/>
-        <path d="M24 148 C40 136 34 166 52 154 M188 146 C206 134 198 168 214 152"/>
-      </g>
-    </symbol>
   </defs>
   <rect width="1600" height="1100" fill="#ead9b8"/>
   <rect width="1600" height="1100" filter="url(#paper)"/>
@@ -48,9 +33,6 @@
     <path stroke-width="4.4" d="M120 270 C90 150 240 70 420 110 C620 154 700 80 820 180 C940 280 860 460 640 500 C400 544 180 450 140 340 C116 280 136 300 120 270Z"/>
     <path stroke-width="4" d="M960 200 C1060 80 1320 90 1460 220 C1580 340 1520 540 1340 600 C1140 668 960 540 960 400 C960 300 900 250 960 200Z"/>
   </g>
-  <use href="#map-skull" x="1120" y="360" width="340" height="262" opacity=".88"/>
-  <use href="#map-skull" x="70" y="560" width="280" height="216" opacity=".84"/>
-  <use href="#map-skull" x="1280" y="820" width="260" height="200" opacity=".9"/>
   <g fill="none" stroke="#3a2a1c" stroke-linecap="round" opacity=".8">
     <path stroke-width="4.2" d="M0 190 C220 150 420 230 640 188 C860 146 1060 228 1280 176 C1460 140 1540 188 1600 166"/>
     <path stroke-width="3.2" d="M0 250 C240 210 460 290 700 246 C940 202 1140 286 1360 234 C1500 200 1560 246 1600 222"/>

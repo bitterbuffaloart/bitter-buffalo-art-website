@@ -68,29 +68,8 @@
     <path d="M150 548 Q158 524 166 548 M158 548 Q166 520 174 548"/>
     <path d="M1488 620 Q1498 590 1508 620 M1500 620 Q1512 586 1524 620"/>
   </g>
-  <g transform="translate(78,292)">
-    <circle cx="108" cy="78" r="46" fill="none" stroke="#c4a35a" stroke-width="1.1" opacity=".7"/>
-    <path d="M108 36 V48 M108 108 V120 M66 78 H78 M138 78 H150" stroke="#c4a35a" stroke-width="1.1" opacity=".7"/>
-    <path d="M70 108 C36 96 4 70 -8 36 C-16 16 6 8 22 28 C40 52 58 78 82 104 Z" fill="#e7d3ae" stroke="#2d2418" stroke-width="2.2"/>
-    <path d="M146 108 C180 96 212 70 224 36 C232 16 210 8 194 28 C176 52 158 78 134 104 Z" fill="#e7d3ae" stroke="#2d2418" stroke-width="2.2"/>
-    <path d="M50 96 C50 36 78 16 108 16 C138 16 166 36 166 96 C166 132 140 154 108 160 C76 154 50 132 50 96Z" fill="#f6efe2" stroke="#2d2418" stroke-width="2.2"/>
-    <ellipse cx="82" cy="96" rx="16" ry="20" fill="#2d2418"/>
-    <ellipse cx="134" cy="96" rx="16" ry="20" fill="#2d2418"/>
-    <path d="M96 122 C96 146 108 158 108 158 C108 158 120 146 120 122 C120 112 114 106 108 106 C102 106 96 112 96 122Z" fill="#2d2418"/>
-    <path d="M92 168 H124 L118 178 H98Z" fill="#f6efe2" stroke="#2d2418" stroke-width="1.6"/>
-    <circle cx="108" cy="62" r="13" fill="none" stroke="#c4a35a" stroke-width="1.3"/>
-    <path d="M108 50 L116 62 L108 74 L100 62Z" fill="#087c85" stroke="none"/>
-  </g>
-  <g transform="translate(860,168) scale(.62)" opacity=".95">
-    <path d="M70 108 C36 96 4 70 -8 36 C-16 16 6 8 22 28 C40 52 58 78 82 104 Z" fill="#e7d3ae" stroke="#2d2418" stroke-width="2.2"/>
-    <path d="M146 108 C180 96 212 70 224 36 C232 16 210 8 194 28 C176 52 158 78 134 104 Z" fill="#e7d3ae" stroke="#2d2418" stroke-width="2.2"/>
-    <path d="M50 96 C50 36 78 16 108 16 C138 16 166 36 166 96 C166 132 140 154 108 160 C76 154 50 132 50 96Z" fill="#f6efe2" stroke="#2d2418" stroke-width="2.2"/>
-    <ellipse cx="82" cy="96" rx="16" ry="20" fill="#2d2418"/>
-    <ellipse cx="134" cy="96" rx="16" ry="20" fill="#2d2418"/>
-    <path d="M96 122 C96 146 108 158 108 158 C108 158 120 146 120 122 C120 112 114 106 108 106 C102 106 96 112 96 122Z" fill="#2d2418"/>
-    <circle cx="108" cy="62" r="14" fill="none" stroke="#c4a35a" stroke-width="1.6"/>
-    <path d="M108 48 L118 62 L108 76 L98 62Z" fill="#087c85"/>
-  </g>
+  
+  
   <!-- Provisional engraved farmer. Both hands grip the plow handles. The share cuts the furrow ahead of the boots. -->
   <g transform="translate(860,70)" stroke="#241910" stroke-linejoin="round" stroke-linecap="round">
     <path d="M8 430 L62 372 L108 438 Z" fill="#2a2926" stroke-width="2"/>

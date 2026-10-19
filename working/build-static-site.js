@@ -118,10 +118,9 @@ function layout({ title, description, pathPrefix, active, body }) {
   const nav = [
     { href: `${p}/`, id: 'home', label: 'Home' },
     { href: `${p}/photography/`, id: 'photo', label: 'Photography' },
-    { href: `${p}/sketchbook/`, id: 'sketch', label: 'Sketchbook' },
-    { href: `${p}/shop/`, id: 'shop', label: 'Shop' },
     { href: `${p}/tie-dye/`, id: 'tiedye', label: 'Tie-Dye' },
     { href: `${p}/laser-art/`, id: 'laser', label: 'Laser Art' },
+    { href: `${p}/sketchbook/`, id: 'sketch', label: 'Sketchbook' },
     { href: `${p}/custom/`, id: 'custom', label: 'Custom Art' },
     { href: `${p}/events/`, id: 'events', label: 'Events' },
     { href: `${p}/about/`, id: 'about', label: 'About' },
@@ -154,7 +153,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261019c" />
+  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261019e" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -313,7 +312,7 @@ async function main() {
         <div class="hero__panel">
           <p class="eyebrow"><span class="eyebrow__mark">Bitter Buffalo Art · Breckenridge, Colorado</span></p>
           <h1>Art from the High Country</h1>
-          <p class="hero__disciplines">Photography · Sketchbook · Tie-Dye · Laser Art</p>
+          <p class="hero__disciplines">Photography · Tie-Dye · Laser Art</p>
           <p class="hero__support">Choose Your Trail</p>
           <div class="hero__actions">
             <a class="btn btn--solid" href="/photography/">View Photography Portfolio</a>
@@ -328,24 +327,6 @@ async function main() {
       <div>Original Bitter Buffalo Art</div>
       <div>Handmade in Colorado</div>
       <div>Built to Live With &amp; Love</div>
-    </section>
-    <section class="sketch-feature" aria-labelledby="sketch-feature-title">
-      <h2 id="sketch-feature-title">The Bitter Buffalo Sketchbook</h2>
-      <div class="sketch-feature__grid">
-        <figure>
-          <a href="/sketchbook/#fox-geometry"><img src="/assets/sketchbook/thumbs/fox-geometry.jpg" alt="A colored drawing of a fox in a forest with mushrooms and a geometric star." width="483" height="640" loading="lazy" decoding="async" /></a>
-          <figcaption>Fox and sacred geometry</figcaption>
-        </figure>
-        <figure>
-          <a href="/sketchbook/#frog-mushroom"><img src="/assets/sketchbook/thumbs/frog-mushroom.jpg" alt="A square drawing of a frog among mushrooms, with looping ink lines." width="640" height="640" loading="lazy" decoding="async" /></a>
-          <figcaption>Frog and mushroom</figcaption>
-        </figure>
-        <figure>
-          <a href="/sketchbook/#red-field"><img src="/assets/sketchbook/thumbs/red-field.jpg" alt="Vertical artwork in red, black, turquoise, green, and magenta." width="445" height="640" loading="lazy" decoding="async" /></a>
-          <figcaption>Psychedelic abstract</figcaption>
-        </figure>
-      </div>
-      <p class="sketch-feature__more"><a class="btn btn--solid-ink" href="/sketchbook/">View the Sketchbook</a></p>
     </section>
     <section class="pillars">
       <h2>Explore Our Collections</h2>
@@ -377,16 +358,6 @@ async function main() {
             <div class="pillar__actions">
               <a class="btn btn--solid" href="${ETSY}" target="_blank" rel="noopener noreferrer">Shop Laser Art on Etsy</a>
               <a class="btn" href="/laser-art/">View Laser Art</a>
-            </div>
-          </div>
-        </article>
-        <article class="pillar pillar--mark" style="--accent:#c4a35a">
-          <img src="/assets/images/western-skull.svg?v=20261019c" alt="" width="440" height="360" loading="lazy" />
-          <div class="pillar__body">
-            <h3>Sketchbook</h3>
-            <p class="pillar__note">Drawings, paintings, and mixed-media work from the studio.</p>
-            <div class="pillar__actions">
-              <a class="btn btn--solid" href="/sketchbook/">View the Sketchbook</a>
             </div>
           </div>
         </article>
@@ -1289,7 +1260,7 @@ a { color: var(--teal); }
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
   background-color: #ead9b8;
-  background-image: url("../images/western-topo.svg?v=20261019c");
+  background-image: url("../images/western-topo.svg?v=20261019d");
   background-repeat: repeat-y;
   background-size: 100% auto;
   background-position: center top;
@@ -1321,17 +1292,6 @@ a { color: var(--teal); }
   display: block;
 }
 .page-hero { position: relative; overflow: visible; }
-.western-page .page-hero::before {
-  content: "";
-  display: block;
-  width: min(340px, 100%);
-  aspect-ratio: 440 / 360;
-  height: auto;
-  margin: 0 0 1.1rem;
-  background: url("../images/western-skull.svg?v=20261019c") center / contain no-repeat;
-  pointer-events: none;
-  overflow: visible;
-}
 .studio-land {
   max-width: 1200px;
   margin: 0 auto;
