@@ -6,7 +6,7 @@
   --teal-bright: #38a6ad;
   --rust: #a5522e;
   --gold: #c4a35a;
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Cinzel", Palatino, "Palatino Linotype", serif;
   --font-body: "Source Sans 3", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
@@ -119,7 +119,7 @@ a { color: var(--teal); }
   font-size: clamp(2.15rem, 5.5vw, 3.35rem);
   line-height: 1.08; margin: 0 0 .45rem; color: #fff;
   text-shadow: 0 2px 4px rgba(0,0,0,.65), 0 0 24px rgba(0,0,0,.35);
-  letter-spacing: .01em;
+  letter-spacing: .03em;
 }
 .page-hero h1 { color: var(--ink); text-shadow: none; }
 .hero__disciplines {
@@ -380,24 +380,10 @@ a { color: var(--teal); }
   background-image:
     url("../images/western-topo.svg"),
     radial-gradient(ellipse at 12% 0%, rgba(196,163,90,.16), transparent 42%),
-    radial-gradient(ellipse at 90% 30%, rgba(165,82,46,.07), transparent 36%);
-  background-size: 520px 520px, auto, auto;
-}
-.western-page::before,
-.western-page::after {
-  content: "";
-  position: fixed;
-  z-index: 0;
-  pointer-events: none;
-  background: url("../images/western-tumbleweed.svg") center / contain no-repeat;
-}
-.western-page::before {
-  width: 84px; height: 84px; left: 0; bottom: 22vh; opacity: .2;
-  animation: tumble-drift 46s ease-in-out infinite;
-}
-.western-page::after {
-  width: 58px; height: 58px; right: 1.5vw; top: 42vh; opacity: .14;
-  animation: tumble-drift 58s ease-in-out infinite reverse;
+    radial-gradient(ellipse at 88% 18%, rgba(165,82,46,.08), transparent 36%);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: min(1600px, 140%) auto, auto, auto;
+  background-position: center -4rem, 0 0, 0 0;
 }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
 .site-footer { padding-bottom: 0; background: #efe6d4; }
@@ -411,16 +397,84 @@ a { color: var(--teal); }
   height: auto;
   display: block;
 }
-@keyframes tumble-drift {
-  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
-  50% { transform: translate3d(16px, 6px, 0) rotate(10deg); }
-  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+.page-hero { position: relative; }
+@media (min-width: 900px) {
+  .western-page .page-hero { padding-right: 8.5rem; }
+  .western-page .page-hero::after {
+    content: "";
+    position: absolute;
+    right: 1.25rem;
+    top: 2.4rem;
+    width: 112px;
+    height: 88px;
+    background: url("../images/western-skull.svg") center / contain no-repeat;
+    opacity: .28;
+    pointer-events: none;
+  }
+}
+.portfolio-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.portfolio-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .04em;
+  border: 1px solid rgba(45,36,24,.28);
+  padding: .45rem .8rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  background: rgba(247,244,238,.9);
+}
+.portfolio-nav a:hover { border-color: var(--teal); color: var(--teal); }
+.portfolio-nav a:focus-visible { outline: 3px solid var(--teal); outline-offset: 2px; }
+.product-card--archive { background: #f7f4ee; }
+.product-card--archive .product-card__image,
+.product-card--archive .product-card__image:hover img { transform: none; cursor: default; }
+.product-card__status {
+  display: inline-block;
+  margin: .15rem 0 .35rem;
+  color: var(--rust);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.gallery--archive { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.gallery--archive img { object-fit: cover; background: #f7f4ee; }
+.artist-story {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.25rem 3.5rem;
+  display: grid;
+  grid-template-columns: minmax(220px, 380px) minmax(0, 1fr);
+  gap: 2rem 2.5rem;
+  align-items: start;
+}
+.artist-story figure { margin: 0; }
+.artist-story img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #f7f4ee;
+  border: 1px solid rgba(45,36,24,.16);
+}
+.artist-story__copy p {
+  color: #3a2f22;
+  font-size: 1.08rem;
+  margin: 0 0 1rem;
 }
 @media (max-width: 780px) {
-  .western-page::before { width: 52px; height: 52px; opacity: .14; bottom: 14vh; }
-  .western-page::after { width: 40px; height: 40px; opacity: .12; }
   .site-footer__land { margin-top: 1rem; }
+  .artist-story { grid-template-columns: 1fr; }
+  .gallery--archive { grid-template-columns: 1fr; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .western-page::before, .western-page::after { animation: none; }
+@media (max-width: 900px) {
+  .gallery--archive { grid-template-columns: 1fr; }
 }

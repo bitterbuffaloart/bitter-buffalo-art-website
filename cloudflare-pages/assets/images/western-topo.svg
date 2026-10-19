@@ -1,12 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" fill="none" aria-hidden="true">
-  <g stroke="#2d2418" stroke-width="1.1" stroke-linecap="round">
-    <path stroke-opacity="0.16" d="M8 46c28-18 52-6 74 2 24 8 36-10 62-8 22 2 40 16 70 8"/>
-    <path stroke-opacity="0.12" d="M6 78c34-16 58 4 86 8 30 4 42-18 70-14 20 2 38 14 66 6"/>
-    <path stroke-opacity="0.1" d="M10 112c26-14 48 2 74 6 28 4 40-16 68-12 22 4 40 14 72 4"/>
-    <path stroke-opacity="0.13" d="M4 148c32-12 54 8 84 10 32 2 46-16 74-10 22 4 42 12 70 2"/>
-    <path stroke-opacity="0.09" d="M12 186c30-16 56 2 82 8 28 6 44-12 72-8 22 4 38 16 64 6"/>
-    <ellipse cx="78" cy="92" rx="36" ry="16" stroke-opacity="0.1"/>
-    <ellipse cx="168" cy="154" rx="42" ry="18" stroke-opacity="0.09"/>
-    <path stroke="#a5522e" stroke-opacity="0.1" d="M20 210c40-10 70 6 108 4 34-2 58-14 92-6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="presentation" focusable="false">
+  <!-- One contour map. Not a tile. Newly drawn. -->
+  <g fill="none" stroke="#2d2418" stroke-linecap="round" opacity=".22">
+    <path stroke-width="1.15" d="M180 220 C260 120 420 90 560 150 C740 230 700 380 540 430 C360 490 140 390 180 220Z"/>
+    <path stroke-width="1" d="M230 250 C300 170 430 160 520 210 C640 280 610 370 500 400 C360 440 190 360 230 250Z"/>
+    <path stroke-width=".9" d="M280 280 C330 230 420 230 470 270 C530 320 500 370 430 380 C340 395 250 340 280 280Z"/>
+    <path stroke-width="1.15" d="M980 160 C1120 80 1340 120 1420 260 C1500 420 1360 560 1160 560 C960 560 860 400 900 280 C930 200 940 190 980 160Z"/>
+    <path stroke-width="1" d="M1040 230 C1140 180 1280 210 1320 310 C1370 430 1260 500 1140 490 C1020 478 980 370 1040 230Z"/>
+    <path stroke-width=".9" d="M1100 280 C1160 250 1240 280 1250 340 C1260 400 1180 430 1120 410 C1060 390 1050 320 1100 280Z"/>
+    <path stroke-width="1.1" d="M240 760 C380 640 620 670 700 820 C780 980 620 1080 440 1040 C250 998 120 860 240 760Z"/>
+    <path stroke-width=".95" d="M330 820 C420 740 560 770 590 880 C620 980 500 1040 400 1000 C290 956 260 880 330 820Z"/>
+    <path stroke-width="1.05" d="M1040 720 C1180 640 1400 700 1460 860 C1520 1020 1320 1100 1160 1040 C1000 980 940 820 1040 720Z"/>
+    <path stroke-width="1.2" d="M40 480 C180 420 260 520 220 640"/>
+    <path stroke-width="1" d="M1480 480 C1360 540 1500 680 1580 620"/>
+    <path stroke-width=".8" d="M760 80 C820 160 700 220 760 300 C820 380 980 340 940 240 C910 160 820 40 760 80Z"/>
+  </g>
+  <g fill="none" stroke="#087c85" stroke-linecap="round" opacity=".28">
+    <path stroke-width="1.35" d="M210 240 C310 150 470 150 560 230 C670 330 600 430 470 450 C310 476 150 360 210 240Z"/>
+    <path stroke-width="1.25" d="M1020 210 C1160 140 1360 200 1400 340 C1450 520 1260 560 1120 500 C1000 448 960 300 1020 210Z"/>
   </g>
 </svg>
