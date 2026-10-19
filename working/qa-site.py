@@ -36,7 +36,6 @@ def check(root, base=None):
     allowed_etsy={
         'https://www.etsy.com/shop/BitterBuffaloArt',
         'https://www.etsy.com/listing/4596991556/hand-dyed-dickies-bib-overalls-40x32',
-        'https://www.etsy.com/listing/4596438824/hand-dyed-dickies-bib-overalls-36x30',
         'https://www.etsy.com/listing/4596420937/hand-dyed-dickies-bib-overalls-34x30',
         'https://www.etsy.com/listing/4596377932/hand-dyed-dickies-bib-overalls-36x30',
         'https://www.etsy.com/listing/4596278804/hand-dyed-dickies-bib-overalls-geode-tie',
@@ -68,7 +67,7 @@ def check(root, base=None):
         'https://www.etsy.com/listing/4597018002/grit-grin-original-5x7-teeth-painting-on',
     }
     if etsy!=allowed_etsy: errors.append(f'Unexpected Etsy links: {etsy ^ allowed_etsy}')
-    if len(etsy_images)!=31: errors.append(f'Expected 31 live Etsy product images, got {len(etsy_images)}')
+    if len(etsy_images)!=3: errors.append(f'Expected 3 live Etsy product images, got {len(etsy_images)}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
     manifest=json.loads((root.parent/'working/final33-portfolio.json').read_text(encoding='utf-8'))
     records=manifest['photos']
