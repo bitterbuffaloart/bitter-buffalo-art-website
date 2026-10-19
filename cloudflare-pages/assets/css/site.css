@@ -728,3 +728,55 @@ body { color: var(--espresso); line-height: 1.65; }
   .print-mockups,
   .print-product dl div { grid-template-columns: 1fr; }
 }
+
+/* Review consolidation: authentic art on parchment, never white gallery cards. */
+.western-page .gallery--portfolio figure,
+.western-page .portfolio-feature figure {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.western-page .gallery--portfolio img,
+.western-page .portfolio-feature img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+}
+.western-page .gallery--portfolio figcaption,
+.western-page .portfolio-feature figcaption {
+  background: rgba(243,231,207,.72);
+  color: var(--espresso);
+}
+.western-page .page-merch .gallery--products .product-card,
+.western-page.page-merch .gallery--products .product-card,
+.western-page .gallery--products .product-card {
+  background: var(--cream);
+  border-color: rgba(45,36,24,.25);
+  box-shadow: none;
+}
+.western-page .gallery--products .product-card figcaption,
+.western-page .gallery--products .product-card__type,
+.western-page .gallery--products .product-card__status {
+  background: var(--cream);
+  color: var(--espresso);
+}
+.western-page .gallery--products .product-card__image { background: var(--cream); }
+.western-page .gallery--products .product-card__image img {
+  object-fit: contain;
+  background: var(--cream);
+}
+.western-page .pillar--home {
+  outline: none;
+  border: 6px solid var(--cream);
+  box-shadow: 0 1px 0 rgba(45,36,24,.3);
+}
+.western-page .pillar--home .pillar__link:focus-visible,
+.western-page .pillar--home .pillar__etsy:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+@media (max-width: 620px) {
+  .western-page .gallery--products .product-card__image img { width:100%; height:auto; }
+}
