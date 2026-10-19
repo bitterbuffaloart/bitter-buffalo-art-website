@@ -153,7 +153,7 @@ function layout({ title, description, pathPrefix, active, body }) {
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="${p}/assets/css/site.css" />
+  <link rel="stylesheet" href="${p}/assets/css/site.css?v=20261018b" />
 </head>
 <body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
@@ -206,8 +206,8 @@ ${body}
     <div class="site-footer__land" aria-hidden="true">
       <!-- Newly drawn provisional farm landscape. The original farmer illustration was not recovered. -->
       <picture>
-        <source media="(max-width: 700px)" srcset="${p}/assets/images/western-footer-mobile.svg" />
-        <img src="${p}/assets/images/western-footer-landscape.svg" alt="" width="1600" height="680" />
+        <source media="(max-width: 700px)" srcset="${p}/assets/images/western-footer-mobile.svg?v=20261018b" />
+        <img src="${p}/assets/images/western-footer-landscape.svg?v=20261018b" alt="" width="1600" height="680" />
       </picture>
     </div>
   </footer>
@@ -341,8 +341,8 @@ async function main() {
       </div>
       <figure>
         <picture>
-          <source media="(max-width: 700px)" srcset="/assets/images/western-footer-mobile.svg" />
-          <img src="/assets/images/western-footer-landscape.svg" alt="Provisional drawing of a farmer plowing a high-country field, with hay bales, mountains, buffalo skulls, and tumbleweeds." width="1600" height="680" />
+          <source media="(max-width: 700px)" srcset="/assets/images/western-footer-mobile.svg?v=20261018b" />
+          <img src="/assets/images/western-footer-landscape.svg?v=20261018b" alt="Provisional drawing of a farmer plowing a high-country field, with hay bales, mountains, buffalo skulls, and tumbleweeds." width="1600" height="680" />
         </picture>
       </figure>
     </section>
@@ -1275,17 +1275,29 @@ a { color: var(--teal); }
 }
 
 /* Western page atmosphere. Decorative only — never intercepts clicks. */
-/* Western page atmosphere. Decorative only — never intercepts clicks. */
 .western-page {
-  background-color: #f3e7cf;
-  background-image: url("../images/western-topo.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #ead9b8;
+  background-image: url("../images/western-topo.svg?v=20261018b");
+  background-repeat: repeat;
+  background-size: 920px auto;
   background-position: center top;
-  background-attachment: fixed;
+  background-attachment: scroll;
+}
+.western-page .site-header { background: rgba(247,244,238,.84); }
+.western-page h1,
+.western-page h2,
+.western-page .lede,
+.western-page .studio-land__copy p,
+.western-page .brandstory p,
+.western-page .prose p,
+.western-page .product-collection__intro p {
+  text-shadow: 0 0 10px #f7f4ee, 0 0 18px #f7f4ee, 0 1px 0 #f7f4ee;
 }
 .site-header, main, .site-footer { position: relative; z-index: 1; }
-.site-footer { padding-bottom: 0; background: rgba(243,231,207,.62); }
+.site-footer { padding-bottom: 0; background: rgba(234,217,184,.58); }
+@media (max-width: 900px) {
+  .western-page { background-size: 680px auto; }
+}
 .site-footer__land {
   margin: 1.5rem -1.25rem 0;
   line-height: 0;
