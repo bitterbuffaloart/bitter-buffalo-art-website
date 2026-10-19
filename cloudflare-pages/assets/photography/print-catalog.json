@@ -1,0 +1,103 @@
+{
+  "currency": "USD",
+  "checkout": false,
+  "ordersPlacedWithSupplier": false,
+  "note": "Only the studio-confirmed retail price is published. Production cost, shipping, production time, and unverified sizes stay Request a Quote. This file does not place a supplier order.",
+  "products": [
+    {
+      "id": "framed-canvas",
+      "name": "Premium 1.5-inch framed canvas",
+      "supplier": "LumaPrints",
+      "supplierStatus": "intended-unverified",
+      "material": "Canvas",
+      "finish": "1.5-inch frame. Exact wrap and frame profile are not confirmed in the supplier account.",
+      "sizes": [
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 199.33,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "inquiry"
+        }
+      ],
+      "otherSizes": "Request a Quote",
+      "description": "A premium framed canvas of a Bitter Buffalo photograph. The 16×24 retail price is confirmed by the studio. Production cost, shipping, and the supplier frame are confirmed before any order.",
+      "mockup": "illustrative",
+      "inquiry": true
+    },
+    {
+      "id": "metal",
+      "name": "Aluminum metal prints",
+      "supplier": "Zno",
+      "supplierStatus": "under-evaluation",
+      "material": "Aluminum",
+      "finish": "Not verified. No supplier finish is claimed.",
+      "sizes": [],
+      "otherSizes": "Request a Quote",
+      "retailPrice": null,
+      "productionCost": null,
+      "shippingCost": null,
+      "productionTime": null,
+      "availability": "unverified",
+      "description": "A metal print is listed for inquiry only. Zno is being evaluated for metal and other premium products. No Zno account, price, or marketing image is connected.",
+      "mockup": "illustrative",
+      "inquiry": true
+    },
+    {
+      "id": "giclee",
+      "name": "Archival giclée fine-art paper prints",
+      "supplier": "LumaPrints",
+      "supplierStatus": "intended-unverified",
+      "material": "Fine-art paper",
+      "finish": "Archival paper. The exact paper stock is not confirmed in the supplier account.",
+      "sizes": [],
+      "otherSizes": "Request a Quote",
+      "retailPrice": null,
+      "productionCost": null,
+      "shippingCost": null,
+      "productionTime": null,
+      "availability": "unverified",
+      "description": "Giclée paper is the intended LumaPrints paper product. Sizes, paper, production cost, and shipping are Request a Quote until the account confirms them.",
+      "mockup": "illustrative",
+      "inquiry": true
+    },
+    {
+      "id": "acrylic",
+      "name": "Acrylic face-mounted prints",
+      "supplier": null,
+      "supplierStatus": "no-approved-supplier",
+      "material": "Acrylic",
+      "finish": "Face-mounted acrylic. Edge and depth are not verified.",
+      "sizes": [],
+      "otherSizes": "Request a Quote",
+      "retailPrice": null,
+      "productionCost": null,
+      "shippingCost": null,
+      "productionTime": null,
+      "availability": "unverified",
+      "description": "Acrylic face-mount is not available for purchase. No approved supplier is connected.",
+      "mockup": "illustrative",
+      "inquiry": true
+    },
+    {
+      "id": "traditional",
+      "name": "Traditional photographic prints",
+      "supplier": null,
+      "supplierStatus": "no-approved-supplier",
+      "material": "Photographic paper",
+      "finish": "Surface finish is not verified.",
+      "sizes": [],
+      "otherSizes": "Request a Quote",
+      "retailPrice": null,
+      "productionCost": null,
+      "shippingCost": null,
+      "productionTime": null,
+      "availability": "unverified",
+      "description": "Traditional photographic prints are listed only if an approved supplier can make them. None is connected, so every option is Request a Quote.",
+      "mockup": "illustrative",
+      "inquiry": true
+    }
+  ]
+}

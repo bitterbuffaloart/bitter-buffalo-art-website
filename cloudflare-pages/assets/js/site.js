@@ -41,6 +41,25 @@ document.addEventListener('DOMContentLoaded', () => {
     if (location.hash === '#laser-intake') activate('laser');
   }
 
+  const forms = [...document.querySelectorAll('form[data-bb-form]')];
+  const blockDelivery = (form) => {
+    form.dataset.deliveryBlocked = 'true';
+    const submit = form.querySelector('button[type="submit"]');
+    if (submit) submit.disabled = true;
+    const status = form.querySelector('[data-bb-form-status]');
+    if (!status) return;
+    status.hidden = false;
+    status.classList.add('is-err');
+    status.classList.remove('is-ok');
+    status.textContent = 'Email delivery is not configured on this server, so this form cannot send a request. Nothing has been submitted.';
+  };
+  if (forms.length) {
+    fetch('/api/contact', { headers: { Accept: 'application/json' } })
+      .then((response) => response.json())
+      .then((data) => { if (!data || data.configured !== true) forms.forEach(blockDelivery); })
+      .catch(() => forms.forEach(blockDelivery));
+  }
+
   // Retain the request on delivery failure and offer an explicit email draft.
   document.querySelectorAll('form[data-bb-form]').forEach((form) => {
     form.addEventListener('submit', async (e) => {
@@ -61,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       e.preventDefault();
       const submit = form.querySelector('button[type="submit"]');
-      if (submit.disabled) return;
+      if (submit.disabled || form.dataset.deliveryBlocked) return;
       submit.disabled = true;
       form.querySelector('[data-email-draft]')?.remove();
       if (status) {
@@ -90,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       payload.project_type = payload.project_type || payload['contact[project_type]'] || '';
       payload.requested_item = payload.requested_item || payload['contact[requested_item]'] || '';
       payload.approximate_size = payload.approximate_size || payload['contact[approximate_size]'] || '';
-      payload.body = payload['contact[body]'] || payload.message || '';
+      payload.body = payload.body || payload['contact[body]'] || payload.message || '';
       try {
         const res = await fetch('/api/contact', {
           method: 'POST',
@@ -117,10 +136,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const draft = document.createElement('a');
         draft.dataset.emailDraft = ''; draft.className = 'btn btn--ghost';
         draft.textContent = 'Open email draft';
-        const lines = [...fd.entries()].filter(([key]) => key.startsWith('contact[')).map(([key, value]) => `${key.replace(/^contact\[(.+)\]$/, '$1')}: ${value}`);
-        draft.href = 'mailto:backcountrytiedye@gmail.com?subject=' + encodeURIComponent(payload.subject || 'Bitter Buffalo Art project request') + '&body=' + encodeURIComponent(lines.join('\n'));
+        const lines = [...fd.entries()].filter(([key, value]) => key !== 'website' && key !== 'company_url' && typeof value === 'string' && value).map(([key, value]) => `${key.replace(/^contact\[(.+)\]$/, '$1')}: ${value}`);
+        draft.href = 'mailto:backcountrytiedye@gmail.com?subject=' + encodeURIComponent(payload.subject || (payload.form_kind === 'print-inquiry' ? 'Photography print inquiry' : 'Bitter Buffalo Art project request')) + '&body=' + encodeURIComponent(lines.join('\n'));
         form.append(draft);
-      } finally { submit.disabled = false; }
+      } finally { if (!form.dataset.deliveryBlocked) submit.disabled = false; }
     });
   });
 });

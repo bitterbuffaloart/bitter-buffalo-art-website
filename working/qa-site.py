@@ -73,8 +73,12 @@ def check(root, base=None):
     records=manifest['photos']
     if len(records)!=33 or {p['rank'] for p in records}!=set(range(1,34)): errors.append('Preserve all Final 33 portfolio records')
     expected={f"{p['rank']:02}" for p in records if p.get('image_kind')=='web_from_jpeg' and p.get('source')}
-    rendered=re.findall(r'portfolio/(\d+)\.jpg',photo)
+    gallery=re.search(r'id="final-33".*?</section>',photo,re.S)
+    rendered=re.findall(r'portfolio/(\d+)\.jpg',gallery.group(0) if gallery else '')
     if set(rendered)!=expected or len(rendered)!=len(expected): errors.append('Gallery must show each recorded real photo exactly once, without placeholders')
+    mockups=re.search(r'class="print-mockups".*?</section>',photo,re.S)
+    mock_ranks=re.findall(r'portfolio/(\d+)\.jpg',mockups.group(0) if mockups else '')
+    if not mock_ranks or set(mock_ranks)-set(rendered): errors.append('Print mockups must reuse Final 33 photographs only')
     if len(re.findall(r'<section(?:\s|>)',photo))!=photo.count('</section>') or re.search(r'</sect\s',photo): errors.append('Photography section tags are unbalanced')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')

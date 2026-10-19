@@ -5,6 +5,14 @@ function json(status, body) {
     'X-Content-Type-Options': 'nosniff',
   }});
 }
+export async function onRequestGet({ env = {} }) {
+  const configured = Boolean(env.RESEND_API_KEY && env.CONTACT_TO_EMAIL && env.CONTACT_FROM_EMAIL);
+  return json(200, { ok: true, configured, channel: configured ? 'resend' : null });
+}
+
+const PRINT_MATERIALS = new Set(['framed-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
+const PRINT_SIZES = new Set(['16x24', 'quote']);
+
 export async function onRequestPost({ request, env = {} }) {
   let raw;
   try {
@@ -18,17 +26,42 @@ export async function onRequestPost({ request, env = {} }) {
   for (const [key, value] of Object.entries(raw)) data[key.replace(/^contact\[(.+)\]$/, '$1')] = value.trim();
   if (data.website || data.company_url) return json(200, { ok: true, delivered: false });
   const kind = data.form_kind || 'general';
+  if (kind === 'print-inquiry') {
+    const confirmedCanvas = data.material === 'framed-canvas' && data.size === '16x24';
+    data.body = [
+      'Photography print inquiry. This is not a payment and does not place a supplier order.',
+      `photograph: ${data.photograph || ''}`,
+      `material: ${data.material || ''}`,
+      `size: ${data.size || ''}`,
+      `quantity: ${data.quantity || ''}`,
+      confirmedCanvas
+        ? 'retail_price: 199.33 USD for the 16x24 premium framed canvas only'
+        : 'retail_price: Request a Quote',
+      'production_cost: Request a Quote',
+      'shipping_cost: Request a Quote',
+      'production_time: Request a Quote',
+      `postal_code: ${data.postal_code || ''}`,
+      `instructions: ${data.instructions || ''}`,
+    ].join('\n');
+  }
   const message = data.body || data.message || data.description;
   if (!data.name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email || '') || !message) return json(400, { ok: false, error: 'Name, a valid email address, and a message are required.' });
-  if (!['general', 'custom-project', 'laser-intake'].includes(kind)) return json(400, { ok: false, error: 'Select a contact form.' });
-  const required = kind === 'custom-project' ? ['product_category', 'project_contact_ack'] : kind === 'laser-intake' ?
+  if (!['general', 'custom-project', 'laser-intake', 'print-inquiry'].includes(kind)) return json(400, { ok: false, error: 'Select a contact form.' });
+  if (Object.keys(data).some(key => /card|cvv|cvc|pan|payment/i.test(key))) return json(400, { ok: false, error: 'Payment details are not accepted.' });
+  const required = kind === 'print-inquiry' ? ['photograph', 'material', 'size', 'quantity', 'request_not_order'] : kind === 'custom-project' ? ['product_category', 'project_contact_ack'] : kind === 'laser-intake' ?
     ['project_type', 'requested_item', 'approximate_size', 'quantity', 'needed_by', 'preferred_contact', 'owns_photo', 'request_not_order', 'approval_required', 'production_use'] : ['Subject'];
   if (required.some(key => !data[key])) return json(400, { ok: false, error: 'Please complete the required project fields and permissions.' });
-  const permissions = kind === 'custom-project' ? ['project_contact_ack'] : kind === 'laser-intake' ? ['owns_photo', 'request_not_order', 'approval_required', 'production_use'] : [];
+  const permissions = kind === 'print-inquiry' ? ['request_not_order'] : kind === 'custom-project' ? ['project_contact_ack'] : kind === 'laser-intake' ? ['owns_photo', 'request_not_order', 'approval_required', 'production_use'] : [];
   if (permissions.some(key => data[key] !== 'yes')) return json(400, { ok: false, error: 'Please confirm the required project permissions.' });
-  if (data.quantity && (!/^\d+$/.test(data.quantity) || Number(data.quantity) < 1)) return json(400, { ok: false, error: 'Quantity must be a positive whole number.' });
+  if (data.quantity && (!/^\d+$/.test(data.quantity) || Number(data.quantity) < 1 || Number(data.quantity) > 99)) return json(400, { ok: false, error: 'Quantity must be a positive whole number.' });
+  if (kind === 'print-inquiry') {
+    if (!PRINT_MATERIALS.has(data.material) || !PRINT_SIZES.has(data.size)) return json(400, { ok: false, error: 'Choose a print material and size from the catalog.' });
+    if (!/^#\d{2} · .{2,80}$/.test(data.photograph)) return json(400, { ok: false, error: 'Choose a photograph from the portfolio.' });
+    if (data.postal_code && !/^[A-Za-z0-9][A-Za-z0-9 -]{1,11}$/.test(data.postal_code)) return json(400, { ok: false, error: 'Enter a shorter postal code, or leave it blank.' });
+    if (data.instructions && data.instructions.length > 2000) return json(400, { ok: false, error: 'Please shorten the instructions.' });
+  }
   if (!env.RESEND_API_KEY || !env.CONTACT_TO_EMAIL || !env.CONTACT_FROM_EMAIL) return json(503, { ok: false, delivered: false, error: 'Website sending is unavailable. Your request has not been sent. Use the email draft below or email backcountrytiedye@gmail.com.' });
-  const subject = kind === 'custom-project' ? 'Custom project request' : kind === 'laser-intake' ? 'Custom laser engraving intake' : (data.Subject || data.subject || 'General question');
+  const subject = kind === 'print-inquiry' ? 'Photography print inquiry — not an order' : kind === 'custom-project' ? 'Custom project request' : kind === 'laser-intake' ? 'Custom laser engraving intake' : (data.Subject || data.subject || 'General question');
   const text = Object.entries(data).filter(([key]) => !['website', 'company_url', 'utf8', 'form_type'].includes(key)).map(([key,value]) => `${key}: ${value}`).join('\n');
   try {
     const response = await fetch('https://api.resend.com/emails', {
