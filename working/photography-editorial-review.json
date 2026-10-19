@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T08:38:42-06:00",
+  "updated": "2026-10-19",
   "featured_rank": 1,
   "gallery_order": [
     1,
@@ -623,12 +623,17 @@
           "Mustangs 2015-03-24",
           "DSC_2108-Edit.tif"
         ],
-        "print_best": "OK_through_16x24",
-        "print_holds": "",
-        "size_matrix_traditional": "12x18"
+        "print_best": "NOT_VERIFIED_CLEAN_MASTER_ABSENT",
+        "print_holds": "WATERMARK_ON_PUBLISHED_WEB_JPEG|PRINT_INQUIRY_UNAVAILABLE",
+        "size_matrix_traditional": "12x18",
+        "published_web_bytes": 421385,
+        "published_web_watermark": "lower_left_mountain_logo_and_www.bitterbuffaloart.com",
+        "original_dimensions_status": "recorded_previously_file_absent_not_reverified"
       },
       "etsy_listing_id": null,
       "blockers": [
+        "Published web JPEG is watermarked and is not a print master. No clean DSC_2108 original is in this repository.",
+        "Recorded 6000×4000 dimensions were not reopened or re-verified.",
         "No photograph story is recorded.",
         "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
         "Shipping calculator and package weight are not verified.",
@@ -794,12 +799,17 @@
           "uploaded",
           "DSC_9535-Edit-2.jpg"
         ],
-        "print_best": "OK_through_16x24",
-        "print_holds": "",
-        "size_matrix_traditional": "12x18"
+        "print_best": "NOT_VERIFIED_CLEAN_MASTER_ABSENT",
+        "print_holds": "WATERMARK_ON_PUBLISHED_WEB_JPEG|PRINT_INQUIRY_UNAVAILABLE",
+        "size_matrix_traditional": "12x18",
+        "published_web_bytes": 504701,
+        "published_web_watermark": "lower_right_bitter_buffalo_photography_script",
+        "original_dimensions_status": "recorded_previously_file_absent_not_reverified"
       },
       "etsy_listing_id": null,
       "blockers": [
+        "Published web JPEG is watermarked and is not a print master. No clean DSC_9535 original is in this repository.",
+        "Recorded 6016×4016 dimensions were not reopened or re-verified.",
         "No photograph story is recorded.",
         "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
         "Shipping calculator and package weight are not verified.",
@@ -1040,6 +1050,7 @@
       "verified_facts": {
         "recorded_title": "Aspen valley",
         "recorded_filename": "DSC_0240_1-Edit-Edit.jpg",
+        "audit_2026_10_19": "Published web JPEG shows a Bitter Buffalo Photography script in the lower right. Photograph was not changed. Print hold is pending owner approval.",
         "folder_labels": [
           "C:\\",
           "Users",
@@ -1053,11 +1064,12 @@
           "DSC_0240_1-Edit-Edit.jpg"
         ],
         "print_best": "OK_through_16x24",
-        "print_holds": "",
+        "print_holds": "WATERMARK_ON_PUBLISHED_WEB_JPEG|OWNER_APPROVAL_REQUIRED_BEFORE_ANY_CHANGE",
         "size_matrix_traditional": "12x18"
       },
       "etsy_listing_id": null,
       "blockers": [
+        "2026-10-19 visual audit: the published web JPEG shows a Bitter Buffalo Photography script in the lower right. The photograph, title, and inquiry option were left unchanged pending owner approval.",
         "No photograph story is recorded.",
         "Prices in Master_Price_Schedule_42.csv are provisional and still marked owner-approval required.",
         "Shipping calculator and package weight are not verified.",

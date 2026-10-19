@@ -3,6 +3,22 @@
   "checkout": false,
   "ordersPlacedWithSupplier": false,
   "note": "Only the studio-confirmed retail price is published. Production cost, shipping, production time, and unverified sizes stay Request a Quote. This file does not place a supplier order.",
+  "photographsUnavailableForPrint": [
+    {
+      "portfolio": "#14",
+      "title": "Horse portrait",
+      "webImage": "/assets/images/portfolio/14.jpg",
+      "reason": "The published web JPEG shows a mountain logo and WWW.BITTERBUFFALOART.COM in the lower left. No clean full-resolution original is in this repository.",
+      "replacement": null
+    },
+    {
+      "portfolio": "#18",
+      "title": "Shiprock star trails",
+      "webImage": "/assets/images/portfolio/18.jpg",
+      "reason": "The published web JPEG shows a Bitter Buffalo Photography script in the lower right. No clean full-resolution original is in this repository.",
+      "replacement": null
+    }
+  ],
   "products": [
     {
       "id": "framed-canvas",

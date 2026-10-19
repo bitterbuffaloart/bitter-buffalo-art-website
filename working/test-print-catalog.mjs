@@ -16,6 +16,8 @@ assert.deepEqual(catalog.products.map((product) => product.id), ['framed-canvas'
 assert.equal(catalog.products.every((product) => product.productionCost == null && product.inquiry === true), true);
 assert.equal(catalog.products[0].sizes[0].productionCost, null);
 assert.equal(catalog.products[0].sizes[0].shippingCost, null);
+assert.deepEqual(catalog.photographsUnavailableForPrint.map((item) => item.portfolio), ['#14', '#18']);
+assert.equal(catalog.photographsUnavailableForPrint.every((item) => item.replacement === null), true);
 
 const home = readFileSync('cloudflare-pages/index.html', 'utf8');
 assert.equal((home.match(/pillar--home/g) || []).length, 4);
@@ -27,6 +29,9 @@ assert.deepEqual(photography.match(/\$\d+(?:\.\d+)?/g), ['$199.33', '$199.33', '
 assert.match(photography, /Request a Quote/);
 assert.match(photography, /illustrative/i);
 assert.doesNotMatch(photography, /i\.etsystatic\.com|zno\.com|lumaprints\.com\/.*\.(jpg|png|webp)/i);
+assert.match(photography, /<option value="#14 · Horse portrait" disabled>/);
+assert.match(photography, /<option value="#18 · Shiprock star trails" disabled>/);
+assert.equal((photography.match(/Not available for print until a clean original is reviewed/g) || []).length, 2);
 
 const works = JSON.parse(readFileSync('cloudflare-pages/assets/sketchbook/works.json', 'utf8'));
 const titles = Object.fromEntries(works.works.map((work) => [work.id, work.title]));

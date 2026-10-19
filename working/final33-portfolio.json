@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "featured_rank": 1,
   "etsy_shop": "https://www.etsy.com/shop/BitterBuffaloArt",
   "collector_rule": "66 signed collector prints total per photograph across all materials and sizes",
@@ -142,7 +142,11 @@
       "source": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\14 - DSC_2108-Edit.tif",
       "etsy_listing_url": "",
       "purchase_status": "UNPUBLISHED_PORTFOLIO_ONLY",
-      "featured": false
+      "featured": false,
+      "print_status": "UNAVAILABLE_PENDING_CLEAN_ORIGINAL",
+      "watermark_on_published_web_jpeg": "lower_left_mountain_logo_and_www.bitterbuffaloart.com",
+      "print_master_in_repository": false,
+      "replacement_filename": null
     },
     {
       "rank": 15,
@@ -182,7 +186,11 @@
       "source": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\18 - DSC_9535-Edit-2.jpg",
       "etsy_listing_url": "",
       "purchase_status": "UNPUBLISHED_PORTFOLIO_ONLY",
-      "featured": false
+      "featured": false,
+      "print_status": "UNAVAILABLE_PENDING_CLEAN_ORIGINAL",
+      "watermark_on_published_web_jpeg": "lower_right_bitter_buffalo_photography_script",
+      "print_master_in_repository": false,
+      "replacement_filename": null
     },
     {
       "rank": 19,

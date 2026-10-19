@@ -12,6 +12,7 @@ export async function onRequestGet({ env = {} }) {
 
 const PRINT_MATERIALS = new Set(['framed-canvas', 'metal', 'giclee', 'acrylic', 'traditional']);
 const PRINT_SIZES = new Set(['16x24', 'quote']);
+const PRINT_UNAVAILABLE = new Set(['#14 · Horse portrait', '#18 · Shiprock star trails']);
 
 export async function onRequestPost({ request, env = {} }) {
   let raw;
@@ -57,6 +58,7 @@ export async function onRequestPost({ request, env = {} }) {
   if (kind === 'print-inquiry') {
     if (!PRINT_MATERIALS.has(data.material) || !PRINT_SIZES.has(data.size)) return json(400, { ok: false, error: 'Choose a print material and size from the catalog.' });
     if (!/^#\d{2} · .{2,80}$/.test(data.photograph)) return json(400, { ok: false, error: 'Choose a photograph from the portfolio.' });
+    if (PRINT_UNAVAILABLE.has(data.photograph)) return json(400, { ok: false, error: 'That photograph is not available for print until a clean original is reviewed.' });
     if (data.postal_code && !/^[A-Za-z0-9][A-Za-z0-9 -]{1,11}$/.test(data.postal_code)) return json(400, { ok: false, error: 'Enter a shorter postal code, or leave it blank.' });
     if (data.instructions && data.instructions.length > 2000) return json(400, { ok: false, error: 'Please shorten the instructions.' });
   }
