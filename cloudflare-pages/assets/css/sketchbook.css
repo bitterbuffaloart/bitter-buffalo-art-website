@@ -135,3 +135,9 @@
 @media (prefers-reduced-motion: reduce) {
   .sketch-dialog, .sketch-card img { transition: none; }
 }
+
+/* Keep original art uncropped, on the studio's parchment rather than white cards. */
+.sketch-grid .sketch-card { border:0; box-shadow:none; background:transparent; }
+.sketch-grid .sketch-card button { background:rgba(234,217,184,.36); border:1px solid rgba(77,53,30,.2); }
+.sketch-grid .sketch-card img { background:transparent; height:auto; object-fit:contain; }
+.sketch-grid .sketch-card figcaption { background:rgba(244,234,214,.6); padding:.65rem .75rem; }
