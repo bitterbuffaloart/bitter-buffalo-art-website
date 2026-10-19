@@ -1,0 +1,501 @@
+{
+  "currency": "USD",
+  "checkout": false,
+  "ordersPlacedWithSupplier": false,
+  "note": "Fixed open-edition prices are displayed for 12×18, 16×24, and 20×30. These are working retail selections on a draft review branch; only 16×24 premium framed canvas ($199.33) was separately owner-confirmed. The studio manually confirms print readiness and fulfillment before payment. Supplier base costs, shipping and turnaround are not published. No checkout or automatic supplier ordering.",
+  "photographsUnavailableForPrint": [
+    {
+      "portfolio": "#14",
+      "title": "Horse portrait",
+      "webImage": "/assets/images/portfolio/14.jpg",
+      "reason": "The published web JPEG shows a mountain logo and WWW.BITTERBUFFALOART.COM in the lower left. No clean full-resolution original is in this repository.",
+      "replacement": null
+    },
+    {
+      "portfolio": "#18",
+      "title": "Shiprock star trails",
+      "webImage": "/assets/images/portfolio/18.jpg",
+      "reason": "The published web JPEG shows a Bitter Buffalo Photography script in the lower right. No clean full-resolution original is in this repository.",
+      "replacement": null
+    },
+    {
+      "portfolio": "#24",
+      "title": "Aspen valley",
+      "webImage": "/assets/images/portfolio/24.jpg",
+      "reason": "Watermark observed in lower-right; awaiting watermark-free full-resolution master for printing.",
+      "replacement": null
+    }
+  ],
+  "products": [
+    {
+      "id": "framed-canvas",
+      "name": "Premium 1.5-inch framed canvas",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Canvas",
+      "finish": "Canvas / floating-frame configuration",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 159.33,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 199.33,
+          "ownerConfirmed": true,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 299.33,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Premium 1.5-inch framed canvas produced by LumaPrints. The studio-confirmed 16×24 retail price is $199.33. Final frame upgrades, shipping, and availability are reviewed before any order.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "stretched-canvas",
+      "name": "Premium 1.5-inch stretched canvas",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Canvas",
+      "finish": "Canvas gallery wrap",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 109.33,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 149.33,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 219.33,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Gallery-wrapped canvas with a 1.5-inch stretcher. All prices are confirmed by the studio before production.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "metal",
+      "name": "Aluminum metal print",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Aluminum",
+      "finish": "Aluminum dye-sublimation; mounting choice confirmed before fulfillment",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 179.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 249.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 359.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Metal prints sourced through LumaPrints. The studio will confirm mounting, finish, shipping, and the retail quote before accepting an order.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "giclee",
+      "name": "Archival matte giclée",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Fine-art archival matte paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 89.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 129.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 199.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Fine-art giclée printing from LumaPrints, including archival matte and premium papers. Exact paper, dimensions and shipping are quoted before order.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "hot-press",
+      "name": "Hot-press giclée",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Fine-art smooth hot-press paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 99.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 149.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 219.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Hot-press giclée featuring original Bitter Buffalo Art photography. Printed after the owner verifies the original and production configuration.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "cold-press",
+      "name": "Cold-press giclée",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Textured fine-art cold-press paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 99.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 149.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 219.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Cold-press giclée featuring original Bitter Buffalo Art photography. Printed after the owner verifies the original and production configuration.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "somerset",
+      "name": "Somerset Velvet giclée",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Somerset Velvet fine-art paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 109.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 159.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 249.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Somerset Velvet giclée featuring original Bitter Buffalo Art photography. Printed after the owner verifies the original and production configuration.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "traditional",
+      "name": "Semi-gloss fine-art photographic paper",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Semi-gloss fine-art paper; not photochemical paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 69.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 109.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 189.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Choose a semi-gloss, glossy, or metallic fine-art surface for a photograph. We confirm paper type, size and retail quote before production.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "glossy",
+      "name": "Glossy fine-art photographic paper",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Glossy fine-art paper",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 79.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 119.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 199.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Glossy fine-art photographic paper featuring original Bitter Buffalo Art photography. Printed after the owner verifies the original and production configuration.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "metallic",
+      "name": "Metallic fine-art photographic paper",
+      "supplier": "LumaPrints",
+      "supplierStatus": "format-listed; exact size/upgrades vary",
+      "material": "Fine-art paper",
+      "finish": "Metallic fine-art paper, not aluminum metal",
+      "sizes": [
+        {
+          "id": "12x18",
+          "label": "12 × 18 in",
+          "retailPrice": 109.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "16x24",
+          "label": "16 × 24 in",
+          "retailPrice": 169.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        },
+        {
+          "id": "20x30",
+          "label": "20 × 30 in",
+          "retailPrice": 269.99,
+          "ownerConfirmed": false,
+          "productionCost": null,
+          "shippingCost": null,
+          "productionTime": null,
+          "availability": "priced-request"
+        }
+      ],
+      "otherSizes": "Custom dimensions by inquiry",
+      "description": "Metallic fine-art photographic paper featuring original Bitter Buffalo Art photography. Printed after the owner verifies the original and production configuration.",
+      "mockup": "illustrative",
+      "inquiry": true,
+      "checkout": false
+    },
+    {
+      "id": "acrylic",
+      "name": "Acrylic face-mounted prints",
+      "supplier": null,
+      "supplierStatus": "no-approved-supplier",
+      "material": "Acrylic",
+      "finish": "Face-mounted acrylic. Edge and depth are not verified.",
+      "sizes": [],
+      "otherSizes": "Request a Quote",
+      "retailPrice": null,
+      "productionCost": null,
+      "shippingCost": null,
+      "productionTime": null,
+      "availability": "special-request",
+      "description": "Special order only — size, acrylic configuration and retail price provided individually. Not in the standard priced collection.",
+      "mockup": "illustrative",
+      "inquiry": true
+    }
+  ],
+  "pricingStatus": "fixed-open-edition-retail-preview-pending-owner-approval",
+  "priceListUpdated": "2026-10-19"
+}

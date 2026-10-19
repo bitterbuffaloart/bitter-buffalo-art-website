@@ -164,7 +164,7 @@ a { color: var(--teal); }
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;
 }
 .pillars__grid--three { grid-template-columns: repeat(3, 1fr); }
-.pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.pillars__grid--home { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 .pillar--mark { background: #f6efe2; }
 .pillar--mark img { object-fit: contain; background: #f6efe2; padding: 8%; }
 .pillar {
@@ -180,6 +180,19 @@ a { color: var(--teal); }
 .pillar__note { font-size: .92rem; margin: 0 0 .85rem; color: #f3e7cf; }
 .pillar__actions { display: flex; flex-direction: column; gap: .5rem; }
 .pillar .btn { width: 100%; }
+.pillar--home { min-height: 360px; }
+.pillar--home h3 { font-size: clamp(1.15rem, 1.6vw, 1.45rem); line-height: 1.15; }
+.pillar--home .pillar__body { padding: 1rem 1rem 1.1rem; }
+.pillar--home .pillar__note { font-size: .86rem; }
+.pillar__link {
+  position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column;
+  color: inherit; text-decoration: none;
+}
+.pillar__link:focus-visible { outline: 3px solid var(--gold); outline-offset: -6px; }
+.pillar--etsy .pillar__body { padding-bottom: 4.4rem; }
+.pillar__etsy {
+  position: absolute; left: 1rem; right: 1rem; bottom: 1rem; z-index: 2; width: auto;
+}
 .secondary-links__grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem;
 }
@@ -313,6 +326,9 @@ a { color: var(--teal); }
 .site-footer a:hover { color: var(--rust); }
 .site-footer a:focus-visible { outline: 3px solid var(--teal-bright); outline-offset: 2px; }
 .site-footer__note { max-width: 1200px; margin: 0 auto; font-size: .9rem; color: #3a2f22; }
+@media (max-width: 1100px) {
+  .pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 @media (max-width: 960px) {
   .pillars__grid, .pillars__grid--three { grid-template-columns: 1fr 1fr; }
   .secondary-links__grid { grid-template-columns: 1fr 1fr; }
@@ -330,6 +346,7 @@ a { color: var(--teal); }
   .site-header__inner { flex-wrap: wrap; }
   .nav-link, .nav-link--etsy { width: 100%; text-align: left; margin-left: 0; }
   .pillars__grid, .pillars__grid--three, .gallery, .secondary-links__grid { grid-template-columns: 1fr; }
+  .pillars__grid--home { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brand__text { font-size: 1.15rem; }
   .hero__content { padding: 1rem .85rem 1.35rem; }
   .hero__panel { padding: 1rem 1rem 1.15rem; max-width: none; width: 100%; }
@@ -494,7 +511,10 @@ a { color: var(--teal); }
   .site-footer__land { margin-top: 1rem; }
   .artist-story { grid-template-columns: 1fr; }
   .gallery--archive { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
   .pillars__grid--home { grid-template-columns: 1fr; }
+  .pillar--home { min-height: 300px; }
 }
 .sketch-feature { max-width: 1200px; margin: 0 auto; padding: 1rem 1.25rem 2rem; }
 .sketch-feature h2 {
@@ -616,4 +636,191 @@ body { color: var(--espresso); line-height: 1.65; }
   .site-footer__blurb { display: none; }
   .site-footer__nav { gap: .2rem .65rem; }
   .site-footer__nav a, .site-footer__note { font-size: .82rem; }
+}
+
+/* Tie-dye and laser tags use the approved parchment, including archive labels. */
+.page-merch .product-card,
+.page-merch .product-card--archive,
+.page-merch .product-card figcaption,
+.page-merch .product-card__type,
+.page-merch .product-card__status {
+  background: var(--cream);
+}
+
+.print-products { display: grid; gap: 1rem; margin: 1.25rem 0; }
+.print-product {
+  background: var(--cream);
+  border: 1px solid rgba(45,36,24,.16);
+  padding: 1rem 1.1rem 1.1rem;
+}
+.print-product h3 { margin: 0 0 .7rem; font: 700 1.35rem/1.2 var(--font-display); color: var(--ink); }
+.print-product dl { margin: 0 0 .8rem; display: grid; gap: .45rem; }
+.print-product dl div {
+  display: grid;
+  grid-template-columns: minmax(9.5rem, 14rem) minmax(0, 1fr);
+  gap: .2rem .85rem;
+}
+.print-product dt { font-weight: 700; }
+.print-product dd { margin: 0; }
+.print-mockups {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.15rem;
+  background: radial-gradient(ellipse 92% 88% at 50% 42%, rgba(244,234,214,.95) 0%, rgba(236,220,190,.78) 58%, rgba(236,220,190,0) 100%);
+}
+.print-mockups h2,
+.print-mockups__intro { grid-column: 1 / -1; margin: 0; color: var(--ink); }
+.print-mockups h2 { font: 700 clamp(1.8rem, 4vw, 2.5rem)/1.1 var(--font-display); }
+.print-mockups__intro { max-width: 42rem; }
+.mockup { margin: 0; background: var(--cream); border: 1px solid rgba(45,36,24,.16); }
+.mockup__stage { padding: 1.15rem; background: #e7d3b4; }
+.mockup__frame { display: block; }
+.mockup img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: none;
+  background: #1c1612;
+}
+.mockup figcaption { padding: .75rem 1rem 1rem; color: var(--ink); }
+.mockup--canvas .mockup__frame {
+  padding: 14px;
+  background: #3a2a22;
+  box-shadow: 12px 16px 0 rgba(45,36,24,.28);
+}
+.mockup--metal .mockup__frame {
+  padding: 7px;
+  background: linear-gradient(135deg, #eeeae4, #8a837c 42%, #f7f4ee 58%, #6d6661);
+}
+.mockup--paper .mockup__stage { background: var(--paper); }
+.mockup--paper .mockup__frame {
+  padding: 18px 18px 28px;
+  background: var(--cream);
+  box-shadow: 0 1px 0 rgba(45,36,24,.25);
+}
+.mockup--acrylic .mockup__frame {
+  padding: 16px 16px 22px;
+  background: linear-gradient(180deg, rgba(255,255,255,.62), rgba(126,200,206,.35));
+  border: 1px solid rgba(255,255,255,.85);
+  box-shadow: 8px 12px 0 rgba(8,124,133,.18), inset 0 0 0 1px rgba(45,36,24,.25);
+}
+.mockup--traditional .mockup__frame {
+  padding: 22px;
+  background: var(--paper);
+  border: 1px solid rgba(45,36,24,.28);
+}
+.print-summary {
+  white-space: pre-line;
+  margin: 0 0 1rem;
+  padding: .85rem 1rem;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid rgba(45,36,24,.22);
+  font: 400 1rem/1.55 var(--font-body);
+  overflow-wrap: anywhere;
+}
+.shop-banner .btn { display: inline-flex; margin: .2rem 0 .4rem; }
+@media (max-width: 700px) {
+  .print-mockups,
+  .print-product dl div { grid-template-columns: 1fr; }
+}
+
+/* Review consolidation: authentic art on parchment, never white gallery cards. */
+.western-page .gallery--portfolio figure,
+.western-page .portfolio-feature figure {
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.western-page .gallery--portfolio img,
+.western-page .portfolio-feature img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: transparent;
+}
+.western-page .gallery--portfolio figcaption,
+.western-page .portfolio-feature figcaption {
+  background: rgba(243,231,207,.72);
+  color: var(--espresso);
+}
+.western-page .page-merch .gallery--products .product-card,
+.western-page.page-merch .gallery--products .product-card,
+.western-page .gallery--products .product-card {
+  background: var(--cream);
+  border-color: rgba(45,36,24,.25);
+  box-shadow: none;
+}
+.western-page .gallery--products .product-card figcaption,
+.western-page .gallery--products .product-card__type,
+.western-page .gallery--products .product-card__status {
+  background: var(--cream);
+  color: var(--espresso);
+}
+.western-page .gallery--products .product-card__image { background: var(--cream); }
+.western-page .gallery--products .product-card__image img {
+  object-fit: contain;
+  background: var(--cream);
+}
+.western-page .pillar--home {
+  outline: none;
+  border: 6px solid var(--cream);
+  box-shadow: 0 1px 0 rgba(45,36,24,.3);
+}
+.western-page .pillar--home .pillar__link:focus-visible,
+.western-page .pillar--home .pillar__etsy:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+@media (max-width: 620px) {
+  .western-page .gallery--products .product-card__image img { width:100%; height:auto; }
+}
+.western-page .gallery--portfolio .print-hold {
+  margin: .35rem 0 0;
+  font-size: .82rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Fixed photography print catalog — readable on desktop and narrow screens. */
+.print-pricing-table-wrap { overflow-x: auto; width: 100%; margin: 1.15rem 0; border: 1px solid rgba(45,36,24,.28); border-radius: .5rem; background: var(--cream); }
+.print-pricing-table { width: 100%; border-collapse: collapse; min-width: 620px; color: var(--espresso); font-variant-numeric: tabular-nums; }
+.print-pricing-table caption { padding: .75rem 1rem; text-align: left; caption-side: bottom; font-size: .85rem; line-height: 1.4; }
+.print-pricing-table thead { color: var(--cream); background: var(--espresso); }
+.print-pricing-table th, .print-pricing-table td { padding: .78rem .95rem; border-bottom: 1px solid rgba(45,36,24,.18); }
+.print-pricing-table thead th { font-size: .92rem; font-weight: 700; }
+.print-pricing-table tbody th { text-align:left; font-weight: 650; }
+.print-pricing-table tbody td { text-align: right; white-space: nowrap; font-weight: 700; }
+.print-pricing-table tbody tr:nth-child(even) { background: rgba(196,163,90,.11); }
+.print-pricing-table tbody tr:hover { background: rgba(8,124,133,.12); }
+.print-pricing-table :is(th,td):focus-visible { outline: 3px solid var(--teal); outline-offset: -3px; }
+@media (max-width: 600px) {
+  .print-pricing-table { min-width: 0; font-size: .78rem; }
+  .print-pricing-table th, .print-pricing-table td { padding: .6rem .32rem; overflow-wrap: anywhere; }
+  .print-pricing-table thead th { font-size: .76rem; }
+  .print-pricing-table tbody td { font-weight: 700; }
+}
+
+/* LumaPrints product reference gallery — preserve proportions of actual supplier photos. */
+.supplier-gallery { padding: clamp(1rem,2.5vw,2.5rem); color:var(--espresso); background:var(--paper); }
+.supplier-gallery > h2 { margin:0 0 .65rem; }
+.supplier-gallery > p { max-width:76ch; }
+.supplier-gallery__group { margin:1.6rem 0 2.2rem; }
+.supplier-gallery__group h3 { margin:0 0 .8rem; border-bottom:1px solid rgba(45,36,24,.25); padding-bottom:.4rem; }
+.supplier-gallery__grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr)); gap:1rem; align-items:start; }
+.supplier-gallery__grid figure { margin:0; border:1px solid rgba(45,36,24,.2); border-radius:8px; overflow:hidden; background:var(--cream); }
+.supplier-gallery__grid figure[hidden] { display:none; }
+.supplier-gallery__grid img { display:block; width:100%; height:220px; object-fit:contain; background:#fff; }
+.supplier-gallery__grid figcaption { padding:.55rem .7rem .7rem; color:var(--espresso); font:400 .86rem/1.35 var(--font-body); }
+.supplier-gallery__credit { font-size:.8rem; line-height:1.45; opacity:.8; }
+@media (max-width:540px) {
+  .supplier-gallery { padding:1rem .7rem; }
+  .supplier-gallery__grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:.55rem; }
+  .supplier-gallery__grid img { height:160px; }
+  .supplier-gallery__grid figcaption { font-size:.78rem; padding:.45rem; }
 }

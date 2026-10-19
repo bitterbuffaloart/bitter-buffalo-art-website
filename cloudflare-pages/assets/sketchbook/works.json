@@ -2,7 +2,7 @@
   "works": [
     {
       "id": "red-field",
-      "title": "Psychedelic abstract",
+      "title": "The Amanita Paradox",
       "categories": [
         "drawings"
       ],
@@ -11,7 +11,7 @@
       "dimensions": null,
       "availability": null,
       "story": "Ink and color on paper, scratched and spattered.",
-      "alt": "Vertical artwork in red, black, turquoise, green, and magenta, with scratched and spattered marks.",
+      "alt": "A vertical drawing of a red mushroom with pale spots, surrounded by turquoise, green, and magenta marks.",
       "thumb": "/assets/sketchbook/thumbs/red-field.jpg",
       "display": "/assets/sketchbook/display/red-field.jpg",
       "zoom": "/assets/sketchbook/zoom/red-field.jpg",
@@ -20,7 +20,7 @@
     },
     {
       "id": "fox-geometry",
-      "title": "Fox and sacred geometry",
+      "title": "The Fox & the Sacred Pattern",
       "categories": [
         "drawings"
       ],
@@ -38,7 +38,7 @@
     },
     {
       "id": "frog-mushroom",
-      "title": "Frog and mushroom",
+      "title": "The Fifth Dimension",
       "categories": [
         "drawings"
       ],

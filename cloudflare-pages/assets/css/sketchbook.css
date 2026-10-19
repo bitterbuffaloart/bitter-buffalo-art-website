@@ -135,3 +135,10 @@
 @media (prefers-reduced-motion: reduce) {
   .sketch-dialog, .sketch-card img { transition: none; }
 }
+
+/* Preserve every original drawing without an intrusive white surround. */
+.sketch-grid .sketch-card { background: var(--cream); border: 1px solid rgba(45,36,24,.2); box-shadow: none; }
+.sketch-grid .sketch-card button,
+.sketch-grid .sketch-card img { background: var(--cream); }
+.sketch-grid .sketch-card img { width:100%; height:auto; object-fit:contain; }
+.sketch-grid .sketch-card figcaption { background: var(--cream); }
