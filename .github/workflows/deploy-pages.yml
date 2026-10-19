@@ -2,9 +2,9 @@ name: Deploy Cloudflare Pages
 on:
   push:
     branches: [main]
-    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-lumaprints.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   pull_request:
-    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-lumaprints.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -30,6 +30,8 @@ jobs:
         run: node working/test-contact.mjs
       - name: Check LumaPrints auth, catalog, and quotes without placing orders
         run: node working/test-lumaprints.mjs
+      - name: Check binding reports omit secret values
+        run: node working/test-pages-bindings.mjs
       - name: Build deployable site only
         run: node working/stage-site.mjs
   deploy:

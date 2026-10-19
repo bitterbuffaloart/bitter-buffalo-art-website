@@ -1,0 +1,30 @@
+name: Inspect LumaPrints bindings
+on:
+  pull_request:
+    paths:
+      - .github/workflows/lumaprints-bindings.yml
+      - working/pages-binding-names.mjs
+      - working/test-pages-bindings.mjs
+permissions:
+  contents: read
+jobs:
+  bindings:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Check the redacted binding report locally
+        run: node working/test-pages-bindings.mjs
+      - name: Report Pages preview and production binding names only
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          LUMAPRINTS_API_KEY: ${{ secrets.LUMAPRINTS_API_KEY }}
+          LUMAPRINTS_API_SECRET: ${{ secrets.LUMAPRINTS_API_SECRET }}
+          LUMAPRINTS_ENVIRONMENT: ${{ secrets.LUMAPRINTS_ENVIRONMENT }}
+          LUMAPRINTS_ADMIN_TOKEN: ${{ secrets.LUMAPRINTS_ADMIN_TOKEN }}
+        run: node working/pages-binding-names.mjs

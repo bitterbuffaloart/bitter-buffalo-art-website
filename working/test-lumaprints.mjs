@@ -1,8 +1,11 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
-import { onRequestGet as statusGet } from '../cloudflare-pages/functions/api/lumaprints/status.js';
-import { onRequestGet as catalogGet } from '../cloudflare-pages/functions/api/lumaprints/catalog.js';
-import { onRequestPost as quotePost } from '../cloudflare-pages/functions/api/lumaprints/quote.js';
+const statusRoutes = await import('../cloudflare-pages/functions/api/lumaprints/status.js');
+const catalogRoutes = await import('../cloudflare-pages/functions/api/lumaprints/catalog.js');
+const quoteRoutes = await import('../cloudflare-pages/functions/api/lumaprints/quote.js');
+const { onRequestGet: statusGet } = statusRoutes;
+const { onRequestGet: catalogGet } = catalogRoutes;
+const { onRequestPost: quotePost } = quoteRoutes;
 import { basicHeader, httpStatusFor, lumaRequest } from '../cloudflare-pages/functions/_lib/lumaprints.js';
 
 const originalFetch = globalThis.fetch;
@@ -68,6 +71,46 @@ assert.equal(response.json.errorClass, 'admin');
 assert.equal(response.json.upstreamStatus, null);
 assert.equal(calls.length, 0);
 assertSilent(response.text);
+
+assert.equal(statusRoutes.onRequest, undefined);
+assert.equal(statusRoutes.onRequestPost, undefined);
+assert.equal(catalogRoutes.onRequest, undefined);
+assert.equal(quoteRoutes.onRequest, undefined);
+assert.equal(quoteRoutes.onRequestGet, undefined);
+const bypasses = [
+  new Request(`https://example.com/api/lumaprints/status?access_token=${admin}&token=${admin}`),
+  new Request('https://example.com/api/lumaprints/status', { headers: { Cookie: `LUMAPRINTS_ADMIN_TOKEN=${admin}` } }),
+  new Request('https://example.com/api/lumaprints/status', { headers: { 'X-Admin-Token': admin } }),
+  new Request('https://example.com/api/lumaprints/status', { headers: { Authorization: `Basic ${btoa(`${admin}:`)}` } }),
+  new Request('https://example.com/api/lumaprints/status', { headers: { Authorization: `bearer ${admin}` } }),
+  new Request('https://example.com/api/lumaprints/status', { headers: { Authorization: `Bearer ${key}` } }),
+  new Request('https://example.com/api/lumaprints/status', { headers: { Authorization: `Bearer ${admin}extra` } }),
+];
+for (const request of bypasses) {
+  response = await bodyOf(await statusGet({ request, env: env() }));
+  assert.equal(response.status, 401);
+  assert.equal(response.json.errorClass, 'admin');
+  assert.equal(response.json.credentials, undefined);
+  assert.equal(calls.length, 0);
+  assertSilent(response.text);
+}
+response = await bodyOf(await statusGet({ env: env() }));
+assert.equal(response.status, 401);
+assert.equal(calls.length, 0);
+response = await bodyOf(await catalogGet({ request: new Request(`https://example.com/api/lumaprints/catalog?access_token=${admin}`), env: env() }));
+assert.equal(response.status, 401);
+assert.equal(calls.length, 0);
+response = await bodyOf(await quotePost({
+  request: new Request('https://example.com/api/lumaprints/quote', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ token: admin, subcategoryId: 101001, width: 16, height: 24 }),
+  }),
+  env: env(),
+}));
+assert.equal(response.status, 401);
+assert.equal(response.json.errorClass, 'admin');
+assert.equal(calls.length, 0);
 
 response = await bodyOf(await catalogGet({ request: new Request('https://example.com/api/lumaprints/catalog', { headers: authed() }), env: env({ LUMAPRINTS_API_KEY: undefined }) }));
 assert.equal(response.status, 503);

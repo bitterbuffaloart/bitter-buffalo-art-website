@@ -238,7 +238,7 @@ async function requireAdmin(request, env = {}) {
       message: 'The print connection check is not configured.',
     });
   }
-  const header = request.headers.get('authorization') || '';
+  const header = request?.headers?.get?.('authorization') || '';
   const token = header.startsWith('Bearer ') ? header.slice(7).trim() : '';
   if (!token || token.length > 512 || /\s/.test(token) || !(await sameSecret(token, unwrap(env.LUMAPRINTS_ADMIN_TOKEN)))) {
     return jsonResponse(401, {
