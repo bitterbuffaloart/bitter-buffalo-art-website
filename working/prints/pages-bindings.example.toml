@@ -1,0 +1,12 @@
+# Not used by the current Pages deploy. Do not copy this into .site-build until
+# `wrangler login` succeeds and the database_id below is the real D1 id.
+# Binding names the functions already read: PRINTS_DB, PRINT_MASTERS.
+
+# [[d1_databases]]
+# binding = "PRINTS_DB"
+# database_name = "bitter-buffalo-prints"
+# database_id = ""
+
+# [[r2_buckets]]
+# binding = "PRINT_MASTERS"
+# bucket_name = "bitter-buffalo-print-masters"

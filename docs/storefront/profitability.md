@@ -1,46 +1,42 @@
-# Profitability — Grand Tetons canvas pilot
+# Profitability — Grand Tetons canvas
 
-Sale stays closed on every size. A size is sellable only when retail, full production, shipping, processing fee, and tax are all known, contribution is greater than zero, resolution is accepted, the LumaPrints mapping is ready, and the print master is in protected storage. None of those conditions are met.
+Public title remains Grand Tetons, photograph #01, DSC_2626. 16×24 retail stays $199.33. That retail was not calculated from the canvas base. 20×30 stays unavailable: local minimum about 191.5 PPI on the 5746×3831 file. The master was not upscaled or altered.
 
-The production figures below are base canvas prices from the existing LumaPrints records (`13_PREMIUM_CANVAS_CONFIGURATION.md` and `14_LUMAPRINTS_PRICING_VERIFICATION.md`, captured 2026-10-17). They are the 1.5-inch stretch canvas before foamcore, backboard, and hanging hardware. They are not a full production cost and they are not a retail price.
+The pilot SKU is the stretched canvas, not the floating frame.
 
-The only confirmed retail is the owner-set 16×24 price of $199.33. That price is not in the LumaPrints worksheets. Older provisional Etsy amounts are not used.
+## What the records say
 
-| Size | Customer label | Landscape inches sent to LumaPrints | Local minimum PPI | Resolution | Retail | Production base | Known gap | Contribution | Sale |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 12×18 | 12×18 | 18 × 12 | 319.2 | OK through 12×18 in the Final 33 record. Not marked accepted for sale. | Blocked. Retail not verified. | $26.49 | Blocked. No retail. | Blocked | Closed |
-| 16×24 | 16×24 | 24 × 16 | 239.4 | Local PPI is above 200. LumaPrints `checkImageConfig` was not run. | $199.33 (19933 cents) | $34.39 | $164.94 | Blocked | Closed |
-| 20×30 | 20×30 | 30 × 20 | 191.5 | Hold. Below 200 PPI on this 5746×3831 file. | Blocked. Retail not verified. | $50.37 | Blocked. No retail. | Blocked | Closed |
+`13_PREMIUM_CANVAS_CONFIGURATION.md` (2026-10-17, draft):
 
-## How the 16×24 gap is calculated
+- Product: stretched canvas, 1.5-inch wood bars. Not 0.75 inch.
+- Edge: mirror wrap when the image allows it.
+- Canvas: archival poly-cotton 360 gsm, 0.48 mm, from the public canvas page.
+- Foamcore underlayer: available on 1.5-inch stretched canvas. Public price not listed. Marked TBD cart quote. Do not assume $0.
+- Backing: black backboard preferred. Confirm in the order UI. No dollar amount.
+- Hanging hardware: installed wire or upgraded hardware. Wire plus black backboard preferred. Three-point security may add cost. No dollar amount.
+- Spacer bars: not a separate LumaPrints line item.
+- Stretch base, before foamcore and hardware: 12×18 $26.49, 16×24 $34.39, 20×30 $50.37.
+- A different SKU, 1.5-inch floating frame, has its own base: 16×24 $74.01. 20×30 framed is an $88.00 estimate. That SKU is not this pilot.
 
-19933 − 3439 = 16494 cents, which is $164.94.
+`14_LUMAPRINTS_PRICING_VERIFICATION.md` reconfirms those same base figures. Its cart-quote table for foamcore, hardware, and shipping is empty. It says dollar add-ons are not on the public table. Shipping calculator quotes are still required. Worksheets stay `ESTIMATED_NOT_CALCULATOR`.
 
-That gap is retail minus the recorded base canvas price. It is not profit. It does not subtract foamcore, hanging hardware, shipping, the Square processing fee, or tax, because those amounts are not verified. No 2.9% + $0.30 fee was assumed.
+`Pricing_Worksheet_Five_Formats.csv`, row `canvas_1_5_stretched` / 16×24:
 
-Contribution stays null until this formula can be filled with verified numbers:
+- Production $34.39, provenance `VERIFIED_pricing_page_1.5in`.
+- Foamcore column: `TBD_CART`.
+- Hardware column: `INCLUDED_OR_TBD`.
+- Customer shipping estimate $22.00. Seller-paid shipping $0.00 on the open row and $22.00 on the collector row.
+- Shipping status: `ESTIMATED_NOT_CALCULATOR`.
+- Note: mirror wrap plus black backboard and wire preferred; foamcore cost TBD in cart.
 
-`retail − full production − shipping − processing fee − tax`
+Those files do not record a fully upgraded 16×24 production total near $90–$92. They do not record a foamcore price or a hardware price. $34.39 is the stretch base only. $74.01 is the framed base, still before foamcore. Neither is the full production cost. The $22 shipping figure is an estimate, not a LumaPrints calculator quote.
 
-and the result is greater than zero.
+## Verified costs
 
-## Shared blockers
+| Size | Retail | Stretch base | Foamcore | Hardware | Shipping | Full production | Sale |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 12×18 | Not verified | $26.49 | Not recorded | Not recorded | Estimate $14, not a calculator quote | Not recorded | Closed |
+| 16×24 | $199.33 | $34.39 | Not recorded | Not recorded | Estimate $22, not a calculator quote | Not recorded | Closed |
+| 20×30 | Not verified | $50.37 | Not recorded | Not recorded | Estimate $35, not a calculator quote | Not recorded | Unavailable, about 191.5 PPI |
 
-- LumaPrints subcategory and option IDs were not discovered from the sandbox catalog.
-- Shipping cost is not verified.
-- Square processing fee for this account is not verified.
-- Colorado destination sales tax is not recorded. The code does not assume Square covers every tax obligation.
-- Foamcore, backboard, and hanging hardware costs are not verified. They are not treated as $0.
-- The print master is not in protected storage. The website JPEG is display-only.
-
-12×18 and 20×30 also lack a verified retail. 20×30 also stays on the resolution hold.
-
-## What would have to change before a margin can be published
-
-1. Cart-verify foamcore and the chosen hanging hardware for each size, then store the full production cost.
-2. Record a sandbox shipping quote for a real destination, not a guessed amount.
-3. Record the Square fee that applies to this sandbox location.
-4. Record the tax treatment for Colorado destination sales.
-5. Confirm or replace 12×18 and 20×30 retail. Leave them unpublished until then.
-6. Resolve the 20×30 resolution hold, or keep that size off sale.
-7. Discover the 1.5-inch stretch subcategory and mirror-wrap option from the sandbox API. Do not type in example IDs.
+No sandbox pricing response was added. Contribution stays blocked.

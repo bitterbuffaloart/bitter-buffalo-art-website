@@ -7,6 +7,7 @@ import { evaluateProfit, profitInput } from "../cloudflare-pages/functions/print
 import { buildOrderPayload, resolveBaseUrl, selectCanvasMapping } from "../cloudflare-pages/functions/prints/lumaprints.mjs";
 import { buildPaymentLinkRequest, resolveSquareBase, signWebhook } from "../cloudflare-pages/functions/prints/square.mjs";
 import { createCheckout, handleShippingNotification, handleSquareNotification, submitSandboxOrder } from "../cloudflare-pages/functions/prints/orders.mjs";
+import { issueMasterToken, MASTER_OBJECT_KEY, verifyMasterToken } from "../cloudflare-pages/functions/prints/master-access.mjs";
 import { createMemoryStore } from "../cloudflare-pages/functions/prints/store.mjs";
 
 const root = resolve(import.meta.dirname, "..");
@@ -291,4 +292,15 @@ test("profit blocks unknown costs and does not treat the base gap as margin", ()
     externalId: "bb_ok", storeId: 1088, recipient: {},
     item: { configurationId: config.configurationId, widthIn: 24, heightIn: 16, mapping: selectCanvasMapping(discovery()), fulfillmentUrl: "https://example.test/master.jpg" },
   }), /lumaprints_mapping_incomplete/);
+});
+
+test("print master token expires and does not accept another object key", async () => {
+  const secret = "local-test-secret";
+  const now = 1_700_000_000;
+  const token = await issueMasterToken(secret, MASTER_OBJECT_KEY, now, 900);
+  assert.equal((await verifyMasterToken(secret, token, now + 1)).ok, true);
+  assert.equal((await verifyMasterToken(secret, token, now + 900)).ok, false);
+  assert.equal((await verifyMasterToken("other-secret", token, now + 1)).ok, false);
+  await assert.rejects(() => issueMasterToken(secret, "other-file", now, 60));
+  await assert.rejects(() => issueMasterToken(secret, MASTER_OBJECT_KEY, now, 901));
 });
