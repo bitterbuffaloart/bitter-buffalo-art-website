@@ -824,3 +824,40 @@ body { color: var(--espresso); line-height: 1.65; }
   .supplier-gallery__grid img { height:160px; }
   .supplier-gallery__grid figcaption { font-size:.78rem; padding:.45rem; }
 }
+
+/* Coaster product-group cards — distinct from unavailable set photography. */
+.coaster-collection {
+  max-width: 1260px;
+  margin: 2rem auto 3rem;
+  padding: clamp(1rem,2.5vw,2rem);
+  background: var(--cream);
+  border: 1px solid rgba(45,36,24,.24);
+}
+.coaster-collection__grid {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 1rem;
+}
+.coaster-collection__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.3rem;
+  background: rgba(244,231,206,.7);
+  border: 1px solid rgba(45,36,24,.22);
+  border-top: 4px solid var(--rust);
+}
+.coaster-collection__eyebrow {
+  color:var(--rust);
+  font-size:.8rem;
+  font-weight:700;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+.coaster-collection__item h3 { margin: .55rem 0 .75rem; font-family:var(--font-display); color:var(--espresso); }
+.coaster-collection__item p { line-height:1.55; margin:.25rem 0 1rem; color:var(--espresso); }
+.coaster-collection__status { margin-top:auto!important; font-size:.86rem; font-weight:700; }
+.coaster-collection__sku { color:var(--espresso); font:.8rem/1.4 ui-monospace,SFMono-Regular,Consolas,monospace; opacity:.8; }
+.coaster-collection__foot { margin:1.1rem 0 0; font-size:.9rem; line-height:1.5; }
+@media(max-width:850px){.coaster-collection__grid{grid-template-columns:1fr}.coaster-collection{margin:1.25rem .8rem 2rem}}
