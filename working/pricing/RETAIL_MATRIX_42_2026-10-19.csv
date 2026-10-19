@@ -1,0 +1,43 @@
+sku,material,edition,size_in,provisional_retail_usd,confirmed_retail_usd,lumaprints_listed_base_usd,pre_fulfillment_usd,max_unknown_spend_at_35pct_margin_usd,base_status,retail_status,fulfillment_status,public_visibility
+SEMIGLOSS-OPEN-12x18,Fine-art semi-gloss paper,Open,12x18,69.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SEMIGLOSS-OPEN-16x24,Fine-art semi-gloss paper,Open,16x24,109.99,,10.37,88.72,50.22,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SEMIGLOSS-OPEN-20x30,Fine-art semi-gloss paper,Open,20x30,189.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SEMIGLOSS-COLLECTOR-12x18,Fine-art semi-gloss paper,Collector,12x18,129.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SEMIGLOSS-COLLECTOR-16x24,Fine-art semi-gloss paper,Collector,16x24,194.99,,10.37,165.65,97.40,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SEMIGLOSS-COLLECTOR-20x30,Fine-art semi-gloss paper,Collector,20x30,309.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-OPEN-12x18,Archival matte giclee,Open,12x18,89.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-OPEN-16x24,Archival matte giclee,Open,16x24,129.99,,10.37,106.82,61.32,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-OPEN-20x30,Archival matte giclee,Open,20x30,199.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-COLLECTOR-12x18,Archival matte giclee,Collector,12x18,159.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-COLLECTOR-16x24,Archival matte giclee,Collector,16x24,224.99,,10.37,192.80,114.05,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+MATTE-COLLECTOR-20x30,Archival matte giclee,Collector,20x30,329.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-OPEN-12x18,Somerset Velvet premium paper,Open,12x18,109.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-OPEN-16x24,Somerset Velvet premium paper,Open,16x24,159.99,,15.06,129.28,73.28,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-OPEN-20x30,Somerset Velvet premium paper,Open,20x30,249.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-COLLECTOR-12x18,Somerset Velvet premium paper,Collector,12x18,189.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-COLLECTOR-16x24,Somerset Velvet premium paper,Collector,16x24,259.99,,15.06,219.78,128.78,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+SOMERSET-COLLECTOR-20x30,Somerset Velvet premium paper,Collector,20x30,389.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-OPEN-12x18,1.5 inch stretched canvas,Open,12x18,134.99,,26.49,95.23,47.98,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-OPEN-16x24,1.5 inch stretched canvas,Open,16x24,224.99,,34.39,168.78,90.03,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-OPEN-20x30,1.5 inch stretched canvas,Open,20x30,314.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-COLLECTOR-12x18,1.5 inch stretched canvas,Collector,12x18,224.99,,26.49,176.68,97.93,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-COLLECTOR-16x24,1.5 inch stretched canvas,Collector,16x24,349.99,,34.39,281.90,159.40,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+STRETCHED-COLLECTOR-20x30,1.5 inch stretched canvas,Collector,20x30,469.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-OPEN-12x18,1.5 inch framed canvas,Open,12x18,149.33,,59.04,75.65,23.39,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-OPEN-16x24,1.5 inch framed canvas,Open,16x24,199.33,199.33,74.01,105.93,36.17,supplier-listed-base,owner-confirmed,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-OPEN-20x30,1.5 inch framed canvas,Open,20x30,299.33,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-COLLECTOR-12x18,1.5 inch framed canvas,Collector,12x18,309.99,,59.04,221.05,112.55,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-COLLECTOR-16x24,1.5 inch framed canvas,Collector,16x24,449.99,,74.01,332.78,175.28,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+FRAMED-COLLECTOR-20x30,1.5 inch framed canvas,Collector,20x30,619.99,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-OPEN-12x18,Aluminum metal,Open,12x18,179.99,,59.77,102.67,39.67,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-OPEN-16x24,Aluminum metal,Open,16x24,224.99,,95.21,107.96,29.21,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-OPEN-20x30,Aluminum metal,Open,20x30,359.99,,137.37,187.97,61.97,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-COLLECTOR-12x18,Aluminum metal,Collector,12x18,279.99,,59.77,193.17,95.17,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-COLLECTOR-16x24,Aluminum metal,Collector,16x24,364.99,,95.21,234.66,106.91,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+METAL-COLLECTOR-20x30,Aluminum metal,Collector,20x30,539.99,,137.37,350.87,161.87,supplier-listed-base,internal-provisional-only,unquoted shipping+mounting+packaging+labor,hold-other-prices
+ACRYLIC-OPEN-12x18,Acrylic face mount by request,Open,12x18,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
+ACRYLIC-OPEN-16x24,Acrylic face mount by request,Open,16x24,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
+ACRYLIC-OPEN-20x30,Acrylic face mount by request,Open,20x30,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
+ACRYLIC-COLLECTOR-12x18,Acrylic face mount by request,Collector,12x18,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
+ACRYLIC-COLLECTOR-16x24,Acrylic face mount by request,Collector,16x24,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
+ACRYLIC-COLLECTOR-20x30,Acrylic face mount by request,Collector,20x30,,,,,,exact-size-quote-needed,internal-provisional-only,unquoted shipping+mounting+packaging+labor,special-request-only
