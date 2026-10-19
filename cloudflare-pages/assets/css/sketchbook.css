@@ -142,3 +142,22 @@
 .sketch-grid .sketch-card img { background: var(--cream); }
 .sketch-grid .sketch-card img { width:100%; height:auto; object-fit:contain; }
 .sketch-grid .sketch-card figcaption { background: var(--cream); }
+
+/* Purchase links apply only to the three verified Etsy-listed original paintings. */
+.sketch-card .sketch-etsy-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  margin-top: .55rem;
+  padding: .55rem .85rem;
+  background: var(--ink);
+  color: #fff;
+  border: 1px solid var(--ink);
+  border-radius: .25rem;
+  text-decoration: none;
+  font-weight: 700;
+}
+.sketch-card .sketch-etsy-link:hover,
+.sketch-card .sketch-etsy-link:focus-visible { background: var(--teal); border-color: var(--teal); color: #fff; }
+.sketch-card .sketch-etsy-link:focus-visible { outline: 3px solid var(--rust); outline-offset: 3px; }
