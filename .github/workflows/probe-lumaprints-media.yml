@@ -1,0 +1,20 @@
+name: Probe LumaPrints product media
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/probe-lumaprints-media.yml'
+      - 'working/probe-lumaprints-media.mjs'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - name: Probe sixteen manufacturer image assets without posting or ordering
+        run: node working/probe-lumaprints-media.mjs
