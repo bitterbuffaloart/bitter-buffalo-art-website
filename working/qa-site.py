@@ -85,13 +85,13 @@ def check(root, base=None):
     supplier=re.search(r'<section class="supplier-gallery".*?</section>',photo,re.S)
     if supplier:
         supplier_section=supplier.group(0)
-        paths=re.findall(r'data-supplier-src="/assets/images/lumaprints/([^"]+)"',supplier_section)
-        if len(paths)!=16 or len(set(paths))!=16:
-            errors.append('Expected 16 distinct manufacturer product examples in the supplier gallery')
+        paths=re.findall(r'<figure><a href="/assets/images/lumaprints/([^"]+)"',supplier_section)
+        if len(paths)!=15 or len(set(paths))!=15:
+            errors.append('Expected 15 unhidden local manufacturer product images in the supplier gallery')
         if 'The sample artwork in these manufacturer photographs is not Bitter Buffalo Art photography' not in supplier_section:
             errors.append('Supplier example gallery must clearly distinguish sample art from studio photography')
         if not set(paths) <= {
-            'metal/metal-silver-glossy.jpg','metal/metal-vivid-details.png','metal/metal-room-display.jpg','metal/metal-mounted-gallery.webp',
+            'metal/metal-silver-glossy.jpg','metal/metal-vivid-details.png','metal/metal-room-display.jpg',
             'paper/somerset-velvet.jpg','paper/paper-finishes.png',
             'canvas/stretched-canvas.jpg','canvas/mirror-wrap.jpg','canvas/solid-border-wrap.jpg','canvas/canvas-surface.png',
             'canvas/stretcher-profile.png','canvas/foamcore-reinforcement.jpg',
