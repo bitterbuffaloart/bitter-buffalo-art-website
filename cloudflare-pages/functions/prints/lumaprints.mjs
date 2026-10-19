@@ -26,16 +26,20 @@ export function basicAuthHeader(apiKey, apiSecret) {
   return `Basic ${btoa(binary)}`;
 }
 
+function isFloatingFrameCanvas(name) {
+  return /1\.5\s*(in|inch)/i.test(name)
+    && /canvas/i.test(name)
+    && /float/i.test(name)
+    && !/stretch/i.test(name);
+}
+
 export function selectCanvasMapping(discovery) {
   const categories = (discovery.categories || []).filter((item) => /canvas/i.test(item.name || ""));
   const matches = [];
   for (const category of categories) {
     const subs = discovery.subcategories?.[category.categoryId] || [];
     for (const sub of subs) {
-      const name = sub.name || "";
-      const stretched = /1\.5\s*(in|inch)/i.test(name) && /stretch/i.test(name) && /canvas/i.test(name);
-      const excluded = /0\.75|fram|float/i.test(name);
-      if (stretched && !excluded) matches.push(sub);
+      if (isFloatingFrameCanvas(sub.name || "")) matches.push(sub);
     }
   }
   if (matches.length !== 1) {
@@ -43,23 +47,13 @@ export function selectCanvasMapping(discovery) {
   }
   const subcategory = matches[0];
   const groups = discovery.options?.[subcategory.subcategoryId] || [];
-  const optionIds = [];
-  const unresolvedGroups = [];
-  for (const group of groups) {
-    const groupName = group.optionGroup || "";
-    const items = group.optionGroupItems || [];
-    if (/border|edge|wrap/i.test(groupName)) {
-      const mirrors = items.filter((item) => /mirror/i.test(item.optionName || ""));
-      if (mirrors.length === 1) optionIds.push(mirrors[0].optionId);
-      else unresolvedGroups.push(groupName);
-    } else {
-      unresolvedGroups.push(groupName);
-    }
-  }
+  const unresolvedGroups = groups.length
+    ? groups.map((group) => group.optionGroup || "option")
+    : ["options"];
   return {
-    readyToSubmit: unresolvedGroups.length === 0,
+    readyToSubmit: false,
     subcategoryId: subcategory.subcategoryId,
-    optionIds,
+    optionIds: [],
     unresolvedGroups,
     requiredDpi: subcategory.requiredDPI ?? null,
   };

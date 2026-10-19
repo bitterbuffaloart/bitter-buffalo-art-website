@@ -63,9 +63,25 @@ async function signedPayment(store, payment, { eventId = "evt-1", type = "paymen
 test("pilot catalog is one photograph and three canvas sizes", () => {
   assert.equal(new Set(CONFIGURATIONS.map((item) => item.photographId)).size, 1);
   assert.deepEqual(CONFIGURATIONS.map((item) => item.label), ["12×18", "16×24", "20×30"]);
-  assert.equal(getConfiguration("bb-photo-01-16x24-canvas-15").retailCents, 19933);
+  const sixteen = getConfiguration("bb-photo-01-16x24-canvas-15");
+  assert.equal(sixteen.retailCents, 19933);
+  assert.equal(sixteen.saleProduct, "premium 1.5-inch floating-frame canvas");
+  assert.equal(sixteen.productionBaseCents, null);
+  assert.equal(sixteen.lumaprintsSubcategoryId, null);
+  assert.equal(sixteen.priorUnframedQuote.selectedProduct, false);
+  assert.equal(sixteen.priorUnframedQuote.subcategoryId, 101003);
+  assert.equal(sixteen.priorUnframedQuote.baseCents, 3439);
+  assert.equal(sixteen.priorUnframedQuote.sumOfReturnedLinesCents, 5051);
   assert.equal(getConfiguration("bb-photo-01-12x18-canvas-15").retailCents, null);
+  assert.equal(getConfiguration("bb-photo-01-12x18-canvas-15").priorUnframedQuote.sumOfReturnedLinesCents, 4049);
   assert.equal(getConfiguration("bb-photo-01-20x30-canvas-15").retailCents, null);
+  assert.equal(getConfiguration("bb-photo-01-20x30-canvas-15").localMinPpi, 191.5);
+  assert.equal(getConfiguration("bb-photo-01-20x30-canvas-15").priorUnframedQuote.sumOfReturnedLinesCents, 6921);
+  for (const item of CONFIGURATIONS) {
+    assert.equal(item.productionBaseCents, null);
+    assert.equal(item.lumaprintsSubcategoryId, null);
+    assert.equal(item.priorUnframedQuote.selectedProduct, false);
+  }
   assert.equal(PHOTOGRAPH.title, "Grand Tetons");
   assert.equal(PHOTOGRAPH.masterReady, false);
 });
@@ -74,6 +90,9 @@ test("page shows the confirmed price, three sizes, and no invented prices", () =
   assert.equal(page.match(/<h1[ >]/g).length, 1);
   assert.equal(page.match(/name="configurationId"/g).length, 3);
   assert.match(page, /\$199\.33/);
+  assert.match(page, /floating-frame canvas/);
+  assert.match(page, /<h2>Floating frame<\/h2>/);
+  assert.doesNotMatch(page, /stretched canvas|wood-stretched/i);
   assert.match(page, /id="print-buy"/);
   assert.doesNotMatch(page, /134\.99|224\.99|314\.99|299\.99/);
   assert.doesNotMatch(page, /us\.api\.lumaprints\.com|connect\.squareup\.com/);
@@ -89,21 +108,26 @@ test("landscape file matches the 3:2 canvas sizes", () => {
   assert.equal(getConfiguration("bb-photo-01-20x30-canvas-15").resolutionStatus, "hold-below-200ppi");
 });
 
-test("mapping selects 1.5-inch stretch and mirror wrap without guessing other groups", () => {
+test("mapping does not select the unframed stretch or an unconfirmed framed name", () => {
   const mapping = selectCanvasMapping(discovery());
-  assert.equal(mapping.subcategoryId, 9002);
-  assert.deepEqual(mapping.optionIds, [502]);
+  assert.equal(mapping.subcategoryId, null);
+  assert.deepEqual(mapping.optionIds, []);
   assert.equal(mapping.readyToSubmit, false);
-  assert.deepEqual(mapping.unresolvedGroups, ["Hanging Hardware"]);
+  assert.deepEqual(mapping.unresolvedGroups, ["subcategory"]);
 });
 
-test("mapping fails closed when mirror wrap is ambiguous", () => {
+test("mapping keeps a uniquely named floating frame unresolved on every option group", () => {
   const input = discovery();
-  input.options[9002][0].optionGroupItems.push({ optionId: 503, optionName: "Mirror Edge" });
+  input.subcategories[50].push({ subcategoryId: 9004, name: "1.5in Floating Frame Canvas", requiredDPI: 200 });
+  input.options[9004] = [
+    { optionGroup: "Frame Finish", optionGroupItems: [{ optionId: 801, optionName: "Unconfirmed finish" }] },
+    { optionGroup: "Frame Choice", optionGroupItems: [{ optionId: 802, optionName: "Unconfirmed frame" }] },
+  ];
   const mapping = selectCanvasMapping(input);
-  assert.equal(mapping.subcategoryId, 9002);
+  assert.equal(mapping.subcategoryId, 9004);
   assert.deepEqual(mapping.optionIds, []);
-  assert.ok(mapping.unresolvedGroups.includes("Canvas Border"));
+  assert.equal(mapping.readyToSubmit, false);
+  assert.deepEqual(mapping.unresolvedGroups, ["Frame Finish", "Frame Choice"]);
 });
 
 test("LumaPrints and Square production hosts are refused", () => {
@@ -121,6 +145,8 @@ test("Square link request uses the server price and asks for a shipping address"
     idempotencyKey: "bb_test",
   });
   assert.equal(request.order.line_items[0].base_price_money.amount, 19933);
+  assert.match(request.order.line_items[0].name, /premium 1\.5-inch floating-frame canvas/);
+  assert.doesNotMatch(request.order.line_items[0].name, /stretch/i);
   assert.equal(request.checkout_options.ask_for_shipping_address, true);
   assert.throws(() => buildPaymentLinkRequest({
     orderId: "bb_test",
@@ -278,7 +304,8 @@ test("profit blocks unknown costs and does not treat the base gap as margin", ()
   const result = evaluateProfit(profitInput(config));
   assert.equal(result.sellable, false);
   assert.equal(result.contributionCents, null);
-  assert.equal(result.knownGapCents, 16494);
+  assert.equal(result.knownGapCents, null);
+  assert.equal(config.priorUnframedQuote.baseCents, 3439);
   assert.ok(result.unknown.includes("shipping"));
   assert.ok(result.unknown.includes("tax"));
   const payload = buildOrderPayload({
