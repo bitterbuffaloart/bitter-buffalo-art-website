@@ -136,8 +136,7 @@ jobs:
           curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/bitter-buffalo-art/deployments?per_page=10" \
             -o deployments.json
-          python -c "import json; data=json.load(open('deployments.json', encoding='utf-8')); assert data.get('success'), 'deployment list failed';
-[print('deployment', item.get('id'), item.get('environment'), ((item.get('deployment_trigger') or {}).get('metadata') or {}).get('branch'), item.get('url')) for item in data.get('result', [])]"
+          python -c "import json; data=json.load(open('deployments.json', encoding='utf-8')); assert data.get('success'); items=data.get('result') or []; [print('deployment', item.get('id'), item.get('environment'), ((item.get('deployment_trigger') or {}).get('metadata') or {}).get('branch'), item.get('url')) for item in items]"
           rm -f deployments.json
   publish-production:
     needs: [verify, record-production]
