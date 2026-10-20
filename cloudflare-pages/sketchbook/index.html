@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sketchbook | Bitter Buffalo Art</title>
-  <meta name="description" content="The Color Between Worlds, digital art from Bitter Buffalo Art. It is not a photography print. Price is not published." />
+  <title>The Bitter Buffalo Sketchbook | Bitter Buffalo Art</title>
+  <meta name="description" content="The Bitter Buffalo Sketchbook: paintings, drawings, and digital work from the studio, including The Color Between Worlds. No price is published." />
   <meta name="theme-color" content="#2D2418" />
   <link rel="canonical" href="https://bitterbuffaloart.com/sketchbook/" />
   <meta property="og:site_name" content="Bitter Buffalo Art" />
-  <meta property="og:title" content="Sketchbook | Bitter Buffalo Art" />
-  <meta property="og:description" content="The Color Between Worlds, digital art from Bitter Buffalo Art. It is not a photography print. Price is not published." />
+  <meta property="og:title" content="The Bitter Buffalo Sketchbook | Bitter Buffalo Art" />
+  <meta property="og:description" content="Paintings, drawings, and digital work from the studio, including The Color Between Worlds. No price is published." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bitterbuffaloart.com/sketchbook/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/site.css" />
+  <link rel="stylesheet" href="../assets/css/sketchbook.css" />
 </head>
-<body>
+<body class="western-page">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header__inner">
@@ -45,13 +46,26 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Digital art</span></p>
-      <h1>Sketchbook</h1>
-      <p class="lede">One digital artwork, The Color Between Worlds, is shown here. It is not a photography print. Price is not published. Other drawings stay off this page until an owner original is on file.</p>
+      <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Studio drawings and paintings</span></p>
+      <h1 id="sketch-title">The Bitter Buffalo Sketchbook</h1>
+      <p class="lede">Paintings, drawings, and digital work from the studio. The Color Between Worlds stays. Nothing on this page is for sale, and no price is published.</p>
     </section>
-    <section class="gallery gallery--portfolio" data-catalog-grid data-category="sketchbook" aria-label="Sketchbook and digital art"></section>
+    <div class="sketch-filters" role="toolbar" aria-label="Artwork categories">
+      <button type="button" data-filter="all" aria-pressed="true">All Artwork</button>
+      <button type="button" data-filter="paintings" aria-pressed="false">Paintings</button>
+      <button type="button" data-filter="drawings" aria-pressed="false">Drawings &amp; Scribbles</button>
+      <button type="button" data-filter="mixed" aria-pressed="false">Digital &amp; Mixed Media</button>
+    </div>
+    <p id="sketch-empty" class="sketch-empty" hidden>No pieces in this category yet.</p>
+    <div id="sketch-grid" class="sketch-grid" aria-live="polite"></div>
   </main>
   <footer class="site-footer">
+    <div class="site-footer__land" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 700px)" srcset="../assets/images/western-footer-mobile.svg" />
+        <img src="../assets/images/western-footer-landscape.svg" alt="" width="1600" height="680" />
+      </picture>
+    </div>
     <div class="site-footer__grid">
       <div>
         <h2>Bitter Buffalo Art</h2>
@@ -77,9 +91,119 @@
         </ul>
       </div>
     </div>
-    <p class="site-footer__note">Sketchbook and digital art are published only when an owner original is on file.</p>
+    <p class="site-footer__note">Sketchbook pieces are shown only when the studio file is on record. This page does not take payment.</p>
   </footer>
+  <dialog id="sketch-dialog" class="sketch-dialog" aria-labelledby="sketch-dialog-title">
+    <div class="sketch-dialog__bar">
+      <button type="button" id="sketch-zoom">View larger</button>
+      <button type="button" id="sketch-close">Close</button>
+    </div>
+    <div class="sketch-dialog__stage" id="sketch-stage">
+      <img id="sketch-full" alt="" />
+    </div>
+    <div class="sketch-dialog__copy">
+      <h2 id="sketch-dialog-title"></h2>
+      <p id="sketch-meta"></p>
+      <p id="sketch-story"></p>
+      <p><a id="sketch-inquire" href="../contact/">Inquire About This Artwork</a></p>
+    </div>
+  </dialog>
   <script src="../assets/js/site.js"></script>
-  <script src="../assets/js/catalog.js"></script>
+  <script>
+    const grid = document.getElementById("sketch-grid");
+    const empty = document.getElementById("sketch-empty");
+    const dialog = document.getElementById("sketch-dialog");
+    const stage = document.getElementById("sketch-stage");
+    const full = document.getElementById("sketch-full");
+    const zoomBtn = document.getElementById("sketch-zoom");
+
+    function metaLine(work) {
+      return [work.medium, work.year, work.dimensions, work.availability].filter(Boolean).join(" · ");
+    }
+
+    function card(work) {
+      const figure = document.createElement("figure");
+      figure.className = "sketch-card";
+      figure.dataset.categories = work.categories.join(" ");
+      figure.id = work.id;
+      const button = document.createElement("button");
+      button.type = "button";
+      const img = document.createElement("img");
+      img.src = work.thumb;
+      img.alt = work.alt;
+      img.width = work.width;
+      img.height = work.height;
+      img.decoding = "async";
+      img.loading = "lazy";
+      button.append(img);
+      button.addEventListener("click", () => openWork(work));
+      const cap = document.createElement("figcaption");
+      const title = document.createElement("h2");
+      title.textContent = work.title;
+      const note = document.createElement("p");
+      note.className = "sketch-note";
+      note.textContent = work.story || metaLine(work);
+      cap.append(title, note);
+      figure.append(button, cap);
+      return figure;
+    }
+
+    function applyFilter(name) {
+      let shown = 0;
+      for (const cardEl of grid.children) {
+        const ok = name === "all" || cardEl.dataset.categories.split(" ").includes(name);
+        cardEl.hidden = !ok;
+        if (ok) shown += 1;
+      }
+      empty.hidden = shown > 0;
+    }
+
+    function openWork(work) {
+      full.src = work.zoom;
+      full.alt = work.alt;
+      full.width = work.width;
+      full.height = work.height;
+      document.getElementById("sketch-dialog-title").textContent = work.title;
+      document.getElementById("sketch-meta").textContent = metaLine(work);
+      document.getElementById("sketch-story").textContent = work.story || "";
+      document.getElementById("sketch-inquire").href = "../contact/?topic=custom&piece=" + encodeURIComponent(work.title);
+      stage.classList.remove("is-zoomed");
+      zoomBtn.textContent = "View larger";
+      zoomBtn.setAttribute("aria-pressed", "false");
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      document.getElementById("sketch-close").focus();
+    }
+
+    document.getElementById("sketch-close").addEventListener("click", () => dialog.close());
+    zoomBtn.addEventListener("click", () => {
+      const on = stage.classList.toggle("is-zoomed");
+      zoomBtn.textContent = on ? "Fit to window" : "View larger";
+      zoomBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    dialog.addEventListener("click", (event) => {
+      if (event.target === dialog) dialog.close();
+    });
+    document.querySelector(".sketch-filters").addEventListener("click", (event) => {
+      const button = event.target.closest("button");
+      if (!button) return;
+      for (const item of event.currentTarget.querySelectorAll("button")) {
+        item.setAttribute("aria-pressed", item === button ? "true" : "false");
+      }
+      applyFilter(button.dataset.filter);
+    });
+
+    fetch("../assets/sketchbook/works.json")
+      .then((response) => response.json())
+      .then((data) => {
+        for (const work of data.works) grid.append(card(work));
+        const hash = location.hash.replace("#", "");
+        const match = data.works.find((work) => work.id === hash);
+        if (match) openWork(match);
+      })
+      .catch(() => {
+        empty.hidden = false;
+        empty.textContent = "The sketchbook list did not load.";
+      });
+  </script>
 </body>
 </html>

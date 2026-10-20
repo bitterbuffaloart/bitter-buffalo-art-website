@@ -412,3 +412,130 @@ a.catalog-title { color: inherit; text-decoration: none; }
   .hero-art { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .hero__panel { position: relative; }
 }
+
+/* Western page atmosphere restored from git history. Decorative only. */
+:root {
+  --espresso: #241910;
+  --parchment: #f4ead6;
+  --sandstone: #e7d3b4;
+}
+.western-page {
+  background-color: #ead9b8;
+  background-image: url("../images/western-topo.svg");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
+  color: var(--espresso);
+}
+.western-page::before,
+.western-page::after {
+  content: "";
+  position: fixed;
+  z-index: 0;
+  pointer-events: none;
+  background: url("../images/western-tumbleweed.svg") center / contain no-repeat;
+}
+.western-page::before {
+  width: 84px;
+  height: 84px;
+  left: 0;
+  bottom: 22vh;
+  opacity: .2;
+  animation: tumble-drift 46s ease-in-out infinite;
+}
+.western-page::after {
+  width: 58px;
+  height: 58px;
+  right: 1.5vw;
+  top: 42vh;
+  opacity: .14;
+  animation: tumble-drift 58s ease-in-out infinite reverse;
+}
+.site-header,
+main,
+.site-footer { position: relative; z-index: 1; }
+.western-page .site-header { background: rgba(247,244,238,.84); }
+.western-page .brand img { background: var(--parchment); }
+.western-page .hero::before {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  width: 112px;
+  height: 88px;
+  background: url("../images/western-skull.svg") center / contain no-repeat;
+  opacity: .72;
+  pointer-events: none;
+  z-index: 3;
+}
+.western-page .page-hero { position: relative; }
+@media (min-width: 900px) {
+  .western-page .page-hero { padding-right: 8.5rem; }
+  .western-page .page-hero::after {
+    content: "";
+    position: absolute;
+    right: 1.25rem;
+    top: 2.4rem;
+    width: 112px;
+    height: 88px;
+    background: url("../images/western-skull.svg") center / contain no-repeat;
+    opacity: .28;
+    pointer-events: none;
+  }
+}
+.western-page .page-hero,
+.western-page .prose,
+.western-page .pillars,
+.western-page .split {
+  background: radial-gradient(ellipse 92% 88% at 50% 42%, rgba(244,234,214,.95) 0%, rgba(231,211,180,.78) 58%, rgba(231,211,180,0) 100%);
+}
+.western-page .page-hero h1,
+.western-page .pillars h2,
+.western-page .prose h2 { color: var(--espresso); text-shadow: none; }
+.western-page .page-hero .lede,
+.western-page .prose p { color: var(--espresso); }
+.pillars__grid--four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.western-page .gallery figure,
+.western-page .portfolio-feature figure,
+.western-page .product-card,
+.western-page .bb-form {
+  background: var(--parchment);
+  box-shadow: none;
+}
+.western-page .gallery--portfolio img,
+.western-page .portfolio-feature img {
+  background: transparent;
+  object-fit: contain;
+}
+.western-page .site-footer {
+  background: var(--parchment);
+  padding-bottom: 0;
+}
+.site-footer__land {
+  margin: 0;
+  line-height: 0;
+  pointer-events: none;
+}
+.site-footer__land img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@keyframes tumble-drift {
+  0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(16px, 6px, 0) rotate(10deg); }
+  100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+}
+@media (max-width: 960px) {
+  .pillars__grid--four { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 780px) {
+  .western-page::before { width: 52px; height: 52px; opacity: .14; bottom: 14vh; }
+  .western-page::after { width: 40px; height: 40px; opacity: .12; }
+  .western-page .hero::before { width: 72px; height: 56px; opacity: .6; }
+  .pillars__grid--four { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .western-page::before,
+  .western-page::after { animation: none; }
+}

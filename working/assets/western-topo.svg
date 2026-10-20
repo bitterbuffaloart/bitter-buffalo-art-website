@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" role="presentation" focusable="false">
+  <!-- One composed contour map for the page field. Not a repeating tile. Newly drawn. -->
+  <defs>
+    <filter id="paper" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.26  0 0 0 0 0.16  0 0 0 0.22 0"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1100" fill="#ead9b8"/>
+  <rect width="1600" height="1100" filter="url(#paper)"/>
+  <g fill="none" stroke="#c4a35a" stroke-width="1.1" opacity=".45">
+    <circle cx="1180" cy="220" r="86"/>
+    <path d="M1180 118 L1230 250 L1130 250Z"/>
+    <path d="M1130 168 H1230"/>
+  </g>
+  <g fill="none" stroke="#2d2418" stroke-linecap="round">
+    <path stroke-width="5.4" d="M80 260 C40 160 160 40 340 70 C520 100 620 40 760 120 C900 200 860 360 680 430 C480 510 220 460 140 360 C90 300 100 290 80 260Z"/>
+    <path stroke-width="3.3" d="M150 250 C140 180 230 110 360 130 C520 154 600 120 680 190 C770 270 720 370 580 400 C420 436 220 390 170 320 C140 280 155 275 150 250Z"/>
+    <path stroke-width="3.3" d="M230 250 C240 200 310 160 400 176 C510 196 560 180 600 230 C650 290 600 350 500 364 C390 380 270 340 240 300 C220 274 224 270 230 250Z"/>
+    <path stroke-width="2.4" d="M310 260 C330 230 390 214 440 230 C500 250 510 290 470 320 C420 354 350 330 330 300 C318 282 306 274 310 260Z"/>
+    <path stroke-width="5.4" d="M900 180 C980 60 1240 40 1400 160 C1540 270 1560 460 1400 560 C1220 670 980 600 920 460 C880 360 840 260 900 180Z"/>
+    <path stroke-width="3.3" d="M1000 210 C1060 130 1240 120 1340 210 C1450 310 1440 450 1320 510 C1180 580 1040 500 1000 400 C976 340 960 260 1000 210Z"/>
+    <path stroke-width="3.3" d="M1080 250 C1120 200 1240 196 1300 260 C1370 336 1340 430 1240 460 C1130 494 1060 420 1070 350 C1076 310 1056 278 1080 250Z"/>
+    <path stroke-width="1" d="M1140 290 C1170 260 1240 264 1260 310 C1284 364 1240 400 1190 392 C1140 384 1120 330 1140 290Z"/>
+    <path stroke-width="4.6" d="M180 780 C300 640 560 620 720 760 C880 900 760 1060 540 1040 C300 1016 80 900 180 780Z"/>
+    <path stroke-width="3.3" d="M280 800 C360 710 540 700 640 800 C740 900 640 1000 500 990 C340 978 210 880 280 800Z"/>
+    <path stroke-width="2.4" d="M360 830 C420 770 530 770 580 840 C630 910 540 970 460 950 C370 928 310 880 360 830Z"/>
+    <path stroke-width="3.6" d="M20 520 C160 460 240 560 200 680 C160 800 40 760 20 660"/>
+    <path stroke-width="3.2" d="M1460 640 C1340 700 1380 860 1500 900 C1580 928 1600 800 1560 720"/>
+    <path stroke-width="2.8" d="M740 40 C820 120 700 200 760 300 C830 410 980 360 940 240 C910 150 820 20 740 40Z"/>
+  </g>
+  <g fill="none" stroke="#087c85" stroke-linecap="round" opacity=".8">
+    <path stroke-width="4.4" d="M120 270 C90 150 240 70 420 110 C620 154 700 80 820 180 C940 280 860 460 640 500 C400 544 180 450 140 340 C116 280 136 300 120 270Z"/>
+    <path stroke-width="4" d="M960 200 C1060 80 1320 90 1460 220 C1580 340 1520 540 1340 600 C1140 668 960 540 960 400 C960 300 900 250 960 200Z"/>
+  </g>
+  <g fill="none" stroke="#3a2a1c" stroke-linecap="round" opacity=".8">
+    <path stroke-width="4.2" d="M0 190 C220 150 420 230 640 188 C860 146 1060 228 1280 176 C1460 140 1540 188 1600 166"/>
+    <path stroke-width="3.2" d="M0 250 C240 210 460 290 700 246 C940 202 1140 286 1360 234 C1500 200 1560 246 1600 222"/>
+    <path stroke-width="4" d="M0 500 C200 456 440 540 700 492 C980 442 1160 532 1400 478 C1520 448 1560 500 1600 470"/>
+    <path stroke-width="3.1" d="M0 570 C220 528 480 612 760 560 C1040 508 1220 598 1460 546 C1560 516 1580 566 1600 540"/>
+    <path stroke-width="3.6" d="M0 860 C260 816 520 920 800 860 C1080 800 1280 900 1500 842 C1560 820 1580 860 1600 844"/>
+  </g>
+  <g fill="none" stroke="#087c85" stroke-linecap="round" opacity=".85">
+    <path stroke-width="3.4" d="M0 220 C220 176 440 262 680 214 C940 164 1140 256 1380 204 C1520 174 1560 220 1600 196"/>
+    <path stroke-width="3.2" d="M0 530 C240 486 500 574 780 522 C1060 470 1260 560 1480 508 C1560 484 1580 528 1600 508"/>
+  </g>
+  <g fill="none" stroke="#3a2a1c" stroke-width="1.3" stroke-linecap="round" transform="translate(70,980)">
+    <ellipse cx="0" cy="0" rx="46" ry="22"/>
+    <ellipse cx="0" cy="0" rx="46" ry="22" transform="rotate(28)"/>
+    <ellipse cx="0" cy="0" rx="46" ry="22" transform="rotate(58)"/>
+    <ellipse cx="0" cy="0" rx="46" ry="22" transform="rotate(88)"/>
+    <path d="M-40 2 L40 -6 M-36 -12 L34 14 M-8 -24 L8 24 M18 -20 L-16 18"/>
+  </g>
+</svg>

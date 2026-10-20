@@ -57,6 +57,7 @@ def print_ready(item):
 
 
 NO_MASTER_NUMBERS = {34, 40, 46, 49}
+WEB_DERIVATIVE_NUMBERS = {51, 52, 53}
 
 
 def is_three_two(item):
@@ -74,7 +75,10 @@ def photo_row(item):
     name = item["title"]
     link = f"/photography/prints/{print_slug(name, number)}/"
     availability = "inquiry"
-    if number in NO_MASTER_NUMBERS or not is_three_two(item):
+    if number in WEB_DERIVATIVE_NUMBERS:
+        materials = "No print price is published. This file is a 2048-pixel web derivative, not a print master. Checkout is not enabled."
+        retail = ""
+    elif number in NO_MASTER_NUMBERS or not is_three_two(item):
         materials = "No print price is published. Checkout is not enabled."
         retail = ""
     elif print_ready(item):

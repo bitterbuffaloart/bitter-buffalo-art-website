@@ -1,0 +1,48 @@
+{
+  "existing_published_count": 50,
+  "proposed_additions": [
+    {
+      "display_position": 51,
+      "permanent_id": "bb-photo-52",
+      "source": "DSC_4241 copy(1).jpg",
+      "edited": "DSC_4241_copy1_freqsep.jpg",
+      "title": "A Voice Against the Stone",
+      "story": "Among weathered stone and young pines, a bull elk lifts his head and calls into the mountain air. His antlers catch the light while the forest stands silent around him. For a moment, the whole wild country seems to listen.",
+      "print_ready": false,
+      "master_status": "Web upload only; locate original full-resolution master before offering prints",
+      "status": "selected_editorial_not_yet_published"
+    },
+    {
+      "display_position": 52,
+      "permanent_id": "bb-photo-53",
+      "source": "DSC_4269 copy.jpg",
+      "edited": "DSC_4269_copy_freqsep.jpg",
+      "title": "Gold Along the Waterline",
+      "story": "Autumn color spreads across the valley beneath a gathering sky, and a blue mountain lake catches the light between the trees. Beyond the golden slopes, the high peaks rise in cool shadow. The season is turning, but the land is not yet ready to let go of its color.",
+      "print_ready": false,
+      "master_status": "Web upload only; locate original full-resolution master before offering prints",
+      "status": "selected_editorial_not_yet_published"
+    },
+    {
+      "display_position": 53,
+      "permanent_id": "bb-photo-54",
+      "source": "untitled-1-2.jpg",
+      "edited": "untitled-1-2_freqsep.jpg",
+      "title": "The Meadow Finds Its River",
+      "story": "A narrow stream curves through green meadow grass toward the dark forest and a rugged mountain skyline. The valley seems to open slowly, one bend at a time, with the water drawing a quiet path through the open country.",
+      "print_ready": false,
+      "master_status": "Web upload only; locate original full-resolution master before offering prints",
+      "status": "selected_editorial_not_yet_published"
+    }
+  ],
+  "new_target_count": 53,
+  "publication_status": "not published; requires repository mapping and deployment",
+  "other_decisions": {
+    "DSC_6980-Edit-Edit copy.jpg": "Existing #25 A Roof Beneath the Fire; alternative low-res web edit; do not duplicate or replace TIFF print master",
+    "DSC_9301(1).jpg": "Existing #48 Where Silence Has Antlers; duplicate subject; do not add",
+    "DSC_9156.jpg": "Reserve alternative elk composition",
+    "DSC_0050 - Copy(1).jpg": "Reserve elk portrait",
+    "DSC_4877.jpg": "Reserve red-rocks trail",
+    "untitled-1(1).jpg": "Reserve bridge and stream view"
+  }
+}

@@ -498,5 +498,35 @@
     "sourceWidth": 5504,
     "sourceHeight": 8256,
     "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 51,
+    "sourcePath": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\DSC_4241_copy1_freqsep.jpg",
+    "sourceName": "DSC_4241_copy1_freqsep.jpg",
+    "manifestWidth": 2048,
+    "manifestHeight": 1365,
+    "sourceWidth": 2048,
+    "sourceHeight": 1365,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 52,
+    "sourcePath": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\DSC_4269_copy_freqsep.jpg",
+    "sourceName": "DSC_4269_copy_freqsep.jpg",
+    "manifestWidth": 2048,
+    "manifestHeight": 1365,
+    "sourceWidth": 2048,
+    "sourceHeight": 1365,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 53,
+    "sourcePath": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\untitled-1-2_freqsep.jpg",
+    "sourceName": "untitled-1-2_freqsep.jpg",
+    "manifestWidth": 2048,
+    "manifestHeight": 1365,
+    "sourceWidth": 2048,
+    "sourceHeight": 1365,
+    "matchesManifest": true
   }
 ]

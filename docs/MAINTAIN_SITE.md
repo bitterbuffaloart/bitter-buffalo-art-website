@@ -2,14 +2,29 @@
 
 One catalog, one portfolio manifest, and one pricing master. Do not start a second site.
 
+## Authoritative files
+
+These are the only files to edit for the public homepage, Sketchbook, and catalog. Do not delete older assets that are no longer linked.
+
+| Surface | Authoritative file | Published by |
+| --- | --- | --- |
+| Homepage | `cloudflare-pages/index.html` | that file itself |
+| Sketchbook | `cloudflare-pages/sketchbook/index.html` and `cloudflare-pages/assets/sketchbook/works.json` | those files |
+| Catalog | `working/portfolio/photography-manifest.json` | `working/catalog/build-catalog.py` writes `cloudflare-pages/assets/data/catalog.json` |
+
+`working/build-static-site.js` is not the homepage. It rewrites `cloudflare-pages/index.html` from an older embedded layout. Do not run it. `working/portfolio/build-final-44.py` still expects 50 photographs and would rewrite the manifest. Do not run it over the current manifest.
+
+The western page disappeared because the parchment, sandstone, topographic, buffalo-skull, and tumbleweed treatments, and the footer landscape, were committed on `5bc6785`, `9f2f142`, and `8bef79d`. That work is not an ancestor of the price-publish commit. The live CSS then painted the page with flat `--paper` and no longer pointed at the SVG files, so the deployed homepage had nothing to show. There is one homepage file. The generator is a second writer, and running it would remove the restored page again.
+
+The homepage has four collection cards: Photography, Tie-Dye, Laser Art, and Sketchbook. Custom Art, Events, About, and Contact stay in the header, the footer, and their own pages. They are not homepage cards. The heading “Art Born in the High Country” stays on the homepage.
+
 ## Photographs
 
-Titles and stories live in `working/portfolio/build-final-44.py`. The manifest is `working/portfolio/photography-manifest.json`. Permanent IDs stay stable. Position 14 is the bison calf, `bb-photo-45`. The horse file remains archived as `bb-photo-14` and must not be deleted.
+Titles and stories live in `working/portfolio/photography-manifest.json`. Permanent IDs stay stable. Position 14 is the bison calf, `bb-photo-45`. The horse file remains archived as `bb-photo-14` and must not be deleted. The displayed count is 53. Photographs 51–53 are `bb-photo-52`, `bb-photo-53`, and `bb-photo-54`. Their files are 2048-pixel web derivatives, not print masters, and they publish no price. Four frequency-separated files stay unpublished in `working/photography-staging/frequency-separated/`.
 
-After a photograph change, from the repository root:
+After a photograph change, edit the manifest, then from the repository root:
 
 ```
-python working/portfolio/build-final-44.py
 python working/catalog/build-catalog.py
 python working/prints/build-print-inquiry.py
 node --test working/test-print-inquiry.mjs working/test-print-storefront.mjs working/catalog/test-import.mjs working/test-contact.mjs
@@ -40,7 +55,7 @@ Reuse these files only. Do not add a second Square stack.
 
 `square.mjs` accepts only `SQUARE_ENVIRONMENT=sandbox` and only `https://connect.squareupsandbox.com`. It refuses `https://connect.squareup.com`. The client needs `SQUARE_ACCESS_TOKEN` and `SQUARE_LOCATION_ID`. The webhook check needs `SQUARE_WEBHOOK_SIGNATURE_KEY` and `SQUARE_WEBHOOK_NOTIFICATION_URL`. None of those values belong in git, public JavaScript, or a handoff.
 
-The `.env` file on 2026-10-20 is older than the sandbox locations 401, so Square was not called. The one credential action is to save a new sandbox access token and sandbox location id in that gitignored `.env` as `SQUARE_ACCESS_TOKEN` and `SQUARE_LOCATION_ID`. Do not paste them into chat.
+The production settings in `.env` are intentional. One read-only production GET /v2/locations on 2026-10-20 returned HTTP 401 AUTHENTICATION_ERROR / UNAUTHORIZED. That result stands. Do not call Square again, and do not paste a token into chat. Checkout stays off.
 
 `POST /api/prints/checkout` compares any browser-supplied `retailCents` with the server configuration and returns HTTP 400 when they differ. It returns HTTP 409 before any Square call while cost, print file, or LumaPrints options are unverified. The public pages have no buy button. A sandbox test fixture in `working/test-print-storefront.mjs` is not wired to the public site.
 

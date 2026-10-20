@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 760" role="presentation" focusable="false">
+  <!-- Newly drawn provisional composition for narrow screens. The original farmer-and-plow illustration was not recovered. -->
+  <defs>
+    <linearGradient id="msky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f1e4"/>
+      <stop offset="1" stop-color="#e4c7a4"/>
+    </linearGradient>
+    <symbol id="mweed" viewBox="-40 -34 80 68">
+      <g fill="none" stroke="#3a2a1c" stroke-width="1.4" stroke-linecap="round">
+        <ellipse cx="0" cy="2" rx="32" ry="18"/>
+        <ellipse cx="0" cy="2" rx="32" ry="18" transform="rotate(22)"/>
+        <ellipse cx="0" cy="2" rx="32" ry="18" transform="rotate(45)"/>
+        <ellipse cx="0" cy="2" rx="32" ry="18" transform="rotate(68)"/>
+        <ellipse cx="0" cy="2" rx="32" ry="18" transform="rotate(90)"/>
+        <path d="M-30 4 L30 -6 M-26 -10 L26 12 M-8 -20 L10 22 M16 -16 L-14 18 M-22 10 L22 -12"/>
+      </g>
+    </symbol>
+  </defs>
+  <rect width="520" height="760" fill="url(#msky)"/>
+  <circle cx="400" cy="64" r="26" fill="#f3e2b8"/>
+  <g fill="none" stroke="#3a2a1c" stroke-width="1.3" opacity=".55">
+    <path d="M40 120 C80 80 150 86 190 124 C220 154 160 180 110 166 C60 152 16 146 40 120Z"/>
+    <path d="M250 100 C300 60 380 70 420 116 C450 150 390 176 320 160 C260 146 214 128 250 100Z"/>
+  </g>
+  <g fill="none" stroke="#087c85" stroke-width="1.6" opacity=".75">
+    <path d="M60 128 C100 92 160 100 188 132 C210 158 160 178 112 164 C70 150 36 148 60 128Z"/>
+  </g>
+  <path fill="#c4a898" d="M0 180 L60 110 L110 150 L170 86 L230 146 L290 78 L360 140 L430 96 L520 150 L520 230 L0 230Z"/>
+  <path fill="#8d624c" d="M0 200 L70 140 L140 188 L210 128 L290 186 L360 132 L440 184 L520 150 L520 280 L0 280Z"/>
+  <path fill="#5e4032" d="M0 250 C120 230 200 280 320 248 C420 226 480 270 520 240 L520 340 L0 340Z"/>
+  <path fill="#c6a15a" d="M0 310 C160 280 280 350 520 300 L520 760 L0 760Z"/>
+  <g fill="none" stroke="#6d532c" stroke-width="2.4">
+    <path d="M16 360 C140 340 260 390 500 352"/>
+    <path d="M10 392 C150 370 280 420 510 384"/>
+    <path d="M20 426 C160 400 300 450 500 418"/>
+  </g>
+  <path fill="none" stroke="#3d2b1c" stroke-width="8" stroke-linecap="round" d="M360 560 C240 530 120 560 20 520"/>
+  
+  <g transform="translate(70,430)">
+    <ellipse cx="36" cy="32" rx="40" ry="12" fill="#8d6230"/>
+    <path d="M0 16 Q0 0 36 0 Q72 0 72 16 L72 30 Q36 44 0 30Z" fill="#e0c078"/>
+    <path d="M16 3 V30 M36 0 V36 M56 3 V30" stroke="#8a5a28" stroke-width="2" fill="none"/>
+  </g>
+  <!-- Provisional engraved farmer. Both hands grip the plow handles. The share cuts the furrow ahead of the boots. -->
+  <g transform="translate(24,176) scale(0.82)" stroke="#241910" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M8 430 L62 372 L108 438 Z" fill="#2a2926" stroke-width="2"/>
+    <path d="M62 372 C118 318 168 338 196 430 C150 400 96 412 62 372Z" fill="#6d5436" stroke-width="2"/>
+    <path d="M4 438 C70 390 140 400 210 446" fill="none" stroke="#3a2a1c" stroke-width="6"/>
+    <path d="M78 400 L250 230" fill="none" stroke="#5c3a24" stroke-width="16"/>
+    <path d="M214 118 L118 292" fill="none" stroke="#4a3424" stroke-width="13"/>
+    <path d="M286 128 L168 304" fill="none" stroke="#4a3424" stroke-width="13"/>
+    <path d="M150 230 H230" fill="none" stroke="#4a3424" stroke-width="9"/>
+    <path d="M248 210 L196 430" fill="none" stroke="#3a2a1c" stroke-width="22"/>
+    <path d="M300 214 L352 428" fill="none" stroke="#3a2a1c" stroke-width="22"/>
+    <g fill="none" stroke="#1a120c" stroke-width="1.3" opacity=".55">
+      <path d="M236 230 L188 410 M260 226 L214 418 M288 230 L338 410"/>
+    </g>
+    <path d="M168 424 H230 L238 448 H156Z" fill="#1a140f"/>
+    <path d="M324 422 H392 L386 446 H310Z" fill="#1a140f"/>
+    <path d="M214 118 H330 L346 292 H198Z" fill="#3d2c1e" stroke-width="2"/>
+    <path d="M248 136 H292 V230 H248Z" fill="#087c85"/>
+    <g fill="none" stroke="#1a120c" stroke-width="1.25" opacity=".7">
+      <path d="M224 146 L210 270 M252 140 L242 276 M286 140 L280 278 M318 146 L312 268"/>
+      <path d="M210 168 H334 M206 202 H340 M202 236 H342 M200 268 H338"/>
+    </g>
+    <path d="M230 150 C160 190 130 230 124 286" fill="none" stroke="#c4a574" stroke-width="16"/>
+    <path d="M310 146 C270 190 230 230 188 286" fill="none" stroke="#b08960" stroke-width="16"/>
+    <ellipse cx="122" cy="292" rx="18" ry="12" fill="#c4a574" stroke-width="2"/>
+    <ellipse cx="186" cy="294" rx="18" ry="12" fill="#b08960" stroke-width="2"/>
+    <path d="M248 108 H318 V132 H248Z" fill="#c4a574" stroke-width="1.6"/>
+    <ellipse cx="286" cy="92" rx="36" ry="40" fill="#e7d3ae" stroke-width="2.2"/>
+    <path d="M258 78 Q286 48 330 74" fill="none" stroke-width="2"/>
+    <circle cx="268" cy="84" r="4.2" fill="#241910"/>
+    <path d="M252 96 Q244 108 256 116" fill="none" stroke-width="2.4"/>
+    <path d="M258 112 Q278 124 296 112" fill="none" stroke-width="2"/>
+    <path d="M250 108 C246 132 268 150 292 140 C276 128 266 116 250 108Z" fill="#3a2a1c"/>
+    <path d="M246 78 Q300 36 352 72 L340 92 Q300 62 258 90Z" fill="#2d2418" stroke-width="2"/>
+    <ellipse cx="300" cy="78" rx="62" ry="13" fill="#2d2418" stroke-width="2"/>
+    <rect x="262" y="70" width="64" height="8" fill="#a5522e"/>
+  </g>
+  <path fill="#5c4030" d="M0 680 C140 650 300 710 520 660 L520 760 L0 760Z"/>
+  <use href="#mweed" x="4" y="620" width="150" height="126"/>
+  <use href="#mweed" x="360" y="608" width="150" height="126"/>
+</svg>

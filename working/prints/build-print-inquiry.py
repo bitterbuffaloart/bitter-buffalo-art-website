@@ -22,6 +22,7 @@ CROP_LIMIT = 0.005
 JS_PRICES = ROOT / "cloudflare-pages" / "assets" / "js" / "print-inquiry.js"
 HELD_NUMBERS = set()
 NO_MASTER_NUMBERS = {34, 40, 46, 49}
+WEB_DERIVATIVE_NUMBERS = {51, 52, 53}
 CANVAS_SIZES = (
     {"id": "12x18", "label": "12×18", "short": 12, "long": 18},
     {"id": "16x24", "label": "16×24", "short": 16, "long": 24},
@@ -165,6 +166,11 @@ def size_record(width, height, size, product_id, number):
         "ppi": ppi,
         "minimumPpi": minimum,
     })
+    if number in WEB_DERIVATIVE_NUMBERS:
+        internal["status"] = "hold"
+        internal["publicOffer"] = "inquiry-only"
+        internal["reason"] = "2048-pixel web derivative. No verified print master."
+        return internal
     if number in NO_MASTER_NUMBERS:
         internal["status"] = "hold"
         internal["publicOffer"] = "inquiry-only"
@@ -194,7 +200,12 @@ def page(photo):
         disabled = " disabled" if item["status"] == "hold" else ""
         suffix = ""
         if item["status"] == "hold":
-            suffix = " (no verified print master)" if photo["portfolioNumber"] in NO_MASTER_NUMBERS else f" (below {item['minimumPpi']} PPI)"
+            if photo["portfolioNumber"] in WEB_DERIVATIVE_NUMBERS:
+                suffix = " (web derivative, no print price)"
+            elif photo["portfolioNumber"] in NO_MASTER_NUMBERS:
+                suffix = " (no verified print master)"
+            else:
+                suffix = f" (below {item['minimumPpi']} PPI)"
         label = item["label"] + suffix
         sizes.append(
             f'<option value="{item["productId"]}:{item["sizeId"]}" data-product="{item["productId"]}" '
@@ -203,7 +214,9 @@ def page(photo):
         )
     names = {product["id"]: product["name"] for product in PRODUCTS}
     listed = [item for item in photo["sizes"] if item["status"] == "priced"]
-    if photo["portfolioNumber"] in NO_MASTER_NUMBERS:
+    if photo["portfolioNumber"] in WEB_DERIVATIVE_NUMBERS:
+        price_note = "<p>No print price is published. This file is a 2048-pixel web derivative, not a print master.</p>"
+    elif photo["portfolioNumber"] in NO_MASTER_NUMBERS:
         price_note = "<p>No print price is published. The verified print master is missing, so this photograph stays gallery and inquiry only.</p>"
     elif not listed:
         price_note = "<p>No print price is published for this photograph.</p>"
@@ -521,8 +534,8 @@ def main():
             "printHolds": holds,
             "sizes": sizes,
         })
-    if len(photographs) != 50:
-        raise SystemExit(f"expected 50 photographs, found {len(photographs)}")
+    if len(photographs) != 53:
+        raise SystemExit(f"expected 53 photographs, found {len(photographs)}")
     write_pricing_master(photographs)
     public_photographs = [public_photo(photo) for photo in photographs]
     payload = {
@@ -552,7 +565,7 @@ def main():
         if token in public_text:
             raise SystemExit(f"unpublished cost or draft wording leaked: {token}")
     for photo in photographs:
-        if photo["portfolioNumber"] not in NO_MASTER_NUMBERS:
+        if photo["portfolioNumber"] not in NO_MASTER_NUMBERS and photo["portfolioNumber"] not in WEB_DERIVATIVE_NUMBERS:
             continue
         html = (PAGES / photo["slug"] / "index.html").read_text(encoding="utf-8")
         if "$" in html:

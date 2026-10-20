@@ -12,6 +12,7 @@ const { onRequestPost } = await import("data:text/javascript;base64," + Buffer.f
 
 const CROP_LIMIT = 0.005;
 const NO_MASTER = new Set([34, 40, 46, 49]);
+const WEB_DERIVATIVE = new Set([51, 52, 53]);
 const OFFERS = {
   "canvas-floating-15": {
     "12x18": { minimum: 200, retail: "149.33" },
@@ -58,12 +59,12 @@ function expected(photo, productId, size) {
   const printWidth = photo.sourceWidth >= photo.sourceHeight ? size.long : size.short;
   const printHeight = photo.sourceWidth >= photo.sourceHeight ? size.short : size.long;
   const ppi = Math.round((Math.min(photo.sourceWidth / printWidth, photo.sourceHeight / printHeight) + 1e-9) * 10) / 10;
-  if (NO_MASTER.has(photo.portfolioNumber) || ppi < offer.minimum) return { status: "hold", ppi };
+  if (NO_MASTER.has(photo.portfolioNumber) || WEB_DERIVATIVE.has(photo.portfolioNumber) || ppi < offer.minimum) return { status: "hold", ppi };
   return { status: "priced", ppi, retail: offer.retail, text: `$${offer.retail}` };
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
-  assert.equal(catalog.photographs.length, 50);
+  assert.equal(catalog.photographs.length, 53);
   assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
@@ -89,7 +90,7 @@ test("every photograph keeps its measured sizes, price, and page", () => {
     assert.match(html, /Select a product/);
     assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout|acrylic/i);
     assert.doesNotMatch(html, /Workbook list price|Pending\. Inquiry only\.|\$74\.01|\$90\.13|\$50\.51|\$34\.39/);
-    if (NO_MASTER.has(photo.portfolioNumber)) assert.doesNotMatch(html, /\$\d/);
+    if (NO_MASTER.has(photo.portfolioNumber) || WEB_DERIVATIVE.has(photo.portfolioNumber)) assert.doesNotMatch(html, /\$\d/);
     let framedPrices = 0;
     for (const productId of Object.keys(OFFERS)) {
       for (const size of SIZES) {
@@ -160,13 +161,32 @@ test("every photograph keeps its measured sizes, price, and page", () => {
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 45).title, "Where the Mountains Catch Fire");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 50).id, "bb-photo-51");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 50).title, "The Long Fall Home");
-  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 51), undefined);
+  assert.equal(byNumber(51).id, "bb-photo-52");
+  assert.equal(byNumber(51).title, "A Voice Against the Stone");
+  assert.equal(byNumber(51).sourceWidth, 2048);
+  assert.equal(byNumber(51).sourceHeight, 1365);
+  assert.equal(framed(51).status, "hold");
+  assert.equal(framed(51).priceText, undefined);
+  assert.equal(byNumber(52).id, "bb-photo-53");
+  assert.equal(byNumber(52).title, "Gold Along the Waterline");
+  assert.equal(framed(52).status, "hold");
+  assert.equal(framed(52).priceText, undefined);
+  assert.equal(byNumber(53).id, "bb-photo-54");
+  assert.equal(byNumber(53).title, "The Meadow Finds Its River");
+  assert.equal(framed(53).status, "hold");
+  assert.equal(framed(53).priceText, undefined);
+  for (const number of [51, 52, 53]) {
+    const page = readFileSync(resolve(root, "cloudflare-pages/photography/prints", byNumber(number).slug, "index.html"), "utf8");
+    assert.match(page, /No print price is published/);
+    assert.match(page, /web derivative/);
+    assert.doesNotMatch(page, /\$\d|Buy<\/button>|id="print-buy"/);
+  }
   assert.match(catalog.photographs.find((photo) => photo.portfolioNumber === 48).story, /the other's antlers/);
 });
 
 test("gallery links each photograph to its own inquiry page", () => {
   const photos = products.products.filter((product) => product.category === "photography prints");
-  assert.equal(photos.length, 50);
+  assert.equal(photos.length, 53);
   assert.deepEqual(
     photos.map((product) => product.inquiry_or_external_link),
     catalog.photographs.map((photo) => photo.url),
