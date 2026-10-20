@@ -13,17 +13,19 @@ A photograph row uses category `photography prints`. Leave `retail_price` blank 
 
 ## Other products
 
-Categories are `photography prints`, `tie-dye`, `laser`, and `custom art`.
+Categories the importer accepts are `photography prints`, `tie-dye`, `laser`, `custom art`, `coasters`, `shadowboxes`, and `lamps`. Coasters stay `laser` so they remain on the laser page. Do not add empty shadowbox or lamp rows to the public catalog.
 
 Required columns:
 
-`id,name,category,images,description,materials_and_sizes,retail_price,supplier_cost,shipping_estimate,availability,inquiry_or_external_link`
+`id,name,category,images,description,materials_and_sizes,retail_price,supplier_cost,shipping_estimate,availability,inquiry_or_external_link,status,sku,etsy_listing_id,inventory,production_cost,shipping_cost,fee_estimate,price_approval,variations,lumaprints_confirmed`
+
+`status` is `active`, `draft`, or `blocked`. `lumaprints_confirmed` stays `no` until the LumaPrints API returns that configuration. `price_approval` is blank, `owner-confirmed`, or `unapproved`.
 
 `images` is thumbnail, display, and enlarged paths separated by `|`. `availability` is `inquiry`, `on-hold`, or `external`. A blank retail price stays unpublished. `working/catalog/import-template.csv` is the header plus the Grand Tetons example.
 
 ## Deploy and rollback
 
-Do not deploy this feature branch. Cloudflare Pages project `bitter-buffalo-art` publishes only from `main`, and only when `ENABLE_PREVIEW_PUBLISH` is true. Pull requests run the page check and do not publish.
+Do not deploy this feature branch. Live production is Pages project `bitter-buffalo-art`, production branch `preview`, commit `cbcf655`. The GitHub workflow deploys only a push to `main`, and it publishes `preview` only when `ENABLE_PREVIEW_PUBLISH` is true. Pull requests run the page check and do not publish.
 
 From a clean checkout, `node working/stage-site.mjs` writes `.site-build`. The script stops if `.site-build` already exists, so a release build uses a clean worktree and does not delete the working tree.
 

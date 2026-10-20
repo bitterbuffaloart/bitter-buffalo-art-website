@@ -13,6 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   radios.forEach((radio) => radio.addEventListener("change", showPrice));
   showPrice();
+  fetch("/assets/data/pricing-master.json")
+    .then((response) => {
+      if (!response.ok) throw new Error(String(response.status));
+      return response.json();
+    })
+    .then((payload) => {
+      const confirmed = (payload.records || []).find((record) => record.sku === "FRAMED-OPEN-16x24" && record.price_approval === "owner-confirmed");
+      if (!confirmed?.confirmed_retail_usd) return;
+      const radio = form.querySelector('input[value="bb-photo-01-16x24-canvas-15"]');
+      if (!radio) return;
+      radio.dataset.retailCents = String(Math.round(Number(confirmed.confirmed_retail_usd) * 100));
+      const span = radio.closest("label")?.querySelector(".size-choice__price");
+      if (span) span.textContent = `$${confirmed.confirmed_retail_usd}`;
+      if (radio.checked) showPrice();
+    })
+    .catch(() => {});
   const inquiry = document.getElementById("print-buy");
   const inquiryFor = () => {
     const radio = selected();

@@ -17,6 +17,8 @@ Cloudflare Pages project: `bitter-buffalo-art`. Set secrets on Preview and Produ
 | `SQUARE_WEBHOOK_NOTIFICATION_URL` | Same | Exact URL Square signs. |
 | `LUMAPRINTS_API_KEY` | Same | Sandbox API key. |
 | `LUMAPRINTS_API_SECRET` | Same | Sandbox API secret. |
+| `LUMAPRINTS_ENVIRONMENT` | Same | Empty until Clyde names the sandbox or production host. |
+| `LUMAPRINTS_ADMIN_TOKEN` | Same | Empty until a replacement admin token exists. |
 | `LUMAPRINTS_API_BASE` | Optional | Default `https://us.api-sandbox.lumaprints.com/api/v1`. |
 | `LUMAPRINTS_STORE_ID` | Same | From sandbox `GET /stores` after a Standard Store exists. |
 | `LUMAPRINTS_WEBHOOK_USER` | Same | Basic auth user for the shipping webhook. |
