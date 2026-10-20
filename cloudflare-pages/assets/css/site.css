@@ -202,6 +202,8 @@ a { color: var(--teal); }
 .gallery figure { margin: 0; background: #fff; border: 1px solid rgba(45,36,24,.12); }
 .gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
 .gallery figcaption { padding: .65rem .85rem; font-size: .9rem; color: #3a2f22; }
+.gallery figcaption strong, .gallery figcaption > span { display: block; }
+.gallery figcaption > span { margin-top: .25rem; }
 .portfolio-feature {
   max-width: 1200px; margin: 0 auto 2rem; padding: 0 1.25rem;
 }
@@ -337,6 +339,18 @@ a { color: var(--teal); }
 
 /* Preserve each photograph’s complete composition. */
 .gallery--portfolio img, .portfolio-feature img { object-fit: contain; background: #f7f4ee; }
+.catalog-thumb {
+  display: block; width: 100%; padding: 0; border: 0; background: #f7f4ee; cursor: zoom-in;
+}
+.catalog-thumb img { display: block; }
+.catalog-price { display: block; margin-top: .35rem; font-weight: 700; }
+.catalog-enlarge {
+  width: min(1100px, calc(100vw - 2rem)); border: 0; padding: 0; background: #f7f4ee;
+}
+.catalog-enlarge img { width: 100%; height: auto; max-height: 80vh; object-fit: contain; }
+.catalog-enlarge p { margin: 0; padding: .75rem 1rem 1rem; }
+.catalog-enlarge__close { margin: .5rem; }
+.catalog-empty { margin: 0; padding: 1rem 1.15rem; background: #fff; border: 1px dashed rgba(45,36,24,.28); }
 .bb-form input, .bb-form select, .bb-form textarea { min-width: 0; width: 100%; }
 .bb-form__check input { width: auto; }
 .bb-form button:disabled { opacity: .65; cursor: wait; }

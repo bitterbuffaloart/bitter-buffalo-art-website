@@ -4,6 +4,9 @@ const root = path.join(__dirname, '..', 'cloudflare-pages');
 const pages = [
   'index.html',
   'photography/index.html',
+  'photography/prints/grand-tetons/index.html',
+  'sketchbook/index.html',
+  'shop/index.html',
   'tie-dye/index.html',
   'laser-art/index.html',
   'custom/index.html',
@@ -26,8 +29,12 @@ for (const p of pages) {
     // nav should include Laser Art on every page
   }
   if (!/nav-link/.test(html) || !/Laser Art/.test(html)) issues.push(p + ': missing Laser Art nav');
-  if (!/Shop Etsy|Shop on Etsy|etsy.com\/shop\/BitterBuffaloArt/.test(html)) {
+  const photoPages = new Set(['photography/index.html', 'photography/prints/grand-tetons/index.html', 'sketchbook/index.html']);
+  if (!photoPages.has(p) && !/Shop Etsy|Shop on Etsy|etsy.com\/shop\/BitterBuffaloArt/.test(html)) {
     issues.push(p + ': missing Etsy CTA');
+  }
+  if (photoPages.has(p) && /Shop Etsy|Buy<\/button>|action="\/api\/prints\/checkout"/.test(html)) {
+    issues.push(p + ': photography page still offers a buy button');
   }
   if (
     /Free U\.S\. Shipping|Ground Builder|myshopify\.com|shopify\.com\/cart|GIVEAWAY-UNION|Union Peaks giveaway|bb-giveaway/i.test(

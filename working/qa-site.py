@@ -32,7 +32,13 @@ def check(root, base=None):
                     if parsed.fragment not in targetids: errors.append(f'{file}: missing fragment {url}')
     if etsy!={'https://www.etsy.com/shop/BitterBuffaloArt'}: errors.append(f'Unexpected Etsy links: {etsy}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
-    if set(re.findall(r'portfolio/(\d+)\.jpg',photo))!={f'{n:02}' for n in range(1,34)}: errors.append('Portfolio must contain exactly Final 33')
+    catalog=json.loads((root/'assets/data/catalog.json').read_text(encoding='utf-8'))
+    numbers=set()
+    for product in catalog['products']:
+        if product.get('category')=='photography prints':
+            numbers.update(re.findall(r'portfolio/(?:thumbs/|large/)?(\d+)\.jpg', product.get('images','')))
+    if numbers!={f'{n:02}' for n in range(1,34)}: errors.append('Portfolio must contain exactly Final 33')
+    if 'data-catalog-grid' not in photo: errors.append('Photography gallery is not connected to the catalog')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')
     resources.update(['index.html','robots.txt','sitemap.xml'])

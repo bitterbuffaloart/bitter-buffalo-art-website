@@ -33,6 +33,7 @@
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="../../../" class="nav-link">Home</a>
         <a href="../../" class="nav-link is-active" aria-current="page">Photography</a>
+        <a href="../../../sketchbook/" class="nav-link">Sketchbook</a>
         <a href="../../../shop/" class="nav-link">Shop</a>
         <a href="../../../tie-dye/" class="nav-link">Tie-Dye</a>
         <a href="../../../laser-art/" class="nav-link">Laser Art</a>
@@ -40,7 +41,6 @@
         <a href="../../../events/" class="nav-link">Events</a>
         <a href="../../../about/" class="nav-link">About</a>
         <a href="../../../contact/" class="nav-link">Contact</a>
-        <a class="nav-link nav-link--etsy" href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Shop Etsy</a>
       </nav>
     </div>
   </header>
@@ -48,7 +48,7 @@
     <section class="page-hero">
       <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Fine Art Photography · #01</span></p>
       <h1>Grand Tetons</h1>
-      <p class="lede">Premium 1.5-inch floating-frame canvas of the approved Grand Tetons photograph. Handmade art stays on Etsy. This page does not collect live payment, and no order is sent to production.</p>
+      <p class="lede">Premium 1.5-inch floating-frame canvas of the approved Grand Tetons photograph. This page shows the confirmed 16×24 price and an inquiry path. It does not take payment.</p>
     </section>
     <section class="print-product">
       <figure class="print-product__photo">
@@ -57,7 +57,7 @@
       </figure>
       <div class="print-product__buy">
         <h2>Size</h2>
-        <form id="print-order" action="/api/prints/checkout" method="post">
+        <form id="print-order" action="../../../contact/" method="get">
           <fieldset class="size-choices">
             <legend class="visually-hidden">Choose one floating-frame size</legend>
             <label class="size-choice">
@@ -80,7 +80,7 @@
             </label>
           </fieldset>
           <p id="print-price" class="print-price">16×24 · $199.33</p>
-          <button class="btn btn--solid-ink" id="print-buy" type="submit">Buy</button>
+          <a class="btn btn--solid-ink" id="print-buy" href="../../../contact/?topic=print&amp;piece=Grand%20Tetons&amp;size=16%C3%9724">Inquire about this print</a>
           <p id="print-result" class="print-result" role="status"></p>
         </form>
         <h2>Floating frame</h2>
@@ -90,7 +90,7 @@
           <li>Foamcore, backing, and hanging wire are not verified</li>
         </ul>
         <h2>Shipping</h2>
-        <p>Shipping cost is not verified. Checkout will not charge a guessed shipping amount. When sandbox checkout is enabled, Square collects the shipping address. Nothing is charged while live payment is off.</p>
+        <p>Shipping cost is not verified and is not published. This page does not take payment.</p>
         <h2>Other materials</h2>
         <p>Metal, acrylic, giclée, and custom sizes are not offered for purchase here. <a href="../../../contact/">Send an inquiry</a>.</p>
       </div>
@@ -112,6 +112,7 @@
         <h3>Explore</h3>
         <ul>
           <li><a href="../../">Photography</a></li>
+          <li><a href="../../../sketchbook/">Sketchbook</a></li>
           <li><a href="../../../shop/">Shop</a></li>
           <li><a href="../../../tie-dye/">Tie-Dye</a></li>
           <li><a href="../../../laser-art/">Laser Art</a></li>
@@ -124,11 +125,11 @@
         <ul>
           <li><a href="../../../custom/">Custom Art</a></li>
           <li><a href="../../../contact/">Contact</a></li>
-          <li><a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Shop on Etsy</a></li>
+          <li><a href="../../../contact/?topic=print&amp;piece=Grand%20Tetons">Print inquiry</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__note">Handmade art stays on our <a href="https://www.etsy.com/shop/BitterBuffaloArt" target="_blank" rel="noopener noreferrer">Etsy shop</a>. This floating-frame page does not collect live payment.</p>
+    <p class="site-footer__note">This floating-frame page does not take payment. Photographs are not sold on Etsy.</p>
   </footer>
   <script src="../../../assets/js/site.js"></script>
   <script src="../../../assets/js/print-product.js"></script>

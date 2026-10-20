@@ -49,3 +49,8 @@ Contact delivery is separate from deployment credentials. A verified sender/reci
 and owner receipt test are required before declaring contact delivery operational.
 Current fallback is a user-triggered email draft; it does not depend on Shopify.
 Follow ../DOMAIN_CUTOVER_CHECKLIST.md after explicit cutover approval.
+
+## Rollback
+
+Do not change DNS. To keep the current working preview in place, set the Actions variable `ENABLE_PREVIEW_PUBLISH` to false. To return the preview branch to an older commit, redeploy that commit with the same Pages project and `--branch=preview`. Pull requests do not publish.
+

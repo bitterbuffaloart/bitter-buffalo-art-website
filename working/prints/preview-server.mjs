@@ -4,7 +4,7 @@ import { extname, join } from "node:path";
 import { createCheckout } from "../../cloudflare-pages/functions/prints/orders.mjs";
 
 const root = join(import.meta.dirname, "..", "..", "cloudflare-pages");
-const types = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".jpg": "image/jpeg", ".png": "image/png", ".svg": "image/svg+xml", ".xml": "application/xml" };
+const types = { ".html": "text/html; charset=utf-8", ".css": "text/css; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".json": "application/json; charset=utf-8", ".jpg": "image/jpeg", ".png": "image/png", ".svg": "image/svg+xml", ".xml": "application/xml" };
 const port = Number(process.env.PORT || 8765);
 
 function fileFor(urlPath) {

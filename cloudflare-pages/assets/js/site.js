@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const piece = params.get('piece');
+  const topic = params.get('topic');
+  if (topic === 'laser') window.location.hash = 'laser-intake';
+  if (piece) {
+    const subject = document.querySelector('[name="contact[Subject]"]');
+    const body = document.querySelector('[name="contact[body]"]');
+    if (subject && topic === 'print') subject.value = 'Print inquiry';
+    if (body && !body.value) {
+      const size = params.get('size');
+      body.value = `Inquiry: ${piece}${size ? ` · ${size}` : ''}`;
+    }
+  }
   const btn = document.querySelector('.nav-toggle');
   const nav = document.getElementById('site-nav');
   if (btn && nav) {

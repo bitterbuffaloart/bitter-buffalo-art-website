@@ -13,31 +13,22 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   radios.forEach((radio) => radio.addEventListener("change", showPrice));
   showPrice();
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  const inquiry = document.getElementById("print-buy");
+  const inquiryFor = () => {
     const radio = selected();
-    const payload = { configurationId: radio.value };
-    if (radio.dataset.retailCents) payload.retailCents = Number(radio.dataset.retailCents);
-    result.textContent = "Checking this size…";
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(payload),
-      });
-      const body = await response.json().catch(() => null);
-      if (response.status === 409) {
-        result.textContent = body?.error || "This size is not for sale yet. No payment was started.";
-        return;
-      }
-      if (!response.ok || !body?.checkoutUrl) {
-        result.textContent = body?.error || "Checkout is not open. No payment was started.";
-        return;
-      }
-      result.textContent = "Sandbox checkout is ready.";
-      window.location.assign(body.checkoutUrl);
-    } catch {
-      result.textContent = "Checkout could not be reached. No payment was started.";
-    }
+    const label = radio.closest("label")?.querySelector(".size-choice__label")?.textContent || "";
+    const target = new URL("../../../contact/", window.location.href);
+    target.searchParams.set("topic", "print");
+    target.searchParams.set("piece", "Grand Tetons");
+    target.searchParams.set("size", label);
+    return target.pathname + target.search;
+  };
+  if (inquiry) inquiry.href = inquiryFor();
+  radios.forEach((radio) => radio.addEventListener("change", () => {
+    if (inquiry) inquiry.href = inquiryFor();
+  }));
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    result.textContent = "This page does not take payment. Use the inquiry link.";
   });
 });
