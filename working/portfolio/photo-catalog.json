@@ -1,0 +1,4110 @@
+{
+  "catalogId": "bitter-buffalo-photo-catalog",
+  "keyedBy": "permanentId",
+  "oneDriveFolder": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy",
+  "manifest": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\Final_33_Manifest.csv",
+  "publicPriceRule": "Framed canvas, aluminum metal, and archival paper only, and only sizes that already qualify. Checkout is disabled.",
+  "squarePaymentLinkRows": 176,
+  "squareUrlsNull": 176,
+  "checkout": "disabled",
+  "reconciliation": {
+    "displayedPhotographs": 53,
+    "final33Rows": 33,
+    "final33OnTheSite": [
+      1,
+      2,
+      3,
+      4,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "final33NotOnTheSite": [
+      5,
+      14
+    ],
+    "sitePhotographsNewerThanOrOutsideThe33": [
+      "bb-photo-05",
+      "bb-photo-45",
+      "bb-photo-18",
+      "bb-photo-24",
+      "bb-photo-34",
+      "bb-photo-35",
+      "bb-photo-36",
+      "bb-photo-37",
+      "bb-photo-38",
+      "bb-photo-39",
+      "bb-photo-40",
+      "bb-photo-41",
+      "bb-photo-42",
+      "bb-photo-43",
+      "bb-photo-44",
+      "bb-photo-46",
+      "bb-photo-47",
+      "bb-photo-48",
+      "bb-photo-49",
+      "bb-photo-50",
+      "bb-photo-51",
+      "bb-photo-52",
+      "bb-photo-53",
+      "bb-photo-54"
+    ]
+  },
+  "photographs": [
+    {
+      "permanentId": "bb-photo-01",
+      "portfolioNumber": 1,
+      "title": "Stormborn Grand Tetons",
+      "story": "Snow-covered peaks rise through layers of cloud while the valley rests in deep shadow. Light breaks across the mountain faces, revealing sharp ridges before the weather draws another veil. The Tetons carry a wild presence here: immense, restless, and worth standing still for.",
+      "final33": {
+        "rank": 1,
+        "title": "Grand Tetons",
+        "key": "dsc_2626",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\01 - DSC_2626-Edit-no water mark.jpg",
+        "display": "/assets/images/portfolio/01.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/01.jpg",
+        "enlarged": "/assets/images/portfolio/large/01.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\01 - DSC_2626-Edit-no water mark.jpg",
+        "final33Original": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 2 2014-06-17\\DSC_2626-Edit-no water mark.jpg",
+        "raw": [
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_2626.NEF",
+            "source": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 2 2014-06-17\\DSC_2626.NEF",
+            "bytes": 31416476,
+            "format": "nef"
+          }
+        ]
+      },
+      "pixels": {
+        "width": 5746,
+        "height": 3831
+      },
+      "aspect": 1.4999,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 319.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 239.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 319.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 319.2,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-02",
+      "portfolioNumber": 2,
+      "title": "When the Mountains Hold Their Breath",
+      "story": "The Maroon Bells meet their reflection beneath a restless sky. Gold threads through the wooded slopes, and the lake holds the mountains almost without a ripple. Along the rocky shore, the whole scene seems to pause long enough for you to catch your breath with it.",
+      "final33": {
+        "rank": 2,
+        "title": "Maroon Bells reflection",
+        "key": "dsc_7500",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\phase5-etsy-lumaprints\\working\\02_Maroon_Bells_DSC_7500-HDR.jpg",
+        "display": "/assets/images/portfolio/02.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/02.jpg",
+        "enlarged": "/assets/images/portfolio/large/02.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\02 - DSC_7500-HDR.tif",
+        "final33Original": "K:\\2014\\Fall\\2014-09-23\\DSC_7500-HDR.tif",
+        "raw": [
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_7500-HDR-2.dng",
+            "source": "K:\\2014\\Fall\\2014-09-23\\DSC_7500-HDR-2.dng",
+            "bytes": 88272614,
+            "format": "dng"
+          },
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_7500-HDR.dng",
+            "source": "K:\\2014\\Fall\\2014-09-23\\DSC_7500-HDR.dng",
+            "bytes": 88523522,
+            "format": "dng"
+          },
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_7500.dng",
+            "source": "K:\\2014\\Fall\\2014-09-23\\DSC_7500.dng",
+            "bytes": 26725850,
+            "format": "dng"
+          }
+        ]
+      },
+      "pixels": {
+        "width": 10800,
+        "height": 7201
+      },
+      "aspect": 1.4998,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 600.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 450.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 360.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 600.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 450.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "20x30",
+            "price": "$359.99",
+            "ppi": 360.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 600.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 450.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "20x30",
+            "price": "$199.99",
+            "ppi": 360.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 9,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-03",
+      "portfolioNumber": 3,
+      "title": "The Long Way Through",
+      "story": "Blue water makes a sweeping turn around a massive wall of stone. Sunlit rock and canyon shadow give the bend its depth, drawing the eye around the curve and out of sight. Some paths become remarkable because they refuse to run straight.",
+      "final33": {
+        "rank": 3,
+        "title": "Horseshoe Bend",
+        "key": "dsc_5436",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\03 Horseshoe Bend.jpg",
+        "display": "/assets/images/portfolio/03.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/03.jpg",
+        "enlarged": "/assets/images/portfolio/large/03.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\03 - DSC_5436.tif",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5436.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 15105,
+        "height": 10253
+      },
+      "aspect": 1.4732,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-04",
+      "portfolioNumber": 4,
+      "title": "Fire Beneath the Arch",
+      "story": "The sun breaks beneath Mesa Arch, lighting its underside with a fierce orange glow. Weathered stone frames the distant country while a starburst cuts across the horizon. For this brief moment, the desert seems to hold a flame beneath its roof.",
+      "final33": {
+        "rank": 4,
+        "title": "Mesa Arch sunrise",
+        "key": "dsc_4048",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\04 Mesa Arch sunrise.jpg",
+        "display": "/assets/images/portfolio/04.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/04.jpg",
+        "enlarged": "/assets/images/portfolio/large/04.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\04 - DSC_4048-HDR-Edit.tif",
+        "final33Original": "K:\\2016\\2016-02-29\\DSC_4048-HDR-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 7500,
+        "height": 5000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-05",
+      "portfolioNumber": 5,
+      "title": "The Canyon Keeps Moving",
+      "story": "The Virgin River winds through Zion beneath red cliffs edged with warm light. Trees fill the canyon floor while smooth water slips around scattered stones. The cliffs command your attention, but the river leads you through the photograph, bend by bend.",
+      "final33": null,
+      "paths": {
+        "siteSource": "K:\\2015\\Bryce Canyon 2015-10-12\\DSC_2475-HDR-Pano-2-Edit.tif",
+        "display": "/assets/images/portfolio/05.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/05.jpg",
+        "enlarged": "/assets/images/portfolio/large/05.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 7332,
+        "height": 4888
+      },
+      "aspect": 1.5,
+      "format": "tif",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 407.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 305.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 244.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 407.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 305.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 407.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 305.5,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-06",
+      "portfolioNumber": 6,
+      "title": "Twice the Fire",
+      "story": "Warm clouds stretch above the mountain skyline and return in the still water below. Snow, dark trees, and bright sky settle into a near mirror image. The reflection gives the light another place to live, doubling the feeling of a moment that cannot last.",
+      "final33": {
+        "rank": 6,
+        "title": "Teton reflection",
+        "key": "dsc_6599",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\06 Teton reflection.jpg",
+        "display": "/assets/images/portfolio/06.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/06.jpg",
+        "enlarged": "/assets/images/portfolio/large/06.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\06 - DSC_6599-Edit.tif",
+        "final33Original": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 3 2014-06-19\\DSC_6599-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-07",
+      "portfolioNumber": 7,
+      "title": "Gold Beyond the Ridge",
+      "story": "Rough stone anchors the foreground while golden woodland rolls toward a distant horizon. Clouds cast moving patches of shade across the broad country. From this rocky perch, autumn feels almost boundless\u2014one bright stretch of land opening into the next.",
+      "final33": {
+        "rank": 7,
+        "title": "Autumn Range Panorama",
+        "key": "dsc_4251",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\07 Autumn Range Panorama.jpg",
+        "display": "/assets/images/portfolio/07.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/07.jpg",
+        "enlarged": "/assets/images/portfolio/large/07.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\07 - DSC_4251-HDR-Pano-Edit-Edit.tif",
+        "final33Original": "K:\\2016\\2016-09-22\\DSC_4251-HDR-Pano-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 11255,
+        "height": 6956
+      },
+      "aspect": 1.618,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-08",
+      "portfolioNumber": 8,
+      "title": "A Thousand Edges of Light",
+      "story": "A low sun reaches across a crowded landscape of rock towers and narrow shadows. Warm light catches the upper edges while the hollows remain cool and deep. The wide view invites a slow look: every ridge holds another shape, another line, another small discovery.",
+      "final33": {
+        "rank": 8,
+        "title": "Canyon Sunstar",
+        "key": "dsc_1751",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\08 Canyon Sunstar.jpg",
+        "display": "/assets/images/portfolio/08.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/08.jpg",
+        "enlarged": "/assets/images/portfolio/large/08.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\08 - DSC_1751-HDR-Pano-Edit.tif",
+        "final33Original": "K:\\2015\\Bryce Canyon 2015-10-12\\DSC_1751-HDR-Pano-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 14400,
+        "height": 4800
+      },
+      "aspect": 3.0,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-09",
+      "portfolioNumber": 9,
+      "title": "The Exchange Still Stands",
+      "story": "Weathered lettering stretches across a wooden storefront beneath the mountains. Windows, doors, and worn boards give the building a character that polished surfaces cannot imitate. It stands beside the road with its name still visible and its history written into the grain.",
+      "final33": {
+        "rank": 9,
+        "title": "Miner's Exchange",
+        "key": "dsc_1677",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\09 - DSC_1677.jpg",
+        "display": "/assets/images/portfolio/09.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/09.jpg",
+        "enlarged": "/assets/images/portfolio/large/09.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\09 - DSC_1677.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_1677.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-10",
+      "portfolioNumber": 10,
+      "title": "Small Life, Wide Silence",
+      "story": "A small bird balances on a post in an almost empty white world. A fine horizontal line gives the eye a place to rest, and the bird gives the silence a pulse. Sometimes the smallest presence is enough to fill the frame.",
+      "final33": {
+        "rank": 10,
+        "title": "Solitude (High Country)",
+        "key": "dsc_192",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\10 - DSC_0192-Edit-16x9-solitude .jpg",
+        "display": "/assets/images/portfolio/10.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/10.jpg",
+        "enlarged": "/assets/images/portfolio/large/10.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\10 - DSC_0192-Edit-16x9-solitude .jpg",
+        "final33Original": "K:\\2016\\2016-05-11\\DSC_0192-Edit-16x9-solitude .jpg",
+        "raw": [
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_0192.NEF",
+            "source": "K:\\2016\\2016-05-11\\DSC_0192.NEF",
+            "bytes": 29882976,
+            "format": "nef"
+          }
+        ]
+      },
+      "pixels": {
+        "width": 9000,
+        "height": 5063
+      },
+      "aspect": 1.7776,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-11",
+      "portfolioNumber": 11,
+      "title": "Crowned in Timber",
+      "story": "A bull elk stands among pale grasses and dark tree trunks, his antlers spreading through the woodland like bare branches. The muted forest colors bring his heavy shoulders and watchful profile forward. Strength feels quiet here, settled into its own surroundings.",
+      "final33": {
+        "rank": 11,
+        "title": "Bull elk",
+        "key": "dsc_9390",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\11 - DSC_9390.jpg",
+        "display": "/assets/images/portfolio/11.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/11.jpg",
+        "enlarged": "/assets/images/portfolio/large/11.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\11 - DSC_9390.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9390.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 8256,
+        "height": 5504
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-12",
+      "portfolioNumber": 12,
+      "title": "Learning the Steep Way",
+      "story": "An adult mountain goat stands above a small kid on a broken slope of rock. White coats catch the light against the gray stone, making their footing feel even more remarkable. The little one has a steep world to learn and company along the way.",
+      "final33": {
+        "rank": 12,
+        "title": "Mountain Goat and Kid",
+        "key": "dsc_2486",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\12 Mountain Goat and Kid.jpg",
+        "display": "/assets/images/portfolio/12.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/12.jpg",
+        "enlarged": "/assets/images/portfolio/large/12.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\12 - DSC_2486-Edit.tif",
+        "final33Original": "K:\\2016\\2016-06-21\\DSC_2486-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 4916,
+        "height": 3593
+      },
+      "aspect": 1.3682,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-13",
+      "portfolioNumber": 13,
+      "title": "Carried by the Open Sky",
+      "story": "Two sandhill cranes stretch their wings across a clear blue sky. Their long necks point forward while the feather tips fan into delicate shapes. For a moment, the photograph holds the effortless-looking balance of bodies built for distance.",
+      "final33": {
+        "rank": 13,
+        "title": "Sandhill cranes",
+        "key": "dsc_4394",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\13 Sandhill cranes.jpg",
+        "display": "/assets/images/portfolio/13.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/13.jpg",
+        "enlarged": "/assets/images/portfolio/large/13.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\13 - DSC_4394-Edit-Edit.tif",
+        "final33Original": "K:\\2017\\2017-03-20\\DSC_4394-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 5760,
+        "height": 3840
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 320.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 240.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 320.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 320.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-45",
+      "portfolioNumber": 14,
+      "title": "Born to Roam",
+      "story": "A rust-colored bison calf stands among sage and grass, surrounded by the heavy shapes of the herd. Small legs, watchful eyes, and a whole stretch of wild country ahead. The next generation is already finding its footing.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\Documents\\Codex\\2026-10-12\\c-users-bitte-onedrive-desktop-portfiolo\\outputs\\Edited_Portfolio_Catalog\\Full_Resolution\\DSC_2637.JPG",
+        "display": "/assets/images/portfolio/14.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/14.jpg",
+        "enlarged": "/assets/images/portfolio/large/14.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 4035,
+        "height": 2690
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 224.2,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 1,
+        "urls": [
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-15",
+      "portfolioNumber": 15,
+      "title": "Iron at Rest",
+      "story": "An old tractor rests in the grass beneath a textured sky. Black and white draws attention to worn metal, heavy tires, and the stubborn geometry of a working machine. Its engine is quiet, but its presence still belongs to the land around it.",
+      "final33": {
+        "rank": 15,
+        "title": "Tractor",
+        "key": "dsc_1989",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\15 Tractor.jpg",
+        "display": "/assets/images/portfolio/15.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/15.jpg",
+        "enlarged": "/assets/images/portfolio/large/15.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\15 - DSC_1989-Edit-B+W-Edit.tif",
+        "final33Original": "K:\\2015\\Mustangs 2015-03-24\\DSC_1989-Edit-B+W-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 7500,
+        "height": 5000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-16",
+      "portfolioNumber": 16,
+      "title": "Let the Water Speak",
+      "story": "Water folds over a broad rock ledge in pale ribbons, gathering and falling again between warm-colored stones. Green growth softens the edges of the scene. The steady movement gives the eye somewhere to settle and the mind permission to wander.",
+      "final33": {
+        "rank": 16,
+        "title": "Waterfall",
+        "key": "dsc_9267",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\16 Waterfall.jpg",
+        "display": "/assets/images/portfolio/16.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/16.jpg",
+        "enlarged": "/assets/images/portfolio/large/16.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\16 - DSC_9267-Edit-2.tif",
+        "final33Original": "K:\\2014\\2014-07-27\\DSC_9267-Edit-2.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-17",
+      "portfolioNumber": 17,
+      "title": "The Night Writes Back",
+      "story": "Long trails of starlight cross the sky above a snow-covered basin and dark mountain slopes. The ground appears still while the exposure turns the passing night into visible lines. Time leaves its handwriting overhead.",
+      "final33": {
+        "rank": 17,
+        "title": "Star trails over the lake",
+        "key": "dsc_9015",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\17 Star trails over the lake.jpg",
+        "display": "/assets/images/portfolio/17.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/17.jpg",
+        "enlarged": "/assets/images/portfolio/large/17.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\17 - DSC_9015-Edit-Edit.tif",
+        "final33Original": "K:\\2016\\Star Trails 2016-02-09\\DSC_9015-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 7500,
+        "height": 5001
+      },
+      "aspect": 1.4997,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 416.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 312.5,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-18",
+      "portfolioNumber": 18,
+      "title": "Where Stone Holds the Stars",
+      "story": "A jagged tower of weathered rock stands beneath a sky written in circles. Blue and white star trails sweep around its crown, turning passing time into something visible. There is a wild kind of peace here\u2014the feeling of planting your feet on solid ground while the whole universe keeps turning.",
+      "final33": {
+        "rank": 18,
+        "title": "Shiprock star trails",
+        "key": "dsc_9535",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": true
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\18 - DSC_9535-Edit-2 copy.jpg",
+        "display": "/assets/images/portfolio/18.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/18.jpg",
+        "enlarged": "/assets/images/portfolio/large/18.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\18 - DSC_9535-Edit-2.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\Live Photos\\Ready for print\\uploaded\\DSC_9535-Edit-2.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 9601,
+        "height": 5400
+      },
+      "aspect": 1.778,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-19",
+      "portfolioNumber": 19,
+      "title": "Winter Keeps the Keys",
+      "story": "Small wooden cabins stand beneath snow-laden trees, their dark walls breaking through the white. The monochrome view brings out rooflines, trunks, and the quiet spaces between buildings. Winter gathers the whole settlement into a slower rhythm.",
+      "final33": {
+        "rank": 19,
+        "title": "Snow cabins",
+        "key": "dsc_3229",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\19 Snow cabins.jpg",
+        "display": "/assets/images/portfolio/19.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/19.jpg",
+        "enlarged": "/assets/images/portfolio/large/19.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\19 - DSC_3229-Edit.tif",
+        "final33Original": "K:\\2013\\2013-10-17\\DSC_3229-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-20",
+      "portfolioNumber": 20,
+      "title": "A Little Color Against the Storm",
+      "story": "A yellow house and its weathered neighbors face the road beneath heavy clouds. Bright paint, pale fencing, and old wood hold their own against the dark sky. The scene has the familiar stubbornness of a mountain town waiting out another change in the weather.",
+      "final33": {
+        "rank": 20,
+        "title": "Storm over the yellow house",
+        "key": "dsc_1492",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\20 Storm over the yellow house.jpg",
+        "display": "/assets/images/portfolio/20.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/20.jpg",
+        "enlarged": "/assets/images/portfolio/large/20.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\20 - DSC_1492-Edit-Edit.tif",
+        "final33Original": "K:\\2014\\St. Elmo 2014-08-17\\DSC_1492-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 5982,
+        "height": 3987
+      },
+      "aspect": 1.5004,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 332.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 249.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 332.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 332.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-21",
+      "portfolioNumber": 21,
+      "title": "Into the Mist",
+      "story": "Elk emerge from a pale meadow where the distance dissolves into mist. One lowers its head to feed while another stands farther back, softened by the haze. The photograph asks for a quieter kind of attention, letting the animals appear gradually as you look.",
+      "final33": {
+        "rank": 21,
+        "title": "Into The Mist",
+        "key": "into_the_mist",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\21 - Into The Mist.jpg",
+        "display": "/assets/images/portfolio/21.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/21.jpg",
+        "enlarged": "/assets/images/portfolio/large/21.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\21 - Into The Mist.jpg",
+        "final33Original": "K:\\2017\\2017-11-06\\Into The Mist.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 7520,
+        "height": 5020
+      },
+      "aspect": 1.498,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 417.8,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 313.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 250.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 417.8,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 313.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 417.8,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 313.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-22",
+      "portfolioNumber": 22,
+      "title": "What the Water Remembers",
+      "story": "The skeletal remains of old machinery stretch above still water, their shapes repeated in the reflection. Autumn color rises behind the weathered framework. Hard angles and bright leaves share the surface, bringing the marks of industry and the surrounding landscape into one frame.",
+      "final33": {
+        "rank": 22,
+        "title": "Mining dredge",
+        "key": "dsc_6683",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\22 Mining dredge.jpg",
+        "display": "/assets/images/portfolio/22.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/22.jpg",
+        "enlarged": "/assets/images/portfolio/large/22.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\22 - DSC_6683-Edit-Edit-2-Edit.tif",
+        "final33Original": "K:\\2014\\Fall\\2014-09-20\\DSC_6683-Edit-Edit-2-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 5949,
+        "height": 3967
+      },
+      "aspect": 1.4996,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 330.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 247.9,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 330.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 330.5,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-23",
+      "portfolioNumber": 23,
+      "title": "Fuel for the Long Way Home",
+      "story": "An old mountain gas station fills the frame with timber, signs, and roadside character. Forested slopes rise behind the roof, placing this small stop firmly in its country. It carries the feeling of a place where the journey slows down for a while.",
+      "final33": {
+        "rank": 23,
+        "title": "Mountain Gas Station",
+        "key": "dsc_7149",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\23 Mountain Gas Station.jpg",
+        "display": "/assets/images/portfolio/23.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/23.jpg",
+        "enlarged": "/assets/images/portfolio/large/23.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\23 - DSC_7149-Edit.tif",
+        "final33Original": "K:\\2014\\Fall\\2014-09-22\\DSC_7149-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-24",
+      "portfolioNumber": 24,
+      "title": "Gold Beneath the Wild",
+      "story": "Warm light reaches across the trees and brush, catching the hillside in gold. Beyond the still water, Mount Sneffels and the surrounding skyline rise in blue shadow beneath soft clouds. This is country that makes you stop without deciding to, then stay a little longer.",
+      "final33": {
+        "rank": 24,
+        "title": "Aspen valley",
+        "key": "dsc_240",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": true
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\24 - DSC_0240_1-Edit-Edit copy.jpg",
+        "display": "/assets/images/portfolio/24.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/24.jpg",
+        "enlarged": "/assets/images/portfolio/large/24.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\24 - DSC_0240_1-Edit-Edit.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\Live Photos\\Ready for print\\uploaded\\DSC_0240_1-Edit-Edit.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 9599,
+        "height": 5400
+      },
+      "aspect": 1.7776,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-25",
+      "portfolioNumber": 25,
+      "title": "A Roof Beneath the Fire",
+      "story": "A small cabin rests at the edge of a meadow while fiery clouds stretch over the forest. Its simple roof and dark doorway give the eye an anchor beneath the dramatic sky. The building feels small, sheltered, and completely at home in the clearing.",
+      "final33": {
+        "rank": 25,
+        "title": "Cabin at sunset",
+        "key": "dsc_6980",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\25 - DSC_6980-Edit-Edit.tif",
+        "display": "/assets/images/portfolio/25.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/25.jpg",
+        "enlarged": "/assets/images/portfolio/large/25.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\25 - DSC_6980-Edit-Edit.tif",
+        "final33Original": "K:\\2015\\2015-07-17 17.46.34\\DSC_6980-Edit-Edit.tif",
+        "raw": [
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_6980__raw-DSC_6980.NEF",
+            "source": "K:\\2015\\2015-07-17 17.46.34\\DSC_6980.NEF",
+            "bytes": 31476865,
+            "format": "nef"
+          }
+        ]
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "tif",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-26",
+      "portfolioNumber": 26,
+      "title": "Iron Remembers",
+      "story": "Locomotive 495 fills the frame with rivets, pipes, and heavy steel beneath a sweeping sky. Light catches the face of the engine and the worn surfaces around it. Even at rest, the machine carries the visual weight of work, distance, and determination.",
+      "final33": {
+        "rank": 26,
+        "title": "Locomotive",
+        "key": "dsc_375",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\26 Locomotive.jpg",
+        "display": "/assets/images/portfolio/26.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/26.jpg",
+        "enlarged": "/assets/images/portfolio/large/26.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\26 - DSC_0375-HDR-Edit-Edit-2.tif",
+        "final33Original": "K:\\2015\\2015-05-26\\2015\\2015-05-26\\DSC_0375-HDR-Edit-Edit-2.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 4886,
+        "height": 7330
+      },
+      "aspect": 0.6666,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 407.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 305.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 244.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 407.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 305.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 407.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 305.4,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-27",
+      "portfolioNumber": 27,
+      "title": "The Last Stop Is Quiet",
+      "story": "A weathered caboose rests among pale winter grass and bare trees. Faded boards and touches of red trace the shape of a carriage built to travel. Here it stands still, with the small details of its surface finally given time to be seen.",
+      "final33": {
+        "rank": 27,
+        "title": "Weathered Caboose in Winter",
+        "key": "dsc_2943",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\27 Weathered Caboose in Winter.jpg",
+        "display": "/assets/images/portfolio/27.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/27.jpg",
+        "enlarged": "/assets/images/portfolio/large/27.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\27 - DSC_2943-Edit-Edit.tif",
+        "final33Original": "K:\\2015\\2015-03-25\\DSC_2943-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 6264,
+        "height": 4055
+      },
+      "aspect": 1.5448,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-28",
+      "portfolioNumber": 28,
+      "title": "Rooted Beneath Giants",
+      "story": "The barn glows warmly beneath a skyline of sharp, snowy summits. Low buildings and an uneven fence bring the scene down to human scale. Hand-built shelter and towering mountains meet in a view that feels both welcoming and immense.",
+      "final33": {
+        "rank": 28,
+        "title": "Barn and Tetons",
+        "key": "dsc_6751",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\28 Barn and Tetons.jpg",
+        "display": "/assets/images/portfolio/28.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/28.jpg",
+        "enlarged": "/assets/images/portfolio/large/28.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\28 - DSC_6751-HDR.tif",
+        "final33Original": "K:\\2014\\Grand Teton 2014\\Grand_Teton Day 4 2014-06-20\\DSC_6751-HDR.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 10800,
+        "height": 4712
+      },
+      "aspect": 2.292,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-29",
+      "portfolioNumber": 29,
+      "title": "Room for the Sky",
+      "story": "A small wooden chapel stands beneath a broad, cloud-streaked sky. Weathered boards and a simple tower rise from open ground, with distant mountains along the horizon. The space around the building becomes part of the photograph, leaving room for stillness and reflection.",
+      "final33": {
+        "rank": 29,
+        "title": "Wooden chapel",
+        "key": "dsc_6525",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\29 Wooden chapel.jpg",
+        "display": "/assets/images/portfolio/29.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/29.jpg",
+        "enlarged": "/assets/images/portfolio/large/29.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\29 - DSC_6525-HDR-Edit.tif",
+        "final33Original": "K:\\2014\\Moab\\2014-03-09\\DSC_6525-HDR-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 7531,
+        "height": 3600
+      },
+      "aspect": 2.0919,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-30",
+      "portfolioNumber": 30,
+      "title": "The Hills Come Alive in Gold",
+      "story": "Yellow wildflowers spread across rolling green country beneath a long mountain skyline. Bands of cloud and light give the distant slopes their shape. The wide frame holds the abundance of a brief flowering season, stretching far beyond any single blossom.",
+      "final33": {
+        "rank": 30,
+        "title": "Wildflower Range Panorama",
+        "key": "dsc_2138",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\30 - DSC_2138-Pano-2-Edit.jpg",
+        "display": "/assets/images/portfolio/30.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/30.jpg",
+        "enlarged": "/assets/images/portfolio/large/30.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\30 - DSC_2138-Pano-2-Edit.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_2138-Pano-2-Edit.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 20044,
+        "height": 6681
+      },
+      "aspect": 3.0001,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-31",
+      "portfolioNumber": 31,
+      "title": "A Small Flame of Violet",
+      "story": "A violet iris opens against a dark, softened background. Curved petals catch the light while narrow green leaves rise around it. Seen this closely, a small flower becomes a whole landscape of color, texture, and delicate edges.",
+      "final33": {
+        "rank": 31,
+        "title": "Wild Iris at Dusk",
+        "key": "dsc_5166",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\31 - DSC_5166.jpg",
+        "display": "/assets/images/portfolio/31.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/31.jpg",
+        "enlarged": "/assets/images/portfolio/large/31.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\31 - DSC_5166.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5166.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 5504,
+        "height": 8256
+      },
+      "aspect": 0.6667,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-32",
+      "portfolioNumber": 32,
+      "title": "What the Storm Left Glowing",
+      "story": "Warm light breaks across a valley layered with autumn trees and dark ridges. Clouds still gather overhead, making each bright patch of land feel newly revealed. Gold and shadow lead the eye toward the mountains in a scene that keeps unfolding the longer you look.",
+      "final33": {
+        "rank": 32,
+        "title": "Autumn Valley After the Storm",
+        "key": "dsc_168",
+        "sameFileAsSiteSource": true,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\32 - DSC_0168_1.jpg",
+        "display": "/assets/images/portfolio/32.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/32.jpg",
+        "enlarged": "/assets/images/portfolio/large/32.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\32 - DSC_0168_1.jpg",
+        "final33Original": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_0168_1.jpg",
+        "raw": []
+      },
+      "pixels": {
+        "width": 11562,
+        "height": 5551
+      },
+      "aspect": 2.0829,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-33",
+      "portfolioNumber": 33,
+      "title": "Main Street, Still Standing",
+      "story": "Weathered storefronts line a broad, quiet road beneath the mountains. Their uneven colors, old signs, and timber faces give each building its own voice. Together they make a street with enough character to hold your attention long after the passing moment.",
+      "final33": {
+        "rank": 33,
+        "title": "Main Street, Still Standing",
+        "key": "dsc_1482",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\33 Main Street, Still Standing.jpg",
+        "display": "/assets/images/portfolio/33.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/33.jpg",
+        "enlarged": "/assets/images/portfolio/large/33.jpg",
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\33 - DSC_1482-Edit-Edit.tif",
+        "final33Original": "K:\\2014\\St. Elmo 2014-08-17\\DSC_1482-Edit-Edit.tif",
+        "raw": []
+      },
+      "pixels": {
+        "width": 5998,
+        "height": 3997
+      },
+      "aspect": 1.5006,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 249.8,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.1,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-34",
+      "portfolioNumber": 34,
+      "title": "Where Winter Meets Wildflowers",
+      "story": "Purple lupines rise through the foreground while yellow flowers mark the rolling ground beyond. Snow still holds the high peaks beneath a clouded sky. Two seasons meet in one view, with the bright insistence of new growth spreading below the cold ridgeline.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_2476.jpg",
+        "display": "/assets/images/portfolio/34.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/34.jpg",
+        "enlarged": "/assets/images/portfolio/large/34.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2143,
+        "height": 3000
+      },
+      "aspect": 0.7143,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-35",
+      "portfolioNumber": 35,
+      "title": "Cold Water, Wild Blood",
+      "story": "A bull elk steps through blue water, his antlers rising above a dark reflection. Ripples spread from his legs and break the smooth surface around him. The direct view gives the encounter a powerful stillness, held between one step and the next.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9655.jpg",
+        "display": "/assets/images/portfolio/35.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/35.jpg",
+        "enlarged": "/assets/images/portfolio/large/35.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 5504,
+        "height": 8256
+      },
+      "aspect": 0.6667,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-36",
+      "portfolioNumber": 36,
+      "title": "The Wild Holds Its Own",
+      "story": "A calf nurses beneath its mother while she turns her head toward the surrounding meadow. Warm light catches their coats and the dry seed heads around them. The scene holds a quieter side of wild life: nourishment, closeness, and a watchful pause.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9886.jpg",
+        "display": "/assets/images/portfolio/36.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/36.jpg",
+        "enlarged": "/assets/images/portfolio/large/36.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 7068,
+        "height": 4712
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 392.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 294.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 235.6,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 392.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 392.7,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-37",
+      "portfolioNumber": 37,
+      "title": "The Gold That Stayed",
+      "story": "An old mining structure stands beside broad slopes of exposed earth, surrounded by golden trees. The forest brings color to a landscape visibly shaped by work. The photograph lets those two histories sit together\u2014the ground that was disturbed and the leaves that return each autumn.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DJI_0188.jpg",
+        "display": "/assets/images/portfolio/37.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/37.jpg",
+        "enlarged": "/assets/images/portfolio/large/37.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 5464,
+        "height": 3070
+      },
+      "aspect": 1.7798,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-38",
+      "portfolioNumber": 38,
+      "title": "Take the Golden Way",
+      "story": "A paved path bends through golden trees toward a rugged mountain skyline. Long shadows cross the surface, and the curve carries the eye beyond what can be seen. It is an invitation to keep going, slowly enough to notice the color along the way.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_0218 - Copy.jpg",
+        "display": "/assets/images/portfolio/38.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/38.jpg",
+        "enlarged": "/assets/images/portfolio/large/38.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 8256,
+        "height": 5504
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-39",
+      "portfolioNumber": 39,
+      "title": "Westbound After Dark",
+      "story": "Union Station glows in red, violet, and blue beneath dramatic clouds. The illuminated clock and bright lettering rise over people moving through the plaza. Stone architecture and electric color meet in a city scene with the restless feeling of departures, arrivals, and somewhere still to go.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\Documents\\Codex\\2026-10-12\\c-users-bitte-onedrive-desktop-portfiolo\\outputs\\Edited_Portfolio_Catalog\\Full_Resolution\\DSC_4664-Edit.jpg",
+        "display": "/assets/images/portfolio/39.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/39.jpg",
+        "enlarged": "/assets/images/portfolio/large/39.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 5837,
+        "height": 3446
+      },
+      "aspect": 1.6938,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-40",
+      "portfolioNumber": 40,
+      "title": "Growing Gold from Stone",
+      "story": "Orange and yellow leaves flare against a slope of broken gray rock. Slender trunks rise through rough ground, turning an unlikely patch of hillside into a celebration of color. Life finds room, then makes something beautiful of it.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_4316.jpg",
+        "display": "/assets/images/portfolio/40.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/40.jpg",
+        "enlarged": "/assets/images/portfolio/large/40.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2738,
+        "height": 1825
+      },
+      "aspect": 1.5003,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-41",
+      "portfolioNumber": 41,
+      "title": "Still Standing, Still Flowing",
+      "story": "A white cascade spills beside the old wooden structure and spreads into a shaded pool. Sunlight reveals the grain of the boards and the sharp angles of the rock. The building holds still while the river carries the scene forward.",
+      "final33": null,
+      "paths": {
+        "siteSource": "K:\\2014\\Fall\\2014-09-23\\DSC_7867-Edit.tif",
+        "display": "/assets/images/portfolio/41.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/41.jpg",
+        "enlarged": "/assets/images/portfolio/large/41.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 3889,
+        "height": 5833
+      },
+      "aspect": 0.6667,
+      "format": "tif",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 324.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 243.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 324.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 324.1,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-42",
+      "portfolioNumber": 42,
+      "title": "The Night Keeps Watch",
+      "story": "Stars gather above the dark forest while light picks out weathered boards and a pale ribbon of falling water. The structure takes on a quieter presence after dark. Above the river's movement, the sky opens wide.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_7977 copy.jpg",
+        "display": "/assets/images/portfolio/42.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/42.jpg",
+        "enlarged": "/assets/images/portfolio/large/42.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 4000,
+        "height": 6000
+      },
+      "aspect": 0.6667,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 250.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 200.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 333.3,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-43",
+      "portfolioNumber": 43,
+      "title": "Embers Above the Desert",
+      "story": "Red towers rise from a shadowed valley while distant snow-covered peaks catch a soft, fiery glow. Long bands of cloud stretch overhead. For a moment, desert stone and winter snow share the same warmth.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_6015.jpg",
+        "display": "/assets/images/portfolio/43.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/43.jpg",
+        "enlarged": "/assets/images/portfolio/large/43.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 11632,
+        "height": 7416
+      },
+      "aspect": 1.5685,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-44",
+      "portfolioNumber": 44,
+      "title": "When the Work Was Done",
+      "story": "An old hay rake rests beside a fence beneath an enormous blue sky. Curved teeth and open wheels stand against a meadow reaching toward wooded hills. The machinery has gone quiet; the land still gives the eye somewhere to travel.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9389.jpg",
+        "display": "/assets/images/portfolio/44.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/44.jpg",
+        "enlarged": "/assets/images/portfolio/large/44.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 5572,
+        "height": 3715
+      },
+      "aspect": 1.4999,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 309.6,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 232.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 309.6,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 309.6,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 4,
+        "urls": [
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-46",
+      "portfolioNumber": 45,
+      "title": "Where the Mountains Catch Fire",
+      "story": "The last light sets the clouds ablaze above a rugged mountain skyline. Gold spills across the autumn forest while the valley settles into shadow. For a few fleeting moments, the mountains seem to hold the fire of the sky before surrendering it to the night.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_0604.jpg",
+        "display": "/assets/images/portfolio/45.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/45.jpg",
+        "enlarged": "/assets/images/portfolio/large/45.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 12032,
+        "height": 8032
+      },
+      "aspect": 1.498,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 668.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 501.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 401.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 668.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 501.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "20x30",
+            "price": "$359.99",
+            "ppi": 401.1,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 668.4,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 501.3,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "20x30",
+            "price": "$199.99",
+            "ppi": 401.1,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 9,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-47",
+      "portfolioNumber": 46,
+      "title": "The River Knows the Way",
+      "story": "The river winds between towering stone and darkening woodland, carrying the last light through the canyon. Ancient cliffs rise above its quiet current, their weathered faces catching the warmth of the sun. The mountains stand their ground, but the water has always known the way forward.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5269.jpg",
+        "display": "/assets/images/portfolio/46.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/46.jpg",
+        "enlarged": "/assets/images/portfolio/large/46.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2048,
+        "height": 1365
+      },
+      "aspect": 1.5004,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-48",
+      "portfolioNumber": 47,
+      "title": "Where the Canyon Opens",
+      "story": "Deep within the red sandstone, water spills past a weathered ladder into a narrow pool. The canyon walls tower overhead, carved and polished by countless seasons of moving water. Here, the journey is written in stone, and the next passage waits beyond the falling water.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5424-Edit-Edit-2.jpg",
+        "display": "/assets/images/portfolio/47.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/47.jpg",
+        "enlarged": "/assets/images/portfolio/large/47.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 4591,
+        "height": 6886
+      },
+      "aspect": 0.6667,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 382.6,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 286.9,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 229.5,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 382.6,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 382.6,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 5,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-49",
+      "portfolioNumber": 48,
+      "title": "Where Silence Has Antlers",
+      "story": "Two elk stand against a pale and nearly empty sky, their dark silhouettes rising from the grassy hillside. One lowers its head while the other's antlers reach into the open air. Nothing in the scene needs to move for the wildness of the moment to be felt.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9301.jpg",
+        "display": "/assets/images/portfolio/48.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/48.jpg",
+        "enlarged": "/assets/images/portfolio/large/48.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 8256,
+        "height": 5504
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-50",
+      "portfolioNumber": 49,
+      "title": "Little Flame in the Meadow",
+      "story": "A young fox sits among grasses and scattered purple flowers, its bright eyes watching from the edge of the woodland. Soft light finds the little hunter while the forest fades into shadow. In a world of towering mountains and powerful wildlife, sometimes the smallest creature carries the greatest wonder.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\FB_IMG_1590634206449.jpg",
+        "display": "/assets/images/portfolio/49.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/49.jpg",
+        "enlarged": "/assets/images/portfolio/large/49.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 1080,
+        "height": 720
+      },
+      "aspect": 1.5,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-51",
+      "portfolioNumber": 50,
+      "title": "The Long Fall Home",
+      "story": "Cold mountain water descends through a narrow passage of granite, gathering into a clear pool among weathered stones. Pine trees hold their places above the falls while the current continues its long journey downstream. Stone may shape the path, but water always finds its way home.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\untitled-1-6.jpg",
+        "display": "/assets/images/portfolio/50.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/50.jpg",
+        "enlarged": "/assets/images/portfolio/large/50.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 5504,
+        "height": 8256
+      },
+      "aspect": 0.6667,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [
+          {
+            "material": "canvas-floating-15",
+            "size": "12x18",
+            "price": "$149.33",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "16x24",
+            "price": "$199.33",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "canvas-floating-15",
+            "size": "20x30",
+            "price": "$299.33",
+            "ppi": 275.2,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "12x18",
+            "price": "$179.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "metal-aluminum",
+            "size": "16x24",
+            "price": "$224.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "12x18",
+            "price": "$89.99",
+            "ppi": 458.7,
+            "checkout": "disabled"
+          },
+          {
+            "material": "paper-archival",
+            "size": "16x24",
+            "price": "$129.99",
+            "ppi": 344.0,
+            "checkout": "disabled"
+          }
+        ],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "published",
+      "saleEligibility": "inquiry",
+      "squareStatus": {
+        "rows": 7,
+        "urls": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-52",
+      "portfolioNumber": 51,
+      "title": "A Voice Against the Stone",
+      "story": "Among weathered stone and young pines, a bull elk lifts his head and calls into the mountain air. His antlers catch the light while the forest stands silent around him. For a moment, the whole wild country seems to listen.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\DSC_4241_copy1_freqsep.jpg",
+        "display": "/assets/images/portfolio/51.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/51.jpg",
+        "enlarged": "/assets/images/portfolio/large/51.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2048,
+        "height": 1365
+      },
+      "aspect": 1.5004,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": true
+      },
+      "publication": "published-web-derivative",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-53",
+      "portfolioNumber": 52,
+      "title": "Gold Along the Waterline",
+      "story": "Autumn color spreads across the valley beneath a gathering sky, and a blue mountain lake catches the light between the trees. Beyond the golden slopes, the high peaks rise in cool shadow. The season is turning, but the land is not yet ready to let go of its color.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\DSC_4269_copy_freqsep.jpg",
+        "display": "/assets/images/portfolio/52.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/52.jpg",
+        "enlarged": "/assets/images/portfolio/large/52.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2048,
+        "height": 1365
+      },
+      "aspect": 1.5004,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": true
+      },
+      "publication": "published-web-derivative",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-54",
+      "portfolioNumber": 53,
+      "title": "The Meadow Finds Its River",
+      "story": "A narrow stream curves through green meadow grass toward the dark forest and a rugged mountain skyline. The valley seems to open slowly, one bend at a time, with the water drawing a quiet path through the open country.",
+      "final33": null,
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\bitter-buffalo-website-etsy-update-2026-10-17\\working\\photography-staging\\frequency-separated\\untitled-1-2_freqsep.jpg",
+        "display": "/assets/images/portfolio/53.jpg",
+        "thumbnail": "/assets/images/portfolio/thumbs/53.jpg",
+        "enlarged": "/assets/images/portfolio/large/53.jpg",
+        "final33Master": null,
+        "final33Original": null,
+        "raw": []
+      },
+      "pixels": {
+        "width": 2048,
+        "height": 1365
+      },
+      "aspect": 1.5004,
+      "format": "jpg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": true
+      },
+      "publication": "published-web-derivative",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    },
+    {
+      "permanentId": "bb-photo-14",
+      "portfolioNumber": null,
+      "title": "Horse portrait",
+      "story": "",
+      "final33": {
+        "rank": 14,
+        "title": "Horse portrait",
+        "key": "dsc_2108",
+        "sameFileAsSiteSource": false,
+        "siteFileIsLarger": false
+      },
+      "paths": {
+        "siteSource": "C:\\Users\\bitte\\OneDrive\\Desktop\\PHOTOGRAPHY_TO_UPLOAD\\14 Horse portrait.jpg",
+        "display": "/assets/images/portfolio/archive/horse-bb-photo-14-display.jpg",
+        "thumbnail": null,
+        "enlarged": null,
+        "final33Master": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\14 - DSC_2108-Edit.tif",
+        "final33Original": "K:\\2015\\Mustangs 2015-03-24\\DSC_2108-Edit.tif",
+        "raw": [
+          {
+            "path": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfolio for Etsy\\DSC_2108.dng",
+            "source": "K:\\2015\\Mustangs 2015-03-24\\DSC_2108.dng",
+            "bytes": 29217486,
+            "format": "dng"
+          }
+        ]
+      },
+      "pixels": {
+        "width": 6000,
+        "height": 4000
+      },
+      "aspect": 1.5,
+      "format": "jpeg",
+      "printEligibility": {
+        "publicMaterials": [
+          "canvas-floating-15",
+          "metal-aluminum",
+          "paper-archival"
+        ],
+        "qualifyingVariants": [],
+        "webDerivativeWithoutPrintPrice": false
+      },
+      "publication": "archived-not-displayed",
+      "saleEligibility": "no public print price",
+      "squareStatus": {
+        "rows": 0,
+        "urls": [],
+        "buyButton": false
+      },
+      "lumaprintsStatus": {
+        "productId": null,
+        "orderPlaced": false,
+        "hostCalled": false
+      }
+    }
+  ]
+}

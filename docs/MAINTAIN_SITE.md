@@ -80,6 +80,39 @@ The production settings in `.env` are intentional. One read-only production GET 
 3. Fix the missing cost, master, or signature problem in the configuration. Do not paste a Square token into chat or into a source file.
 4. Leave `PRINT_FULFILLMENT_MODE` empty until the owner has approved a sandbox submission for that exact order. A failed public checkout is recovered by inquiry, not by turning the buy path on.
 
+## OneDrive photographs and the catalog
+
+The existing OneDrive folder is `C:\Users\bitte\OneDrive\Desktop\Portfolio for Etsy`. Do not create a second folder with that name. `Final_33_Manifest.csv` in that folder is the 33-photograph manifest. It is not the 33-piece tie-dye portfolio.
+
+The permanent-ID catalog is `working/portfolio/photo-catalog.json`. It is keyed by `bb-photo-NN` and records the title, story, paths, pixels, aspect, format, print eligibility, publication, sale eligibility, Square status, and LumaPrints status. The public price rows stay in `working/pricing/pricing-master.json`. The 176 Square rows stay in `cloudflare-pages/assets/data/square-payment-links.json` with empty URLs until a real payment link is verified. A file copied into the OneDrive folder is a local copy. OneDrive running, or a file that can be read on this computer, does not prove the file has finished uploading.
+
+## How to add a photograph
+
+1. Put the finished master in `C:\Users\bitte\OneDrive\Desktop\Portfolio for Etsy` only when that destination file is absent. If the same name exists and the hash differs, keep both files under different names. Do not overwrite it, and do not delete the original.
+2. Add one object to `working/portfolio/photography-manifest.json` with a new permanent ID. Do not renumber `bb-photo-01` through `bb-photo-54`. The archived horse remains `bb-photo-14`.
+3. Run `python working/catalog/build-catalog.py`, then `python working/prints/build-print-inquiry.py`, then `python working/site/shared_chrome.py`.
+4. Do not run `working/build-static-site.js` or `working/portfolio/build-final-44.py`.
+
+## How to add or change a story
+
+Edit the `story` field for that permanent ID in `working/portfolio/photography-manifest.json`. Then run `python working/catalog/build-catalog.py`. Do not change the photograph file, the price, or the Square URL as part of a story edit.
+
+## How to add a price
+
+A public price is allowed only for premium framed canvas (`canvas-floating-15`), aluminum metal (`metal-aluminum`), and archival paper (`paper-archival`), and only at 12×18, 16×24, or 20×30 when that file is already within 0.5 percent of 3:2 and meets the PPI minimum. Record it in `working/pricing/pricing-master.json` and the print-page builder. Do not invent a price. Do not price the 2048-pixel photographs `bb-photo-52`, `bb-photo-53`, and `bb-photo-54`. Leave the Square `url` null. Do not add a Buy button.
+
+## How to add an Etsy link
+
+Photography is not listed on Etsy from this site. A garment link belongs on `cloudflare-pages/tie-dye/index.html` only when the live listing page was opened and the photo, title, size, material, price, and listing URL were read from that page. Use the listing URL, not the shop home, as the buy link. Do not guess a size. The Wildfire Bramble and Midnight Bramble sizes stay as they were published.
+
+## How to add an event
+
+Add a card to `cloudflare-pages/events/index.html` only with a flyer file that is already on disk. Keep the flyer’s width and height. A past date is labeled “Past appearance.” Do not publish TreeTop or Wildoria attendance without a flyer and acceptance correspondence. An application that says it does not guarantee a space is not attendance.
+
 ## Deploy and rollback
 
-GitHub Actions workflow `Deploy Cloudflare Pages` publishes an isolated `qa-<sha>` preview from this branch. Production publish is a separate workflow dispatch input and deploys the existing Cloudflare Pages project. Do not change DNS unless that project cannot publish the domain. Keep the previous production deployment id and roll back in Cloudflare Pages if the new deployment is wrong.
+GitHub Actions workflow `.github/workflows/deploy-pages.yml` publishes this branch. Production is a workflow dispatch with `publish_production` set to true. It deploys the existing Cloudflare Pages project `bitter-buffalo-art`. The `deploy` job on this branch stays skipped. Do not change DNS.
+
+The rollback deployment is `dc5467d7-b576-4496-b6fa-44c71acedd4d`, at `https://dc5467d7.bitter-buffalo-art.pages.dev/`. Roll back in Cloudflare Pages to that deployment if a new production publish is wrong. Do not delete the newer deployment until the rollback URL has been opened and returns HTTP 200.
+
+Do not put tokens, location ids, or API secrets in this file, in a page, or in a commit.
