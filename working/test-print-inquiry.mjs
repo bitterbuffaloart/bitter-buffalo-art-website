@@ -11,44 +11,59 @@ const contactFile = resolve(root, "cloudflare-pages/functions/api/contact.js");
 const { onRequestPost } = await import("data:text/javascript;base64," + Buffer.from(readFileSync(contactFile)).toString("base64"));
 
 const CROP_LIMIT = 0.005;
+const HELD = new Set(["bb-photo-14", "bb-photo-18", "bb-photo-24"]);
+const OFFERS = {
+  "canvas-floating-15": {
+    "12x18": { minimum: 200, retail: "149.33", text: "Workbook list price $149.33" },
+    "16x24": { minimum: 200, retail: "199.33", text: "$199.33", approved: true },
+  },
+  "canvas-15": {
+    "12x18": { minimum: 200, retail: "134.99", text: "Workbook list price $134.99" },
+    "16x24": { minimum: 200, retail: "224.99", text: "Workbook list price $224.99" },
+  },
+  "metal-aluminum": {
+    "12x18": { minimum: 300, retail: "179.99", text: "Workbook list price $179.99" },
+    "16x24": { minimum: 300, retail: "224.99", text: "Workbook list price $224.99" },
+    "20x30": { minimum: 300, retail: "359.99", text: "Workbook list price $359.99" },
+  },
+  "paper-archival": { "16x24": { minimum: 300, retail: "129.99", text: "Workbook list price $129.99" } },
+  "paper-semigloss": { "16x24": { minimum: 300, retail: "109.99", text: "Workbook list price $109.99" } },
+  "paper-somerset": { "16x24": { minimum: 300, retail: "159.99", text: "Workbook list price $159.99" } },
+};
+const SIZES = [
+  { id: "12x18", short: 12, long: 18 },
+  { id: "16x24", short: 16, long: 24 },
+  { id: "20x30", short: 20, long: 30 },
+];
 
 function expected(photo, productId, size) {
+  const offer = OFFERS[productId][size.id];
+  if (!offer) return null;
   const longSide = Math.max(photo.sourceWidth, photo.sourceHeight);
   const shortSide = Math.min(photo.sourceWidth, photo.sourceHeight);
-  if (Math.abs(longSide / shortSide - 1.5) / 1.5 > CROP_LIMIT) {
-    return { status: "unavailable" };
-  }
+  if (Math.abs(longSide / shortSide - 1.5) / 1.5 > CROP_LIMIT) return { status: "unavailable" };
   const printWidth = photo.sourceWidth >= photo.sourceHeight ? size.long : size.short;
   const printHeight = photo.sourceWidth >= photo.sourceHeight ? size.short : size.long;
   const ppi = Math.round((Math.min(photo.sourceWidth / printWidth, photo.sourceHeight / printHeight) + 1e-9) * 10) / 10;
-  const held = ppi < 200 || (size.id === "20x30" && photo.printHolds.includes("HOLD_20x30"));
-  if (held) return { status: "hold", ppi };
-  if (photo.id === "bb-photo-01" && productId === "canvas-floating-15" && size.id === "16x24") {
-    return { status: "priced", ppi, retail: "199.33" };
-  }
-  return { status: "quote", ppi };
+  if (HELD.has(photo.id) || ppi < offer.minimum) return { status: "hold", ppi };
+  return { status: offer.approved ? "priced" : "workbook", ppi, retail: offer.retail, text: offer.text };
 }
 
-test("inquiry catalog has 33 photographs and only verified canvas families", () => {
+test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
   assert.equal(catalog.photographs.length, 33);
-  assert.deepEqual(catalog.products.map((product) => product.id), ["canvas-floating-15", "canvas-15"]);
+  assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
-    "Archival giclée fine-art paper",
-    "Aluminum metal",
     "Acrylic face-mount",
     "Framed paper",
+    "Collector edition",
   ]);
   assert.equal(catalog.supplierExample, null);
   assert.equal(catalog.approvedRetail.text, "$199.33");
+  assert.equal(catalog.approvedRetail.sizeId, "16x24");
 });
 
 test("every photograph keeps its measured sizes, price, and page", () => {
-  const sizes = [
-    { id: "12x18", short: 12, long: 18 },
-    { id: "16x24", short: 16, long: 24 },
-    { id: "20x30", short: 20, long: 30 },
-  ];
   const slugs = new Set();
   for (const photo of catalog.photographs) {
     assert.equal(slugs.has(photo.slug), false);
@@ -59,29 +74,43 @@ test("every photograph keeps its measured sizes, price, and page", () => {
     assert.match(html, new RegExp(photo.display.replace(/^\//, "")));
     assert.match(html, new RegExp(`width="${photo.displayWidth}" height="${photo.displayHeight}"`));
     assert.match(html, /Select a product/);
-    assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout/);
-    assert.equal((html.match(/\$199\.33/g) || []).length, photo.id === "bb-photo-01" ? 1 : 0);
-    const page = resolve(root, "cloudflare-pages/photography/prints", photo.slug, "index.html");
-    assert.equal(readdirSync(resolve(page, "..")).includes("index.html"), true);
-    for (const productId of ["canvas-floating-15", "canvas-15"]) {
-      for (const size of sizes) {
+    assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout|acrylic/i);
+    assert.doesNotMatch(html, /\$299\.33|\$314\.99|\$74\.01|\$34\.39|\$59\.04/);
+    let approved = 0;
+    for (const productId of Object.keys(OFFERS)) {
+      for (const size of SIZES) {
         const actual = photo.sizes.find((item) => item.productId === productId && item.sizeId === size.id);
         const want = expected(photo, productId, size);
+        if (!want) {
+          assert.equal(actual, undefined, `${photo.id} ${productId} ${size.id}`);
+          continue;
+        }
         assert.equal(actual.status, want.status, `${photo.id} ${productId} ${size.id}`);
         if (want.ppi !== undefined) assert.equal(actual.ppi, want.ppi);
-        if (want.status === "priced") assert.equal(actual.retail, "199.33");
-        if (want.status !== "priced") assert.equal(actual.retail, undefined);
-        if (want.status === "unavailable") assert.doesNotMatch(html, new RegExp(`data-product="${productId}" data-size="${size.id}"`));
+        if (want.retail) {
+          assert.equal(actual.retail, want.retail);
+          assert.equal(actual.priceText, want.text);
+          assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+          approved += want.status === "priced" ? 1 : 0;
+        } else {
+          assert.equal(actual.retail, undefined);
+          assert.equal(actual.priceText, undefined);
+        }
+        if (want.status === "unavailable") {
+          assert.doesNotMatch(html, new RegExp(`data-product="${productId}" data-size="${size.id}"`));
+        }
+        assert.equal(quoteText(photo.id, productId, size.id), want.text || "Request a quote.");
       }
     }
+    assert.equal((html.match(/\$199\.33/g) || []).length, approved);
   }
   const tetons = catalog.photographs[0];
-  const hold = tetons.sizes.find((item) => item.productId === "canvas-floating-15" && item.sizeId === "20x30");
-  assert.equal(hold.status, "hold");
-  assert.equal(hold.ppi, 191.5);
-  assert.equal(quoteText("bb-photo-01", "canvas-floating-15", "16x24"), "$199.33");
-  assert.equal(quoteText("bb-photo-01", "canvas-15", "16x24"), "Request a quote.");
-  assert.equal(quoteText("bb-photo-02", "canvas-floating-15", "16x24"), "Request a quote.");
+  assert.equal(tetons.sizes.find((item) => item.productId === "canvas-floating-15" && item.sizeId === "20x30"), undefined);
+  const metalHold = tetons.sizes.find((item) => item.productId === "metal-aluminum" && item.sizeId === "20x30");
+  assert.equal(metalHold.status, "hold");
+  assert.equal(metalHold.ppi, 191.5);
+  assert.equal(quoteText("bb-photo-02", "metal-aluminum", "20x30"), "Workbook list price $359.99");
+  assert.equal(quoteText("bb-photo-14", "canvas-floating-15", "16x24"), "Request a quote.");
 });
 
 test("gallery links each photograph to its own inquiry page", () => {

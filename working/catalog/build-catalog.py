@@ -40,29 +40,37 @@ def image_list(display, thumb, enlarged):
     return "|".join([thumb, display, enlarged])
 
 
+HELD_NUMBERS = {14, 18, 24}
+
+
+def print_ready(item):
+    if item["portfolioNumber"] in HELD_NUMBERS:
+        return False
+    long_side = max(item["sourceWidth"], item["sourceHeight"])
+    short_side = min(item["sourceWidth"], item["sourceHeight"])
+    return abs((long_side / short_side) - 1.5) / 1.5 <= 0.005
+
+
 def photo_row(item):
     number = item["portfolioNumber"]
     name = item["title"]
-    holds = item.get("printHolds") or ""
-    if number == 1:
-        materials = (
-            "Premium 1.5-inch floating-frame canvas. "
-            "12×18: price not published. "
-            "16×24: $199.33. "
-            "20×30: on hold, below 200 ppi."
-        )
+    link = "/photography/prints/grand-tetons/" if number == 1 else f"/photography/prints/{print_slug(name, number)}/"
+    if number in HELD_NUMBERS:
+        materials = "On hold. No price is published."
+        retail = ""
+        availability = "on-hold"
+        description = f"Portfolio photograph #{number:02d}. On hold. No price is published. No checkout on this website."
+    elif print_ready(item):
+        materials = "16×24 open-edition 1.5-inch framed canvas: $199.33. Other workbook list prices are on the inquiry page."
         retail = "199.33"
         availability = "inquiry"
-        link = "/photography/prints/grand-tetons/"
-        description = "Portfolio photograph #01, DSC_2626. Floating-frame canvas. Inquire to order. No checkout on this website."
+        prefix = "Portfolio photograph #01, DSC_2626." if number == 1 else f"Portfolio photograph #{number:02d}."
+        description = prefix + " 16×24 framed canvas $199.33. Other listed prices on the inquiry page are workbook list prices. No checkout on this website."
     else:
-        materials = "Premium 1.5-inch floating-frame canvas. Sizes and prices for this photograph are not published."
-        if holds:
-            materials += " Recorded hold: " + holds.replace("|", "; ") + "."
+        materials = "No listed size matches this photograph without cropping."
         retail = ""
         availability = "inquiry"
-        link = f"/photography/prints/{print_slug(name, number)}/"
-        description = f"Portfolio photograph #{number:02d}. Inquire to ask about a print. No checkout on this website."
+        description = f"Portfolio photograph #{number:02d}. Inquire to ask about a print. No price is published. No checkout on this website."
     return {
         "id": f"bb-photo-{number:02d}",
         "name": name,

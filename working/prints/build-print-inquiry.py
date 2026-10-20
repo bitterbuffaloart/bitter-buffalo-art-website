@@ -1,6 +1,7 @@
-"""Generate print inquiry pages from measured pixels and verified canvas records.
+"""Generate print inquiry pages from measured pixels and the workbook price table.
 
-Does not invent supplier families, sizes, crops, or retail prices.
+Publishes only open-edition retails whose size is on a supplier sheet.
+Does not invent sizes, crops, or prices.
 """
 import json
 import re
@@ -17,32 +18,81 @@ SITEMAP = ROOT / "cloudflare-pages" / "sitemap.xml"
 
 Image.MAX_IMAGE_PIXELS = None
 CROP_LIMIT = 0.005
-PPI_MINIMUM = 200
+JS_PRICES = ROOT / "cloudflare-pages" / "assets" / "js" / "print-inquiry.js"
+HELD_NUMBERS = {14, 18, 24}
 CANVAS_SIZES = (
     {"id": "12x18", "label": "12×18", "short": 12, "long": 18},
     {"id": "16x24", "label": "16×24", "short": 16, "long": 24},
     {"id": "20x30", "label": "20×30", "short": 20, "long": 30},
 )
+# kind, retail, minimum PPI. Only sizes present on the supplier sheets.
+OFFERS = {
+    "canvas-floating-15": {
+        "12x18": ("workbook", "149.33", 200),
+        "16x24": ("approved", "199.33", 200),
+    },
+    "canvas-15": {
+        "12x18": ("workbook", "134.99", 200),
+        "16x24": ("workbook", "224.99", 200),
+    },
+    "metal-aluminum": {
+        "12x18": ("workbook", "179.99", 300),
+        "16x24": ("workbook", "224.99", 300),
+        "20x30": ("workbook", "359.99", 300),
+    },
+    "paper-archival": {
+        "16x24": ("workbook", "129.99", 300),
+    },
+    "paper-semigloss": {
+        "16x24": ("workbook", "109.99", 300),
+    },
+    "paper-somerset": {
+        "16x24": ("workbook", "159.99", 300),
+    },
+}
 PRODUCTS = (
     {
         "id": "canvas-floating-15",
         "name": "Premium 1.5-inch floating-frame canvas",
         "family": "framed canvas",
-        "evidence": "Established sale configuration in the print catalog. Frame finish, frame choice, foamcore, backing, and wire are not verified, so this product has no finish dropdown.",
+        "evidence": "Open-edition 1.5-inch framed canvas. 16×24 is the owner-approved retail. 12×18 is a workbook list price. 20×30 is not on the framed-canvas supplier sheet. Frame finish is not verified, so there is no finish dropdown.",
     },
     {
         "id": "canvas-15",
-        "name": "1.5-inch canvas",
+        "name": "1.5-inch stretched canvas",
         "family": "1.5-inch canvas",
-        "evidence": "Prior sandbox quote for unframed subcategory 101003, 1.50in Stretched Canvas. That quote is evidence for the family only. It is not a published price and it is not the floating-frame sale product.",
+        "evidence": "Open-edition 1.5-inch stretched canvas from the canvas supplier sheet. This is not the floating-frame product. 20×30 is not on that sheet.",
+    },
+    {
+        "id": "metal-aluminum",
+        "name": "Aluminum metal",
+        "family": "aluminum metal",
+        "evidence": "Open-edition aluminum from the metal supplier sheet. Finish and mounting are not verified, so there is no finish dropdown.",
+    },
+    {
+        "id": "paper-archival",
+        "name": "Archival matte paper",
+        "family": "archival matte paper",
+        "evidence": "Open-edition archival matte paper. Only 16×24 is on the fine-art paper supplier sheet.",
+    },
+    {
+        "id": "paper-semigloss",
+        "name": "Fine-art semi-gloss paper",
+        "family": "fine-art semi-gloss paper",
+        "evidence": "Open-edition fine-art semi-gloss paper. Only 16×24 is on the fine-art paper supplier sheet. This is not traditional photographic paper.",
+    },
+    {
+        "id": "paper-somerset",
+        "name": "Somerset Velvet",
+        "family": "Somerset Velvet",
+        "evidence": "Open-edition Somerset Velvet. Only 16×24 is on the fine-art paper supplier sheet.",
     },
 )
 OMITTED = (
-    {"name": "Traditional photographic paper", "reason": "No verified supplier record in this repository."},
-    {"name": "Archival giclée fine-art paper", "reason": "No verified supplier record in this repository."},
-    {"name": "Aluminum metal", "reason": "No verified supplier record in this repository."},
-    {"name": "Acrylic face-mount", "reason": "No verified supplier record in this repository."},
-    {"name": "Framed paper", "reason": "No verified supplier record. Framed canvas is a separate family and is not framed paper."},
+    {"name": "Traditional photographic paper", "reason": "The workbook semi-gloss line is fine-art paper and is not confirmed as traditional photographic paper."},
+    {"name": "Acrylic face-mount", "reason": "The workbook says acrylic retail targets must not be displayed."},
+    {"name": "Framed paper", "reason": "No open-edition workbook retail. Framed canvas is a separate product."},
+    {"name": "Collector edition", "reason": "No collector price is approved to publish."},
 )
 
 
@@ -74,11 +124,22 @@ def measure(path):
         return int(width), int(height)
 
 
-def size_record(width, height, size, product_id, number, holds):
+def price_text(kind, retail):
+    if kind == "approved":
+        if retail != "199.33":
+            raise SystemExit("approved retail is only 199.33")
+        return "$199.33"
+    return f"Workbook list price ${retail}"
+
+
+def size_record(width, height, size, product_id, number):
+    offer = OFFERS[product_id].get(size["id"])
+    if offer is None:
+        return None
+    kind, retail, minimum = offer
     long_side = max(width, height)
     short_side = min(width, height)
-    ratio = long_side / short_side
-    if abs(ratio - 1.5) / 1.5 > CROP_LIMIT:
+    if abs((long_side / short_side) - 1.5) / 1.5 > CROP_LIMIT:
         return {
             "productId": product_id,
             "sizeId": size["id"],
@@ -95,17 +156,19 @@ def size_record(width, height, size, product_id, number, holds):
         "printWidthIn": print_width,
         "printHeightIn": print_height,
         "ppi": ppi,
+        "minimumPpi": minimum,
     }
-    held = ppi < PPI_MINIMUM or (size["id"] == "20x30" and "HOLD_20x30" in holds)
-    if held:
+    if number in HELD_NUMBERS:
         base["status"] = "hold"
-        base["reason"] = "Below 200 PPI." if ppi < PPI_MINIMUM else "Recorded 20×30 hold."
+        base["reason"] = "Workbook hold."
         return base
-    if number == 1 and product_id == "canvas-floating-15" and size["id"] == "16x24":
-        base["status"] = "priced"
-        base["retail"] = "199.33"
+    if ppi < minimum:
+        base["status"] = "hold"
+        base["reason"] = f"Below {minimum} PPI."
         return base
-    base["status"] = "quote"
+    base["status"] = "priced" if kind == "approved" else "workbook"
+    base["retail"] = retail
+    base["priceText"] = price_text(kind, retail)
     return base
 
 
@@ -124,14 +187,17 @@ def page(photo):
             f'data-size="{item["sizeId"]}" data-label="{item["label"]}" data-status="{item["status"]}"{disabled}>'
             f'{esc(label)}</option>'
         )
-    price_note = ""
-    if photo["portfolioNumber"] == 1:
-        price_note = (
-            "<p>The only approved retail price is Grand Tetons, 16×24, premium 1.5-inch floating-frame canvas, "
-            "at $199.33. Every other product and size on this page is a quote request. 20×30 stays on hold.</p>"
-        )
+    names = {product["id"]: product["name"] for product in PRODUCTS}
+    listed = [item for item in photo["sizes"] if item["status"] in ("priced", "workbook")]
+    if photo["portfolioNumber"] in HELD_NUMBERS:
+        price_note = "<p>This photograph is on hold. No price is published.</p>"
+    elif not listed:
+        price_note = "<p>No price is published for this photograph.</p>"
     else:
-        price_note = "<p>No retail price is published for this photograph. A valid selection says “Request a quote.”</p>"
+        rows = []
+        for item in listed:
+            rows.append(f"<li>{esc(names[item['productId']])}, {esc(item['label'])}: {esc(item['priceText'])}</li>")
+        price_note = '<ul class="print-prices">' + "".join(rows) + "</ul>"
     aspect = f'{photo["sourceWidth"]}:{photo["sourceHeight"]}'
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -224,7 +290,7 @@ def page(photo):
     <section class="prose formats-block">
       <h2>About this photograph</h2>
       <p>Source file {esc(photo["sourceName"])}, {photo["sourceWidth"]}×{photo["sourceHeight"]} pixels, {photo["orientation"]}, aspect {photo["aspectRatio"]:.4f}. The preview keeps that full composition. No crop is applied.</p>
-      <p>Pixel proportion {esc(aspect)}. Canvas sizes that do not match this proportion are omitted.</p>
+      <p>Pixel proportion {esc(aspect)}. A size that would crop this photograph, or that is missing from the supplier sheet, is omitted. Draft amounts are workbook list prices.</p>
       <p><a href="../../">Back to the portfolio</a></p>
     </section>
   </main>
@@ -261,6 +327,20 @@ def page(photo):
 </body>
 </html>
 """
+
+
+def write_price_map(photographs):
+    mapping = {}
+    for photo in photographs:
+        for item in photo["sizes"]:
+            if "priceText" in item:
+                mapping[f"{photo['id']}|{item['productId']}|{item['sizeId']}"] = item["priceText"]
+    text = JS_PRICES.read_text(encoding="utf-8")
+    block = "export const PUBLISHED_PRICES = " + json.dumps(mapping, indent=2) + ";"
+    updated, count = re.subn(r"export const PUBLISHED_PRICES = \{.*?\};", block, text, count=1, flags=re.S)
+    if count != 1:
+        raise SystemExit("price map marker missing from print-inquiry.js")
+    JS_PRICES.write_text(updated, encoding="utf-8")
 
 
 def update_sitemap(photographs):
@@ -306,7 +386,9 @@ def main():
         sizes = []
         for product in PRODUCTS:
             for canvas_size in CANVAS_SIZES:
-                sizes.append(size_record(width, height, canvas_size, product["id"], number, holds))
+                record = size_record(width, height, canvas_size, product["id"], number)
+                if record:
+                    sizes.append(record)
         photographs.append({
             "id": f"bb-photo-{number:02d}",
             "portfolioNumber": number,
@@ -331,14 +413,15 @@ def main():
         "omittedFamilies": list(OMITTED),
         "supplierExample": None,
         "approvedRetail": {
-            "photographId": "bb-photo-01",
             "productId": "canvas-floating-15",
             "sizeId": "16x24",
             "text": "$199.33",
+            "appliesTo": "every print-ready 3:2 photograph",
         },
         "photographs": photographs,
     }
     PUBLIC_JSON.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    write_price_map(photographs)
     SOURCE_JSON.write_text(json.dumps(sources, indent=2) + "\n", encoding="utf-8")
     for photo in photographs:
         target = PAGES / photo["slug"] / "index.html"

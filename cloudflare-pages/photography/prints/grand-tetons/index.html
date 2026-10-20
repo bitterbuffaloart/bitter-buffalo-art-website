@@ -67,14 +67,14 @@
         <label class="hp" aria-hidden="true">Company website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         <label for="print-product">Print product</label>
         <select id="print-product" name="print-product" required>
-          <option value="">Select a product</option><option value="canvas-floating-15">Premium 1.5-inch floating-frame canvas</option><option value="canvas-15">1.5-inch canvas</option>
+          <option value="">Select a product</option><option value="canvas-floating-15">Premium 1.5-inch floating-frame canvas</option><option value="canvas-15">1.5-inch stretched canvas</option><option value="metal-aluminum">Aluminum metal</option><option value="paper-archival">Archival matte paper</option><option value="paper-semigloss">Fine-art semi-gloss paper</option><option value="paper-somerset">Somerset Velvet</option>
         </select>
         <label for="print-size">Size</label>
         <select id="print-size" name="print-size" required disabled>
-          <option value="">Select a size</option><option value="canvas-floating-15:12x18" data-product="canvas-floating-15" data-size="12x18" data-label="12×18" data-status="quote">12×18</option><option value="canvas-floating-15:16x24" data-product="canvas-floating-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-floating-15:20x30" data-product="canvas-floating-15" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (on hold)</option><option value="canvas-15:12x18" data-product="canvas-15" data-size="12x18" data-label="12×18" data-status="quote">12×18</option><option value="canvas-15:16x24" data-product="canvas-15" data-size="16x24" data-label="16×24" data-status="quote">16×24</option><option value="canvas-15:20x30" data-product="canvas-15" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (on hold)</option>
+          <option value="">Select a size</option><option value="canvas-floating-15:12x18" data-product="canvas-floating-15" data-size="12x18" data-label="12×18" data-status="workbook">12×18</option><option value="canvas-floating-15:16x24" data-product="canvas-floating-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-15:12x18" data-product="canvas-15" data-size="12x18" data-label="12×18" data-status="workbook">12×18</option><option value="canvas-15:16x24" data-product="canvas-15" data-size="16x24" data-label="16×24" data-status="workbook">16×24</option><option value="metal-aluminum:12x18" data-product="metal-aluminum" data-size="12x18" data-label="12×18" data-status="workbook">12×18</option><option value="metal-aluminum:16x24" data-product="metal-aluminum" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (on hold)</option><option value="metal-aluminum:20x30" data-product="metal-aluminum" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (on hold)</option><option value="paper-archival:16x24" data-product="paper-archival" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (on hold)</option><option value="paper-semigloss:16x24" data-product="paper-semigloss" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (on hold)</option><option value="paper-somerset:16x24" data-product="paper-somerset" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (on hold)</option>
         </select>
         <p id="print-price" class="print-price" aria-live="polite"></p>
-        <p>The only approved retail price is Grand Tetons, 16×24, premium 1.5-inch floating-frame canvas, at $199.33. Every other product and size on this page is a quote request. 20×30 stays on hold.</p>
+        <ul class="print-prices"><li>Premium 1.5-inch floating-frame canvas, 12×18: Workbook list price $149.33</li><li>Premium 1.5-inch floating-frame canvas, 16×24: $199.33</li><li>1.5-inch stretched canvas, 12×18: Workbook list price $134.99</li><li>1.5-inch stretched canvas, 16×24: Workbook list price $224.99</li><li>Aluminum metal, 12×18: Workbook list price $179.99</li></ul>
         <label for="print-name">Full name</label>
         <input id="print-name" name="contact[name]" required autocomplete="name" />
         <label for="print-email">Email address</label>
@@ -89,7 +89,7 @@
     <section class="prose formats-block">
       <h2>About this photograph</h2>
       <p>Source file 01 - DSC_2626-Edit-no water mark.jpg, 5746×3831 pixels, landscape, aspect 1.4999. The preview keeps that full composition. No crop is applied.</p>
-      <p>Pixel proportion 5746:3831. Canvas sizes that do not match this proportion are omitted.</p>
+      <p>Pixel proportion 5746:3831. A size that would crop this photograph, or that is missing from the supplier sheet, is omitted. Draft amounts are workbook list prices.</p>
       <p><a href="../../">Back to the portfolio</a></p>
     </section>
   </main>

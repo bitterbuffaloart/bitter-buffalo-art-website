@@ -4,43 +4,63 @@
       "id": "canvas-floating-15",
       "name": "Premium 1.5-inch floating-frame canvas",
       "family": "framed canvas",
-      "evidence": "Established sale configuration in the print catalog. Frame finish, frame choice, foamcore, backing, and wire are not verified, so this product has no finish dropdown."
+      "evidence": "Open-edition 1.5-inch framed canvas. 16\u00d724 is the owner-approved retail. 12\u00d718 is a workbook list price. 20\u00d730 is not on the framed-canvas supplier sheet. Frame finish is not verified, so there is no finish dropdown."
     },
     {
       "id": "canvas-15",
-      "name": "1.5-inch canvas",
+      "name": "1.5-inch stretched canvas",
       "family": "1.5-inch canvas",
-      "evidence": "Prior sandbox quote for unframed subcategory 101003, 1.50in Stretched Canvas. That quote is evidence for the family only. It is not a published price and it is not the floating-frame sale product."
+      "evidence": "Open-edition 1.5-inch stretched canvas from the canvas supplier sheet. This is not the floating-frame product. 20\u00d730 is not on that sheet."
+    },
+    {
+      "id": "metal-aluminum",
+      "name": "Aluminum metal",
+      "family": "aluminum metal",
+      "evidence": "Open-edition aluminum from the metal supplier sheet. Finish and mounting are not verified, so there is no finish dropdown."
+    },
+    {
+      "id": "paper-archival",
+      "name": "Archival matte paper",
+      "family": "archival matte paper",
+      "evidence": "Open-edition archival matte paper. Only 16\u00d724 is on the fine-art paper supplier sheet."
+    },
+    {
+      "id": "paper-semigloss",
+      "name": "Fine-art semi-gloss paper",
+      "family": "fine-art semi-gloss paper",
+      "evidence": "Open-edition fine-art semi-gloss paper. Only 16\u00d724 is on the fine-art paper supplier sheet. This is not traditional photographic paper."
+    },
+    {
+      "id": "paper-somerset",
+      "name": "Somerset Velvet",
+      "family": "Somerset Velvet",
+      "evidence": "Open-edition Somerset Velvet. Only 16\u00d724 is on the fine-art paper supplier sheet."
     }
   ],
   "omittedFamilies": [
     {
       "name": "Traditional photographic paper",
-      "reason": "No verified supplier record in this repository."
-    },
-    {
-      "name": "Archival gicl\u00e9e fine-art paper",
-      "reason": "No verified supplier record in this repository."
-    },
-    {
-      "name": "Aluminum metal",
-      "reason": "No verified supplier record in this repository."
+      "reason": "The workbook semi-gloss line is fine-art paper and is not confirmed as traditional photographic paper."
     },
     {
       "name": "Acrylic face-mount",
-      "reason": "No verified supplier record in this repository."
+      "reason": "The workbook says acrylic retail targets must not be displayed."
     },
     {
       "name": "Framed paper",
-      "reason": "No verified supplier record. Framed canvas is a separate family and is not framed paper."
+      "reason": "No open-edition workbook retail. Framed canvas is a separate product."
+    },
+    {
+      "name": "Collector edition",
+      "reason": "No collector price is approved to publish."
     }
   ],
   "supplierExample": null,
   "approvedRetail": {
-    "photographId": "bb-photo-01",
     "productId": "canvas-floating-15",
     "sizeId": "16x24",
-    "text": "$199.33"
+    "text": "$199.33",
+    "appliesTo": "every print-ready 3:2 photograph"
   },
   "photographs": [
     {
@@ -66,7 +86,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 319.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -75,18 +98,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 239.4,
+          "minimumPpi": 200,
           "status": "priced",
-          "retail": "199.33"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 191.5,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -95,7 +110,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 319.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -104,17 +122,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 239.4,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 319.2,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 191.5,
+          "minimumPpi": 300,
           "status": "hold",
-          "reason": "Below 200 PPI."
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -141,7 +219,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 600.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -150,16 +231,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 450.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 360.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -168,7 +243,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 600.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -177,16 +255,82 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 450.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 600.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 360.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "359.99",
+          "priceText": "Workbook list price $359.99"
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -221,13 +365,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -242,9 +379,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -273,7 +445,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -282,16 +457,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -300,7 +469,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -309,16 +481,81 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -345,7 +582,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 500.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -354,16 +594,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 375.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 300.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -372,7 +606,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 500.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -381,16 +618,82 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 375.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 500.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 300.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "359.99",
+          "priceText": "Workbook list price $359.99"
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -417,7 +720,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -426,16 +732,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -444,7 +744,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -453,16 +756,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -497,13 +861,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -518,9 +875,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -557,13 +949,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -578,9 +963,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -609,7 +1029,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -618,16 +1041,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -636,7 +1053,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -645,16 +1065,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -689,13 +1170,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -710,9 +1184,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -741,7 +1250,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 458.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -750,16 +1262,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 344.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 275.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -768,7 +1274,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 458.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -777,16 +1286,81 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 344.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 275.2,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -821,13 +1395,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -842,9 +1409,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -873,7 +1475,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 320.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -882,17 +1487,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 240.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 192.0,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -901,7 +1499,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 320.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -910,17 +1511,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 240.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 320.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 192.0,
+          "minimumPpi": 300,
           "status": "hold",
-          "reason": "Below 200 PPI."
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -947,7 +1608,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-floating-15",
@@ -956,16 +1619,9 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -974,7 +1630,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -983,16 +1641,75 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
         }
       ]
     },
@@ -1019,7 +1736,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1028,16 +1748,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1046,7 +1760,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1055,16 +1772,81 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -1091,7 +1873,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1100,16 +1885,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1118,7 +1897,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1127,16 +1909,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1163,7 +2006,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1172,16 +2018,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1190,7 +2030,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 416.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1199,16 +2042,81 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 312.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -1235,7 +2143,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 334.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-floating-15",
@@ -1244,16 +2154,9 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.7,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -1262,7 +2165,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 334.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -1271,16 +2176,75 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 334.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.5,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
         }
       ]
     },
@@ -1307,7 +2271,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1316,16 +2283,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1334,7 +2295,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1343,16 +2307,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1379,7 +2404,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 332.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1388,17 +2416,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 249.2,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 199.4,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1407,7 +2428,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 332.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1416,17 +2440,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 249.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 332.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 199.4,
+          "minimumPpi": 300,
           "status": "hold",
-          "reason": "Below 200 PPI."
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1453,7 +2537,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 417.8,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1462,16 +2549,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 313.3,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 250.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1480,7 +2561,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 417.8,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1489,16 +2573,81 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 313.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 417.8,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 250.7,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -1525,7 +2674,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 330.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1534,17 +2686,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 247.9,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 198.3,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1553,7 +2698,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 330.5,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1562,17 +2710,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 247.9,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 330.5,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 198.3,
+          "minimumPpi": 300,
           "status": "hold",
-          "reason": "Below 200 PPI."
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1599,7 +2807,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1608,16 +2819,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1626,7 +2831,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1635,16 +2843,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1671,7 +2940,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 335.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-floating-15",
@@ -1680,16 +2951,9 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 251.4,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 201.1,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -1698,7 +2962,9 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 335.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
           "productId": "canvas-15",
@@ -1707,16 +2973,75 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 251.4,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Workbook hold."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 335.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 201.1,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Workbook hold."
         }
       ]
     },
@@ -1743,7 +3068,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1752,16 +3080,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1770,7 +3092,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1779,16 +3104,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 250.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 200.0,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
@@ -1815,7 +3201,10 @@
           "printWidthIn": 12,
           "printHeightIn": 18,
           "ppi": 407.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1824,16 +3213,10 @@
           "printWidthIn": 16,
           "printHeightIn": 24,
           "ppi": 305.4,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 20,
-          "printHeightIn": 30,
-          "ppi": 244.3,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -1842,7 +3225,10 @@
           "printWidthIn": 12,
           "printHeightIn": 18,
           "ppi": 407.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1851,16 +3237,81 @@
           "printWidthIn": 16,
           "printHeightIn": 24,
           "ppi": 305.4,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 407.2,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 20,
           "printHeightIn": 30,
           "ppi": 244.3,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -1895,13 +3346,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -1916,9 +3360,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -1955,13 +3434,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -1976,9 +3448,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -2015,13 +3522,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -2036,9 +3536,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -2075,13 +3610,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -2096,9 +3624,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -2127,7 +3690,10 @@
           "printWidthIn": 12,
           "printHeightIn": 18,
           "ppi": 458.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -2136,16 +3702,10 @@
           "printWidthIn": 16,
           "printHeightIn": 24,
           "ppi": 344.0,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 20,
-          "printHeightIn": 30,
-          "ppi": 275.2,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -2154,7 +3714,10 @@
           "printWidthIn": 12,
           "printHeightIn": 18,
           "ppi": 458.7,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -2163,16 +3726,81 @@
           "printWidthIn": 16,
           "printHeightIn": 24,
           "ppi": 344.0,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 20,
           "printHeightIn": 30,
           "ppi": 275.2,
-          "status": "quote"
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -2207,13 +3835,6 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "status": "unavailable",
-          "reason": "This size would crop the photograph."
-        },
-        {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
@@ -2228,9 +3849,44 @@
           "reason": "This size would crop the photograph."
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
           "status": "unavailable",
           "reason": "This size would crop the photograph."
         }
@@ -2259,7 +3915,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.1,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -2268,17 +3927,10 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 249.8,
-          "status": "quote"
-        },
-        {
-          "productId": "canvas-floating-15",
-          "sizeId": "20x30",
-          "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 199.9,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -2287,7 +3939,10 @@
           "printWidthIn": 18,
           "printHeightIn": 12,
           "ppi": 333.1,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -2296,17 +3951,77 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 249.8,
-          "status": "quote"
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
-          "productId": "canvas-15",
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.1,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
           "ppi": 199.9,
+          "minimumPpi": 300,
           "status": "hold",
-          "reason": "Below 200 PPI."
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     }

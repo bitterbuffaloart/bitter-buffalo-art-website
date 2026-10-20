@@ -55,7 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (product.retail_price) {
       const price = document.createElement("span");
       price.className = "catalog-price";
-      price.textContent = money(product.retail_price);
+      price.textContent = photography && product.retail_price === "199.33"
+        ? "16×24 framed canvas $199.33"
+        : money(product.retail_price);
       text.append(price);
     } else if (product.availability === "on-hold") {
       const hold = document.createElement("span");

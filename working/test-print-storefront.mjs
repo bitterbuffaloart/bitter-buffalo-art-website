@@ -91,10 +91,13 @@ test("page shows the confirmed price, three sizes, and no invented prices", () =
   assert.match(page, /Select a product/);
   assert.match(page, /\$199\.33/);
   assert.match(page, /floating-frame canvas/);
-  assert.match(page, /1\.5-inch canvas/);
-  assert.doesNotMatch(page, /stretched canvas|wood-stretched/i);
+  assert.match(page, /1\.5-inch stretched canvas/);
+  assert.match(page, /Workbook list price \$149\.33/);
+  assert.match(page, /Workbook list price \$134\.99/);
+  assert.match(page, /Workbook list price \$224\.99/);
+  assert.match(page, /Workbook list price \$179\.99/);
   assert.doesNotMatch(page, /id="print-buy"|Buy<\/button>|action="\/api\/prints\/checkout"/);
-  assert.doesNotMatch(page, /134\.99|224\.99|314\.99|299\.99/);
+  assert.doesNotMatch(page, /299\.33|314\.99|359\.99|129\.99|109\.99|159\.99|74\.01|34\.39/);
   assert.doesNotMatch(page, /us\.api\.lumaprints\.com|connect\.squareup\.com/);
   assert.doesNotMatch(page, /etsy\.com/);
   for (const label of ["12×18", "16×24", "20×30"]) assert.match(page, new RegExp(label));
