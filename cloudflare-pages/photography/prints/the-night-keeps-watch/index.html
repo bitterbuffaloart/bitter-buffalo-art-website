@@ -31,16 +31,14 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="../../../" class="nav-link">Home</a>
-        <a href="../../" class="nav-link is-active" aria-current="page">Photography</a>
-        <a href="../../../sketchbook/" class="nav-link">Sketchbook</a>
-        <a href="../../../shop/" class="nav-link">Shop</a>
-        <a href="../../../tie-dye/" class="nav-link">Tie-Dye</a>
-        <a href="../../../laser-art/" class="nav-link">Laser Art</a>
-        <a href="../../../custom/" class="nav-link">Custom Art</a>
-        <a href="../../../events/" class="nav-link">Events</a>
-        <a href="../../../about/" class="nav-link">About</a>
-        <a href="../../../contact/" class="nav-link">Contact</a>
+        <a href="/" class="nav-link">Home</a>
+        <a href="/shop/" class="nav-link">Shop</a>
+        <a href="/tie-dye/" class="nav-link">Tie-Dye</a>
+        <a href="/photography/" class="nav-link is-active" aria-current="page">Photography</a>
+        <a href="/sketchbook/" class="nav-link">Sketchbook</a>
+        <a href="/custom/" class="nav-link">Custom Art</a>
+        <a href="/events/" class="nav-link">Events</a>
+        <a href="/about/" class="nav-link">About</a>
       </nav>
     </div>
   </header>
@@ -68,14 +66,15 @@
         <label class="hp" aria-hidden="true">Company website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
         <label for="print-product">Print product</label>
         <select id="print-product" name="print-product" required>
-          <option value="">Select a product</option><option value="canvas-floating-15">Premium 1.5-inch framed canvas</option><option value="canvas-15">Standard 1.5-inch stretched canvas</option><option value="metal-aluminum">Aluminum metal</option><option value="paper-archival">Archival matte</option><option value="paper-semigloss">Semi-gloss</option><option value="paper-somerset">Somerset Velvet</option>
+          <option value="">Select a product</option><option value="canvas-floating-15">Premium 1.5-inch framed canvas</option><option value="metal-aluminum">Aluminum metal</option><option value="paper-archival">Archival matte</option>
         </select>
         <label for="print-size">Size</label>
         <select id="print-size" name="print-size" required disabled>
-          <option value="">Select a size</option><option value="canvas-floating-15:12x18" data-product="canvas-floating-15" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="canvas-floating-15:16x24" data-product="canvas-floating-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-floating-15:20x30" data-product="canvas-floating-15" data-size="20x30" data-label="20×30" data-status="priced">20×30</option><option value="canvas-15:12x18" data-product="canvas-15" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="canvas-15:16x24" data-product="canvas-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-15:20x30" data-product="canvas-15" data-size="20x30" data-label="20×30" data-status="priced">20×30</option><option value="metal-aluminum:12x18" data-product="metal-aluminum" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="metal-aluminum:16x24" data-product="metal-aluminum" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="metal-aluminum:20x30" data-product="metal-aluminum" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option><option value="paper-archival:12x18" data-product="paper-archival" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="paper-archival:16x24" data-product="paper-archival" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="paper-archival:20x30" data-product="paper-archival" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option><option value="paper-semigloss:12x18" data-product="paper-semigloss" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="paper-semigloss:16x24" data-product="paper-semigloss" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="paper-semigloss:20x30" data-product="paper-semigloss" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option><option value="paper-somerset:12x18" data-product="paper-somerset" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="paper-somerset:16x24" data-product="paper-somerset" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="paper-somerset:20x30" data-product="paper-somerset" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option>
+          <option value="">Select a size</option><option value="canvas-floating-15:12x18" data-product="canvas-floating-15" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="canvas-floating-15:16x24" data-product="canvas-floating-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-floating-15:20x30" data-product="canvas-floating-15" data-size="20x30" data-label="20×30" data-status="priced">20×30</option><option value="metal-aluminum:12x18" data-product="metal-aluminum" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="metal-aluminum:16x24" data-product="metal-aluminum" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="metal-aluminum:20x30" data-product="metal-aluminum" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option><option value="paper-archival:12x18" data-product="paper-archival" data-size="12x18" data-label="12×18" data-status="priced">12×18</option><option value="paper-archival:16x24" data-product="paper-archival" data-size="16x24" data-label="16×24" data-status="hold" disabled>16×24 (below 300 PPI)</option><option value="paper-archival:20x30" data-product="paper-archival" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (below 300 PPI)</option>
         </select>
         <p id="print-price" class="print-price" aria-live="polite"></p>
-        <ul class="print-prices"><li>Premium 1.5-inch framed canvas, 12×18: $149.33</li><li>Premium 1.5-inch framed canvas, 16×24: $199.33</li><li>Premium 1.5-inch framed canvas, 20×30: $299.33</li><li>Standard 1.5-inch stretched canvas, 12×18: $134.99</li><li>Standard 1.5-inch stretched canvas, 16×24: $224.99</li><li>Standard 1.5-inch stretched canvas, 20×30: $314.99</li><li>Aluminum metal, 12×18: $179.99</li><li>Archival matte, 12×18: $89.99</li><li>Semi-gloss, 12×18: $69.99</li><li>Somerset Velvet, 12×18: $109.99</li></ul>
+        <ul class="print-prices"><li>Premium 1.5-inch framed canvas, 12×18: $149.33</li><li>Premium 1.5-inch framed canvas, 16×24: $199.33</li><li>Premium 1.5-inch framed canvas, 20×30: $299.33</li><li>Aluminum metal, 12×18: $179.99</li><li>Archival matte, 12×18: $89.99</li></ul>
+        <p>Stretched canvas, semi-gloss, and Somerset Velvet remain in the pricing record and are not sale options. This form sends an inquiry. It does not take payment.</p>
         <label for="print-name">Full name</label>
         <input id="print-name" name="contact[name]" required autocomplete="name" />
         <label for="print-email">Email address</label>
@@ -96,32 +95,39 @@
     </section>
   </main>
   <footer class="site-footer">
+    <div class="site-footer__land" aria-hidden="true">
+      <picture>
+        <source media="(max-width: 700px)" srcset="/assets/images/western-footer-mobile.svg" />
+        <img src="/assets/images/western-footer-landscape.svg" alt="" width="1600" height="680" />
+      </picture>
+    </div>
     <div class="site-footer__grid">
       <div>
         <h2>Bitter Buffalo Art</h2>
-        <p>Original art from the Colorado High Country—fine-art photography, hand-dyed textiles, laser woodwork, and custom commissions from Breckenridge.</p>
+        <p>Original art from the Colorado High Country—fine-art photography, hand-dyed textiles, laser woodwork, and the studio sketchbook from Breckenridge.</p>
       </div>
       <div>
         <h3>Explore</h3>
         <ul>
-          <li><a href="../../">Photography</a></li>
-          <li><a href="../../../sketchbook/">Sketchbook</a></li>
-          <li><a href="../../../shop/">Shop</a></li>
-          <li><a href="../../../tie-dye/">Tie-Dye</a></li>
-          <li><a href="../../../laser-art/">Laser Art</a></li>
-          <li><a href="../../../events/">Events</a></li>
-          <li><a href="../../../about/">About</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/shop/">Shop</a></li>
+          <li><a href="/photography/">Fine-Art Photography Prints</a></li>
+          <li><a href="/tie-dye/">Tie-Dye &amp; Wearable Art</a></li>
+          <li><a href="/laser-art/">Laser-Engraved Wood Art</a></li>
+          <li><a href="/sketchbook/">Sketchbook</a></li>
+          <li><a href="/events/">Events</a></li>
+          <li><a href="/about/">About</a></li>
         </ul>
       </div>
       <div>
         <h3>Work With Us</h3>
         <ul>
-          <li><a href="../../../custom/">Custom Art</a></li>
-          <li><a href="../../../contact/">Contact</a></li>
+          <li><a href="/custom/">Custom Art</a></li>
+          <li><a href="/contact/">Contact</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__note">This page does not take payment. Photographs are not sold on Etsy.</p>
+    <p class="site-footer__note">Fine-art photography prints are offered on this website. Handmade tie-dye and laser pieces are linked to an individual Etsy listing only when that listing is already verified. This website does not take payment.</p>
   </footer>
   <script type="module" src="../../../assets/js/print-inquiry.js"></script>
   <script src="../../../assets/js/site.js"></script>

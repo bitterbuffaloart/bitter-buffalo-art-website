@@ -9,14 +9,15 @@ These are the only files to edit for the public homepage, Sketchbook, and catalo
 | Surface | Authoritative file | Published by |
 | --- | --- | --- |
 | Homepage | `cloudflare-pages/index.html` | that file itself |
+| Header and footer | `working/site/shared_chrome.py` | `python working/site/shared_chrome.py` stamps every public page |
 | Sketchbook | `cloudflare-pages/sketchbook/index.html` and `cloudflare-pages/assets/sketchbook/works.json` | those files |
 | Catalog | `working/portfolio/photography-manifest.json` | `working/catalog/build-catalog.py` writes `cloudflare-pages/assets/data/catalog.json` |
 
-`working/build-static-site.js` is not the homepage. It rewrites `cloudflare-pages/index.html` from an older embedded layout. Do not run it. `working/portfolio/build-final-44.py` still expects 50 photographs and would rewrite the manifest. Do not run it over the current manifest.
+`working/build-static-site.js` is the whole-site generator. It is a second writer: it rebuilds `cloudflare-pages/index.html` and an older header from strings inside that file. That is why a page can serve different navigation or homepage HTML from the rest of the site. Do not run it. The public header is the eight links in `working/site/shared_chrome.py`, in this order: Home, Shop, Tie-Dye, Photography, Sketchbook, Custom Art, Events, About. Laser Art stays on the homepage, the shop, and the footer. Contact stays in the footer and on the contact page. `working/test-site-chrome.mjs` fails when that order differs or a local asset path is missing. `working/portfolio/build-final-44.py` still expects 50 photographs and would rewrite the manifest. Do not run it over the current manifest.
 
 The western page disappeared because the parchment, sandstone, topographic, buffalo-skull, and tumbleweed treatments, and the footer landscape, were committed on `5bc6785`, `9f2f142`, and `8bef79d`. That work is not an ancestor of the price-publish commit. The live CSS then painted the page with flat `--paper` and no longer pointed at the SVG files, so the deployed homepage had nothing to show. There is one homepage file. The generator is a second writer, and running it would remove the restored page again.
 
-The homepage has four collection cards: Photography, Tie-Dye, Laser Art, and Sketchbook. Custom Art, Events, About, and Contact stay in the header, the footer, and their own pages. They are not homepage cards. The heading “Art Born in the High Country” stays on the homepage.
+The homepage has four collection cards: Photography, Tie-Dye, Laser Art, and Sketchbook. Custom Art, Events, and About are in the header. Contact stays in the footer and on its own page. They are not homepage cards. The heading “Art Born in the High Country” stays on the homepage.
 
 ## Photographs
 
@@ -27,11 +28,12 @@ After a photograph change, edit the manifest, then from the repository root:
 ```
 python working/catalog/build-catalog.py
 python working/prints/build-print-inquiry.py
-node --test working/test-print-inquiry.mjs working/test-print-storefront.mjs working/catalog/test-import.mjs working/test-contact.mjs
+python working/site/shared_chrome.py
+node --test working/test-print-inquiry.mjs working/test-print-storefront.mjs working/catalog/test-import.mjs working/test-contact.mjs working/test-site-chrome.mjs
 python working/qa-site.py cloudflare-pages
 ```
 
-The six print products have authorized starting selling prices in `working/prints/build-print-inquiry.py`. Show a price only when that file is 3:2 within 0.5 percent and meets the PPI minimum: canvas 200, metal and paper 300. Omit a size that would crop the photograph. Disable a size below the PPI minimum and say why. Photographs 34, 40, 46, and 49 stay gallery and inquiry only because they have no verified print master. Do not block the other photographs for those four. #10 stays 16:9 with no invented price. Acrylic stays off.
+The six print products have authorized starting selling prices in `working/prints/build-print-inquiry.py` and in `working/pricing/pricing-master.json`. Do not delete those rows. The public selectors offer only premium framed canvas, aluminum metal, and archival matte, at 12×18, 16×24, and 20×30, when the file is within 0.5 percent of 3:2 and meets the PPI minimum: canvas 200, metal and paper 300. Stretched canvas, semi-gloss, and Somerset Velvet stay in the pricing record and are not sale options. The catalog and price files do not name a separate five- or six-subject initial sale set. Do not invent one. The only named selected sale configuration in `docs/storefront/` is Grand Tetons 16×24 premium framed canvas at $199.33. Omit a size that would crop the photograph. Disable a size below the PPI minimum and say why. Photographs 34, 40, 46, and 49 stay gallery and inquiry only because they have no verified print master. Photographs 51–53 are web derivatives and publish no price. Do not block the other photographs for those four. #10 stays 16:9 with no invented price. Acrylic stays off. A print inquiry form is not a purchase link. Buy stays off until Square authenticates.
 
 Standard 1.5-inch stretched canvas at 16×24 is $224.99, which is higher than premium 1.5-inch framed canvas at 16×24 ($199.33). Do not change either price to remove that difference. Framed canvas and stretched canvas stay separate products. Do not map the framed product to unframed stretch subcategory 101003.
 

@@ -92,7 +92,12 @@ test("page shows the confirmed price, three sizes, and no invented prices", () =
   assert.match(page, /\$199\.33/);
   assert.match(page, /\$149\.33/);
   assert.match(page, /Premium 1\.5-inch framed canvas/);
-  assert.match(page, /Standard 1\.5-inch stretched canvas/);
+  assert.match(page, /Aluminum metal/);
+  assert.match(page, /Archival matte/);
+  assert.match(page, /not sale options/);
+  assert.doesNotMatch(page, /<option value="canvas-15"/);
+  assert.doesNotMatch(page, /<option value="paper-semigloss"/);
+  assert.doesNotMatch(page, /<option value="paper-somerset"/);
   assert.doesNotMatch(page, /Workbook list price|Pending\. Inquiry only\./);
   assert.doesNotMatch(page, /id="print-buy"|Buy<\/button>|action="\/api\/prints\/checkout"/);
   assert.doesNotMatch(page, /74\.01|90\.13|50\.51|34\.39/);

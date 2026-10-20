@@ -1,4 +1,6 @@
 /**
+ * DO NOT RUN. This whole-site generator rewrites cloudflare-pages/index.html
+ * and an older navigation. It is not the live homepage. See docs/MAINTAIN_SITE.md.
  * Build independent static site for Cloudflare Pages (Phase 3 refinements).
  * No Shopify checkout/cart/accounts. Commerce CTAs → Etsy shop.
  */

@@ -100,7 +100,9 @@ test("every photograph keeps its measured sizes, price, and page", () => {
         if (want.ppi !== undefined) assert.equal(actual.ppi, want.ppi);
         if (want.text) {
           assert.equal(actual.priceText, want.text);
-          assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+          const publicSale = ["canvas-floating-15", "metal-aluminum", "paper-archival"].includes(productId);
+          if (publicSale) assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+          else assert.doesNotMatch(html, new RegExp(`<option value="${productId}"`));
           if (want.status === "priced") {
             assert.equal(actual.retail, want.retail);
             if (productId === "canvas-floating-15" && size.id === "16x24") framedPrices += 1;

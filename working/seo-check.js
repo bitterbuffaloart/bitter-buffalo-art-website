@@ -28,14 +28,12 @@ for (const p of pages) {
   if (!/Laser Art/.test(html) && p !== 'photography/index.html' && p !== 'tie-dye/index.html') {
     // nav should include Laser Art on every page
   }
-  if (!/nav-link/.test(html) || !/Laser Art/.test(html)) issues.push(p + ': missing Laser Art nav');
-  const photoPages = new Set(['photography/index.html', 'photography/prints/grand-tetons/index.html', 'sketchbook/index.html']);
-  if (!photoPages.has(p) && !/Shop Etsy|Shop on Etsy|etsy.com\/shop\/BitterBuffaloArt/.test(html)) {
-    issues.push(p + ': missing Etsy CTA');
-  }
-  if (photoPages.has(p) && /Shop Etsy|Buy<\/button>|action="\/api\/prints\/checkout"/.test(html)) {
-    issues.push(p + ': photography page still offers a buy button');
-  }
+  const nav = html.slice(html.indexOf('id="site-nav"'), html.indexOf('</nav>'));
+  const labels = [...nav.matchAll(/>([^<]+)<\/a>/g)].map((match) => match[1]);
+  const expected = ['Home', 'Shop', 'Tie-Dye', 'Photography', 'Sketchbook', 'Custom Art', 'Events', 'About'];
+  if (labels.join('|') !== expected.join('|')) issues.push(p + ': nav order ' + labels.join('|'));
+  if (/Shop Etsy/.test(nav)) issues.push(p + ': header still has Shop Etsy');
+  if (/Buy<\/button>|action="\/api\/prints\/checkout"/.test(html)) issues.push(p + ': page offers a buy button');
   if (
     /Free U\.S\. Shipping|Ground Builder|myshopify\.com|shopify\.com\/cart|GIVEAWAY-UNION|Union Peaks giveaway|bb-giveaway/i.test(
       html

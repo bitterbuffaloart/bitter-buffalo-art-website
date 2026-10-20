@@ -13,8 +13,11 @@ def check(root, base=None):
         text=file.read_text(encoding='utf-8'); p=Page(text); ids=[a['id'] for _,a in p.tags if 'id' in a]
         if len(ids)!=len(set(ids)): errors.append(f'{file.name}: duplicate IDs')
         if len(re.findall(r'<h1[ >]',text))!=1: errors.append(f'{file}: expected one h1')
-        for selector in ['<title>', 'name="description"', 'name="viewport"', 'rel="canonical"', 'aria-current="page"']:
+        for selector in ['<title>', 'name="description"', 'name="viewport"', 'rel="canonical"']:
             if selector not in text: errors.append(f'{file}: missing {selector}')
+        rel = file.relative_to(root).as_posix()
+        if 'aria-current="page"' not in text and rel not in {'contact/index.html', 'laser-art/index.html'}:
+            errors.append(f'{file}: missing aria-current="page"')
         for tag,a in p.tags:
             if tag=='img' and 'alt' not in a: errors.append(f'{file}: image missing alt')
             for attr in ('href','src'):
@@ -30,7 +33,8 @@ def check(root, base=None):
                 if parsed.fragment and target.suffix=='.html':
                     targetids={a.get('id') for _,a in Page(target.read_text(encoding='utf-8')).tags}
                     if parsed.fragment not in targetids: errors.append(f'{file}: missing fragment {url}')
-    if etsy!={'https://www.etsy.com/shop/BitterBuffaloArt'}: errors.append(f'Unexpected Etsy links: {etsy}')
+    allowed_etsy={'https://www.etsy.com/shop/BitterBuffaloArt'}
+    if not etsy <= allowed_etsy: errors.append(f'Unexpected Etsy links: {etsy - allowed_etsy}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
     catalog=json.loads((root/'assets/data/catalog.json').read_text(encoding='utf-8'))
     numbers=set()

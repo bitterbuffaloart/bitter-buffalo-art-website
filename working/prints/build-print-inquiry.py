@@ -6,11 +6,14 @@ why. Photographs 34, 40, 46, and 49 stay gallery and inquiry only.
 """
 import json
 import re
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageOps
 
 ROOT = Path(r"C:\Users\bitte\bitter-buffalo-website-etsy-update-2026-10-17")
+sys.path.insert(0, str(ROOT / "working" / "site"))
+from shared_chrome import footer_html, nav_html
 MANIFEST = ROOT / "working" / "portfolio" / "photography-manifest.json"
 PUBLIC_JSON = ROOT / "cloudflare-pages" / "assets" / "data" / "print-inquiry.json"
 SOURCE_JSON = ROOT / "working" / "prints" / "source-dimensions.json"
@@ -101,6 +104,8 @@ PRODUCTS = (
         "evidence": "Authorized starting prices: 12×18 $109.99, 16×24 $159.99, 20×30 $249.99.",
     },
 )
+# Public selectors. The other three families stay in the pricing master and are not sale options.
+PUBLIC_SALE_IDS = ("canvas-floating-15", "metal-aluminum", "paper-archival")
 OMITTED = (
     {"name": "Traditional photographic paper", "reason": "The workbook semi-gloss line is fine-art paper and is not confirmed as traditional photographic paper."},
     {"name": "Acrylic face-mount", "reason": "The workbook says acrylic retail targets must not be displayed."},
@@ -190,12 +195,13 @@ def size_record(width, height, size, product_id, number):
 
 
 def page(photo):
+    sale_products = [product for product in PRODUCTS if product["id"] in PUBLIC_SALE_IDS]
     options = ['<option value="">Select a product</option>']
-    for product in PRODUCTS:
+    for product in sale_products:
         options.append(f'<option value="{product["id"]}">{esc(product["name"])}</option>')
     sizes = ['<option value="">Select a size</option>']
     for item in photo["sizes"]:
-        if item["status"] == "unavailable":
+        if item["productId"] not in PUBLIC_SALE_IDS or item["status"] == "unavailable":
             continue
         disabled = " disabled" if item["status"] == "hold" else ""
         suffix = ""
@@ -212,8 +218,8 @@ def page(photo):
             f'data-size="{item["sizeId"]}" data-label="{item["label"]}" data-status="{item["status"]}"{disabled}>'
             f'{esc(label)}</option>'
         )
-    names = {product["id"]: product["name"] for product in PRODUCTS}
-    listed = [item for item in photo["sizes"] if item["status"] == "priced"]
+    names = {product["id"]: product["name"] for product in sale_products}
+    listed = [item for item in photo["sizes"] if item["status"] == "priced" and item["productId"] in PUBLIC_SALE_IDS]
     if photo["portfolioNumber"] in WEB_DERIVATIVE_NUMBERS:
         price_note = "<p>No print price is published. This file is a 2048-pixel web derivative, not a print master.</p>"
     elif photo["portfolioNumber"] in NO_MASTER_NUMBERS:
@@ -258,18 +264,7 @@ def page(photo):
         </span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="../../../" class="nav-link">Home</a>
-        <a href="../../" class="nav-link is-active" aria-current="page">Photography</a>
-        <a href="../../../sketchbook/" class="nav-link">Sketchbook</a>
-        <a href="../../../shop/" class="nav-link">Shop</a>
-        <a href="../../../tie-dye/" class="nav-link">Tie-Dye</a>
-        <a href="../../../laser-art/" class="nav-link">Laser Art</a>
-        <a href="../../../custom/" class="nav-link">Custom Art</a>
-        <a href="../../../events/" class="nav-link">Events</a>
-        <a href="../../../about/" class="nav-link">About</a>
-        <a href="../../../contact/" class="nav-link">Contact</a>
-      </nav>
+      {nav_html("Photography")}
     </div>
   </header>
   <main id="main">
@@ -304,6 +299,7 @@ def page(photo):
         </select>
         <p id="print-price" class="print-price" aria-live="polite"></p>
         {price_note}
+        <p>Stretched canvas, semi-gloss, and Somerset Velvet remain in the pricing record and are not sale options. This form sends an inquiry. It does not take payment.</p>
         <label for="print-name">Full name</label>
         <input id="print-name" name="contact[name]" required autocomplete="name" />
         <label for="print-email">Email address</label>
@@ -323,34 +319,7 @@ def page(photo):
       <p><a href="../../">Back to the portfolio</a></p>
     </section>
   </main>
-  <footer class="site-footer">
-    <div class="site-footer__grid">
-      <div>
-        <h2>Bitter Buffalo Art</h2>
-        <p>Original art from the Colorado High Country—fine-art photography, hand-dyed textiles, laser woodwork, and custom commissions from Breckenridge.</p>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <ul>
-          <li><a href="../../">Photography</a></li>
-          <li><a href="../../../sketchbook/">Sketchbook</a></li>
-          <li><a href="../../../shop/">Shop</a></li>
-          <li><a href="../../../tie-dye/">Tie-Dye</a></li>
-          <li><a href="../../../laser-art/">Laser Art</a></li>
-          <li><a href="../../../events/">Events</a></li>
-          <li><a href="../../../about/">About</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Work With Us</h3>
-        <ul>
-          <li><a href="../../../custom/">Custom Art</a></li>
-          <li><a href="../../../contact/">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="site-footer__note">This page does not take payment. Photographs are not sold on Etsy.</p>
-  </footer>
+  {footer_html()}
   <script type="module" src="../../../assets/js/print-inquiry.js"></script>
   <script src="../../../assets/js/site.js"></script>
 </body>
