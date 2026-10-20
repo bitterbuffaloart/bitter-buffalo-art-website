@@ -11,37 +11,37 @@ const contactFile = resolve(root, "cloudflare-pages/functions/api/contact.js");
 const { onRequestPost } = await import("data:text/javascript;base64," + Buffer.from(readFileSync(contactFile)).toString("base64"));
 
 const CROP_LIMIT = 0.005;
-const HELD = new Set();
+const NO_MASTER = new Set([34, 40, 46, 49]);
 const OFFERS = {
   "canvas-floating-15": {
-    "12x18": { minimum: 200, listed: true },
-    "16x24": { minimum: 200, listed: true, approved: true },
-    "20x30": { minimum: 200, listed: false },
+    "12x18": { minimum: 200, retail: "149.33" },
+    "16x24": { minimum: 200, retail: "199.33" },
+    "20x30": { minimum: 200, retail: "299.33" },
   },
   "canvas-15": {
-    "12x18": { minimum: 200, listed: true },
-    "16x24": { minimum: 200, listed: true },
-    "20x30": { minimum: 200, listed: false },
+    "12x18": { minimum: 200, retail: "134.99" },
+    "16x24": { minimum: 200, retail: "224.99" },
+    "20x30": { minimum: 200, retail: "314.99" },
   },
   "metal-aluminum": {
-    "12x18": { minimum: 300, listed: true },
-    "16x24": { minimum: 300, listed: true },
-    "20x30": { minimum: 300, listed: true },
+    "12x18": { minimum: 300, retail: "179.99" },
+    "16x24": { minimum: 300, retail: "224.99" },
+    "20x30": { minimum: 300, retail: "359.99" },
   },
   "paper-archival": {
-    "12x18": { minimum: 300, listed: false },
-    "16x24": { minimum: 300, listed: true },
-    "20x30": { minimum: 300, listed: false },
+    "12x18": { minimum: 300, retail: "89.99" },
+    "16x24": { minimum: 300, retail: "129.99" },
+    "20x30": { minimum: 300, retail: "199.99" },
   },
   "paper-semigloss": {
-    "12x18": { minimum: 300, listed: false },
-    "16x24": { minimum: 300, listed: true },
-    "20x30": { minimum: 300, listed: false },
+    "12x18": { minimum: 300, retail: "69.99" },
+    "16x24": { minimum: 300, retail: "109.99" },
+    "20x30": { minimum: 300, retail: "189.99" },
   },
   "paper-somerset": {
-    "12x18": { minimum: 300, listed: false },
-    "16x24": { minimum: 300, listed: true },
-    "20x30": { minimum: 300, listed: false },
+    "12x18": { minimum: 300, retail: "109.99" },
+    "16x24": { minimum: 300, retail: "159.99" },
+    "20x30": { minimum: 300, retail: "249.99" },
   },
 };
 const SIZES = [
@@ -58,10 +58,8 @@ function expected(photo, productId, size) {
   const printWidth = photo.sourceWidth >= photo.sourceHeight ? size.long : size.short;
   const printHeight = photo.sourceWidth >= photo.sourceHeight ? size.short : size.long;
   const ppi = Math.round((Math.min(photo.sourceWidth / printWidth, photo.sourceHeight / printHeight) + 1e-9) * 10) / 10;
-  if (HELD.has(photo.id) || ppi < offer.minimum) return { status: "hold", ppi };
-  if (offer.approved) return { status: "priced", ppi, retail: "199.33", text: "$199.33 approved" };
-  if (!offer.listed) return { status: "custom-quote", ppi, text: "Custom quote." };
-  return { status: "pending", ppi, text: "Pending. Inquiry only." };
+  if (NO_MASTER.has(photo.portfolioNumber) || ppi < offer.minimum) return { status: "hold", ppi };
+  return { status: "priced", ppi, retail: offer.retail, text: `$${offer.retail}` };
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
@@ -74,7 +72,7 @@ test("inquiry catalog publishes only workbook sizes that are on a supplier sheet
     "Collector edition",
   ]);
   assert.equal(catalog.supplierExample, null);
-  assert.equal(catalog.approvedRetail.text, "$199.33 approved");
+  assert.equal(catalog.approvedRetail.text, "$199.33");
   assert.equal(catalog.approvedRetail.sizeId, "16x24");
 });
 
@@ -90,8 +88,9 @@ test("every photograph keeps its measured sizes, price, and page", () => {
     assert.match(html, new RegExp(`width="${photo.displayWidth}" height="${photo.displayHeight}"`));
     assert.match(html, /Select a product/);
     assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout|acrylic/i);
-    assert.doesNotMatch(html, /Workbook list price|\$149\.33|\$299\.33|\$134\.99|\$224\.99|\$314\.99|\$179\.99|\$359\.99|\$89\.99|\$129\.99|\$199\.99|\$69\.99|\$109\.99|\$189\.99|\$159\.99|\$249\.99|\$74\.01|\$90\.13|\$50\.51|\$34\.39/);
-    let approved = 0;
+    assert.doesNotMatch(html, /Workbook list price|Pending\. Inquiry only\.|\$74\.01|\$90\.13|\$50\.51|\$34\.39/);
+    if (NO_MASTER.has(photo.portfolioNumber)) assert.doesNotMatch(html, /\$\d/);
+    let framedPrices = 0;
     for (const productId of Object.keys(OFFERS)) {
       for (const size of SIZES) {
         const actual = photo.sizes.find((item) => item.productId === productId && item.sizeId === size.id);
@@ -103,7 +102,7 @@ test("every photograph keeps its measured sizes, price, and page", () => {
           assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
           if (want.status === "priced") {
             assert.equal(actual.retail, want.retail);
-            approved += 1;
+            if (productId === "canvas-floating-15" && size.id === "16x24") framedPrices += 1;
           } else {
             assert.equal(actual.retail, undefined);
           }
@@ -117,7 +116,7 @@ test("every photograph keeps its measured sizes, price, and page", () => {
         assert.equal(quoteText(photo.id, productId, size.id), want.text || "Request a quote.");
       }
     }
-    assert.equal((html.match(/\$199\.33/g) || []).length, approved);
+    assert.equal((html.match(/\$199\.33/g) || []).length, framedPrices);
   }
   const tetons = catalog.photographs[0];
   const framedLarge = tetons.sizes.find((item) => item.productId === "canvas-floating-15" && item.sizeId === "20x30");
@@ -126,7 +125,7 @@ test("every photograph keeps its measured sizes, price, and page", () => {
   const metalHold = tetons.sizes.find((item) => item.productId === "metal-aluminum" && item.sizeId === "20x30");
   assert.equal(metalHold.status, "hold");
   assert.equal(metalHold.ppi, 191.5);
-  assert.equal(quoteText("bb-photo-02", "metal-aluminum", "20x30"), "Pending. Inquiry only.");
+  assert.equal(quoteText("bb-photo-02", "metal-aluminum", "20x30"), "$359.99");
   assert.equal(quoteText("bb-photo-10", "canvas-floating-15", "16x24"), "Request a quote.");
   const byNumber = (number) => catalog.photographs.find((photo) => photo.portfolioNumber === number);
   const framed = (number) => byNumber(number).sizes.find((item) => item.productId === "canvas-floating-15" && item.sizeId === "16x24");
@@ -139,14 +138,22 @@ test("every photograph keeps its measured sizes, price, and page", () => {
   assert.equal(framed(24).status, "unavailable");
   assert.equal(byNumber(18).printHolds, "");
   assert.equal(byNumber(24).printHolds, "");
+  assert.equal(byNumber(34).sourceWidth, 2143);
+  assert.equal(byNumber(34).sourceHeight, 3000);
+  assert.equal(framed(34).status, "unavailable");
+  assert.match(
+    readFileSync(resolve(root, "cloudflare-pages/photography/prints", byNumber(34).slug, "index.html"), "utf8"),
+    /No print price is published\. The verified print master is missing/,
+  );
+  assert.equal(framed(40).status, "hold");
   assert.equal(framed(45).status, "priced");
   assert.equal(framed(46).status, "hold");
   assert.equal(framed(47).status, "priced");
   assert.equal(framed(48).status, "priced");
   assert.equal(framed(49).status, "hold");
   assert.equal(framed(50).status, "priced");
-  assert.equal(byNumber(45).sizes.find((item) => item.productId === "paper-archival" && item.sizeId === "12x18").status, "custom-quote");
-  assert.equal(byNumber(45).sizes.find((item) => item.productId === "canvas-15" && item.sizeId === "20x30").status, "custom-quote");
+  assert.equal(byNumber(45).sizes.find((item) => item.productId === "paper-archival" && item.sizeId === "12x18").priceText, "$89.99");
+  assert.equal(byNumber(45).sizes.find((item) => item.productId === "canvas-15" && item.sizeId === "20x30").priceText, "$314.99");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 1).title, "Stormborn Grand Tetons");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 14).id, "bb-photo-45");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 45).id, "bb-photo-46");

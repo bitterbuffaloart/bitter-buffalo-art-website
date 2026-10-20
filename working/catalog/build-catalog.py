@@ -56,18 +56,33 @@ def print_ready(item):
     return ppi is not None and ppi >= 200
 
 
+NO_MASTER_NUMBERS = {34, 40, 46, 49}
+
+
+def is_three_two(item):
+    width = item["sourceWidth"]
+    height = item["sourceHeight"]
+    long_side = max(width, height)
+    short_side = min(width, height)
+    if short_side == 0:
+        return False
+    return abs((long_side / short_side) - 1.5) / 1.5 <= 0.005
+
+
 def photo_row(item):
     number = item["portfolioNumber"]
     name = item["title"]
     link = f"/photography/prints/{print_slug(name, number)}/"
-    if print_ready(item):
-        materials = "Approved price: 16×24 open-edition premium 1.5-inch framed canvas $199.33. Other sizes are pending or by inquiry. Checkout is not enabled."
-        retail = "199.33"
-        availability = "inquiry"
-    else:
-        materials = "No approved price is published. A listed size is omitted when it would crop the photograph or the file is below the PPI minimum. Checkout is not enabled."
+    availability = "inquiry"
+    if number in NO_MASTER_NUMBERS or not is_three_two(item):
+        materials = "No print price is published. Checkout is not enabled."
         retail = ""
-        availability = "inquiry"
+    elif print_ready(item):
+        materials = "16×24 premium 1.5-inch framed canvas: $199.33. Other authorized sizes are on the inquiry page when this file qualifies. Checkout is not enabled."
+        retail = "199.33"
+    else:
+        materials = "Authorized sizes that meet the PPI minimum are on the inquiry page. Checkout is not enabled."
+        retail = ""
     return {
         "id": item["permanentId"],
         "name": name,

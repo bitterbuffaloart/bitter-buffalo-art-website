@@ -16,17 +16,17 @@ node --test working/test-print-inquiry.mjs working/test-print-storefront.mjs wor
 python working/qa-site.py cloudflare-pages
 ```
 
-The only approved retail is $199.33 for a 16×24 open-edition premium 1.5-inch framed canvas when the measured file is 3:2 within 0.5 percent and at least 200 PPI. Label that price approved. Canvas uses 200 PPI. Metal and paper use 300 PPI. Recalculate each file. Do not copy an older photograph’s eligibility onto a new one.
+The six print products have authorized starting selling prices in `working/prints/build-print-inquiry.py`. Show a price only when that file is 3:2 within 0.5 percent and meets the PPI minimum: canvas 200, metal and paper 300. Omit a size that would crop the photograph. Disable a size below the PPI minimum and say why. Photographs 34, 40, 46, and 49 stay gallery and inquiry only because they have no verified print master. Do not block the other photographs for those four. #10 stays 16:9 with no invented price. Acrylic stays off.
 
-Other recorded amounts are unapproved hold drafts. They are not confirmed offers. Canvas and paper 20×30, and paper 12×18, stay custom quotes because those sizes are absent from the supplier sheets. Acrylic stays off. #10 stays 16:9 with no price. $74.01 is the 16×24 framed-canvas supplier base only. It does not include the floating frame, foamcore, hardware, shipping, or delivered cost. Do not treat $90.13 or $50.51 as a verified framed cost. Unknown costs stay unknown.
+Standard 1.5-inch stretched canvas at 16×24 is $224.99, which is higher than premium 1.5-inch framed canvas at 16×24 ($199.33). Do not change either price to remove that difference. Framed canvas and stretched canvas stay separate products. Do not map the framed product to unframed stretch subcategory 101003.
 
-## How to approve a price
+$74.01 is the 16×24 framed-canvas supplier base only. It does not include the floating frame, foamcore, hardware, shipping, or delivered cost. Do not treat $90.13 or $50.51 as a verified framed cost. Unknown costs stay unknown, not zero.
 
-1. Confirm the size is on the current supplier sheet for that exact product.
-2. Confirm the measured file meets the aspect and PPI rule for that product. A 16:9 file does not inherit a 3:2 price.
-3. Confirm the complete production cost, frame, foamcore, hardware, shipping, tax, and a protected print master. A supplier base is not the delivered cost.
-4. Change that one row in `working/prints/build-print-inquiry.py` from `hold` to `approved`, rebuild the inquiry pages, and review the public page. The public page may show a dollar amount only after that approval.
-5. Leave checkout disabled until the checks in `cloudflare-pages/functions/prints/profit.mjs` all pass. Approving a retail price does not by itself make the item sellable.
+## How to turn on payment for one price
+
+1. Confirm the complete production cost, frame, foamcore, hardware, shipping, tax, and a protected print master. A supplier base is not the delivered cost. An authorized starting price is not permission to take payment.
+2. Leave checkout disabled until the checks in `cloudflare-pages/functions/prints/profit.mjs` all pass for that one configuration.
+3. Do not enable checkout for every product at once. Do not add a Buy button while any of those checks is open.
 
 ## Checkout
 
@@ -39,6 +39,8 @@ Reuse these files only. Do not add a second Square stack.
 - `cloudflare-pages/functions/api/prints/square-webhook.js`
 
 `square.mjs` accepts only `SQUARE_ENVIRONMENT=sandbox` and only `https://connect.squareupsandbox.com`. It refuses `https://connect.squareup.com`. The client needs `SQUARE_ACCESS_TOKEN` and `SQUARE_LOCATION_ID`. The webhook check needs `SQUARE_WEBHOOK_SIGNATURE_KEY` and `SQUARE_WEBHOOK_NOTIFICATION_URL`. None of those values belong in git, public JavaScript, or a handoff.
+
+The `.env` file on 2026-10-20 is older than the sandbox locations 401, so Square was not called. The one credential action is to save a new sandbox access token and sandbox location id in that gitignored `.env` as `SQUARE_ACCESS_TOKEN` and `SQUARE_LOCATION_ID`. Do not paste them into chat.
 
 `POST /api/prints/checkout` compares any browser-supplied `retailCents` with the server configuration and returns HTTP 400 when they differ. It returns HTTP 409 before any Square call while cost, print file, or LumaPrints options are unverified. The public pages have no buy button. A sandbox test fixture in `working/test-print-storefront.mjs` is not wired to the public site.
 
