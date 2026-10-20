@@ -15,7 +15,7 @@ const columns = [
   "inquiry_or_external_link",
 ];
 
-const allowed = new Set(["photography prints", "tie-dye", "laser", "custom art"]);
+const allowed = new Set(["photography prints", "tie-dye", "laser", "custom art", "sketchbook"]);
 
 function parseCsv(text) {
   const rows = [];

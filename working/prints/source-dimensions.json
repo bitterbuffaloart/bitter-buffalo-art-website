@@ -438,5 +438,65 @@
     "sourceWidth": 5572,
     "sourceHeight": 3715,
     "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 45,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_0604.jpg",
+    "sourceName": "DSC_0604.jpg",
+    "manifestWidth": 12032,
+    "manifestHeight": 8032,
+    "sourceWidth": 12032,
+    "sourceHeight": 8032,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 46,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5269.jpg",
+    "sourceName": "DSC_5269.jpg",
+    "manifestWidth": 2048,
+    "manifestHeight": 1365,
+    "sourceWidth": 2048,
+    "sourceHeight": 1365,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 47,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_5424-Edit-Edit-2.jpg",
+    "sourceName": "DSC_5424-Edit-Edit-2.jpg",
+    "manifestWidth": 4591,
+    "manifestHeight": 6886,
+    "sourceWidth": 4591,
+    "sourceHeight": 6886,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 48,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_9301.jpg",
+    "sourceName": "DSC_9301.jpg",
+    "manifestWidth": 8256,
+    "manifestHeight": 5504,
+    "sourceWidth": 8256,
+    "sourceHeight": 5504,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 49,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\FB_IMG_1590634206449.jpg",
+    "sourceName": "FB_IMG_1590634206449.jpg",
+    "manifestWidth": 1080,
+    "manifestHeight": 720,
+    "sourceWidth": 1080,
+    "sourceHeight": 720,
+    "matchesManifest": true
+  },
+  {
+    "portfolioNumber": 50,
+    "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\untitled-1-6.jpg",
+    "sourceName": "untitled-1-6.jpg",
+    "manifestWidth": 5504,
+    "manifestHeight": 8256,
+    "sourceWidth": 5504,
+    "sourceHeight": 8256,
+    "matchesManifest": true
   }
 ]

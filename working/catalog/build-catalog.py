@@ -147,11 +147,32 @@ def tiedye_row(item=None):
     }
 
 
+def sketch_row(item):
+    return {
+        "id": item["id"],
+        "name": item["title"],
+        "category": "sketchbook",
+        "images": image_list(item["display"], item["thumbnail"], item["enlarged"]),
+        "description": item["story"],
+        "materials_and_sizes": "Digital artwork. Not a photography print. Price is not published.",
+        "retail_price": "",
+        "supplier_cost": "",
+        "shipping_estimate": "",
+        "availability": "inquiry",
+        "inquiry_or_external_link": "/contact/?topic=custom&piece=" + quote(item["title"]),
+        "display_width": item["displayWidth"],
+        "display_height": item["displayHeight"],
+        "thumb_width": item["thumbnailWidth"],
+        "thumb_height": item["thumbnailHeight"],
+    }
+
+
 def products():
     rows = [photo_row(item) for item in PHOTO["photographs"]]
     rows.extend(coaster_row(item) for item in PHOTO["coasters"])
     rows.append(tiedye_row())
     rows.extend(tiedye_row(item) for item in PHOTO.get("tieDye", []))
+    rows.extend(sketch_row(item) for item in PHOTO.get("sketchbook", []))
     return rows
 
 

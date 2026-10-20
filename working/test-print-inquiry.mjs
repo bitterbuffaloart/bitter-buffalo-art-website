@@ -50,7 +50,7 @@ function expected(photo, productId, size) {
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
-  assert.equal(catalog.photographs.length, 44);
+  assert.equal(catalog.photographs.length, 50);
   assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
@@ -113,11 +113,17 @@ test("every photograph keeps its measured sizes, price, and page", () => {
   assert.equal(quoteText("bb-photo-10", "canvas-floating-15", "16x24"), "Request a quote.");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 1).title, "Stormborn Grand Tetons");
   assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 14).id, "bb-photo-45");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 45).id, "bb-photo-46");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 45).title, "Where the Mountains Catch Fire");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 50).id, "bb-photo-51");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 50).title, "The Long Fall Home");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 51), undefined);
+  assert.match(catalog.photographs.find((photo) => photo.portfolioNumber === 48).story, /the other's antlers/);
 });
 
 test("gallery links each photograph to its own inquiry page", () => {
   const photos = products.products.filter((product) => product.category === "photography prints");
-  assert.equal(photos.length, 44);
+  assert.equal(photos.length, 50);
   assert.deepEqual(
     photos.map((product) => product.inquiry_or_external_link),
     catalog.photographs.map((photo) => photo.url),

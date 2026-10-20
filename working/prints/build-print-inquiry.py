@@ -438,6 +438,8 @@ def main():
             extra.append("<p>This photograph stays 16:9. It is not cropped to 3:2. No price is published. It needs its own compatible custom print size.</p>")
         if item.get("highResolutionMaster") == "missing":
             extra.append("<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>")
+        if not (item.get("story") or "").strip():
+            extra.append("<p>No previously written story is on file for this photograph.</p>")
         if number == 26 and item.get("alternate", {}).get("present"):
             extra.append("<p>The color image is the photograph on this page. The black-and-white export is an alternate, not a separate photograph.</p>")
         photographs.append({
@@ -459,8 +461,8 @@ def main():
             "printHolds": holds,
             "sizes": sizes,
         })
-    if len(photographs) != 44:
-        raise SystemExit(f"expected 44 photographs, found {len(photographs)}")
+    if len(photographs) != 50:
+        raise SystemExit(f"expected 50 photographs, found {len(photographs)}")
     payload = {
         "products": list(PRODUCTS),
         "omittedFamilies": list(OMITTED),

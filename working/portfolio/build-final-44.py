@@ -1,5 +1,7 @@
-"""Build the 44-photograph manifest and web derivatives.
+"""Build the photograph manifest and web derivatives.
 
+Positions 1–44 stay in place. Positions 45–50 are added after them.
+Photograph 51 is a comparison only and is not published.
 Originals are measured and never overwritten. Web JPEGs are separate files.
 A reduced source is not treated as a high-resolution print master.
 """
@@ -81,7 +83,14 @@ STORIES = {
     42: ("The Night Keeps Watch", "Stars gather above the dark forest while light picks out weathered boards and a pale ribbon of falling water. The structure takes on a quieter presence after dark. Above the river's movement, the sky opens wide."),
     43: ("Embers Above the Desert", "Red towers rise from a shadowed valley while distant snow-covered peaks catch a soft, fiery glow. Long bands of cloud stretch overhead. For a moment, desert stone and winter snow share the same warmth."),
     44: ("When the Work Was Done", "An old hay rake rests beside a fence beneath an enormous blue sky. Curved teeth and open wheels stand against a meadow reaching toward wooded hills. The machinery has gone quiet; the land still gives the eye somewhere to travel."),
+    45: ("Where the Mountains Catch Fire", "The last light sets the clouds ablaze above a rugged mountain skyline. Gold spills across the autumn forest while the valley settles into shadow. For a few fleeting moments, the mountains seem to hold the fire of the sky before surrendering it to the night."),
+    46: ("The River Knows the Way", "The river winds between towering stone and darkening woodland, carrying the last light through the canyon. Ancient cliffs rise above its quiet current, their weathered faces catching the warmth of the sun. The mountains stand their ground, but the water has always known the way forward."),
+    47: ("Where the Canyon Opens", "Deep within the red sandstone, water spills past a weathered ladder into a narrow pool. The canyon walls tower overhead, carved and polished by countless seasons of moving water. Here, the journey is written in stone, and the next passage waits beyond the falling water."),
+    48: ("Where Silence Has Antlers", "Two elk stand against a pale and nearly empty sky, their dark silhouettes rising from the grassy hillside. One lowers its head while the other's antlers reach into the open air. Nothing in the scene needs to move for the wildness of the moment to be felt."),
+    49: ("Little Flame in the Meadow", "A young fox sits among grasses and scattered purple flowers, its bright eyes watching from the edge of the woodland. Soft light finds the little hunter while the forest fades into shadow. In a world of towering mountains and powerful wildlife, sometimes the smallest creature carries the greatest wonder."),
+    50: ("The Long Fall Home", "Cold mountain water descends through a narrow passage of granite, gathering into a clear pool among weathered stones. Pine trees hold their places above the falls while the current continues its long journey downstream. Stone may shape the path, but water always finds its way home."),
 }
+SKETCH_STORY = "Color folds into color in a mirrored world of electric yellow, green, violet, and fire. Shapes emerge, divide, and return to the center, creating a vision that seems to change with every glance. What first appears as chaos becomes a dance of reflection, symmetry, and possibility."
 
 SOURCES = {
     5: Path(r"K:\2015\Bryce Canyon 2015-10-12\DSC_2475-HDR-Pano-2-Edit.tif"),
@@ -99,7 +108,16 @@ SOURCES = {
     42: PORTFOLIO / "DSC_7977 copy.jpg",
     43: PORTFOLIO / "DSC_6015.jpg",
     44: PORTFOLIO / "DSC_9389.jpg",
+    45: PORTFOLIO / "DSC_0604.jpg",
+    46: PORTFOLIO / "DSC_5269.jpg",
+    47: PORTFOLIO / "DSC_5424-Edit-Edit-2.jpg",
+    48: PORTFOLIO / "DSC_9301.jpg",
+    49: PORTFOLIO / "FB_IMG_1590634206449.jpg",
+    50: PORTFOLIO / "untitled-1-6.jpg",
 }
+SKETCH_SOURCE = PORTFOLIO / "Untitled-art.jpg"
+SKETCH_OUT = ROOT / "cloudflare-pages" / "assets" / "images" / "sketchbook"
+DISPLAYED = 50
 
 
 def slug(title, number):
@@ -112,7 +130,16 @@ def slug(title, number):
 def permanent_id(number):
     if number == 14:
         return "bb-photo-45"
-    return f"bb-photo-{number:02d}"
+    # bb-photo-45 is the bison at position 14. New positions get the next free ids.
+    added = {
+        45: "bb-photo-46",
+        46: "bb-photo-47",
+        47: "bb-photo-48",
+        48: "bb-photo-49",
+        49: "bb-photo-50",
+        50: "bb-photo-51",
+    }
+    return added.get(number, f"bb-photo-{number:02d}")
 
 
 def measure(path):
@@ -137,9 +164,61 @@ def write_fit(image, path, edge, quality):
     return copy.width, copy.height
 
 
+def sketchbook_record(current):
+    if not SKETCH_SOURCE.is_file():
+        raise SystemExit(f"missing sketchbook source {SKETCH_SOURCE.name}")
+    image = measure(SKETCH_SOURCE)
+    previous = next((item for item in current.get("sketchbook") or [] if item.get("id") == "bb-sketch-01"), None)
+    files_ready = all((SKETCH_OUT / name).is_file() for name in (
+        "the-color-between-worlds.jpg",
+        "thumbs/the-color-between-worlds.jpg",
+        "large/the-color-between-worlds.jpg",
+    ))
+    unchanged = (
+        previous is not None
+        and previous.get("sourcePath") == str(SKETCH_SOURCE)
+        and (image.width, image.height) == (previous.get("sourceWidth"), previous.get("sourceHeight"))
+        and files_ready
+    )
+    if unchanged:
+        display_w = previous["displayWidth"]
+        display_h = previous["displayHeight"]
+        thumb_w = previous["thumbnailWidth"]
+        thumb_h = previous["thumbnailHeight"]
+        large_w = previous["enlargedWidth"]
+        large_h = previous["enlargedHeight"]
+    else:
+        display_w, display_h = write_fit(image, SKETCH_OUT / "the-color-between-worlds.jpg", 1600, 86)
+        thumb_w, thumb_h = write_fit(image, SKETCH_OUT / "thumbs" / "the-color-between-worlds.jpg", 480, 80)
+        large_w, large_h = write_fit(image, SKETCH_OUT / "large" / "the-color-between-worlds.jpg", 2400, 88)
+    return {
+        "id": "bb-sketch-01",
+        "title": "The Color Between Worlds",
+        "story": SKETCH_STORY,
+        "category": "Sketchbook/Digital Art",
+        "sourcePath": str(SKETCH_SOURCE),
+        "sourceFilename": SKETCH_SOURCE.name,
+        "sourceWidth": image.width,
+        "sourceHeight": image.height,
+        "display": "/assets/images/sketchbook/the-color-between-worlds.jpg",
+        "displayWidth": display_w,
+        "displayHeight": display_h,
+        "thumbnail": "/assets/images/sketchbook/thumbs/the-color-between-worlds.jpg",
+        "thumbnailWidth": thumb_w,
+        "thumbnailHeight": thumb_h,
+        "enlarged": "/assets/images/sketchbook/large/the-color-between-worlds.jpg",
+        "enlargedWidth": large_w,
+        "enlargedHeight": large_h,
+        "printMasterIsWebJpeg": False,
+    }
+
+
 def main():
-    if set(STORIES) != set(range(1, 45)):
-        raise SystemExit("stories must be positions 1 through 44")
+    if set(STORIES) != set(range(1, DISPLAYED + 1)):
+        raise SystemExit(f"stories must be positions 1 through {DISPLAYED}")
+    for number, (_title, story) in STORIES.items():
+        if not story.strip():
+            raise SystemExit(f"story missing for #{number}")
     current = json.loads(MANIFEST.read_text(encoding="utf-8"))
     by_number = {item["portfolioNumber"]: item for item in current["photographs"]}
     archived = current.get("archived") or []
@@ -165,7 +244,7 @@ def main():
 
     photographs = []
     redirects = []
-    for number in range(1, 45):
+    for number in range(1, DISPLAYED + 1):
         title, story = STORIES[number]
         if number in SOURCES:
             source = SOURCES[number]
@@ -258,8 +337,11 @@ def main():
     names = [Path(item["sourcePath"]).name for item in photographs]
     if len(names) != len(set(names)):
         raise SystemExit("duplicate source filename")
+    if len(photographs) != DISPLAYED:
+        raise SystemExit(f"expected {DISPLAYED} photographs")
+    sketchbook = [sketchbook_record(current)]
     payload = {
-        "displayed": 44,
+        "displayed": DISPLAYED,
         "photographs": photographs,
         "archived": [{
             "permanentId": "bb-photo-14",
@@ -275,6 +357,7 @@ def main():
         "reservedExcluded": sorted(RESERVED),
         "coasters": current.get("coasters", []),
         "tieDye": current.get("tieDye", []),
+        "sketchbook": sketchbook,
     }
     MANIFEST.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     lines = REDIRECTS.read_text(encoding="utf-8").splitlines()
@@ -283,7 +366,7 @@ def main():
         if rule not in lines:
             lines.append(rule)
     REDIRECTS.write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"photographs={len(photographs)} redirects={len(redirects)} archived=bb-photo-14")
+    print(f"photographs={len(photographs)} sketchbook={len(sketchbook)} redirects={len(redirects)} archived=bb-photo-14")
 
 
 if __name__ == "__main__":

@@ -37,7 +37,7 @@ def check(root, base=None):
     for product in catalog['products']:
         if product.get('category')=='photography prints':
             numbers.update(re.findall(r'portfolio/(?:thumbs/|large/)?(\d+)\.jpg', product.get('images','')))
-    if numbers!={f'{n:02}' for n in range(1,45)}: errors.append('Portfolio must contain exactly 44 photographs')
+    if numbers!={f'{n:02}' for n in range(1,51)}: errors.append('Portfolio must contain exactly 50 photographs')
     if 'data-catalog-grid' not in photo: errors.append('Photography gallery is not connected to the catalog')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')
