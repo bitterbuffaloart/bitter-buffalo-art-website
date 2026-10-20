@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grand Tetons Floating-Frame Canvas | Bitter Buffalo Art</title>
-  <meta name="description" content="Grand Tetons fine-art floating-frame canvas by Bitter Buffalo Art. Three 1.5-inch sizes. Live payment and production fulfillment are not turned on." />
+  <title>Grand Tetons print inquiry | Bitter Buffalo Art</title>
+  <meta name="description" content="Grand Tetons print inquiry. Choose a verified product and size. This page does not take payment." />
   <meta name="robots" content="noindex" />
   <meta name="theme-color" content="#2D2418" />
   <link rel="canonical" href="https://bitterbuffaloart.com/photography/prints/grand-tetons/" />
   <meta property="og:site_name" content="Bitter Buffalo Art" />
-  <meta property="og:title" content="Grand Tetons Floating-Frame Canvas | Bitter Buffalo Art" />
-  <meta property="og:description" content="Grand Tetons premium 1.5-inch floating-frame canvas. The confirmed 16×24 retail is $199.33. Live checkout is off." />
+  <meta property="og:title" content="Grand Tetons print inquiry | Bitter Buffalo Art" />
+  <meta property="og:description" content="Grand Tetons print inquiry. This page does not take payment." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bitterbuffaloart.com/photography/prints/grand-tetons/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../../../assets/css/site.css" />
 </head>
-<body>
+<body data-photograph-id="bb-photo-01" data-photograph-title="Grand Tetons">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header__inner">
@@ -48,57 +48,48 @@
     <section class="page-hero">
       <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Fine Art Photography · #01</span></p>
       <h1>Grand Tetons</h1>
-      <p class="lede">Premium 1.5-inch floating-frame canvas of the approved Grand Tetons photograph. This page shows the confirmed 16×24 price and an inquiry path. It does not take payment.</p>
+      <p class="lede">Choose a print product and a size for this photograph. This page does not take payment.</p>
     </section>
-    <section class="print-product">
-      <figure class="print-product__photo">
+    <section class="print-inquiry">
+      <figure class="print-inquiry__photo">
         <img src="../../../assets/images/portfolio/01.jpg" alt="Grand Tetons" width="1400" height="933" />
         <figcaption>Website preview of Grand Tetons. This JPEG is not the print file.</figcaption>
       </figure>
-      <div class="print-product__buy">
-        <h2>Size</h2>
-        <form id="print-order" action="../../../contact/" method="get">
-          <fieldset class="size-choices">
-            <legend class="visually-hidden">Choose one floating-frame size</legend>
-            <label class="size-choice">
-              <input type="radio" name="configurationId" value="bb-photo-01-12x18-canvas-15" />
-              <span class="size-choice__label">12×18</span>
-              <span class="size-choice__price">Price not verified</span>
-              <span class="size-choice__note">Verified 3:2 canvas size. Retail is not confirmed, so this size is not for sale.</span>
-            </label>
-            <label class="size-choice">
-              <input type="radio" name="configurationId" value="bb-photo-01-16x24-canvas-15" data-retail-cents="19933" checked />
-              <span class="size-choice__label">16×24</span>
-              <span class="size-choice__price">$199.33</span>
-              <span class="size-choice__note">Confirmed retail. Sale stays closed until shipping, fees, tax, and the LumaPrints options are verified.</span>
-            </label>
-            <label class="size-choice">
-              <input type="radio" name="configurationId" value="bb-photo-01-20x30-canvas-15" />
-              <span class="size-choice__label">20×30</span>
-              <span class="size-choice__price">Price not verified</span>
-              <span class="size-choice__note">Verified 3:2 canvas size. This file is below 200 ppi at 20×30, and the retail is not confirmed.</span>
-            </label>
-          </fieldset>
-          <p id="print-price" class="print-price">16×24 · $199.33</p>
-          <a class="btn btn--solid-ink" id="print-buy" href="../../../contact/?topic=print&amp;piece=Grand%20Tetons&amp;size=16%C3%9724">Inquire about this print</a>
-          <p id="print-result" class="print-result" role="status"></p>
-        </form>
-        <h2>Floating frame</h2>
-        <ul class="checklist">
-          <li>Premium 1.5-inch floating-frame canvas</li>
-          <li>Frame finish and frame choice are not verified</li>
-          <li>Foamcore, backing, and hanging wire are not verified</li>
-        </ul>
-        <h2>Shipping</h2>
-        <p>Shipping cost is not verified and is not published. This page does not take payment.</p>
-        <h2>Other materials</h2>
-        <p>Metal, acrylic, giclée, and custom sizes are not offered for purchase here. <a href="../../../contact/">Send an inquiry</a>.</p>
-      </div>
+      <form id="print-inquiry" class="bb-form print-inquiry__form" data-bb-form="general" data-print-inquiry method="post" action="/api/contact" accept-charset="UTF-8" novalidate>
+        <input type="hidden" name="form_kind" value="general" />
+        <input type="hidden" name="contact[Subject]" value="Print inquiry" />
+        <input type="hidden" name="contact[photograph_title]" value="" />
+        <input type="hidden" name="contact[catalog_id]" value="" />
+        <input type="hidden" name="contact[print_product]" value="" />
+        <input type="hidden" name="contact[print_size]" value="" />
+        <input type="hidden" name="contact[price_or_quote]" value="" />
+        <input type="hidden" name="contact[body]" value="" />
+        <label class="hp" aria-hidden="true">Company website<input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        <label for="print-product">Print product</label>
+        <select id="print-product" name="print-product" required>
+          <option value="">Select a product</option><option value="canvas-floating-15">Premium 1.5-inch floating-frame canvas</option><option value="canvas-15">1.5-inch canvas</option>
+        </select>
+        <label for="print-size">Size</label>
+        <select id="print-size" name="print-size" required disabled>
+          <option value="">Select a size</option><option value="canvas-floating-15:12x18" data-product="canvas-floating-15" data-size="12x18" data-label="12×18" data-status="quote">12×18</option><option value="canvas-floating-15:16x24" data-product="canvas-floating-15" data-size="16x24" data-label="16×24" data-status="priced">16×24</option><option value="canvas-floating-15:20x30" data-product="canvas-floating-15" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (on hold)</option><option value="canvas-15:12x18" data-product="canvas-15" data-size="12x18" data-label="12×18" data-status="quote">12×18</option><option value="canvas-15:16x24" data-product="canvas-15" data-size="16x24" data-label="16×24" data-status="quote">16×24</option><option value="canvas-15:20x30" data-product="canvas-15" data-size="20x30" data-label="20×30" data-status="hold" disabled>20×30 (on hold)</option>
+        </select>
+        <p id="print-price" class="print-price" aria-live="polite"></p>
+        <p>The only approved retail price is Grand Tetons, 16×24, premium 1.5-inch floating-frame canvas, at $199.33. Every other product and size on this page is a quote request. 20×30 stays on hold.</p>
+        <label for="print-name">Full name</label>
+        <input id="print-name" name="contact[name]" required autocomplete="name" />
+        <label for="print-email">Email address</label>
+        <input id="print-email" type="email" name="contact[email]" required autocomplete="email" />
+        <label for="print-message">Message</label>
+        <textarea id="print-message" name="contact[visitor_message]" rows="5" required></textarea>
+        <button class="btn btn--solid-ink" type="submit">Send print inquiry</button>
+        <p data-bb-form-status role="status" hidden></p>
+        <noscript><p>Nothing has been sent. JavaScript is required to choose a product and size before an inquiry can be sent.</p></noscript>
+      </form>
     </section>
     <section class="prose formats-block">
       <h2>About this photograph</h2>
-      <p>Grand Tetons is photograph #01 in the Final 33 portfolio. The source file is DSC_2626, 5746×3831 pixels, in the same 3:2 proportion as these canvas sizes. The print is not cropped into a different shape.</p>
-      <p>A separate artist statement has not been recorded for this photograph.</p>
+      <p>Source file 01 - DSC_2626-Edit-no water mark.jpg, 5746×3831 pixels, landscape, aspect 1.4999. The preview keeps that full composition. No crop is applied.</p>
+      <p>Pixel proportion 5746:3831. Canvas sizes that do not match this proportion are omitted.</p>
       <p><a href="../../">Back to the portfolio</a></p>
     </section>
   </main>
@@ -125,13 +116,12 @@
         <ul>
           <li><a href="../../../custom/">Custom Art</a></li>
           <li><a href="../../../contact/">Contact</a></li>
-          <li><a href="../../../contact/?topic=print&amp;piece=Grand%20Tetons">Print inquiry</a></li>
         </ul>
       </div>
     </div>
-    <p class="site-footer__note">This floating-frame page does not take payment. Photographs are not sold on Etsy.</p>
+    <p class="site-footer__note">This page does not take payment. Photographs are not sold on Etsy.</p>
   </footer>
+  <script type="module" src="../../../assets/js/print-inquiry.js"></script>
   <script src="../../../assets/js/site.js"></script>
-  <script src="../../../assets/js/print-product.js"></script>
 </body>
 </html>

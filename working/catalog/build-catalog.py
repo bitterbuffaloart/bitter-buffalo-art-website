@@ -1,6 +1,7 @@
 """Build the editable catalog from verified manifests. Does not invent prices."""
 import csv
 import json
+import re
 from pathlib import Path
 from urllib.parse import quote
 
@@ -28,6 +29,13 @@ def inquiry(piece):
     return "/contact/?topic=print&piece=" + quote(piece)
 
 
+def print_slug(title, number):
+    if number == 1:
+        return "grand-tetons"
+    text = title.lower().replace("'", "").replace("’", "")
+    return re.sub(r"[^a-z0-9]+", "-", text).strip("-")
+
+
 def image_list(display, thumb, enlarged):
     return "|".join([thumb, display, enlarged])
 
@@ -53,7 +61,7 @@ def photo_row(item):
             materials += " Recorded hold: " + holds.replace("|", "; ") + "."
         retail = ""
         availability = "inquiry"
-        link = inquiry(name)
+        link = f"/photography/prints/{print_slug(name, number)}/"
         description = f"Portfolio photograph #{number:02d}. Inquire to ask about a print. No checkout on this website."
     return {
         "id": f"bb-photo-{number:02d}",

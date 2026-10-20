@@ -6,12 +6,16 @@
       "category": "photography prints",
       "images": "/assets/images/portfolio/thumbs/01.jpg|/assets/images/portfolio/01.jpg|/assets/images/portfolio/large/01.jpg",
       "description": "Portfolio photograph #01, DSC_2626. Floating-frame canvas. Inquire to order. No checkout on this website.",
-      "materials_and_sizes": "Premium 1.5-inch floating-frame canvas. 12×18: price not published. 16×24: $199.33. 20×30: on hold, below 200 ppi.",
+      "materials_and_sizes": "Premium 1.5-inch floating-frame canvas. 12\u00d718: price not published. 16\u00d724: $199.33. 20\u00d730: on hold, below 200 ppi.",
       "retail_price": "199.33",
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/photography/prints/grand-tetons/"
+      "inquiry_or_external_link": "/photography/prints/grand-tetons/",
+      "display_width": 1400,
+      "display_height": 933,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-02",
@@ -24,7 +28,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Maroon%20Bells%20reflection"
+      "inquiry_or_external_link": "/photography/prints/maroon-bells-reflection/",
+      "display_width": 1400,
+      "display_height": 933,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-03",
@@ -37,7 +45,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Horseshoe%20Bend"
+      "inquiry_or_external_link": "/photography/prints/horseshoe-bend/",
+      "display_width": 1600,
+      "display_height": 1086,
+      "thumb_width": 480,
+      "thumb_height": 326
     },
     {
       "id": "bb-photo-04",
@@ -50,7 +62,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Mesa%20Arch%20sunrise"
+      "inquiry_or_external_link": "/photography/prints/mesa-arch-sunrise/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-05",
@@ -63,7 +79,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Zion%20river"
+      "inquiry_or_external_link": "/photography/prints/zion-river/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-06",
@@ -76,7 +96,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Teton%20reflection"
+      "inquiry_or_external_link": "/photography/prints/teton-reflection/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-07",
@@ -89,7 +113,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Autumn%20Range%20Panorama"
+      "inquiry_or_external_link": "/photography/prints/autumn-range-panorama/",
+      "display_width": 1600,
+      "display_height": 989,
+      "thumb_width": 480,
+      "thumb_height": 297
     },
     {
       "id": "bb-photo-08",
@@ -102,7 +130,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Canyon%20Sunstar"
+      "inquiry_or_external_link": "/photography/prints/canyon-sunstar/",
+      "display_width": 1600,
+      "display_height": 533,
+      "thumb_width": 480,
+      "thumb_height": 160
     },
     {
       "id": "bb-photo-09",
@@ -115,7 +147,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Miner%27s%20Exchange"
+      "inquiry_or_external_link": "/photography/prints/miners-exchange/",
+      "display_width": 1400,
+      "display_height": 933,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-10",
@@ -128,7 +164,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Solitude%20%28High%20Country%29"
+      "inquiry_or_external_link": "/photography/prints/solitude-high-country/",
+      "display_width": 1400,
+      "display_height": 788,
+      "thumb_width": 480,
+      "thumb_height": 270
     },
     {
       "id": "bb-photo-11",
@@ -141,7 +181,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Bull%20elk"
+      "inquiry_or_external_link": "/photography/prints/bull-elk/",
+      "display_width": 1400,
+      "display_height": 933,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-12",
@@ -154,7 +198,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Mountain%20Goat%20and%20Kid"
+      "inquiry_or_external_link": "/photography/prints/mountain-goat-and-kid/",
+      "display_width": 1600,
+      "display_height": 1169,
+      "thumb_width": 480,
+      "thumb_height": 351
     },
     {
       "id": "bb-photo-13",
@@ -167,7 +215,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Sandhill%20cranes"
+      "inquiry_or_external_link": "/photography/prints/sandhill-cranes/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-14",
@@ -180,7 +232,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Horse%20portrait"
+      "inquiry_or_external_link": "/photography/prints/horse-portrait/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-15",
@@ -193,7 +249,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Tractor"
+      "inquiry_or_external_link": "/photography/prints/tractor/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-16",
@@ -206,7 +266,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Waterfall"
+      "inquiry_or_external_link": "/photography/prints/waterfall/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-17",
@@ -219,7 +283,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Star%20trails%20over%20the%20lake"
+      "inquiry_or_external_link": "/photography/prints/star-trails-over-the-lake/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-18",
@@ -232,7 +300,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Shiprock%20star%20trails"
+      "inquiry_or_external_link": "/photography/prints/shiprock-star-trails/",
+      "display_width": 1400,
+      "display_height": 935,
+      "thumb_width": 480,
+      "thumb_height": 321
     },
     {
       "id": "bb-photo-19",
@@ -245,7 +317,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Snow%20cabins"
+      "inquiry_or_external_link": "/photography/prints/snow-cabins/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-20",
@@ -258,7 +334,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Storm%20over%20the%20yellow%20house"
+      "inquiry_or_external_link": "/photography/prints/storm-over-the-yellow-house/",
+      "display_width": 1600,
+      "display_height": 1066,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-21",
@@ -271,7 +351,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Into%20The%20Mist"
+      "inquiry_or_external_link": "/photography/prints/into-the-mist/",
+      "display_width": 1400,
+      "display_height": 935,
+      "thumb_width": 480,
+      "thumb_height": 321
     },
     {
       "id": "bb-photo-22",
@@ -284,7 +368,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Mining%20dredge"
+      "inquiry_or_external_link": "/photography/prints/mining-dredge/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-23",
@@ -297,7 +385,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Mountain%20Gas%20Station"
+      "inquiry_or_external_link": "/photography/prints/mountain-gas-station/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-24",
@@ -310,7 +402,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Aspen%20valley"
+      "inquiry_or_external_link": "/photography/prints/aspen-valley/",
+      "display_width": 1400,
+      "display_height": 935,
+      "thumb_width": 480,
+      "thumb_height": 321
     },
     {
       "id": "bb-photo-25",
@@ -323,7 +419,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Cabin%20at%20sunset"
+      "inquiry_or_external_link": "/photography/prints/cabin-at-sunset/",
+      "display_width": 1600,
+      "display_height": 1067,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-photo-26",
@@ -336,7 +436,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Locomotive"
+      "inquiry_or_external_link": "/photography/prints/locomotive/",
+      "display_width": 1067,
+      "display_height": 1600,
+      "thumb_width": 320,
+      "thumb_height": 480
     },
     {
       "id": "bb-photo-27",
@@ -349,7 +453,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Weathered%20Caboose%20in%20Winter"
+      "inquiry_or_external_link": "/photography/prints/weathered-caboose-in-winter/",
+      "display_width": 1600,
+      "display_height": 1036,
+      "thumb_width": 480,
+      "thumb_height": 311
     },
     {
       "id": "bb-photo-28",
@@ -362,7 +470,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Barn%20and%20Tetons"
+      "inquiry_or_external_link": "/photography/prints/barn-and-tetons/",
+      "display_width": 1600,
+      "display_height": 698,
+      "thumb_width": 480,
+      "thumb_height": 209
     },
     {
       "id": "bb-photo-29",
@@ -375,7 +487,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Wooden%20chapel"
+      "inquiry_or_external_link": "/photography/prints/wooden-chapel/",
+      "display_width": 1600,
+      "display_height": 765,
+      "thumb_width": 480,
+      "thumb_height": 229
     },
     {
       "id": "bb-photo-30",
@@ -388,7 +504,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Wildflower%20Range%20Panorama"
+      "inquiry_or_external_link": "/photography/prints/wildflower-range-panorama/",
+      "display_width": 1400,
+      "display_height": 467,
+      "thumb_width": 480,
+      "thumb_height": 160
     },
     {
       "id": "bb-photo-31",
@@ -401,7 +521,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Wild%20Iris%20at%20Dusk"
+      "inquiry_or_external_link": "/photography/prints/wild-iris-at-dusk/",
+      "display_width": 933,
+      "display_height": 1400,
+      "thumb_width": 320,
+      "thumb_height": 480
     },
     {
       "id": "bb-photo-32",
@@ -414,7 +538,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Autumn%20Valley%20After%20the%20Storm"
+      "inquiry_or_external_link": "/photography/prints/autumn-valley-after-the-storm/",
+      "display_width": 1400,
+      "display_height": 672,
+      "thumb_width": 480,
+      "thumb_height": 230
     },
     {
       "id": "bb-photo-33",
@@ -427,7 +555,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=print&piece=Main%20Street%2C%20Still%20Standing"
+      "inquiry_or_external_link": "/photography/prints/main-street-still-standing/",
+      "display_width": 1600,
+      "display_height": 1066,
+      "thumb_width": 480,
+      "thumb_height": 320
     },
     {
       "id": "bb-01-coaster-4pc-001",
@@ -440,7 +572,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=01%20COASTER-4PC-001"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=01%20COASTER-4PC-001",
+      "display_width": 1200,
+      "display_height": 1600,
+      "thumb_width": 360,
+      "thumb_height": 480
     },
     {
       "id": "bb-02-coaster-4pc-002",
@@ -453,7 +589,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=02%20COASTER-4PC-002"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=02%20COASTER-4PC-002",
+      "display_width": 1600,
+      "display_height": 1200,
+      "thumb_width": 480,
+      "thumb_height": 360
     },
     {
       "id": "bb-03-coaster-4pc-003",
@@ -466,7 +606,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=03%20COASTER-4PC-003"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=03%20COASTER-4PC-003",
+      "display_width": 1600,
+      "display_height": 1200,
+      "thumb_width": 480,
+      "thumb_height": 360
     },
     {
       "id": "bb-04-coaster-5pc-001",
@@ -479,7 +623,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=04%20COASTER-5PC-001"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=04%20COASTER-5PC-001",
+      "display_width": 1200,
+      "display_height": 1600,
+      "thumb_width": 360,
+      "thumb_height": 480
     },
     {
       "id": "bb-05-coaster-4pc-004",
@@ -492,7 +640,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=05%20COASTER-4PC-004"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=05%20COASTER-4PC-004",
+      "display_width": 1200,
+      "display_height": 1600,
+      "thumb_width": 360,
+      "thumb_height": 480
     },
     {
       "id": "bb-06-coaster-4pc-005",
@@ -505,7 +657,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=06%20COASTER-4PC-005"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=06%20COASTER-4PC-005",
+      "display_width": 1200,
+      "display_height": 1600,
+      "thumb_width": 360,
+      "thumb_height": 480
     },
     {
       "id": "bb-07-coaster-4pc-006",
@@ -518,7 +674,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=07%20COASTER-4PC-006"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=07%20COASTER-4PC-006",
+      "display_width": 1600,
+      "display_height": 1200,
+      "thumb_width": 480,
+      "thumb_height": 360
     },
     {
       "id": "bb-08-coaster-4pc-007",
@@ -531,7 +691,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "/contact/?topic=laser&piece=08%20COASTER-4PC-007"
+      "inquiry_or_external_link": "/contact/?topic=laser&piece=08%20COASTER-4PC-007",
+      "display_width": 1200,
+      "display_height": 1600,
+      "thumb_width": 360,
+      "thumb_height": 480
     },
     {
       "id": "bb-tiedye-earth-tones",
@@ -544,7 +708,11 @@
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
-      "inquiry_or_external_link": "https://www.etsy.com/shop/BitterBuffaloArt"
+      "inquiry_or_external_link": "https://www.etsy.com/shop/BitterBuffaloArt",
+      "display_width": 1000,
+      "display_height": 1000,
+      "thumb_width": 1000,
+      "thumb_height": 1000
     }
   ]
 }

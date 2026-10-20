@@ -88,14 +88,15 @@ test("pilot catalog is one photograph and three canvas sizes", () => {
 
 test("page shows the confirmed price, three sizes, and no invented prices", () => {
   assert.equal(page.match(/<h1[ >]/g).length, 1);
-  assert.equal(page.match(/name="configurationId"/g).length, 3);
+  assert.match(page, /Select a product/);
   assert.match(page, /\$199\.33/);
   assert.match(page, /floating-frame canvas/);
-  assert.match(page, /<h2>Floating frame<\/h2>/);
+  assert.match(page, /1\.5-inch canvas/);
   assert.doesNotMatch(page, /stretched canvas|wood-stretched/i);
-  assert.match(page, /id="print-buy"/);
+  assert.doesNotMatch(page, /id="print-buy"|Buy<\/button>|action="\/api\/prints\/checkout"/);
   assert.doesNotMatch(page, /134\.99|224\.99|314\.99|299\.99/);
   assert.doesNotMatch(page, /us\.api\.lumaprints\.com|connect\.squareup\.com/);
+  assert.doesNotMatch(page, /etsy\.com/);
   for (const label of ["12×18", "16×24", "20×30"]) assert.match(page, new RegExp(label));
 });
 

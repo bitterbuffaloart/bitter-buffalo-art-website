@@ -1,0 +1,2314 @@
+{
+  "products": [
+    {
+      "id": "canvas-floating-15",
+      "name": "Premium 1.5-inch floating-frame canvas",
+      "family": "framed canvas",
+      "evidence": "Established sale configuration in the print catalog. Frame finish, frame choice, foamcore, backing, and wire are not verified, so this product has no finish dropdown."
+    },
+    {
+      "id": "canvas-15",
+      "name": "1.5-inch canvas",
+      "family": "1.5-inch canvas",
+      "evidence": "Prior sandbox quote for unframed subcategory 101003, 1.50in Stretched Canvas. That quote is evidence for the family only. It is not a published price and it is not the floating-frame sale product."
+    }
+  ],
+  "omittedFamilies": [
+    {
+      "name": "Traditional photographic paper",
+      "reason": "No verified supplier record in this repository."
+    },
+    {
+      "name": "Archival gicl\u00e9e fine-art paper",
+      "reason": "No verified supplier record in this repository."
+    },
+    {
+      "name": "Aluminum metal",
+      "reason": "No verified supplier record in this repository."
+    },
+    {
+      "name": "Acrylic face-mount",
+      "reason": "No verified supplier record in this repository."
+    },
+    {
+      "name": "Framed paper",
+      "reason": "No verified supplier record. Framed canvas is a separate family and is not framed paper."
+    }
+  ],
+  "supplierExample": null,
+  "approvedRetail": {
+    "photographId": "bb-photo-01",
+    "productId": "canvas-floating-15",
+    "sizeId": "16x24",
+    "text": "$199.33"
+  },
+  "photographs": [
+    {
+      "id": "bb-photo-01",
+      "portfolioNumber": 1,
+      "title": "Grand Tetons",
+      "slug": "grand-tetons",
+      "url": "/photography/prints/grand-tetons/",
+      "sourceName": "01 - DSC_2626-Edit-no water mark.jpg",
+      "sourceWidth": 5746,
+      "sourceHeight": 3831,
+      "aspectRatio": 1.4999,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/01.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "printHolds": "HOLD_20x30_below_200ppi",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 319.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "status": "priced",
+          "retail": "199.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 191.5,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 319.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 239.4,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 191.5,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-02",
+      "portfolioNumber": 2,
+      "title": "Maroon Bells reflection",
+      "slug": "maroon-bells-reflection",
+      "url": "/photography/prints/maroon-bells-reflection/",
+      "sourceName": "02_Maroon_Bells_DSC_7500-HDR.jpg",
+      "sourceWidth": 10800,
+      "sourceHeight": 7201,
+      "aspectRatio": 1.4998,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/02.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 600.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 360.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 600.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 450.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 360.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-03",
+      "portfolioNumber": 3,
+      "title": "Horseshoe Bend",
+      "slug": "horseshoe-bend",
+      "url": "/photography/prints/horseshoe-bend/",
+      "sourceName": "03 Horseshoe Bend.jpg",
+      "sourceWidth": 15105,
+      "sourceHeight": 10253,
+      "aspectRatio": 1.4732,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/03.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1086,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-04",
+      "portfolioNumber": 4,
+      "title": "Mesa Arch sunrise",
+      "slug": "mesa-arch-sunrise",
+      "url": "/photography/prints/mesa-arch-sunrise/",
+      "sourceName": "04 Mesa Arch sunrise.jpg",
+      "sourceWidth": 7500,
+      "sourceHeight": 5000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/04.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-05",
+      "portfolioNumber": 5,
+      "title": "Zion river",
+      "slug": "zion-river",
+      "url": "/photography/prints/zion-river/",
+      "sourceName": "05 Zion river.jpg",
+      "sourceWidth": 9001,
+      "sourceHeight": 6000,
+      "aspectRatio": 1.5002,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/05.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 500.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 300.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 500.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 375.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 300.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-06",
+      "portfolioNumber": 6,
+      "title": "Teton reflection",
+      "slug": "teton-reflection",
+      "url": "/photography/prints/teton-reflection/",
+      "sourceName": "06 Teton reflection.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/06.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-07",
+      "portfolioNumber": 7,
+      "title": "Autumn Range Panorama",
+      "slug": "autumn-range-panorama",
+      "url": "/photography/prints/autumn-range-panorama/",
+      "sourceName": "07 Autumn Range Panorama.jpg",
+      "sourceWidth": 11255,
+      "sourceHeight": 6956,
+      "aspectRatio": 1.618,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/07.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 989,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-08",
+      "portfolioNumber": 8,
+      "title": "Canyon Sunstar",
+      "slug": "canyon-sunstar",
+      "url": "/photography/prints/canyon-sunstar/",
+      "sourceName": "08 Canyon Sunstar.jpg",
+      "sourceWidth": 14400,
+      "sourceHeight": 4800,
+      "aspectRatio": 3.0,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/08.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 533,
+      "printHolds": "WIDE_PANORAMA_crop_needed_for_3x2|PANORAMA_SIZING_REVIEW|PANORAMA_SIZING_REVIEW_Canyon_Sunstar",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-09",
+      "portfolioNumber": 9,
+      "title": "Miner's Exchange",
+      "slug": "miners-exchange",
+      "url": "/photography/prints/miners-exchange/",
+      "sourceName": "09 - DSC_1677.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/09.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-10",
+      "portfolioNumber": 10,
+      "title": "Solitude (High Country)",
+      "slug": "solitude-high-country",
+      "url": "/photography/prints/solitude-high-country/",
+      "sourceName": "10 - DSC_0192-Edit-16x9-solitude .jpg",
+      "sourceWidth": 9000,
+      "sourceHeight": 5063,
+      "aspectRatio": 1.7776,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/10.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 788,
+      "printHolds": "SHARPNESS_OWNER_REVIEW_Solitude|SHARPNESS_OWNER_REVIEW_Solitude",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-11",
+      "portfolioNumber": 11,
+      "title": "Bull elk",
+      "slug": "bull-elk",
+      "url": "/photography/prints/bull-elk/",
+      "sourceName": "11 - DSC_9390.jpg",
+      "sourceWidth": 8256,
+      "sourceHeight": 5504,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/11.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "printHolds": "NOTE_second_elk_now_at_slot_21",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 275.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 275.2,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-12",
+      "portfolioNumber": 12,
+      "title": "Mountain Goat and Kid",
+      "slug": "mountain-goat-and-kid",
+      "url": "/photography/prints/mountain-goat-and-kid/",
+      "sourceName": "12 Mountain Goat and Kid.jpg",
+      "sourceWidth": 4916,
+      "sourceHeight": 3593,
+      "aspectRatio": 1.3682,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/12.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1169,
+      "printHolds": "HOLD_20x30_below_200ppi|HOLD_20x30_mountain_goat",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-13",
+      "portfolioNumber": 13,
+      "title": "Sandhill cranes",
+      "slug": "sandhill-cranes",
+      "url": "/photography/prints/sandhill-cranes/",
+      "sourceName": "13 Sandhill cranes.jpg",
+      "sourceWidth": 5760,
+      "sourceHeight": 3840,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/13.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "HOLD_20x30_below_200ppi",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 320.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 192.0,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 320.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 240.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 192.0,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-14",
+      "portfolioNumber": 14,
+      "title": "Horse portrait",
+      "slug": "horse-portrait",
+      "url": "/photography/prints/horse-portrait/",
+      "sourceName": "14 Horse portrait.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/14.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-15",
+      "portfolioNumber": 15,
+      "title": "Tractor",
+      "slug": "tractor",
+      "url": "/photography/prints/tractor/",
+      "sourceName": "15 Tractor.jpg",
+      "sourceWidth": 7500,
+      "sourceHeight": 5000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/15.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-16",
+      "portfolioNumber": 16,
+      "title": "Waterfall",
+      "slug": "waterfall",
+      "url": "/photography/prints/waterfall/",
+      "sourceName": "16 Waterfall.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/16.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-17",
+      "portfolioNumber": 17,
+      "title": "Star trails over the lake",
+      "slug": "star-trails-over-the-lake",
+      "url": "/photography/prints/star-trails-over-the-lake/",
+      "sourceName": "17 Star trails over the lake.jpg",
+      "sourceWidth": 7500,
+      "sourceHeight": 5001,
+      "aspectRatio": 1.4997,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/17.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 416.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 312.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-18",
+      "portfolioNumber": 18,
+      "title": "Shiprock star trails",
+      "slug": "shiprock-star-trails",
+      "url": "/photography/prints/shiprock-star-trails/",
+      "sourceName": "18 - DSC_9535-Edit-2.jpg",
+      "sourceWidth": 6016,
+      "sourceHeight": 4016,
+      "aspectRatio": 1.498,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/18.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 334.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 334.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.5,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-19",
+      "portfolioNumber": 19,
+      "title": "Snow cabins",
+      "slug": "snow-cabins",
+      "url": "/photography/prints/snow-cabins/",
+      "sourceName": "19 Snow cabins.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/19.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-20",
+      "portfolioNumber": 20,
+      "title": "Storm over the yellow house",
+      "slug": "storm-over-the-yellow-house",
+      "url": "/photography/prints/storm-over-the-yellow-house/",
+      "sourceName": "20 Storm over the yellow house.jpg",
+      "sourceWidth": 5982,
+      "sourceHeight": 3987,
+      "aspectRatio": 1.5004,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/20.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1066,
+      "printHolds": "HOLD_20x30_below_200ppi",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 332.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 199.4,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 332.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 199.4,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-21",
+      "portfolioNumber": 21,
+      "title": "Into The Mist",
+      "slug": "into-the-mist",
+      "url": "/photography/prints/into-the-mist/",
+      "sourceName": "21 - Into The Mist.jpg",
+      "sourceWidth": 7520,
+      "sourceHeight": 5020,
+      "aspectRatio": 1.498,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/21.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "printHolds": "SUBJECT_OVERLAP_elk_with_slot_11|SUBJECT_OVERLAP_elk_with_slot_11",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 417.8,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 417.8,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 313.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 250.7,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-22",
+      "portfolioNumber": 22,
+      "title": "Mining dredge",
+      "slug": "mining-dredge",
+      "url": "/photography/prints/mining-dredge/",
+      "sourceName": "22 Mining dredge.jpg",
+      "sourceWidth": 5949,
+      "sourceHeight": 3967,
+      "aspectRatio": 1.4996,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/22.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "HOLD_20x30_below_200ppi",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 330.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 198.3,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 330.5,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 247.9,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 198.3,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-23",
+      "portfolioNumber": 23,
+      "title": "Mountain Gas Station",
+      "slug": "mountain-gas-station",
+      "url": "/photography/prints/mountain-gas-station/",
+      "sourceName": "23 Mountain Gas Station.jpg",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/23.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-24",
+      "portfolioNumber": 24,
+      "title": "Aspen valley",
+      "slug": "aspen-valley",
+      "url": "/photography/prints/aspen-valley/",
+      "sourceName": "24 - DSC_0240_1-Edit-Edit.jpg",
+      "sourceWidth": 6034,
+      "sourceHeight": 4028,
+      "aspectRatio": 1.498,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/24.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 335.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 201.1,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 335.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 251.4,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 201.1,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-25",
+      "portfolioNumber": 25,
+      "title": "Cabin at sunset",
+      "slug": "cabin-at-sunset",
+      "url": "/photography/prints/cabin-at-sunset/",
+      "sourceName": "25 - DSC_6980-Edit-Edit.tif",
+      "sourceWidth": 6000,
+      "sourceHeight": 4000,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/25.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 250.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 200.0,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-26",
+      "portfolioNumber": 26,
+      "title": "Locomotive",
+      "slug": "locomotive",
+      "url": "/photography/prints/locomotive/",
+      "sourceName": "26 Locomotive.jpg",
+      "sourceWidth": 4886,
+      "sourceHeight": 7330,
+      "aspectRatio": 0.6666,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/26.jpg",
+      "displayWidth": 1067,
+      "displayHeight": 1600,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 407.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 244.3,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 407.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 305.4,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 244.3,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-27",
+      "portfolioNumber": 27,
+      "title": "Weathered Caboose in Winter",
+      "slug": "weathered-caboose-in-winter",
+      "url": "/photography/prints/weathered-caboose-in-winter/",
+      "sourceName": "27 Weathered Caboose in Winter.jpg",
+      "sourceWidth": 6264,
+      "sourceHeight": 4055,
+      "aspectRatio": 1.5448,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/27.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1036,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-28",
+      "portfolioNumber": 28,
+      "title": "Barn and Tetons",
+      "slug": "barn-and-tetons",
+      "url": "/photography/prints/barn-and-tetons/",
+      "sourceName": "28 Barn and Tetons.jpg",
+      "sourceWidth": 10800,
+      "sourceHeight": 4712,
+      "aspectRatio": 2.292,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/28.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 698,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-29",
+      "portfolioNumber": 29,
+      "title": "Wooden chapel",
+      "slug": "wooden-chapel",
+      "url": "/photography/prints/wooden-chapel/",
+      "sourceName": "29 Wooden chapel.jpg",
+      "sourceWidth": 7531,
+      "sourceHeight": 3600,
+      "aspectRatio": 2.0919,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/29.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 765,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-30",
+      "portfolioNumber": 30,
+      "title": "Wildflower Range Panorama",
+      "slug": "wildflower-range-panorama",
+      "url": "/photography/prints/wildflower-range-panorama/",
+      "sourceName": "30 - DSC_2138-Pano-2-Edit.jpg",
+      "sourceWidth": 20044,
+      "sourceHeight": 6681,
+      "aspectRatio": 3.0001,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/30.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 467,
+      "printHolds": "WIDE_PANORAMA_crop_needed_for_3x2",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-31",
+      "portfolioNumber": 31,
+      "title": "Wild Iris at Dusk",
+      "slug": "wild-iris-at-dusk",
+      "url": "/photography/prints/wild-iris-at-dusk/",
+      "sourceName": "31 - DSC_5166.jpg",
+      "sourceWidth": 5504,
+      "sourceHeight": 8256,
+      "aspectRatio": 0.6667,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/31.jpg",
+      "displayWidth": 933,
+      "displayHeight": 1400,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 275.2,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 275.2,
+          "status": "quote"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-32",
+      "portfolioNumber": 32,
+      "title": "Autumn Valley After the Storm",
+      "slug": "autumn-valley-after-the-storm",
+      "url": "/photography/prints/autumn-valley-after-the-storm/",
+      "sourceName": "32 - DSC_0168_1.jpg",
+      "sourceWidth": 11562,
+      "sourceHeight": 5551,
+      "aspectRatio": 2.0829,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/32.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 672,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-33",
+      "portfolioNumber": 33,
+      "title": "Main Street, Still Standing",
+      "slug": "main-street-still-standing",
+      "url": "/photography/prints/main-street-still-standing/",
+      "sourceName": "33 Main Street, Still Standing.jpg",
+      "sourceWidth": 5998,
+      "sourceHeight": 3997,
+      "aspectRatio": 1.5006,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/33.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1066,
+      "printHolds": "HOLD_20x30_below_200ppi",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.1,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 199.9,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 333.1,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 249.8,
+          "status": "quote"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 199.9,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        }
+      ]
+    }
+  ]
+}

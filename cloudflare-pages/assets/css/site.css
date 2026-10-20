@@ -205,6 +205,7 @@ a { color: var(--teal); }
 .gallery figcaption strong, .gallery figcaption > span { display: block; }
 .gallery figcaption > span { margin-top: .25rem; }
 .catalog-title, .catalog-copy { display: block; margin: 0; }
+a.catalog-title { color: inherit; text-decoration: none; }
 .catalog-title { font-weight: 700; margin-bottom: .4rem; }
 .catalog-copy { margin-bottom: .35rem; }
 .gallery figcaption a { display: inline-block; margin-top: .2rem; }
@@ -381,8 +382,23 @@ a { color: var(--teal); }
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
   clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
 }
+.print-inquiry {
+  display: grid; grid-template-columns: 1.15fr .85fr; gap: 1.25rem; align-items: start;
+  max-width: 1100px; margin: 0 auto 2rem; padding: 0 1.25rem;
+}
+.print-inquiry__photo { margin: 0; background: #fff; border: 1px solid rgba(45,36,24,.14); }
+.print-inquiry__photo img { width: 100%; height: auto; object-fit: contain; background: #f7f4ee; }
+.print-inquiry__photo figcaption { padding: .75rem 1rem 1rem; color: #5a4a36; }
+.print-inquiry__form label:not(.hp) { display: block; font-weight: 700; margin: .85rem 0 .3rem; }
+.print-inquiry__form select, .print-inquiry__form input, .print-inquiry__form textarea {
+  width: 100%; min-height: 48px; font: inherit;
+}
+.print-inquiry__form textarea { min-height: 8rem; padding: .6rem .7rem; }
+.print-inquiry__form select:disabled { opacity: .65; }
+.print-price:empty { display: none; }
 @media (max-width: 800px) {
-  .print-product { grid-template-columns: 1fr; }
+  .print-product, .print-inquiry { grid-template-columns: 1fr; }
+  .print-inquiry { padding: 0 .85rem; gap: .75rem; }
 }
 @media (max-width: 780px) {
   /* Let the panel determine height so the headline stays inside the hero. */
