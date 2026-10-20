@@ -23,7 +23,7 @@
       "galleryReference": "/photography/#portfolio-01",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Grand Tetons"
+      "previousTitle": "Stormborn Grand Tetons"
     },
     {
       "permanentId": "bb-photo-02",
@@ -47,7 +47,7 @@
       "galleryReference": "/photography/#portfolio-02",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Maroon Bells reflection"
+      "previousTitle": "When the Mountains Hold Their Breath"
     },
     {
       "permanentId": "bb-photo-03",
@@ -71,7 +71,7 @@
       "galleryReference": "/photography/#portfolio-03",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Horseshoe Bend"
+      "previousTitle": "The Long Way Through"
     },
     {
       "permanentId": "bb-photo-04",
@@ -95,21 +95,21 @@
       "galleryReference": "/photography/#portfolio-04",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Mesa Arch sunrise"
+      "previousTitle": "Fire Beneath the Arch"
     },
     {
       "permanentId": "bb-photo-05",
       "portfolioNumber": 5,
       "title": "The Canyon Keeps Moving",
       "story": "The Virgin River winds through Zion beneath red cliffs edged with warm light. Trees fill the canyon floor while smooth water slips around scattered stones. The cliffs command your attention, but the river leads you through the photograph, bend by bend.",
-      "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_2475-HDR-Pano-2-Edit.jpg",
-      "sourceFilename": "DSC_2475-HDR-Pano-2-Edit.jpg",
-      "sourceWidth": 2738,
-      "sourceHeight": 1825,
-      "aspectClass": 1.5003,
+      "sourcePath": "K:\\2015\\Bryce Canyon 2015-10-12\\DSC_2475-HDR-Pano-2-Edit.tif",
+      "sourceFilename": "DSC_2475-HDR-Pano-2-Edit.tif",
+      "sourceWidth": 7332,
+      "sourceHeight": 4888,
+      "aspectClass": 1.5,
       "display": "/assets/images/portfolio/05.jpg",
       "displayWidth": 1600,
-      "displayHeight": 1066,
+      "displayHeight": 1067,
       "thumbnail": "/assets/images/portfolio/thumbs/05.jpg",
       "thumbnailWidth": 480,
       "thumbnailHeight": 320,
@@ -117,9 +117,9 @@
       "enlargedWidth": 2400,
       "enlargedHeight": 1600,
       "galleryReference": "/photography/#portfolio-05",
-      "highResolutionMaster": "missing",
+      "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Zion river"
+      "previousTitle": "The Canyon Keeps Moving"
     },
     {
       "permanentId": "bb-photo-06",
@@ -143,7 +143,7 @@
       "galleryReference": "/photography/#portfolio-06",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Teton reflection"
+      "previousTitle": "Twice the Fire"
     },
     {
       "permanentId": "bb-photo-07",
@@ -167,7 +167,7 @@
       "galleryReference": "/photography/#portfolio-07",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Autumn Range Panorama"
+      "previousTitle": "Gold Beyond the Ridge"
     },
     {
       "permanentId": "bb-photo-08",
@@ -191,7 +191,7 @@
       "galleryReference": "/photography/#portfolio-08",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Canyon Sunstar"
+      "previousTitle": "A Thousand Edges of Light"
     },
     {
       "permanentId": "bb-photo-09",
@@ -215,7 +215,7 @@
       "galleryReference": "/photography/#portfolio-09",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Miner's Exchange"
+      "previousTitle": "The Exchange Still Stands"
     },
     {
       "permanentId": "bb-photo-10",
@@ -240,7 +240,7 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "composition": "16:9 preserved. Do not crop to 3:2. No published price.",
-      "previousTitle": "Solitude (High Country)"
+      "previousTitle": "Small Life, Wide Silence"
     },
     {
       "permanentId": "bb-photo-11",
@@ -264,7 +264,7 @@
       "galleryReference": "/photography/#portfolio-11",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Bull elk"
+      "previousTitle": "Crowned in Timber"
     },
     {
       "permanentId": "bb-photo-12",
@@ -288,7 +288,7 @@
       "galleryReference": "/photography/#portfolio-12",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Mountain Goat and Kid"
+      "previousTitle": "Learning the Steep Way"
     },
     {
       "permanentId": "bb-photo-13",
@@ -312,7 +312,7 @@
       "galleryReference": "/photography/#portfolio-13",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Sandhill cranes"
+      "previousTitle": "Carried by the Open Sky"
     },
     {
       "permanentId": "bb-photo-45",
@@ -336,7 +336,7 @@
       "galleryReference": "/photography/#portfolio-14",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Horse portrait"
+      "previousTitle": "Born to Roam"
     },
     {
       "permanentId": "bb-photo-15",
@@ -360,7 +360,7 @@
       "galleryReference": "/photography/#portfolio-15",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Tractor"
+      "previousTitle": "Iron at Rest"
     },
     {
       "permanentId": "bb-photo-16",
@@ -384,7 +384,7 @@
       "galleryReference": "/photography/#portfolio-16",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Waterfall"
+      "previousTitle": "Let the Water Speak"
     },
     {
       "permanentId": "bb-photo-17",
@@ -408,7 +408,7 @@
       "galleryReference": "/photography/#portfolio-17",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Star trails over the lake"
+      "previousTitle": "The Night Writes Back"
     },
     {
       "permanentId": "bb-photo-18",
@@ -432,7 +432,7 @@
       "galleryReference": "/photography/#portfolio-18",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Shiprock star trails"
+      "previousTitle": "Where Stone Holds the Stars"
     },
     {
       "permanentId": "bb-photo-19",
@@ -456,7 +456,7 @@
       "galleryReference": "/photography/#portfolio-19",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Snow cabins"
+      "previousTitle": "Winter Keeps the Keys"
     },
     {
       "permanentId": "bb-photo-20",
@@ -480,7 +480,7 @@
       "galleryReference": "/photography/#portfolio-20",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Storm over the yellow house"
+      "previousTitle": "A Little Color Against the Storm"
     },
     {
       "permanentId": "bb-photo-21",
@@ -504,7 +504,7 @@
       "galleryReference": "/photography/#portfolio-21",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Into The Mist"
+      "previousTitle": "Into the Mist"
     },
     {
       "permanentId": "bb-photo-22",
@@ -528,7 +528,7 @@
       "galleryReference": "/photography/#portfolio-22",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Mining dredge"
+      "previousTitle": "What the Water Remembers"
     },
     {
       "permanentId": "bb-photo-23",
@@ -552,7 +552,7 @@
       "galleryReference": "/photography/#portfolio-23",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Mountain Gas Station"
+      "previousTitle": "Fuel for the Long Way Home"
     },
     {
       "permanentId": "bb-photo-24",
@@ -577,7 +577,7 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "location": "Dallas Divide / Mount Sneffels, Colorado.",
-      "previousTitle": "Aspen valley"
+      "previousTitle": "Gold Beneath the Wild"
     },
     {
       "permanentId": "bb-photo-25",
@@ -601,7 +601,7 @@
       "galleryReference": "/photography/#portfolio-25",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Cabin at sunset"
+      "previousTitle": "A Roof Beneath the Fire"
     },
     {
       "permanentId": "bb-photo-26",
@@ -630,7 +630,7 @@
         "sourceFilename": "DSC_0375-HDR-Edit-bw.jpg",
         "present": true
       },
-      "previousTitle": "Locomotive"
+      "previousTitle": "Iron Remembers"
     },
     {
       "permanentId": "bb-photo-27",
@@ -654,7 +654,7 @@
       "galleryReference": "/photography/#portfolio-27",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Weathered Caboose in Winter"
+      "previousTitle": "The Last Stop Is Quiet"
     },
     {
       "permanentId": "bb-photo-28",
@@ -678,7 +678,7 @@
       "galleryReference": "/photography/#portfolio-28",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Barn and Tetons"
+      "previousTitle": "Rooted Beneath Giants"
     },
     {
       "permanentId": "bb-photo-29",
@@ -702,7 +702,7 @@
       "galleryReference": "/photography/#portfolio-29",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Wooden chapel"
+      "previousTitle": "Room for the Sky"
     },
     {
       "permanentId": "bb-photo-30",
@@ -726,7 +726,7 @@
       "galleryReference": "/photography/#portfolio-30",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Wildflower Range Panorama"
+      "previousTitle": "The Hills Come Alive in Gold"
     },
     {
       "permanentId": "bb-photo-31",
@@ -750,7 +750,7 @@
       "galleryReference": "/photography/#portfolio-31",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Wild Iris at Dusk"
+      "previousTitle": "A Small Flame of Violet"
     },
     {
       "permanentId": "bb-photo-32",
@@ -774,7 +774,7 @@
       "galleryReference": "/photography/#portfolio-32",
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
-      "previousTitle": "Autumn Valley After the Storm"
+      "previousTitle": "What the Storm Left Glowing"
     },
     {
       "permanentId": "bb-photo-33",
@@ -821,7 +821,8 @@
       "enlargedHeight": 2400,
       "galleryReference": "/photography/#portfolio-34",
       "highResolutionMaster": "missing",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Where Winter Meets Wildflowers"
     },
     {
       "permanentId": "bb-photo-35",
@@ -844,7 +845,8 @@
       "enlargedHeight": 2400,
       "galleryReference": "/photography/#portfolio-35",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Cold Water, Wild Blood"
     },
     {
       "permanentId": "bb-photo-36",
@@ -867,7 +869,8 @@
       "enlargedHeight": 1600,
       "galleryReference": "/photography/#portfolio-36",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "The Wild Holds Its Own"
     },
     {
       "permanentId": "bb-photo-37",
@@ -890,7 +893,8 @@
       "enlargedHeight": 1348,
       "galleryReference": "/photography/#portfolio-37",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "The Gold That Stayed"
     },
     {
       "permanentId": "bb-photo-38",
@@ -913,7 +917,8 @@
       "enlargedHeight": 1600,
       "galleryReference": "/photography/#portfolio-38",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Take the Golden Way"
     },
     {
       "permanentId": "bb-photo-39",
@@ -936,7 +941,8 @@
       "enlargedHeight": 1417,
       "galleryReference": "/photography/#portfolio-39",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Westbound After Dark"
     },
     {
       "permanentId": "bb-photo-40",
@@ -959,20 +965,21 @@
       "enlargedHeight": 1600,
       "galleryReference": "/photography/#portfolio-40",
       "highResolutionMaster": "missing",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Growing Gold from Stone"
     },
     {
       "permanentId": "bb-photo-41",
       "portfolioNumber": 41,
       "title": "Still Standing, Still Flowing",
       "story": "A white cascade spills beside the old wooden structure and spreads into a shaded pool. Sunlight reveals the grain of the boards and the sharp angles of the rock. The building holds still while the river carries the scene forward.",
-      "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\Portfiolo\\DSC_7867-Edit - Copy.jpg",
-      "sourceFilename": "DSC_7867-Edit - Copy.jpg",
-      "sourceWidth": 1825,
-      "sourceHeight": 2738,
-      "aspectClass": 0.6665,
+      "sourcePath": "K:\\2014\\Fall\\2014-09-23\\DSC_7867-Edit.tif",
+      "sourceFilename": "DSC_7867-Edit.tif",
+      "sourceWidth": 3889,
+      "sourceHeight": 5833,
+      "aspectClass": 0.6667,
       "display": "/assets/images/portfolio/41.jpg",
-      "displayWidth": 1066,
+      "displayWidth": 1067,
       "displayHeight": 1600,
       "thumbnail": "/assets/images/portfolio/thumbs/41.jpg",
       "thumbnailWidth": 320,
@@ -981,8 +988,9 @@
       "enlargedWidth": 1600,
       "enlargedHeight": 2400,
       "galleryReference": "/photography/#portfolio-41",
-      "highResolutionMaster": "missing",
-      "printMasterIsWebJpeg": false
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Still Standing, Still Flowing"
     },
     {
       "permanentId": "bb-photo-42",
@@ -1005,7 +1013,8 @@
       "enlargedHeight": 2400,
       "galleryReference": "/photography/#portfolio-42",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "The Night Keeps Watch"
     },
     {
       "permanentId": "bb-photo-43",
@@ -1028,7 +1037,8 @@
       "enlargedHeight": 1530,
       "galleryReference": "/photography/#portfolio-43",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Embers Above the Desert"
     },
     {
       "permanentId": "bb-photo-44",
@@ -1051,7 +1061,8 @@
       "enlargedHeight": 1600,
       "galleryReference": "/photography/#portfolio-44",
       "highResolutionMaster": "measured",
-      "printMasterIsWebJpeg": false
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "When the Work Was Done"
     }
   ],
   "archived": [
@@ -1175,6 +1186,52 @@
       "thumbnail": "/assets/images/products/thumbs/08-coaster-4pc-007.jpg",
       "thumbnailWidth": 360,
       "thumbnailHeight": 480
+    }
+  ],
+  "tieDye": [
+    {
+      "id": "bb-tiedye-overalls",
+      "name": "Hand-dyed overalls",
+      "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\New folder\\20260630_124345.jpg",
+      "sourceFilename": "20260630_124345.jpg",
+      "sourceWidth": 9000,
+      "sourceHeight": 12000,
+      "relatedViews": [
+        "20260630_125013.jpg"
+      ],
+      "note": "Front of one pair. The purple and green view in the same folder is the reverse of this garment, not a second product.",
+      "display": "/assets/images/tie-dye/overalls-display.jpg",
+      "displayWidth": 1200,
+      "displayHeight": 1600,
+      "thumbnail": "/assets/images/tie-dye/overalls-thumb.jpg",
+      "thumbnailWidth": 360,
+      "thumbnailHeight": 480,
+      "enlarged": "/assets/images/tie-dye/overalls-large.jpg",
+      "enlargedWidth": 1800,
+      "enlargedHeight": 2400,
+      "pricePublished": false
+    },
+    {
+      "id": "bb-tiedye-lace-top",
+      "name": "Hand-dyed lace top",
+      "sourcePath": "C:\\Users\\bitte\\OneDrive\\Desktop\\New folder\\20260630_125720.jpg",
+      "sourceFilename": "20260630_125720.jpg",
+      "sourceWidth": 12000,
+      "sourceHeight": 9000,
+      "relatedViews": [
+        "20260630_130013.jpg"
+      ],
+      "note": "Front of one top. The spiral view in the same folder is the back of this garment, not a second product.",
+      "display": "/assets/images/tie-dye/lace-top-display.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1200,
+      "thumbnail": "/assets/images/tie-dye/lace-top-thumb.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 360,
+      "enlarged": "/assets/images/tie-dye/lace-top-large.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1800,
+      "pricePublished": false
     }
   ]
 }

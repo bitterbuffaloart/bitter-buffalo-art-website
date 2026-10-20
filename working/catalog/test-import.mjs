@@ -12,7 +12,11 @@ test("product import keeps 44 photographs and the one approved price", () => {
     .map((photo) => [photo.id, "199.33"]);
   assert.equal(photos.length, 44);
   assert.equal(products.filter((product) => product.category === "laser").length, 8);
-  assert.equal(products.filter((product) => product.category === "tie-dye").length, 1);
+  assert.equal(products.filter((product) => product.category === "tie-dye").length, 3);
+  assert.deepEqual(
+    products.filter((product) => product.category === "tie-dye").map((product) => product.id),
+    ["bb-tiedye-earth-tones", "bb-tiedye-overalls", "bb-tiedye-lace-top"],
+  );
   assert.deepEqual(
     products.filter((product) => product.retail_price).map((product) => [product.id, product.retail_price]),
     priced,

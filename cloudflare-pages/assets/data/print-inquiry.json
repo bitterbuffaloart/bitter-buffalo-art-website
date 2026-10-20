@@ -572,17 +572,17 @@
       "portfolioNumber": 5,
       "title": "The Canyon Keeps Moving",
       "story": "The Virgin River winds through Zion beneath red cliffs edged with warm light. Trees fill the canyon floor while smooth water slips around scattered stones. The cliffs command your attention, but the river leads you through the photograph, bend by bend.",
-      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "extra": "",
       "slug": "the-canyon-keeps-moving",
       "url": "/photography/prints/the-canyon-keeps-moving/",
-      "sourceName": "DSC_2475-HDR-Pano-2-Edit.jpg",
-      "sourceWidth": 2738,
-      "sourceHeight": 1825,
-      "aspectRatio": 1.5003,
+      "sourceName": "DSC_2475-HDR-Pano-2-Edit.tif",
+      "sourceWidth": 7332,
+      "sourceHeight": 4888,
+      "aspectRatio": 1.5,
       "orientation": "landscape",
       "display": "/assets/images/portfolio/05.jpg",
       "displayWidth": 1600,
-      "displayHeight": 1066,
+      "displayHeight": 1067,
       "printHolds": "",
       "sizes": [
         {
@@ -591,10 +591,11 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 152.1,
+          "ppi": 407.3,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -602,10 +603,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -613,10 +615,11 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 152.1,
+          "ppi": 407.3,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -624,10 +627,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
           "productId": "metal-aluminum",
@@ -635,10 +639,11 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 152.1,
+          "ppi": 407.3,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
         },
         {
           "productId": "metal-aluminum",
@@ -646,10 +651,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
           "productId": "metal-aluminum",
@@ -657,7 +663,7 @@
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
-          "ppi": 91.3,
+          "ppi": 244.4,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."
@@ -668,10 +674,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
         },
         {
           "productId": "paper-semigloss",
@@ -679,10 +686,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
         },
         {
           "productId": "paper-somerset",
@@ -690,10 +698,11 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 114.1,
+          "ppi": 305.5,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
         }
       ]
     },
@@ -4821,16 +4830,16 @@
       "portfolioNumber": 41,
       "title": "Still Standing, Still Flowing",
       "story": "A white cascade spills beside the old wooden structure and spreads into a shaded pool. Sunlight reveals the grain of the boards and the sharp angles of the rock. The building holds still while the river carries the scene forward.",
-      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "extra": "",
       "slug": "still-standing-still-flowing",
       "url": "/photography/prints/still-standing-still-flowing/",
-      "sourceName": "DSC_7867-Edit - Copy.jpg",
-      "sourceWidth": 1825,
-      "sourceHeight": 2738,
-      "aspectRatio": 0.6665,
+      "sourceName": "DSC_7867-Edit.tif",
+      "sourceWidth": 3889,
+      "sourceHeight": 5833,
+      "aspectRatio": 0.6667,
       "orientation": "portrait",
       "display": "/assets/images/portfolio/41.jpg",
-      "displayWidth": 1066,
+      "displayWidth": 1067,
       "displayHeight": 1600,
       "printHolds": "",
       "sizes": [
@@ -4840,10 +4849,11 @@
           "label": "12\u00d718",
           "printWidthIn": 12,
           "printHeightIn": 18,
-          "ppi": 152.1,
+          "ppi": 324.1,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -4851,10 +4861,11 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
         },
         {
           "productId": "canvas-15",
@@ -4862,10 +4873,11 @@
           "label": "12\u00d718",
           "printWidthIn": 12,
           "printHeightIn": 18,
-          "ppi": 152.1,
+          "ppi": 324.1,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -4873,10 +4885,11 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Below 200 PPI."
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
         },
         {
           "productId": "metal-aluminum",
@@ -4884,10 +4897,11 @@
           "label": "12\u00d718",
           "printWidthIn": 12,
           "printHeightIn": 18,
-          "ppi": 152.1,
+          "ppi": 324.1,
           "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Below 300 PPI."
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
         },
         {
           "productId": "metal-aluminum",
@@ -4895,7 +4909,7 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."
@@ -4906,7 +4920,7 @@
           "label": "20\u00d730",
           "printWidthIn": 20,
           "printHeightIn": 30,
-          "ppi": 91.3,
+          "ppi": 194.4,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."
@@ -4917,7 +4931,7 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."
@@ -4928,7 +4942,7 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."
@@ -4939,7 +4953,7 @@
           "label": "16\u00d724",
           "printWidthIn": 16,
           "printHeightIn": 24,
-          "ppi": 114.1,
+          "ppi": 243.0,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."

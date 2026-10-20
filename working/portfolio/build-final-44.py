@@ -84,7 +84,7 @@ STORIES = {
 }
 
 SOURCES = {
-    5: PORTFOLIO / "DSC_2475-HDR-Pano-2-Edit.jpg",
+    5: Path(r"K:\2015\Bryce Canyon 2015-10-12\DSC_2475-HDR-Pano-2-Edit.tif"),
     14: FULL / "DSC_2637.JPG",
     18: ETSY / "18 - DSC_9535-Edit-2 copy.jpg",
     24: ETSY / "24 - DSC_0240_1-Edit-Edit copy.jpg",
@@ -95,7 +95,7 @@ SOURCES = {
     38: PORTFOLIO / "DSC_0218 - Copy.jpg",
     39: FULL / "DSC_4664-Edit.jpg",
     40: PORTFOLIO / "DSC_4316.jpg",
-    41: PORTFOLIO / "DSC_7867-Edit - Copy.jpg",
+    41: Path(r"K:\2014\Fall\2014-09-23\DSC_7867-Edit.tif"),
     42: PORTFOLIO / "DSC_7977 copy.jpg",
     43: PORTFOLIO / "DSC_6015.jpg",
     44: PORTFOLIO / "DSC_9389.jpg",
@@ -142,15 +142,24 @@ def main():
         raise SystemExit("stories must be positions 1 through 44")
     current = json.loads(MANIFEST.read_text(encoding="utf-8"))
     by_number = {item["portfolioNumber"]: item for item in current["photographs"]}
-    horse = dict(by_number[14])
-    if Path(horse["sourcePath"]).name.lower().find("horse") < 0 and "Horse" not in horse["title"]:
-        raise SystemExit("position 14 is not the horse record that must be archived")
-    ARCHIVE.mkdir(parents=True, exist_ok=True)
-    for folder, name in ((OUT, "14.jpg"), (THUMBS, "14.jpg"), (LARGE, "14.jpg")):
-        source = folder / name
-        if not source.is_file():
-            raise SystemExit(f"missing horse web file {source}")
-        shutil.copy2(source, ARCHIVE / f"horse-bb-photo-14-{folder.name if folder != OUT else 'display'}.jpg")
+    archived = current.get("archived") or []
+    horse = next((item for item in archived if item.get("permanentId") == "bb-photo-14"), None)
+    if horse is None:
+        horse = dict(by_number[14])
+        if Path(horse["sourcePath"]).name.lower().find("horse") < 0 and "Horse" not in horse["title"]:
+            raise SystemExit("position 14 is not the horse record that must be archived")
+        ARCHIVE.mkdir(parents=True, exist_ok=True)
+        for folder, name in ((OUT, "14.jpg"), (THUMBS, "14.jpg"), (LARGE, "14.jpg")):
+            source = folder / name
+            if not source.is_file():
+                raise SystemExit(f"missing horse web file {source}")
+            shutil.copy2(source, ARCHIVE / f"horse-bb-photo-14-{folder.name if folder != OUT else 'display'}.jpg")
+    else:
+        horse = dict(horse)
+        if "horse" not in Path(horse["sourcePath"]).name.lower() and "Horse" not in horse.get("title", ""):
+            raise SystemExit("archived horse record is missing")
+        if not (ARCHIVE / "horse-bb-photo-14-display.jpg").is_file():
+            raise SystemExit("archived horse web file is missing")
     if not Path(horse["sourcePath"]).is_file():
         raise SystemExit("horse source file is missing; it must stay archived, not deleted")
 
@@ -164,12 +173,25 @@ def main():
                 raise SystemExit(f"missing named source for #{number}: {source.name}")
             if source.name in RESERVED:
                 raise SystemExit(f"reserved file attached to #{number}")
-            image = measure(source)
-            display_w, display_h = write_fit(image, OUT / f"{number:02d}.jpg", 1600, 86)
-            thumb_w, thumb_h = write_fit(image, THUMBS / f"{number:02d}.jpg", 480, 80)
-            large_w, large_h = write_fit(image, LARGE / f"{number:02d}.jpg", 2400, 88)
-            source_path = str(source)
             previous = by_number.get(number)
+            image = measure(source)
+            unchanged = (
+                previous is not None
+                and previous.get("sourcePath") == str(source)
+                and (image.width, image.height) == (previous["sourceWidth"], previous["sourceHeight"])
+            )
+            if unchanged:
+                display_w = previous["displayWidth"]
+                display_h = previous["displayHeight"]
+                thumb_w = previous["thumbnailWidth"]
+                thumb_h = previous["thumbnailHeight"]
+                large_w = previous["enlargedWidth"]
+                large_h = previous["enlargedHeight"]
+            else:
+                display_w, display_h = write_fit(image, OUT / f"{number:02d}.jpg", 1600, 86)
+                thumb_w, thumb_h = write_fit(image, THUMBS / f"{number:02d}.jpg", 480, 80)
+                large_w, large_h = write_fit(image, LARGE / f"{number:02d}.jpg", 2400, 88)
+            source_path = str(source)
         else:
             previous = by_number[number]
             source = Path(previous["sourcePath"])
@@ -252,6 +274,7 @@ def main():
         }],
         "reservedExcluded": sorted(RESERVED),
         "coasters": current.get("coasters", []),
+        "tieDye": current.get("tieDye", []),
     }
     MANIFEST.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     lines = REDIRECTS.read_text(encoding="utf-8").splitlines()

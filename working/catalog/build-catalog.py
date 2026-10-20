@@ -109,23 +109,41 @@ def coaster_row(item):
     }
 
 
-def tiedye_row():
+def tiedye_row(item=None):
+    if item is None:
+        return {
+            "id": "bb-tiedye-earth-tones",
+            "name": "Backcountry earth tones",
+            "category": "tie-dye",
+            "images": "/assets/images/tie-dye.jpg|/assets/images/tie-dye.jpg|/assets/images/tie-dye.jpg",
+            "description": "Hand-dyed shirt photographed for the tie-dye portfolio. Price is not published.",
+            "materials_and_sizes": "Hand-dyed cloth. Size is not recorded in the catalog.",
+            "retail_price": "",
+            "supplier_cost": "",
+            "shipping_estimate": "",
+            "availability": "inquiry",
+            "inquiry_or_external_link": "https://www.etsy.com/shop/BitterBuffaloArt",
+            "display_width": 1000,
+            "display_height": 1000,
+            "thumb_width": 1000,
+            "thumb_height": 1000,
+        }
     return {
-        "id": "bb-tiedye-earth-tones",
-        "name": "Backcountry earth tones",
+        "id": item["id"],
+        "name": item["name"],
         "category": "tie-dye",
-        "images": "/assets/images/tie-dye.jpg|/assets/images/tie-dye.jpg|/assets/images/tie-dye.jpg",
-        "description": "Hand-dyed shirt photographed for the tie-dye portfolio. Price is not published.",
+        "images": image_list(item["display"], item["thumbnail"], item["enlarged"]),
+        "description": item["note"] + " Price is not published.",
         "materials_and_sizes": "Hand-dyed cloth. Size is not recorded in the catalog.",
         "retail_price": "",
         "supplier_cost": "",
         "shipping_estimate": "",
         "availability": "inquiry",
         "inquiry_or_external_link": "https://www.etsy.com/shop/BitterBuffaloArt",
-        "display_width": 1000,
-        "display_height": 1000,
-        "thumb_width": 1000,
-        "thumb_height": 1000,
+        "display_width": item["displayWidth"],
+        "display_height": item["displayHeight"],
+        "thumb_width": item["thumbnailWidth"],
+        "thumb_height": item["thumbnailHeight"],
     }
 
 
@@ -133,6 +151,7 @@ def products():
     rows = [photo_row(item) for item in PHOTO["photographs"]]
     rows.extend(coaster_row(item) for item in PHOTO["coasters"])
     rows.append(tiedye_row())
+    rows.extend(tiedye_row(item) for item in PHOTO.get("tieDye", []))
     return rows
 
 
