@@ -33,7 +33,34 @@ def check(root, base=None):
                 if parsed.fragment and target.suffix=='.html':
                     targetids={a.get('id') for _,a in Page(target.read_text(encoding='utf-8')).tags}
                     if parsed.fragment not in targetids: errors.append(f'{file}: missing fragment {url}')
-    allowed_etsy={'https://www.etsy.com/shop/BitterBuffaloArt'}
+    allowed_etsy={
+        'https://www.etsy.com/shop/BitterBuffaloArt',
+        'https://www.etsy.com/listing/4596278804/hand-dyed-dickies-bib-overalls-geode-tie',
+        'https://www.etsy.com/listing/4595591399/turquoise-geode-style-mandala-reverse',
+        'https://www.etsy.com/listing/4599061887/wildfire-bramble-hand-dyed-v-neck-ruffle',
+        'https://www.etsy.com/listing/4599062175/desert-nocturne-hand-dyed-strappy-maxi',
+        'https://www.etsy.com/listing/4599062615/midnight-bramble-hand-dyed-pink-and',
+        'https://www.etsy.com/listing/4599086486/midnight-bloom-hand-dyed-pink-violet-and',
+        'https://www.etsy.com/listing/4599084460/canyon-rose-hand-dyed-ruffle-dress-rose',
+        'https://www.etsy.com/listing/4597159476/xl-reverse-tie-dye-hoodie-pink-purple',
+        'https://www.etsy.com/listing/4597138439/xl-reverse-tie-dye-hoodie-pink-black',
+        'https://www.etsy.com/listing/4596457374/moonlit-mosaic-reverse-ice-dyed',
+        'https://www.etsy.com/listing/4595627250/geode-tie-dye-cotton-dress-medium-old',
+        'https://www.etsy.com/listing/4596991556/hand-dyed-dickies-bib-overalls-40x32',
+        'https://www.etsy.com/listing/4596921803/3xl-reverse-tie-dye-hoodie-green-aqua',
+        'https://www.etsy.com/listing/4596850932/3xl-reverse-tie-dye-hoodie-pink-black',
+        'https://www.etsy.com/listing/4596420937/hand-dyed-dickies-bib-overalls-34x30',
+        'https://www.etsy.com/listing/4596377932/hand-dyed-dickies-bib-overalls-36x30',
+        'https://www.etsy.com/listing/4596232860/reverse-tie-dye-dickies-bib-overalls',
+        'https://www.etsy.com/listing/4596003319/hand-dyed-beaded-dress-xl-no-boundaries',
+        'https://www.etsy.com/listing/4595996185/hand-dyed-ruffle-dress-large-old-navy',
+        'https://www.etsy.com/listing/4595632928/turquoise-geode-tie-dye-dress-xl-old',
+        'https://www.etsy.com/listing/4595584025/purple-geode-style-mandala-reverse-tie',
+        'https://www.etsy.com/listing/4596729532/midnight-bloom-reverse-ice-dyed',
+        'https://www.etsy.com/listing/4596421779/hand-dyed-dickies-bib-overalls-38x32',
+        'https://www.etsy.com/listing/4596257603/hand-dyed-dickies-bib-overalls-34x30',
+        'https://www.etsy.com/listing/4596019472/hand-dyed-ruffle-dress-xl-old-navy-pink',
+    }
     if not etsy <= allowed_etsy: errors.append(f'Unexpected Etsy links: {etsy - allowed_etsy}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
     catalog=json.loads((root/'assets/data/catalog.json').read_text(encoding='utf-8'))
@@ -44,7 +71,9 @@ def check(root, base=None):
     if numbers!={f'{n:02}' for n in range(1,54)}: errors.append('Portfolio must contain exactly 53 photographs')
     if 'data-catalog-grid' not in photo: errors.append('Photography gallery is not connected to the catalog')
     events=(root/'events/index.html').read_text(encoding='utf-8')
-    if any(s not in events for s in ['booth-market.jpg','booth-tiedye.jpg','Union Peak','Wildoria','DISCONNECT']): errors.append('Events restoration missing')
+    required_events = ['booth-market.jpg','booth-tiedye.jpg','Union Peak','DISCONNECT','soul-rebel-black-uhuru.jpg','questing-the-wilderealm.jpg','elevate-love-2026-lineup.jpg','elevate-love-2026-poster.jpg','Soul Rebel Festival','WildeRealm','Elevate Love']
+    if any(s not in events for s in required_events): errors.append('Events restoration missing')
+    if 'Wildoria' in events: errors.append('Wildoria participation claimed without proof')
     resources.update(['index.html','robots.txt','sitemap.xml'])
     # Include CSS background assets as well as direct HTML references.
     resources.update(f.relative_to(root).as_posix() for f in (root/'assets').rglob('*') if f.is_file())

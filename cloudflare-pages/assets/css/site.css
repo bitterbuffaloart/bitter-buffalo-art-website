@@ -269,6 +269,17 @@ a.catalog-title { color: inherit; text-decoration: none; }
   font-size: .75rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
   background: rgba(8,124,133,.12); color: var(--teal); border: 1px solid rgba(8,124,133,.28);
 }
+.event-card--wide { grid-column: 1 / -1; }
+.event-posters {
+  display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-start; margin: 0 0 .75rem;
+}
+.event-posters figure { margin: 0; }
+.event-poster { display: block; line-height: 0; }
+.event-poster img {
+  display: block; width: auto; max-width: 100%; height: auto; max-height: 72vh;
+  object-fit: contain; background: #f7f4ee;
+}
+.event-posters figcaption { line-height: 1.4; margin-top: .35rem; font-size: .92rem; }
 .contact-hub { max-width: 1200px; }
 .contact-hub__choices {
   display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; margin: 1rem 0 1.5rem;
@@ -344,6 +355,7 @@ a.catalog-title { color: inherit; text-decoration: none; }
 
 /* Preserve each photograph’s complete composition. */
 .gallery--portfolio img, .portfolio-feature img { object-fit: contain; background: #f7f4ee; }
+.gallery--etsy img { aspect-ratio: auto; height: auto; object-fit: contain; background: #f7f4ee; }
 .catalog-thumb {
   display: block; width: 100%; padding: 0; border: 0; background: #f7f4ee; cursor: zoom-in;
 }

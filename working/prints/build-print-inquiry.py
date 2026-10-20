@@ -300,6 +300,8 @@ def page(photo):
         <p id="print-price" class="print-price" aria-live="polite"></p>
         {price_note}
         <p>Stretched canvas, semi-gloss, and Somerset Velvet remain in the pricing record and are not sale options. This form sends an inquiry. It does not take payment.</p>
+        <p>A Square Payment Link takes payment for a print price. It does not place a LumaPrints order. A buy link is shown only when a verified square.link or checkout.square.site address is on file for the selected material and size.</p>
+        <p data-square-slot></p>
         <label for="print-name">Full name</label>
         <input id="print-name" name="contact[name]" required autocomplete="name" />
         <label for="print-email">Email address</label>
@@ -321,6 +323,7 @@ def page(photo):
   </main>
   {footer_html()}
   <script type="module" src="../../../assets/js/print-inquiry.js"></script>
+  <script type="module" src="../../../assets/js/square-payment-link.js"></script>
   <script src="../../../assets/js/site.js"></script>
 </body>
 </html>
