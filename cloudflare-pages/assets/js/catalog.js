@@ -35,9 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
       dialog.showModal();
     });
     const text = document.createElement("figcaption");
-    const title = document.createElement("strong");
+    const title = document.createElement("p");
+    title.className = "catalog-title";
     title.textContent = product.name;
-    const copy = document.createElement("span");
+    const copy = document.createElement("p");
+    copy.className = "catalog-copy";
     copy.textContent = product.description;
     text.append(title, copy);
     if (product.retail_price) {

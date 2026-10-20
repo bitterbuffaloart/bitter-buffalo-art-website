@@ -204,6 +204,10 @@ a { color: var(--teal); }
 .gallery figcaption { padding: .65rem .85rem; font-size: .9rem; color: #3a2f22; }
 .gallery figcaption strong, .gallery figcaption > span { display: block; }
 .gallery figcaption > span { margin-top: .25rem; }
+.catalog-title, .catalog-copy { display: block; margin: 0; }
+.catalog-title { font-weight: 700; margin-bottom: .4rem; }
+.catalog-copy { margin-bottom: .35rem; }
+.gallery figcaption a { display: inline-block; margin-top: .2rem; }
 .portfolio-feature {
   max-width: 1200px; margin: 0 auto 2rem; padding: 0 1.25rem;
 }
