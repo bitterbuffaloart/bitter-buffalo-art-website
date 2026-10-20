@@ -61,7 +61,7 @@ def photo_row(item):
     name = item["title"]
     link = f"/photography/prints/{print_slug(name, number)}/"
     if print_ready(item):
-        materials = "16×24 open-edition 1.5-inch framed canvas: $199.33. Other workbook list prices are on the inquiry page. Checkout is not enabled."
+        materials = "Approved price: 16×24 open-edition premium 1.5-inch framed canvas $199.33. Other sizes are pending or by inquiry. Checkout is not enabled."
         retail = "199.33"
         availability = "inquiry"
     else:

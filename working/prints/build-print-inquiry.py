@@ -1,7 +1,8 @@
-"""Generate print inquiry pages from measured pixels and the workbook price table.
+"""Generate print inquiry pages from measured pixels and the hold-draft price table.
 
-Publishes only open-edition retails whose size is on a supplier sheet.
-Does not invent sizes, crops, or prices.
+The only public dollar amount is the approved 16×24 framed canvas at $199.33.
+Other retails stay unapproved hold drafts. A draft does not mean the supplier
+lists that size. Canvas and paper 20×30, and paper 12×18, stay custom-quote.
 """
 import json
 import re
@@ -25,43 +26,53 @@ CANVAS_SIZES = (
     {"id": "16x24", "label": "16×24", "short": 16, "long": 24},
     {"id": "20x30", "label": "20×30", "short": 20, "long": 30},
 )
-# kind, retail, minimum PPI. Only sizes present on the supplier sheets.
-OFFERS = {
+# kind, retail, minimum PPI, supplierListed.
+# Canvas 200 PPI. Metal and paper 300 PPI. Aspect is checked separately.
+DRAFTS = {
     "canvas-floating-15": {
-        "12x18": ("workbook", "149.33", 200),
-        "16x24": ("approved", "199.33", 200),
+        "12x18": ("hold", "149.33", 200, True),
+        "16x24": ("approved", "199.33", 200, True),
+        "20x30": ("hold", "299.33", 200, False),
     },
     "canvas-15": {
-        "12x18": ("workbook", "134.99", 200),
-        "16x24": ("workbook", "224.99", 200),
+        "12x18": ("hold", "134.99", 200, True),
+        "16x24": ("hold", "224.99", 200, True),
+        "20x30": ("hold", "314.99", 200, False),
     },
     "metal-aluminum": {
-        "12x18": ("workbook", "179.99", 300),
-        "16x24": ("workbook", "224.99", 300),
-        "20x30": ("workbook", "359.99", 300),
+        "12x18": ("hold", "179.99", 300, True),
+        "16x24": ("hold", "224.99", 300, True),
+        "20x30": ("hold", "359.99", 300, True),
     },
     "paper-archival": {
-        "16x24": ("workbook", "129.99", 300),
+        "12x18": ("hold", "89.99", 300, False),
+        "16x24": ("hold", "129.99", 300, True),
+        "20x30": ("hold", "199.99", 300, False),
     },
     "paper-semigloss": {
-        "16x24": ("workbook", "109.99", 300),
+        "12x18": ("hold", "69.99", 300, False),
+        "16x24": ("hold", "109.99", 300, True),
+        "20x30": ("hold", "189.99", 300, False),
     },
     "paper-somerset": {
-        "16x24": ("workbook", "159.99", 300),
+        "12x18": ("hold", "109.99", 300, False),
+        "16x24": ("hold", "159.99", 300, True),
+        "20x30": ("hold", "249.99", 300, False),
     },
 }
+PUBLIC_DOLLAR = "$199.33"
 PRODUCTS = (
     {
         "id": "canvas-floating-15",
         "name": "Premium 1.5-inch floating-frame canvas",
         "family": "framed canvas",
-        "evidence": "Open-edition 1.5-inch framed canvas. 16×24 is the owner-approved retail. 12×18 is a workbook list price. 20×30 is not on the framed-canvas supplier sheet. Frame finish is not verified, so there is no finish dropdown.",
+        "evidence": "Open-edition 1.5-inch framed canvas. 16×24 at $199.33 is the only approved retail. 12×18 is an unapproved hold draft. 20×30 is not on the framed-canvas supplier sheet and stays a custom quote. Frame finish is not verified, so there is no finish dropdown.",
     },
     {
         "id": "canvas-15",
         "name": "1.5-inch stretched canvas",
         "family": "1.5-inch canvas",
-        "evidence": "Open-edition 1.5-inch stretched canvas from the canvas supplier sheet. This is not the floating-frame product. 20×30 is not on that sheet.",
+        "evidence": "Open-edition 1.5-inch stretched canvas from the canvas supplier sheet. 12×18 and 16×24 are unapproved hold drafts. 20×30 is not on that sheet and stays a custom quote. This is not the floating-frame product.",
     },
     {
         "id": "metal-aluminum",
@@ -73,19 +84,19 @@ PRODUCTS = (
         "id": "paper-archival",
         "name": "Archival matte paper",
         "family": "archival matte paper",
-        "evidence": "Open-edition archival matte paper. Only 16×24 is on the fine-art paper supplier sheet.",
+        "evidence": "Open-edition archival matte paper. Only 16×24 is on the fine-art paper supplier sheet. 12×18 and 20×30 stay custom quotes. The recorded amounts are unapproved hold drafts.",
     },
     {
         "id": "paper-semigloss",
         "name": "Fine-art semi-gloss paper",
         "family": "fine-art semi-gloss paper",
-        "evidence": "Open-edition fine-art semi-gloss paper. Only 16×24 is on the fine-art paper supplier sheet. This is not traditional photographic paper.",
+        "evidence": "Open-edition fine-art semi-gloss paper. Only 16×24 is on the fine-art paper supplier sheet. 12×18 and 20×30 stay custom quotes. This is not traditional photographic paper.",
     },
     {
         "id": "paper-somerset",
         "name": "Somerset Velvet",
         "family": "Somerset Velvet",
-        "evidence": "Open-edition Somerset Velvet. Only 16×24 is on the fine-art paper supplier sheet.",
+        "evidence": "Open-edition Somerset Velvet. Only 16×24 is on the fine-art paper supplier sheet. 12×18 and 20×30 stay custom quotes.",
     },
 )
 OMITTED = (
@@ -124,52 +135,63 @@ def measure(path):
         return int(width), int(height)
 
 
-def price_text(kind, retail):
-    if kind == "approved":
-        if retail != "199.33":
-            raise SystemExit("approved retail is only 199.33")
-        return "$199.33"
-    return f"Workbook list price ${retail}"
+def draft_row(product_id, size_id):
+    kind, retail, minimum, listed = DRAFTS[product_id][size_id]
+    if kind == "approved" and retail != "199.33":
+        raise SystemExit("approved retail is only 199.33")
+    if kind not in ("approved", "hold"):
+        raise SystemExit(f"unexpected price kind {kind}")
+    return kind, retail, minimum, listed
 
 
 def size_record(width, height, size, product_id, number):
-    offer = OFFERS[product_id].get(size["id"])
-    if offer is None:
-        return None
-    kind, retail, minimum = offer
+    kind, retail, minimum, listed = draft_row(product_id, size["id"])
     long_side = max(width, height)
     short_side = min(width, height)
-    if abs((long_side / short_side) - 1.5) / 1.5 > CROP_LIMIT:
-        return {
-            "productId": product_id,
-            "sizeId": size["id"],
-            "label": size["label"],
-            "status": "unavailable",
-            "reason": "This size would crop the photograph.",
-        }
-    print_width, print_height = (size["long"], size["short"]) if width >= height else (size["short"], size["long"])
-    ppi = one_decimal(min(width / print_width, height / print_height))
-    base = {
+    crop = abs((long_side / short_side) - 1.5) / 1.5 > CROP_LIMIT
+    internal = {
         "productId": product_id,
         "sizeId": size["id"],
         "label": size["label"],
+        "supplierListed": listed,
+        "draftRetail": None if kind == "approved" else retail,
+        "approval": "approved" if kind == "approved" else "unapproved",
+    }
+    if crop:
+        internal["status"] = "unavailable"
+        internal["reason"] = "This size would crop the photograph."
+        internal["publicOffer"] = "omitted"
+        return internal
+    print_width, print_height = (size["long"], size["short"]) if width >= height else (size["short"], size["long"])
+    ppi = one_decimal(min(width / print_width, height / print_height))
+    internal.update({
         "printWidthIn": print_width,
         "printHeightIn": print_height,
         "ppi": ppi,
         "minimumPpi": minimum,
-    }
-    if number in HELD_NUMBERS:
-        base["status"] = "hold"
-        base["reason"] = "Workbook hold."
-        return base
-    if ppi < minimum:
-        base["status"] = "hold"
-        base["reason"] = f"Below {minimum} PPI."
-        return base
-    base["status"] = "priced" if kind == "approved" else "workbook"
-    base["retail"] = retail
-    base["priceText"] = price_text(kind, retail)
-    return base
+    })
+    if number in HELD_NUMBERS or ppi < minimum:
+        internal["status"] = "hold"
+        internal["publicOffer"] = "hold"
+        internal["reason"] = "Workbook hold." if number in HELD_NUMBERS else f"Below {minimum} PPI."
+        return internal
+    if kind == "approved":
+        internal["status"] = "priced"
+        internal["publicOffer"] = "approved"
+        internal["retail"] = retail
+        internal["priceText"] = f"{PUBLIC_DOLLAR} approved"
+        return internal
+    if not listed:
+        internal["status"] = "custom-quote"
+        internal["publicOffer"] = "custom-quote"
+        internal["priceText"] = "Custom quote."
+        internal["reason"] = "This size is not on the supplier sheet. The draft amount is an unapproved hold, not a confirmed offer."
+        return internal
+    internal["status"] = "pending"
+    internal["publicOffer"] = "pending"
+    internal["priceText"] = "Pending. Inquiry only."
+    internal["reason"] = "Unapproved hold draft. Not a confirmed offer."
+    return internal
 
 
 def page(photo):
@@ -181,14 +203,15 @@ def page(photo):
         if item["status"] == "unavailable":
             continue
         disabled = " disabled" if item["status"] == "hold" else ""
-        label = item["label"] + (" (on hold)" if item["status"] == "hold" else "")
+        suffix = {"hold": " (on hold)", "pending": " (pending)", "custom-quote": " (custom quote)"}.get(item["status"], "")
+        label = item["label"] + suffix
         sizes.append(
             f'<option value="{item["productId"]}:{item["sizeId"]}" data-product="{item["productId"]}" '
             f'data-size="{item["sizeId"]}" data-label="{item["label"]}" data-status="{item["status"]}"{disabled}>'
             f'{esc(label)}</option>'
         )
     names = {product["id"]: product["name"] for product in PRODUCTS}
-    listed = [item for item in photo["sizes"] if item["status"] in ("priced", "workbook")]
+    listed = [item for item in photo["sizes"] if item["status"] in ("priced", "pending", "custom-quote")]
     if photo["portfolioNumber"] in HELD_NUMBERS:
         price_note = "<p>This photograph is on hold. No price is published.</p>"
     elif not listed:
@@ -292,7 +315,7 @@ def page(photo):
       <h2>About this photograph</h2>
       {photo["extra"]}
       <p>Source file {esc(photo["sourceName"])}, {photo["sourceWidth"]}×{photo["sourceHeight"]} pixels, {photo["orientation"]}, aspect {photo["aspectRatio"]:.4f}. The preview keeps that full composition. No crop is applied.</p>
-      <p>Pixel proportion {esc(aspect)}. A size that would crop this photograph, or that is missing from the supplier sheet, is omitted. Draft amounts are workbook list prices.</p>
+      <p>Pixel proportion {esc(aspect)}. A size that would crop this photograph is omitted. The only approved price is the 16×24 premium 1.5-inch framed canvas. Other variants are pending or by inquiry. A size missing from the supplier sheet is a custom quote.</p>
       <p><a href="../../">Back to the portfolio</a></p>
     </section>
   </main>
@@ -365,37 +388,85 @@ def update_sitemap(photographs):
     seen.add(len(current))
 
 
+def master_status(item):
+    if item["status"] == "priced":
+        return "priced"
+    if item["status"] == "unavailable":
+        return "unavailable"
+    return "hold"
+
+
 def write_pricing_master(photographs):
     rows = []
     for photo in photographs:
         for item in photo["sizes"]:
-            if item["status"] == "unavailable":
-                continue
-            approved = item.get("priceText") == "$199.33"
+            approved = item["status"] == "priced"
             rows.append({
                 "permanentId": photo["id"],
+                "portfolioNumber": photo["portfolioNumber"],
                 "title": photo["title"],
                 "productId": item["productId"],
                 "sizeId": item["sizeId"],
-                "status": item["status"],
-                "approvedRetail": item.get("priceText") if approved else None,
-                "draftRetail": None if approved or item["status"] != "workbook" else item.get("priceText"),
+                "status": master_status(item),
+                "publicOffer": item.get("publicOffer"),
+                "approval": item.get("approval"),
+                "supplierListed": item.get("supplierListed"),
+                "ppi": item.get("ppi"),
+                "minimumPpi": item.get("minimumPpi"),
+                "approvedRetail": PUBLIC_DOLLAR if approved else None,
+                "draftRetail": item.get("draftRetail"),
+                "supplierBase": "74.01" if item["productId"] == "canvas-floating-15" and item["sizeId"] == "16x24" else None,
                 "supplierCost": "unknown",
                 "shipping": "unknown",
                 "squareFee": "unknown",
                 "tax": "unknown",
                 "profit": "unknown",
-                "availability": "inquiry",
+                "availability": "inquiry" if item["status"] != "unavailable" else "unavailable",
                 "checkout": "disabled",
-                "reason": "Approved retail, complete production cost, print master, shipping, tax, and fulfillment are not all verified." if not approved else "Approved retail only. Complete production cost, shipping, tax, and fulfillment are unverified, so checkout stays disabled.",
+                "reason": item.get("reason") or "Approved retail only. Complete production cost, frame, hardware, shipping, tax, and a protected print master are unverified, so checkout stays disabled.",
             })
     target = ROOT / "working" / "pricing" / "pricing-master.json"
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps({
-        "source": "2026-10-19 LumaPrints workbook open-edition retails. Approved retail is only 16x24 premium 1.5-inch framed canvas at $199.33.",
+        "source": "Owner-approved retail is only 16x24 open-edition premium 1.5-inch framed canvas at $199.33. Other amounts are unapproved hold drafts loaded on 2026-10-20. They are not confirmed offers.",
         "acrylic": "excluded",
+        "supplierBase": {
+            "productId": "canvas-floating-15",
+            "sizeId": "16x24",
+            "amount": "74.01",
+            "meaning": "16x24 framed-canvas supplier base only",
+            "doesNotInclude": ["floating frame", "foamcore", "hardware", "shipping", "delivered cost"],
+            "notAVerifiedFramedCost": ["90.13", "50.51"],
+        },
+        "supplierCost": "unknown",
+        "checkout": "disabled",
         "records": rows,
     }, indent=2) + "\n", encoding="utf-8")
+
+
+def public_size(item):
+    kept = {
+        "productId": item["productId"],
+        "sizeId": item["sizeId"],
+        "label": item["label"],
+        "status": item["status"],
+        "publicOffer": item.get("publicOffer"),
+        "supplierListed": item.get("supplierListed"),
+    }
+    if item.get("reason"):
+        kept["reason"] = item["reason"]
+    for key in ("printWidthIn", "printHeightIn", "ppi", "minimumPpi", "priceText"):
+        if key in item:
+            kept[key] = item[key]
+    if item["status"] == "priced":
+        kept["retail"] = "199.33"
+    return kept
+
+
+def public_photo(photo):
+    shown = dict(photo)
+    shown["sizes"] = [public_size(item) for item in photo["sizes"]]
+    return shown
 
 
 def main():
@@ -463,6 +534,8 @@ def main():
         })
     if len(photographs) != 50:
         raise SystemExit(f"expected 50 photographs, found {len(photographs)}")
+    write_pricing_master(photographs)
+    public_photographs = [public_photo(photo) for photo in photographs]
     payload = {
         "products": list(PRODUCTS),
         "omittedFamilies": list(OMITTED),
@@ -470,20 +543,30 @@ def main():
         "approvedRetail": {
             "productId": "canvas-floating-15",
             "sizeId": "16x24",
-            "text": "$199.33",
-            "appliesTo": "every print-ready 3:2 photograph",
+            "text": "$199.33 approved",
+            "appliesTo": "every photograph whose measured file is 3:2 within 0.5 percent and at least 200 PPI on canvas",
         },
-        "photographs": photographs,
+        "photographs": public_photographs,
     }
     PUBLIC_JSON.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
-    write_price_map(photographs)
+    write_price_map(public_photographs)
     SOURCE_JSON.write_text(json.dumps(sources, indent=2) + "\n", encoding="utf-8")
     for photo in photographs:
         target = PAGES / photo["slug"] / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page(photo), encoding="utf-8")
     update_sitemap(photographs)
-    write_pricing_master(photographs)
+    forbidden = (
+        "$149.33", "$299.33", "$134.99", "$224.99", "$314.99", "$179.99", "$359.99",
+        "$89.99", "$129.99", "$199.99", "$69.99", "$109.99", "$189.99", "$159.99",
+        "$249.99", "$74.01", "$90.13", "$50.51", "Workbook list price",
+    )
+    public_text = PUBLIC_JSON.read_text(encoding="utf-8") + JS_PRICES.read_text(encoding="utf-8")
+    for folder in PAGES.glob("*/index.html"):
+        public_text += folder.read_text(encoding="utf-8")
+    for token in forbidden:
+        if token in public_text:
+            raise SystemExit(f"draft amount leaked to a public file: {token}")
     current_slugs = {photo["slug"] for photo in photographs}
     for folder in PAGES.iterdir():
         if folder.is_dir() and folder.name not in current_slugs:
