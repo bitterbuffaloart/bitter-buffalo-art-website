@@ -81,13 +81,13 @@ jobs:
         run: python working/qa-site.py cloudflare-pages --base https://bitter-buffalo-art.pages.dev
   branch-preview:
     needs: verify
-    if: github.event_name == 'pull_request' && github.head_ref == 'cursor/photography-storefront-pilot-3433'
+    if: (github.event_name == 'pull_request' && github.head_ref == 'cursor/photography-storefront-pilot-3433') || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/cursor/photography-storefront-pilot-3433')
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
         with:
           persist-credentials: false
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-node@v6
         with:
           node-version: '22'
@@ -110,7 +110,7 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: '4.151.1'
           workingDirectory: .site-build
-          command: pages deploy public --project-name=bitter-buffalo-art --branch=qa-${{ github.event.pull_request.head.sha }} --commit-hash=${{ github.event.pull_request.head.sha }}
+          command: pages deploy public --project-name=bitter-buffalo-art --branch=qa-${{ github.event.pull_request.head.sha || github.sha }} --commit-hash=${{ github.event.pull_request.head.sha || github.sha }}
       - name: Print isolated preview URL
         env:
           PREVIEW_URL: ${{ steps.candidate.outputs.deployment-url }}
