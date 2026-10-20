@@ -2,7 +2,7 @@
 export const PHOTOGRAPH = {
   photographId: "bb-photo-01",
   rank: 1,
-  title: "Grand Tetons",
+  title: "Stormborn Grand Tetons",
   slug: "grand-tetons",
   displayImage: "/assets/images/portfolio/01.jpg",
   sourceFile: "DSC_2626-Edit-no water mark.jpg",

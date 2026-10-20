@@ -3,7 +3,6 @@
   <url><loc>https://bitterbuffaloart.com/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/sketchbook/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/grand-tetons/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/shop/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/tie-dye/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/laser-art/</loc><changefreq>weekly</changefreq></url>
@@ -11,36 +10,48 @@
   <url><loc>https://bitterbuffaloart.com/events/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/about/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/contact/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/maroon-bells-reflection/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/horseshoe-bend/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/mesa-arch-sunrise/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/zion-river/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/teton-reflection/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/autumn-range-panorama/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/canyon-sunstar/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/miners-exchange/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/solitude-high-country/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/bull-elk/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/mountain-goat-and-kid/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/sandhill-cranes/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/horse-portrait/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/tractor/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/waterfall/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/star-trails-over-the-lake/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/shiprock-star-trails/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/snow-cabins/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/storm-over-the-yellow-house/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/a-little-color-against-the-storm/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/a-roof-beneath-the-fire/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/a-small-flame-of-violet/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/a-thousand-edges-of-light/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/born-to-roam/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/carried-by-the-open-sky/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/cold-water-wild-blood/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/crowned-in-timber/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/embers-above-the-desert/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/fire-beneath-the-arch/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/fuel-for-the-long-way-home/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/gold-beneath-the-wild/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/gold-beyond-the-ridge/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/grand-tetons/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/growing-gold-from-stone/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/into-the-mist/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/mining-dredge/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/mountain-gas-station/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/aspen-valley/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/cabin-at-sunset/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/locomotive/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/weathered-caboose-in-winter/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/barn-and-tetons/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/wooden-chapel/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/wildflower-range-panorama/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/wild-iris-at-dusk/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/autumn-valley-after-the-storm/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/iron-at-rest/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/iron-remembers/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/learning-the-steep-way/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/let-the-water-speak/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/main-street-still-standing/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/room-for-the-sky/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/rooted-beneath-giants/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/small-life-wide-silence/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/still-standing-still-flowing/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/take-the-golden-way/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-canyon-keeps-moving/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-exchange-still-stands/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-gold-that-stayed/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-hills-come-alive-in-gold/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-last-stop-is-quiet/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-long-way-through/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-night-keeps-watch/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-night-writes-back/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/the-wild-holds-its-own/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/twice-the-fire/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/westbound-after-dark/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/what-the-storm-left-glowing/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/what-the-water-remembers/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/when-the-mountains-hold-their-breath/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/when-the-work-was-done/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/where-stone-holds-the-stars/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/where-winter-meets-wildflowers/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/prints/winter-keeps-the-keys/</loc><changefreq>weekly</changefreq></url>
 </urlset>

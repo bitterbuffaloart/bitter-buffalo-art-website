@@ -11,7 +11,7 @@ const contactFile = resolve(root, "cloudflare-pages/functions/api/contact.js");
 const { onRequestPost } = await import("data:text/javascript;base64," + Buffer.from(readFileSync(contactFile)).toString("base64"));
 
 const CROP_LIMIT = 0.005;
-const HELD = new Set(["bb-photo-14", "bb-photo-18", "bb-photo-24"]);
+const HELD = new Set();
 const OFFERS = {
   "canvas-floating-15": {
     "12x18": { minimum: 200, retail: "149.33", text: "Workbook list price $149.33" },
@@ -50,7 +50,7 @@ function expected(photo, productId, size) {
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
-  assert.equal(catalog.photographs.length, 33);
+  assert.equal(catalog.photographs.length, 44);
   assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
@@ -110,12 +110,14 @@ test("every photograph keeps its measured sizes, price, and page", () => {
   assert.equal(metalHold.status, "hold");
   assert.equal(metalHold.ppi, 191.5);
   assert.equal(quoteText("bb-photo-02", "metal-aluminum", "20x30"), "Workbook list price $359.99");
-  assert.equal(quoteText("bb-photo-14", "canvas-floating-15", "16x24"), "Request a quote.");
+  assert.equal(quoteText("bb-photo-10", "canvas-floating-15", "16x24"), "Request a quote.");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 1).title, "Stormborn Grand Tetons");
+  assert.equal(catalog.photographs.find((photo) => photo.portfolioNumber === 14).id, "bb-photo-45");
 });
 
 test("gallery links each photograph to its own inquiry page", () => {
   const photos = products.products.filter((product) => product.category === "photography prints");
-  assert.equal(photos.length, 33);
+  assert.equal(photos.length, 44);
   assert.deepEqual(
     photos.map((product) => product.inquiry_or_external_link),
     catalog.photographs.map((photo) => photo.url),
@@ -125,7 +127,7 @@ test("gallery links each photograph to its own inquiry page", () => {
 test("contact accepts the inquiry fields and does not report success when send is unavailable", async () => {
   const details = inquiryDetails({
     photographId: "bb-photo-01",
-    title: "Grand Tetons",
+    title: "Stormborn Grand Tetons",
     productName: "Premium 1.5-inch floating-frame canvas",
     sizeLabel: "16×24",
     productId: "canvas-floating-15",
@@ -176,7 +178,7 @@ test("contact accepts the inquiry fields and does not report success when send i
     env: { RESEND_API_KEY: "test-only", CONTACT_TO_EMAIL: "owner@example.com", CONTACT_FROM_EMAIL: "sender@example.com" },
   });
   assert.equal(delivered.status, 200);
-  assert.match(sent.text, /Photograph: Grand Tetons/);
+  assert.match(sent.text, /Photograph: Stormborn Grand Tetons/);
   assert.match(sent.text, /Catalog ID: bb-photo-01/);
   assert.match(sent.text, /Product: Premium 1\.5-inch floating-frame canvas/);
   assert.match(sent.text, /Size: 16×24/);

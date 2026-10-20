@@ -19,7 +19,7 @@ SITEMAP = ROOT / "cloudflare-pages" / "sitemap.xml"
 Image.MAX_IMAGE_PIXELS = None
 CROP_LIMIT = 0.005
 JS_PRICES = ROOT / "cloudflare-pages" / "assets" / "js" / "print-inquiry.js"
-HELD_NUMBERS = {14, 18, 24}
+HELD_NUMBERS = set()
 CANVAS_SIZES = (
     {"id": "12x18", "label": "12×18", "short": 12, "long": 18},
     {"id": "16x24", "label": "16×24", "short": 16, "long": 24},
@@ -249,7 +249,8 @@ def page(photo):
     <section class="page-hero">
       <p class="eyebrow"><span class="eyebrow__mark eyebrow__mark--ink">Fine Art Photography · #{photo["portfolioNumber"]:02d}</span></p>
       <h1>{esc(photo["title"])}</h1>
-      <p class="lede">Choose a print product and a size for this photograph. This page does not take payment.</p>
+      <p class="lede">{esc(photo["story"])}</p>
+      <p>Choose a print product and a size for this photograph. This page does not take payment.</p>
     </section>
     <section class="print-inquiry">
       <figure class="print-inquiry__photo">
@@ -289,6 +290,7 @@ def page(photo):
     </section>
     <section class="prose formats-block">
       <h2>About this photograph</h2>
+      {photo["extra"]}
       <p>Source file {esc(photo["sourceName"])}, {photo["sourceWidth"]}×{photo["sourceHeight"]} pixels, {photo["orientation"]}, aspect {photo["aspectRatio"]:.4f}. The preview keeps that full composition. No crop is applied.</p>
       <p>Pixel proportion {esc(aspect)}. A size that would crop this photograph, or that is missing from the supplier sheet, is omitted. Draft amounts are workbook list prices.</p>
       <p><a href="../../">Back to the portfolio</a></p>
@@ -344,16 +346,56 @@ def write_price_map(photographs):
 
 
 def update_sitemap(photographs):
-    text = SITEMAP.read_text(encoding="utf-8")
-    lines = []
+    current = {f"https://bitterbuffaloart.com/photography/prints/{photo['slug']}/" for photo in photographs}
+    kept = []
+    seen = set()
+    for line in SITEMAP.read_text(encoding="utf-8").splitlines():
+        if "/photography/prints/" in line and "<loc>" in line:
+            continue
+        kept.append(line)
+    block = [
+        f"  <url><loc>{loc}</loc><changefreq>weekly</changefreq></url>"
+        for loc in sorted(current)
+    ]
+    text = "\n".join(kept)
+    text = text.replace("</urlset>", "\n".join(block) + "\n</urlset>")
+    if text.count("</urlset>") != 1:
+        raise SystemExit("sitemap urlset marker missing")
+    SITEMAP.write_text(text if text.endswith("\n") else text + "\n", encoding="utf-8")
+    seen.add(len(current))
+
+
+def write_pricing_master(photographs):
+    rows = []
     for photo in photographs:
-        loc = f"https://bitterbuffaloart.com/photography/prints/{photo['slug']}/"
-        snippet = f"  <url><loc>{loc}</loc><changefreq>weekly</changefreq></url>"
-        if loc not in text:
-            lines.append(snippet)
-    if lines:
-        text = text.replace("</urlset>", "\n".join(lines) + "\n</urlset>")
-        SITEMAP.write_text(text, encoding="utf-8")
+        for item in photo["sizes"]:
+            if item["status"] == "unavailable":
+                continue
+            approved = item.get("priceText") == "$199.33"
+            rows.append({
+                "permanentId": photo["id"],
+                "title": photo["title"],
+                "productId": item["productId"],
+                "sizeId": item["sizeId"],
+                "status": item["status"],
+                "approvedRetail": item.get("priceText") if approved else None,
+                "draftRetail": None if approved or item["status"] != "workbook" else item.get("priceText"),
+                "supplierCost": "unknown",
+                "shipping": "unknown",
+                "squareFee": "unknown",
+                "tax": "unknown",
+                "profit": "unknown",
+                "availability": "inquiry",
+                "checkout": "disabled",
+                "reason": "Approved retail, complete production cost, print master, shipping, tax, and fulfillment are not all verified." if not approved else "Approved retail only. Complete production cost, shipping, tax, and fulfillment are unverified, so checkout stays disabled.",
+            })
+    target = ROOT / "working" / "pricing" / "pricing-master.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps({
+        "source": "2026-10-19 LumaPrints workbook open-edition retails. Approved retail is only 16x24 premium 1.5-inch framed canvas at $199.33.",
+        "acrylic": "excluded",
+        "records": rows,
+    }, indent=2) + "\n", encoding="utf-8")
 
 
 def main():
@@ -389,10 +431,21 @@ def main():
                 record = size_record(width, height, canvas_size, product["id"], number)
                 if record:
                     sizes.append(record)
+        extra = []
+        if item.get("location"):
+            extra.append(f"<p>Location: {esc(item['location'])}</p>")
+        if number == 10:
+            extra.append("<p>This photograph stays 16:9. It is not cropped to 3:2. No price is published. It needs its own compatible custom print size.</p>")
+        if item.get("highResolutionMaster") == "missing":
+            extra.append("<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>")
+        if number == 26 and item.get("alternate", {}).get("present"):
+            extra.append("<p>The color image is the photograph on this page. The black-and-white export is an alternate, not a separate photograph.</p>")
         photographs.append({
-            "id": f"bb-photo-{number:02d}",
+            "id": item["permanentId"],
             "portfolioNumber": number,
             "title": item["title"],
+            "story": item["story"],
+            "extra": "".join(extra),
             "slug": photo_slug,
             "url": f"/photography/prints/{photo_slug}/",
             "sourceName": path.name,
@@ -406,8 +459,8 @@ def main():
             "printHolds": holds,
             "sizes": sizes,
         })
-    if len(photographs) != 33:
-        raise SystemExit(f"expected 33 photographs, found {len(photographs)}")
+    if len(photographs) != 44:
+        raise SystemExit(f"expected 44 photographs, found {len(photographs)}")
     payload = {
         "products": list(PRODUCTS),
         "omittedFamilies": list(OMITTED),
@@ -428,6 +481,13 @@ def main():
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(page(photo), encoding="utf-8")
     update_sitemap(photographs)
+    write_pricing_master(photographs)
+    current_slugs = {photo["slug"] for photo in photographs}
+    for folder in PAGES.iterdir():
+        if folder.is_dir() and folder.name not in current_slugs:
+            for child in folder.glob("*"):
+                child.unlink()
+            folder.rmdir()
     print(f"photographs={len(photographs)} pages={len(list(PAGES.glob('*/index.html')))}")
 
 

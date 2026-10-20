@@ -6,6 +6,11 @@ on:
   pull_request:
     paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   workflow_dispatch:
+    inputs:
+      publish_production:
+        description: Publish this verified branch to the existing Pages production branch
+        type: boolean
+        default: false
 permissions:
   contents: read
 concurrency:
@@ -117,3 +122,50 @@ jobs:
         run: |
           test -n "$PREVIEW_URL"
           echo "PREVIEW_URL=$PREVIEW_URL"
+  record-production:
+    if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/cursor/photography-storefront-pilot-3433'
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Record the current production deployment without printing credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test "$CLOUDFLARE_ACCOUNT_ID" = "f3ee68d66369fd4b2bc390d1dae218f6"
+          curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/bitter-buffalo-art/deployments?per_page=10" \
+            -o deployments.json
+          python -c "import json; data=json.load(open('deployments.json', encoding='utf-8')); assert data.get('success'), 'deployment list failed';
+[print('deployment', item.get('id'), item.get('environment'), ((item.get('deployment_trigger') or {}).get('metadata') or {}).get('branch'), item.get('url')) for item in data.get('result', [])]"
+          rm -f deployments.json
+  publish-production:
+    needs: [verify, record-production]
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.publish_production == 'true' && github.ref == 'refs/heads/cursor/photography-storefront-pilot-3433'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Require scoped deployment credentials before any upload
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo '::error::Missing CLOUDFLARE_API_TOKEN (Account Cloudflare Pages Edit).'; exit 1; }
+          test "$CLOUDFLARE_ACCOUNT_ID" = 'f3ee68d66369fd4b2bc390d1dae218f6' || { echo '::error::Missing or unexpected Cloudflare account ID.'; exit 1; }
+      - run: node working/stage-site.mjs
+      - name: Publish to the existing production branch
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: '4.151.1'
+          workingDirectory: .site-build
+          command: pages deploy public --project-name=bitter-buffalo-art --branch=preview --commit-hash=${{ github.sha }}

@@ -66,7 +66,9 @@
     {
       "id": "bb-photo-01",
       "portfolioNumber": 1,
-      "title": "Grand Tetons",
+      "title": "Stormborn Grand Tetons",
+      "story": "Snow-covered peaks rise through layers of cloud while the valley rests in deep shadow. Light breaks across the mountain faces, revealing sharp ridges before the weather draws another veil. The Tetons carry a wild presence here: immense, restless, and worth standing still for.",
+      "extra": "",
       "slug": "grand-tetons",
       "url": "/photography/prints/grand-tetons/",
       "sourceName": "01 - DSC_2626-Edit-no water mark.jpg",
@@ -77,7 +79,7 @@
       "display": "/assets/images/portfolio/01.jpg",
       "displayWidth": 1400,
       "displayHeight": 933,
-      "printHolds": "HOLD_20x30_below_200ppi",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -199,9 +201,11 @@
     {
       "id": "bb-photo-02",
       "portfolioNumber": 2,
-      "title": "Maroon Bells reflection",
-      "slug": "maroon-bells-reflection",
-      "url": "/photography/prints/maroon-bells-reflection/",
+      "title": "When the Mountains Hold Their Breath",
+      "story": "The Maroon Bells meet their reflection beneath a restless sky. Gold threads through the wooded slopes, and the lake holds the mountains almost without a ripple. Along the rocky shore, the whole scene seems to pause long enough for you to catch your breath with it.",
+      "extra": "",
+      "slug": "when-the-mountains-hold-their-breath",
+      "url": "/photography/prints/when-the-mountains-hold-their-breath/",
       "sourceName": "02_Maroon_Bells_DSC_7500-HDR.jpg",
       "sourceWidth": 10800,
       "sourceHeight": 7201,
@@ -337,9 +341,11 @@
     {
       "id": "bb-photo-03",
       "portfolioNumber": 3,
-      "title": "Horseshoe Bend",
-      "slug": "horseshoe-bend",
-      "url": "/photography/prints/horseshoe-bend/",
+      "title": "The Long Way Through",
+      "story": "Blue water makes a sweeping turn around a massive wall of stone. Sunlit rock and canyon shadow give the bend its depth, drawing the eye around the curve and out of sight. Some paths become remarkable because they refuse to run straight.",
+      "extra": "",
+      "slug": "the-long-way-through",
+      "url": "/photography/prints/the-long-way-through/",
       "sourceName": "03 Horseshoe Bend.jpg",
       "sourceWidth": 15105,
       "sourceHeight": 10253,
@@ -425,9 +431,11 @@
     {
       "id": "bb-photo-04",
       "portfolioNumber": 4,
-      "title": "Mesa Arch sunrise",
-      "slug": "mesa-arch-sunrise",
-      "url": "/photography/prints/mesa-arch-sunrise/",
+      "title": "Fire Beneath the Arch",
+      "story": "The sun breaks beneath Mesa Arch, lighting its underside with a fierce orange glow. Weathered stone frames the distant country while a starburst cuts across the horizon. For this brief moment, the desert seems to hold a flame beneath its roof.",
+      "extra": "",
+      "slug": "fire-beneath-the-arch",
+      "url": "/photography/prints/fire-beneath-the-arch/",
       "sourceName": "04 Mesa Arch sunrise.jpg",
       "sourceWidth": 7500,
       "sourceHeight": 5000,
@@ -562,17 +570,19 @@
     {
       "id": "bb-photo-05",
       "portfolioNumber": 5,
-      "title": "Zion river",
-      "slug": "zion-river",
-      "url": "/photography/prints/zion-river/",
-      "sourceName": "05 Zion river.jpg",
-      "sourceWidth": 9001,
-      "sourceHeight": 6000,
-      "aspectRatio": 1.5002,
+      "title": "The Canyon Keeps Moving",
+      "story": "The Virgin River winds through Zion beneath red cliffs edged with warm light. Trees fill the canyon floor while smooth water slips around scattered stones. The cliffs command your attention, but the river leads you through the photograph, bend by bend.",
+      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "slug": "the-canyon-keeps-moving",
+      "url": "/photography/prints/the-canyon-keeps-moving/",
+      "sourceName": "DSC_2475-HDR-Pano-2-Edit.jpg",
+      "sourceWidth": 2738,
+      "sourceHeight": 1825,
+      "aspectRatio": 1.5003,
       "orientation": "landscape",
       "display": "/assets/images/portfolio/05.jpg",
       "displayWidth": 1600,
-      "displayHeight": 1067,
+      "displayHeight": 1066,
       "printHolds": "",
       "sizes": [
         {
@@ -581,11 +591,10 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 500.0,
+          "ppi": 152.1,
           "minimumPpi": 200,
-          "status": "workbook",
-          "retail": "149.33",
-          "priceText": "Workbook list price $149.33"
+          "status": "hold",
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "canvas-floating-15",
@@ -593,11 +602,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 200,
-          "status": "priced",
-          "retail": "199.33",
-          "priceText": "$199.33"
+          "status": "hold",
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "canvas-15",
@@ -605,11 +613,10 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 500.0,
+          "ppi": 152.1,
           "minimumPpi": 200,
-          "status": "workbook",
-          "retail": "134.99",
-          "priceText": "Workbook list price $134.99"
+          "status": "hold",
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "canvas-15",
@@ -617,11 +624,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 200,
-          "status": "workbook",
-          "retail": "224.99",
-          "priceText": "Workbook list price $224.99"
+          "status": "hold",
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -629,11 +635,10 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 500.0,
+          "ppi": 152.1,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "179.99",
-          "priceText": "Workbook list price $179.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -641,11 +646,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "224.99",
-          "priceText": "Workbook list price $224.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -653,11 +657,10 @@
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
-          "ppi": 300.0,
+          "ppi": 91.3,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "359.99",
-          "priceText": "Workbook list price $359.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-archival",
@@ -665,11 +668,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "129.99",
-          "priceText": "Workbook list price $129.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-semigloss",
@@ -677,11 +679,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "109.99",
-          "priceText": "Workbook list price $109.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-somerset",
@@ -689,20 +690,21 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 375.0,
+          "ppi": 114.1,
           "minimumPpi": 300,
-          "status": "workbook",
-          "retail": "159.99",
-          "priceText": "Workbook list price $159.99"
+          "status": "hold",
+          "reason": "Below 300 PPI."
         }
       ]
     },
     {
       "id": "bb-photo-06",
       "portfolioNumber": 6,
-      "title": "Teton reflection",
-      "slug": "teton-reflection",
-      "url": "/photography/prints/teton-reflection/",
+      "title": "Twice the Fire",
+      "story": "Warm clouds stretch above the mountain skyline and return in the still water below. Snow, dark trees, and bright sky settle into a near mirror image. The reflection gives the light another place to live, doubling the feeling of a moment that cannot last.",
+      "extra": "",
+      "slug": "twice-the-fire",
+      "url": "/photography/prints/twice-the-fire/",
       "sourceName": "06 Teton reflection.jpg",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -833,9 +835,11 @@
     {
       "id": "bb-photo-07",
       "portfolioNumber": 7,
-      "title": "Autumn Range Panorama",
-      "slug": "autumn-range-panorama",
-      "url": "/photography/prints/autumn-range-panorama/",
+      "title": "Gold Beyond the Ridge",
+      "story": "Rough stone anchors the foreground while golden woodland rolls toward a distant horizon. Clouds cast moving patches of shade across the broad country. From this rocky perch, autumn feels almost boundless\u2014one bright stretch of land opening into the next.",
+      "extra": "",
+      "slug": "gold-beyond-the-ridge",
+      "url": "/photography/prints/gold-beyond-the-ridge/",
       "sourceName": "07 Autumn Range Panorama.jpg",
       "sourceWidth": 11255,
       "sourceHeight": 6956,
@@ -921,9 +925,11 @@
     {
       "id": "bb-photo-08",
       "portfolioNumber": 8,
-      "title": "Canyon Sunstar",
-      "slug": "canyon-sunstar",
-      "url": "/photography/prints/canyon-sunstar/",
+      "title": "A Thousand Edges of Light",
+      "story": "A low sun reaches across a crowded landscape of rock towers and narrow shadows. Warm light catches the upper edges while the hollows remain cool and deep. The wide view invites a slow look: every ridge holds another shape, another line, another small discovery.",
+      "extra": "",
+      "slug": "a-thousand-edges-of-light",
+      "url": "/photography/prints/a-thousand-edges-of-light/",
       "sourceName": "08 Canyon Sunstar.jpg",
       "sourceWidth": 14400,
       "sourceHeight": 4800,
@@ -932,7 +938,7 @@
       "display": "/assets/images/portfolio/08.jpg",
       "displayWidth": 1600,
       "displayHeight": 533,
-      "printHolds": "WIDE_PANORAMA_crop_needed_for_3x2|PANORAMA_SIZING_REVIEW|PANORAMA_SIZING_REVIEW_Canyon_Sunstar",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -1009,9 +1015,11 @@
     {
       "id": "bb-photo-09",
       "portfolioNumber": 9,
-      "title": "Miner's Exchange",
-      "slug": "miners-exchange",
-      "url": "/photography/prints/miners-exchange/",
+      "title": "The Exchange Still Stands",
+      "story": "Weathered lettering stretches across a wooden storefront beneath the mountains. Windows, doors, and worn boards give the building a character that polished surfaces cannot imitate. It stands beside the road with its name still visible and its history written into the grain.",
+      "extra": "",
+      "slug": "the-exchange-still-stands",
+      "url": "/photography/prints/the-exchange-still-stands/",
       "sourceName": "09 - DSC_1677.jpg",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -1142,9 +1150,11 @@
     {
       "id": "bb-photo-10",
       "portfolioNumber": 10,
-      "title": "Solitude (High Country)",
-      "slug": "solitude-high-country",
-      "url": "/photography/prints/solitude-high-country/",
+      "title": "Small Life, Wide Silence",
+      "story": "A small bird balances on a post in an almost empty white world. A fine horizontal line gives the eye a place to rest, and the bird gives the silence a pulse. Sometimes the smallest presence is enough to fill the frame.",
+      "extra": "<p>This photograph stays 16:9. It is not cropped to 3:2. No price is published. It needs its own compatible custom print size.</p>",
+      "slug": "small-life-wide-silence",
+      "url": "/photography/prints/small-life-wide-silence/",
       "sourceName": "10 - DSC_0192-Edit-16x9-solitude .jpg",
       "sourceWidth": 9000,
       "sourceHeight": 5063,
@@ -1153,7 +1163,7 @@
       "display": "/assets/images/portfolio/10.jpg",
       "displayWidth": 1400,
       "displayHeight": 788,
-      "printHolds": "SHARPNESS_OWNER_REVIEW_Solitude|SHARPNESS_OWNER_REVIEW_Solitude",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -1230,9 +1240,11 @@
     {
       "id": "bb-photo-11",
       "portfolioNumber": 11,
-      "title": "Bull elk",
-      "slug": "bull-elk",
-      "url": "/photography/prints/bull-elk/",
+      "title": "Crowned in Timber",
+      "story": "A bull elk stands among pale grasses and dark tree trunks, his antlers spreading through the woodland like bare branches. The muted forest colors bring his heavy shoulders and watchful profile forward. Strength feels quiet here, settled into its own surroundings.",
+      "extra": "",
+      "slug": "crowned-in-timber",
+      "url": "/photography/prints/crowned-in-timber/",
       "sourceName": "11 - DSC_9390.jpg",
       "sourceWidth": 8256,
       "sourceHeight": 5504,
@@ -1241,7 +1253,7 @@
       "display": "/assets/images/portfolio/11.jpg",
       "displayWidth": 1400,
       "displayHeight": 933,
-      "printHolds": "NOTE_second_elk_now_at_slot_21",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -1367,9 +1379,11 @@
     {
       "id": "bb-photo-12",
       "portfolioNumber": 12,
-      "title": "Mountain Goat and Kid",
-      "slug": "mountain-goat-and-kid",
-      "url": "/photography/prints/mountain-goat-and-kid/",
+      "title": "Learning the Steep Way",
+      "story": "An adult mountain goat stands above a small kid on a broken slope of rock. White coats catch the light against the gray stone, making their footing feel even more remarkable. The little one has a steep world to learn and company along the way.",
+      "extra": "",
+      "slug": "learning-the-steep-way",
+      "url": "/photography/prints/learning-the-steep-way/",
       "sourceName": "12 Mountain Goat and Kid.jpg",
       "sourceWidth": 4916,
       "sourceHeight": 3593,
@@ -1378,7 +1392,7 @@
       "display": "/assets/images/portfolio/12.jpg",
       "displayWidth": 1600,
       "displayHeight": 1169,
-      "printHolds": "HOLD_20x30_below_200ppi|HOLD_20x30_mountain_goat",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -1455,9 +1469,11 @@
     {
       "id": "bb-photo-13",
       "portfolioNumber": 13,
-      "title": "Sandhill cranes",
-      "slug": "sandhill-cranes",
-      "url": "/photography/prints/sandhill-cranes/",
+      "title": "Carried by the Open Sky",
+      "story": "Two sandhill cranes stretch their wings across a clear blue sky. Their long necks point forward while the feather tips fan into delicate shapes. For a moment, the photograph holds the effortless-looking balance of bodies built for distance.",
+      "extra": "",
+      "slug": "carried-by-the-open-sky",
+      "url": "/photography/prints/carried-by-the-open-sky/",
       "sourceName": "13 Sandhill cranes.jpg",
       "sourceWidth": 5760,
       "sourceHeight": 3840,
@@ -1466,7 +1482,7 @@
       "display": "/assets/images/portfolio/13.jpg",
       "displayWidth": 1600,
       "displayHeight": 1067,
-      "printHolds": "HOLD_20x30_below_200ppi",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -1586,14 +1602,16 @@
       ]
     },
     {
-      "id": "bb-photo-14",
+      "id": "bb-photo-45",
       "portfolioNumber": 14,
-      "title": "Horse portrait",
-      "slug": "horse-portrait",
-      "url": "/photography/prints/horse-portrait/",
-      "sourceName": "14 Horse portrait.jpg",
-      "sourceWidth": 6000,
-      "sourceHeight": 4000,
+      "title": "Born to Roam",
+      "story": "A rust-colored bison calf stands among sage and grass, surrounded by the heavy shapes of the herd. Small legs, watchful eyes, and a whole stretch of wild country ahead. The next generation is already finding its footing.",
+      "extra": "",
+      "slug": "born-to-roam",
+      "url": "/photography/prints/born-to-roam/",
+      "sourceName": "DSC_2637.JPG",
+      "sourceWidth": 4035,
+      "sourceHeight": 2690,
       "aspectRatio": 1.5,
       "orientation": "landscape",
       "display": "/assets/images/portfolio/14.jpg",
@@ -1607,10 +1625,11 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 333.3,
+          "ppi": 224.2,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
         },
         {
           "productId": "canvas-floating-15",
@@ -1618,10 +1637,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 200,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "canvas-15",
@@ -1629,10 +1648,11 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 333.3,
+          "ppi": 224.2,
           "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
         },
         {
           "productId": "canvas-15",
@@ -1640,10 +1660,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 200,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 200 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -1651,10 +1671,10 @@
           "label": "12\u00d718",
           "printWidthIn": 18,
           "printHeightIn": 12,
-          "ppi": 333.3,
+          "ppi": 224.2,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -1662,10 +1682,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "metal-aluminum",
@@ -1673,10 +1693,10 @@
           "label": "20\u00d730",
           "printWidthIn": 30,
           "printHeightIn": 20,
-          "ppi": 200.0,
+          "ppi": 134.5,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-archival",
@@ -1684,10 +1704,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-semigloss",
@@ -1695,10 +1715,10 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         },
         {
           "productId": "paper-somerset",
@@ -1706,19 +1726,21 @@
           "label": "16\u00d724",
           "printWidthIn": 24,
           "printHeightIn": 16,
-          "ppi": 250.0,
+          "ppi": 168.1,
           "minimumPpi": 300,
           "status": "hold",
-          "reason": "Workbook hold."
+          "reason": "Below 300 PPI."
         }
       ]
     },
     {
       "id": "bb-photo-15",
       "portfolioNumber": 15,
-      "title": "Tractor",
-      "slug": "tractor",
-      "url": "/photography/prints/tractor/",
+      "title": "Iron at Rest",
+      "story": "An old tractor rests in the grass beneath a textured sky. Black and white draws attention to worn metal, heavy tires, and the stubborn geometry of a working machine. Its engine is quiet, but its presence still belongs to the land around it.",
+      "extra": "",
+      "slug": "iron-at-rest",
+      "url": "/photography/prints/iron-at-rest/",
       "sourceName": "15 Tractor.jpg",
       "sourceWidth": 7500,
       "sourceHeight": 5000,
@@ -1853,9 +1875,11 @@
     {
       "id": "bb-photo-16",
       "portfolioNumber": 16,
-      "title": "Waterfall",
-      "slug": "waterfall",
-      "url": "/photography/prints/waterfall/",
+      "title": "Let the Water Speak",
+      "story": "Water folds over a broad rock ledge in pale ribbons, gathering and falling again between warm-colored stones. Green growth softens the edges of the scene. The steady movement gives the eye somewhere to settle and the mind permission to wander.",
+      "extra": "",
+      "slug": "let-the-water-speak",
+      "url": "/photography/prints/let-the-water-speak/",
       "sourceName": "16 Waterfall.jpg",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -1986,9 +2010,11 @@
     {
       "id": "bb-photo-17",
       "portfolioNumber": 17,
-      "title": "Star trails over the lake",
-      "slug": "star-trails-over-the-lake",
-      "url": "/photography/prints/star-trails-over-the-lake/",
+      "title": "The Night Writes Back",
+      "story": "Long trails of starlight cross the sky above a snow-covered basin and dark mountain slopes. The ground appears still while the exposure turns the passing night into visible lines. Time leaves its handwriting overhead.",
+      "extra": "",
+      "slug": "the-night-writes-back",
+      "url": "/photography/prints/the-night-writes-back/",
       "sourceName": "17 Star trails over the lake.jpg",
       "sourceWidth": 7500,
       "sourceHeight": 5001,
@@ -2123,137 +2149,101 @@
     {
       "id": "bb-photo-18",
       "portfolioNumber": 18,
-      "title": "Shiprock star trails",
-      "slug": "shiprock-star-trails",
-      "url": "/photography/prints/shiprock-star-trails/",
-      "sourceName": "18 - DSC_9535-Edit-2.jpg",
-      "sourceWidth": 6016,
-      "sourceHeight": 4016,
-      "aspectRatio": 1.498,
+      "title": "Where Stone Holds the Stars",
+      "story": "A jagged tower of weathered rock stands beneath a sky written in circles. Blue and white star trails sweep around its crown, turning passing time into something visible. There is a wild kind of peace here\u2014the feeling of planting your feet on solid ground while the whole universe keeps turning.",
+      "extra": "",
+      "slug": "where-stone-holds-the-stars",
+      "url": "/photography/prints/where-stone-holds-the-stars/",
+      "sourceName": "18 - DSC_9535-Edit-2 copy.jpg",
+      "sourceWidth": 9601,
+      "sourceHeight": 5400,
+      "aspectRatio": 1.778,
       "orientation": "landscape",
       "display": "/assets/images/portfolio/18.jpg",
-      "displayWidth": 1400,
-      "displayHeight": 935,
+      "displayWidth": 1600,
+      "displayHeight": 900,
       "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 334.2,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-floating-15",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 334.2,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-15",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 334.2,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 200.5,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-archival",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-semigloss",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-somerset",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 250.7,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         }
       ]
     },
     {
       "id": "bb-photo-19",
       "portfolioNumber": 19,
-      "title": "Snow cabins",
-      "slug": "snow-cabins",
-      "url": "/photography/prints/snow-cabins/",
+      "title": "Winter Keeps the Keys",
+      "story": "Small wooden cabins stand beneath snow-laden trees, their dark walls breaking through the white. The monochrome view brings out rooflines, trunks, and the quiet spaces between buildings. Winter gathers the whole settlement into a slower rhythm.",
+      "extra": "",
+      "slug": "winter-keeps-the-keys",
+      "url": "/photography/prints/winter-keeps-the-keys/",
       "sourceName": "19 Snow cabins.jpg",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -2384,9 +2374,11 @@
     {
       "id": "bb-photo-20",
       "portfolioNumber": 20,
-      "title": "Storm over the yellow house",
-      "slug": "storm-over-the-yellow-house",
-      "url": "/photography/prints/storm-over-the-yellow-house/",
+      "title": "A Little Color Against the Storm",
+      "story": "A yellow house and its weathered neighbors face the road beneath heavy clouds. Bright paint, pale fencing, and old wood hold their own against the dark sky. The scene has the familiar stubbornness of a mountain town waiting out another change in the weather.",
+      "extra": "",
+      "slug": "a-little-color-against-the-storm",
+      "url": "/photography/prints/a-little-color-against-the-storm/",
       "sourceName": "20 Storm over the yellow house.jpg",
       "sourceWidth": 5982,
       "sourceHeight": 3987,
@@ -2395,7 +2387,7 @@
       "display": "/assets/images/portfolio/20.jpg",
       "displayWidth": 1600,
       "displayHeight": 1066,
-      "printHolds": "HOLD_20x30_below_200ppi",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -2517,7 +2509,9 @@
     {
       "id": "bb-photo-21",
       "portfolioNumber": 21,
-      "title": "Into The Mist",
+      "title": "Into the Mist",
+      "story": "Elk emerge from a pale meadow where the distance dissolves into mist. One lowers its head to feed while another stands farther back, softened by the haze. The photograph asks for a quieter kind of attention, letting the animals appear gradually as you look.",
+      "extra": "",
       "slug": "into-the-mist",
       "url": "/photography/prints/into-the-mist/",
       "sourceName": "21 - Into The Mist.jpg",
@@ -2528,7 +2522,7 @@
       "display": "/assets/images/portfolio/21.jpg",
       "displayWidth": 1400,
       "displayHeight": 935,
-      "printHolds": "SUBJECT_OVERLAP_elk_with_slot_11|SUBJECT_OVERLAP_elk_with_slot_11",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -2654,9 +2648,11 @@
     {
       "id": "bb-photo-22",
       "portfolioNumber": 22,
-      "title": "Mining dredge",
-      "slug": "mining-dredge",
-      "url": "/photography/prints/mining-dredge/",
+      "title": "What the Water Remembers",
+      "story": "The skeletal remains of old machinery stretch above still water, their shapes repeated in the reflection. Autumn color rises behind the weathered framework. Hard angles and bright leaves share the surface, bringing the marks of industry and the surrounding landscape into one frame.",
+      "extra": "",
+      "slug": "what-the-water-remembers",
+      "url": "/photography/prints/what-the-water-remembers/",
       "sourceName": "22 Mining dredge.jpg",
       "sourceWidth": 5949,
       "sourceHeight": 3967,
@@ -2665,7 +2661,7 @@
       "display": "/assets/images/portfolio/22.jpg",
       "displayWidth": 1600,
       "displayHeight": 1067,
-      "printHolds": "HOLD_20x30_below_200ppi",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -2787,9 +2783,11 @@
     {
       "id": "bb-photo-23",
       "portfolioNumber": 23,
-      "title": "Mountain Gas Station",
-      "slug": "mountain-gas-station",
-      "url": "/photography/prints/mountain-gas-station/",
+      "title": "Fuel for the Long Way Home",
+      "story": "An old mountain gas station fills the frame with timber, signs, and roadside character. Forested slopes rise behind the roof, placing this small stop firmly in its country. It carries the feeling of a place where the journey slows down for a while.",
+      "extra": "",
+      "slug": "fuel-for-the-long-way-home",
+      "url": "/photography/prints/fuel-for-the-long-way-home/",
       "sourceName": "23 Mountain Gas Station.jpg",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -2920,137 +2918,101 @@
     {
       "id": "bb-photo-24",
       "portfolioNumber": 24,
-      "title": "Aspen valley",
-      "slug": "aspen-valley",
-      "url": "/photography/prints/aspen-valley/",
-      "sourceName": "24 - DSC_0240_1-Edit-Edit.jpg",
-      "sourceWidth": 6034,
-      "sourceHeight": 4028,
-      "aspectRatio": 1.498,
+      "title": "Gold Beneath the Wild",
+      "story": "Warm light reaches across the trees and brush, catching the hillside in gold. Beyond the still water, Mount Sneffels and the surrounding skyline rise in blue shadow beneath soft clouds. This is country that makes you stop without deciding to, then stay a little longer.",
+      "extra": "<p>Location: Dallas Divide / Mount Sneffels, Colorado.</p>",
+      "slug": "gold-beneath-the-wild",
+      "url": "/photography/prints/gold-beneath-the-wild/",
+      "sourceName": "24 - DSC_0240_1-Edit-Edit copy.jpg",
+      "sourceWidth": 9599,
+      "sourceHeight": 5400,
+      "aspectRatio": 1.7776,
       "orientation": "landscape",
       "display": "/assets/images/portfolio/24.jpg",
-      "displayWidth": 1400,
-      "displayHeight": 935,
+      "displayWidth": 1600,
+      "displayHeight": 900,
       "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 335.2,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-floating-15",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-15",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 335.2,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "canvas-15",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 200,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "12x18",
           "label": "12\u00d718",
-          "printWidthIn": 18,
-          "printHeightIn": 12,
-          "ppi": 335.2,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "metal-aluminum",
           "sizeId": "20x30",
           "label": "20\u00d730",
-          "printWidthIn": 30,
-          "printHeightIn": 20,
-          "ppi": 201.1,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-archival",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-semigloss",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         },
         {
           "productId": "paper-somerset",
           "sizeId": "16x24",
           "label": "16\u00d724",
-          "printWidthIn": 24,
-          "printHeightIn": 16,
-          "ppi": 251.4,
-          "minimumPpi": 300,
-          "status": "hold",
-          "reason": "Workbook hold."
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
         }
       ]
     },
     {
       "id": "bb-photo-25",
       "portfolioNumber": 25,
-      "title": "Cabin at sunset",
-      "slug": "cabin-at-sunset",
-      "url": "/photography/prints/cabin-at-sunset/",
+      "title": "A Roof Beneath the Fire",
+      "story": "A small cabin rests at the edge of a meadow while fiery clouds stretch over the forest. Its simple roof and dark doorway give the eye an anchor beneath the dramatic sky. The building feels small, sheltered, and completely at home in the clearing.",
+      "extra": "",
+      "slug": "a-roof-beneath-the-fire",
+      "url": "/photography/prints/a-roof-beneath-the-fire/",
       "sourceName": "25 - DSC_6980-Edit-Edit.tif",
       "sourceWidth": 6000,
       "sourceHeight": 4000,
@@ -3181,9 +3143,11 @@
     {
       "id": "bb-photo-26",
       "portfolioNumber": 26,
-      "title": "Locomotive",
-      "slug": "locomotive",
-      "url": "/photography/prints/locomotive/",
+      "title": "Iron Remembers",
+      "story": "Locomotive 495 fills the frame with rivets, pipes, and heavy steel beneath a sweeping sky. Light catches the face of the engine and the worn surfaces around it. Even at rest, the machine carries the visual weight of work, distance, and determination.",
+      "extra": "<p>The color image is the photograph on this page. The black-and-white export is an alternate, not a separate photograph.</p>",
+      "slug": "iron-remembers",
+      "url": "/photography/prints/iron-remembers/",
       "sourceName": "26 Locomotive.jpg",
       "sourceWidth": 4886,
       "sourceHeight": 7330,
@@ -3318,9 +3282,11 @@
     {
       "id": "bb-photo-27",
       "portfolioNumber": 27,
-      "title": "Weathered Caboose in Winter",
-      "slug": "weathered-caboose-in-winter",
-      "url": "/photography/prints/weathered-caboose-in-winter/",
+      "title": "The Last Stop Is Quiet",
+      "story": "A weathered caboose rests among pale winter grass and bare trees. Faded boards and touches of red trace the shape of a carriage built to travel. Here it stands still, with the small details of its surface finally given time to be seen.",
+      "extra": "",
+      "slug": "the-last-stop-is-quiet",
+      "url": "/photography/prints/the-last-stop-is-quiet/",
       "sourceName": "27 Weathered Caboose in Winter.jpg",
       "sourceWidth": 6264,
       "sourceHeight": 4055,
@@ -3406,9 +3372,11 @@
     {
       "id": "bb-photo-28",
       "portfolioNumber": 28,
-      "title": "Barn and Tetons",
-      "slug": "barn-and-tetons",
-      "url": "/photography/prints/barn-and-tetons/",
+      "title": "Rooted Beneath Giants",
+      "story": "The barn glows warmly beneath a skyline of sharp, snowy summits. Low buildings and an uneven fence bring the scene down to human scale. Hand-built shelter and towering mountains meet in a view that feels both welcoming and immense.",
+      "extra": "",
+      "slug": "rooted-beneath-giants",
+      "url": "/photography/prints/rooted-beneath-giants/",
       "sourceName": "28 Barn and Tetons.jpg",
       "sourceWidth": 10800,
       "sourceHeight": 4712,
@@ -3494,9 +3462,11 @@
     {
       "id": "bb-photo-29",
       "portfolioNumber": 29,
-      "title": "Wooden chapel",
-      "slug": "wooden-chapel",
-      "url": "/photography/prints/wooden-chapel/",
+      "title": "Room for the Sky",
+      "story": "A small wooden chapel stands beneath a broad, cloud-streaked sky. Weathered boards and a simple tower rise from open ground, with distant mountains along the horizon. The space around the building becomes part of the photograph, leaving room for stillness and reflection.",
+      "extra": "",
+      "slug": "room-for-the-sky",
+      "url": "/photography/prints/room-for-the-sky/",
       "sourceName": "29 Wooden chapel.jpg",
       "sourceWidth": 7531,
       "sourceHeight": 3600,
@@ -3582,9 +3552,11 @@
     {
       "id": "bb-photo-30",
       "portfolioNumber": 30,
-      "title": "Wildflower Range Panorama",
-      "slug": "wildflower-range-panorama",
-      "url": "/photography/prints/wildflower-range-panorama/",
+      "title": "The Hills Come Alive in Gold",
+      "story": "Yellow wildflowers spread across rolling green country beneath a long mountain skyline. Bands of cloud and light give the distant slopes their shape. The wide frame holds the abundance of a brief flowering season, stretching far beyond any single blossom.",
+      "extra": "",
+      "slug": "the-hills-come-alive-in-gold",
+      "url": "/photography/prints/the-hills-come-alive-in-gold/",
       "sourceName": "30 - DSC_2138-Pano-2-Edit.jpg",
       "sourceWidth": 20044,
       "sourceHeight": 6681,
@@ -3593,7 +3565,7 @@
       "display": "/assets/images/portfolio/30.jpg",
       "displayWidth": 1400,
       "displayHeight": 467,
-      "printHolds": "WIDE_PANORAMA_crop_needed_for_3x2",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -3670,9 +3642,11 @@
     {
       "id": "bb-photo-31",
       "portfolioNumber": 31,
-      "title": "Wild Iris at Dusk",
-      "slug": "wild-iris-at-dusk",
-      "url": "/photography/prints/wild-iris-at-dusk/",
+      "title": "A Small Flame of Violet",
+      "story": "A violet iris opens against a dark, softened background. Curved petals catch the light while narrow green leaves rise around it. Seen this closely, a small flower becomes a whole landscape of color, texture, and delicate edges.",
+      "extra": "",
+      "slug": "a-small-flame-of-violet",
+      "url": "/photography/prints/a-small-flame-of-violet/",
       "sourceName": "31 - DSC_5166.jpg",
       "sourceWidth": 5504,
       "sourceHeight": 8256,
@@ -3807,9 +3781,11 @@
     {
       "id": "bb-photo-32",
       "portfolioNumber": 32,
-      "title": "Autumn Valley After the Storm",
-      "slug": "autumn-valley-after-the-storm",
-      "url": "/photography/prints/autumn-valley-after-the-storm/",
+      "title": "What the Storm Left Glowing",
+      "story": "Warm light breaks across a valley layered with autumn trees and dark ridges. Clouds still gather overhead, making each bright patch of land feel newly revealed. Gold and shadow lead the eye toward the mountains in a scene that keeps unfolding the longer you look.",
+      "extra": "",
+      "slug": "what-the-storm-left-glowing",
+      "url": "/photography/prints/what-the-storm-left-glowing/",
       "sourceName": "32 - DSC_0168_1.jpg",
       "sourceWidth": 11562,
       "sourceHeight": 5551,
@@ -3896,6 +3872,8 @@
       "id": "bb-photo-33",
       "portfolioNumber": 33,
       "title": "Main Street, Still Standing",
+      "story": "Weathered storefronts line a broad, quiet road beneath the mountains. Their uneven colors, old signs, and timber faces give each building its own voice. Together they make a street with enough character to hold your attention long after the passing moment.",
+      "extra": "",
       "slug": "main-street-still-standing",
       "url": "/photography/prints/main-street-still-standing/",
       "sourceName": "33 Main Street, Still Standing.jpg",
@@ -3906,7 +3884,7 @@
       "display": "/assets/images/portfolio/33.jpg",
       "displayWidth": 1600,
       "displayHeight": 1066,
-      "printHolds": "HOLD_20x30_below_200ppi",
+      "printHolds": "",
       "sizes": [
         {
           "productId": "canvas-floating-15",
@@ -4019,6 +3997,1309 @@
           "printWidthIn": 24,
           "printHeightIn": 16,
           "ppi": 249.8,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-34",
+      "portfolioNumber": 34,
+      "title": "Where Winter Meets Wildflowers",
+      "story": "Purple lupines rise through the foreground while yellow flowers mark the rolling ground beyond. Snow still holds the high peaks beneath a clouded sky. Two seasons meet in one view, with the bright insistence of new growth spreading below the cold ridgeline.",
+      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "slug": "where-winter-meets-wildflowers",
+      "url": "/photography/prints/where-winter-meets-wildflowers/",
+      "sourceName": "DSC_2476.jpg",
+      "sourceWidth": 2143,
+      "sourceHeight": 3000,
+      "aspectRatio": 0.7143,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/34.jpg",
+      "displayWidth": 1143,
+      "displayHeight": 1600,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-35",
+      "portfolioNumber": 35,
+      "title": "Cold Water, Wild Blood",
+      "story": "A bull elk steps through blue water, his antlers rising above a dark reflection. Ripples spread from his legs and break the smooth surface around him. The direct view gives the encounter a powerful stillness, held between one step and the next.",
+      "extra": "",
+      "slug": "cold-water-wild-blood",
+      "url": "/photography/prints/cold-water-wild-blood/",
+      "sourceName": "DSC_9655.jpg",
+      "sourceWidth": 5504,
+      "sourceHeight": 8256,
+      "aspectRatio": 0.6667,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/35.jpg",
+      "displayWidth": 1067,
+      "displayHeight": 1600,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 458.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 275.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-36",
+      "portfolioNumber": 36,
+      "title": "The Wild Holds Its Own",
+      "story": "A calf nurses beneath its mother while she turns her head toward the surrounding meadow. Warm light catches their coats and the dry seed heads around them. The scene holds a quieter side of wild life: nourishment, closeness, and a watchful pause.",
+      "extra": "",
+      "slug": "the-wild-holds-its-own",
+      "url": "/photography/prints/the-wild-holds-its-own/",
+      "sourceName": "DSC_9886.jpg",
+      "sourceWidth": 7068,
+      "sourceHeight": 4712,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/36.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 392.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 392.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 392.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 235.6,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 294.5,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-37",
+      "portfolioNumber": 37,
+      "title": "The Gold That Stayed",
+      "story": "An old mining structure stands beside broad slopes of exposed earth, surrounded by golden trees. The forest brings color to a landscape visibly shaped by work. The photograph lets those two histories sit together\u2014the ground that was disturbed and the leaves that return each autumn.",
+      "extra": "",
+      "slug": "the-gold-that-stayed",
+      "url": "/photography/prints/the-gold-that-stayed/",
+      "sourceName": "DJI_0188.jpg",
+      "sourceWidth": 5464,
+      "sourceHeight": 3070,
+      "aspectRatio": 1.7798,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/37.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 899,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-38",
+      "portfolioNumber": 38,
+      "title": "Take the Golden Way",
+      "story": "A paved path bends through golden trees toward a rugged mountain skyline. Long shadows cross the surface, and the curve carries the eye beyond what can be seen. It is an invitation to keep going, slowly enough to notice the color along the way.",
+      "extra": "",
+      "slug": "take-the-golden-way",
+      "url": "/photography/prints/take-the-golden-way/",
+      "sourceName": "DSC_0218 - Copy.jpg",
+      "sourceWidth": 8256,
+      "sourceHeight": 5504,
+      "aspectRatio": 1.5,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/38.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 458.7,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 275.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "129.99",
+          "priceText": "Workbook list price $129.99"
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "109.99",
+          "priceText": "Workbook list price $109.99"
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 344.0,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "159.99",
+          "priceText": "Workbook list price $159.99"
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-39",
+      "portfolioNumber": 39,
+      "title": "Westbound After Dark",
+      "story": "Union Station glows in red, violet, and blue beneath dramatic clouds. The illuminated clock and bright lettering rise over people moving through the plaza. Stone architecture and electric color meet in a city scene with the restless feeling of departures, arrivals, and somewhere still to go.",
+      "extra": "",
+      "slug": "westbound-after-dark",
+      "url": "/photography/prints/westbound-after-dark/",
+      "sourceName": "DSC_4664-Edit.jpg",
+      "sourceWidth": 5837,
+      "sourceHeight": 3446,
+      "aspectRatio": 1.6938,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/39.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 945,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-40",
+      "portfolioNumber": 40,
+      "title": "Growing Gold from Stone",
+      "story": "Orange and yellow leaves flare against a slope of broken gray rock. Slender trunks rise through rough ground, turning an unlikely patch of hillside into a celebration of color. Life finds room, then makes something beautiful of it.",
+      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "slug": "growing-gold-from-stone",
+      "url": "/photography/prints/growing-gold-from-stone/",
+      "sourceName": "DSC_4316.jpg",
+      "sourceWidth": 2738,
+      "sourceHeight": 1825,
+      "aspectRatio": 1.5003,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/40.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1066,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 152.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 152.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 152.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 91.3,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-41",
+      "portfolioNumber": 41,
+      "title": "Still Standing, Still Flowing",
+      "story": "A white cascade spills beside the old wooden structure and spreads into a shaded pool. Sunlight reveals the grain of the boards and the sharp angles of the rock. The building holds still while the river carries the scene forward.",
+      "extra": "<p>The high-resolution print master is missing. The file on this page is the gallery source and is not marked print-ready.</p>",
+      "slug": "still-standing-still-flowing",
+      "url": "/photography/prints/still-standing-still-flowing/",
+      "sourceName": "DSC_7867-Edit - Copy.jpg",
+      "sourceWidth": 1825,
+      "sourceHeight": 2738,
+      "aspectRatio": 0.6665,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/41.jpg",
+      "displayWidth": 1066,
+      "displayHeight": 1600,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 152.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 152.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 200,
+          "status": "hold",
+          "reason": "Below 200 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 152.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 91.3,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 114.1,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-42",
+      "portfolioNumber": 42,
+      "title": "The Night Keeps Watch",
+      "story": "Stars gather above the dark forest while light picks out weathered boards and a pale ribbon of falling water. The structure takes on a quieter presence after dark. Above the river's movement, the sky opens wide.",
+      "extra": "",
+      "slug": "the-night-keeps-watch",
+      "url": "/photography/prints/the-night-keeps-watch/",
+      "sourceName": "DSC_7977 copy.jpg",
+      "sourceWidth": 4000,
+      "sourceHeight": 6000,
+      "aspectRatio": 0.6667,
+      "orientation": "portrait",
+      "display": "/assets/images/portfolio/42.jpg",
+      "displayWidth": 1067,
+      "displayHeight": 1600,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 333.3,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 333.3,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 12,
+          "printHeightIn": 18,
+          "ppi": 333.3,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 20,
+          "printHeightIn": 30,
+          "ppi": 200.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 16,
+          "printHeightIn": 24,
+          "ppi": 250.0,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-43",
+      "portfolioNumber": 43,
+      "title": "Embers Above the Desert",
+      "story": "Red towers rise from a shadowed valley while distant snow-covered peaks catch a soft, fiery glow. Long bands of cloud stretch overhead. For a moment, desert stone and winter snow share the same warmth.",
+      "extra": "",
+      "slug": "embers-above-the-desert",
+      "url": "/photography/prints/embers-above-the-desert/",
+      "sourceName": "DSC_6015.jpg",
+      "sourceWidth": 11632,
+      "sourceHeight": 7416,
+      "aspectRatio": 1.5685,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/43.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1020,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "status": "unavailable",
+          "reason": "This size would crop the photograph."
+        }
+      ]
+    },
+    {
+      "id": "bb-photo-44",
+      "portfolioNumber": 44,
+      "title": "When the Work Was Done",
+      "story": "An old hay rake rests beside a fence beneath an enormous blue sky. Curved teeth and open wheels stand against a meadow reaching toward wooded hills. The machinery has gone quiet; the land still gives the eye somewhere to travel.",
+      "extra": "",
+      "slug": "when-the-work-was-done",
+      "url": "/photography/prints/when-the-work-was-done/",
+      "sourceName": "DSC_9389.jpg",
+      "sourceWidth": 5572,
+      "sourceHeight": 3715,
+      "aspectRatio": 1.4999,
+      "orientation": "landscape",
+      "display": "/assets/images/portfolio/44.jpg",
+      "displayWidth": 1600,
+      "displayHeight": 1067,
+      "printHolds": "",
+      "sizes": [
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 309.6,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "149.33",
+          "priceText": "Workbook list price $149.33"
+        },
+        {
+          "productId": "canvas-floating-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
+          "minimumPpi": 200,
+          "status": "priced",
+          "retail": "199.33",
+          "priceText": "$199.33"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 309.6,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "134.99",
+          "priceText": "Workbook list price $134.99"
+        },
+        {
+          "productId": "canvas-15",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
+          "minimumPpi": 200,
+          "status": "workbook",
+          "retail": "224.99",
+          "priceText": "Workbook list price $224.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "12x18",
+          "label": "12\u00d718",
+          "printWidthIn": 18,
+          "printHeightIn": 12,
+          "ppi": 309.6,
+          "minimumPpi": 300,
+          "status": "workbook",
+          "retail": "179.99",
+          "priceText": "Workbook list price $179.99"
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "metal-aluminum",
+          "sizeId": "20x30",
+          "label": "20\u00d730",
+          "printWidthIn": 30,
+          "printHeightIn": 20,
+          "ppi": 185.7,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-archival",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-semigloss",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
+          "minimumPpi": 300,
+          "status": "hold",
+          "reason": "Below 300 PPI."
+        },
+        {
+          "productId": "paper-somerset",
+          "sizeId": "16x24",
+          "label": "16\u00d724",
+          "printWidthIn": 24,
+          "printHeightIn": 16,
+          "ppi": 232.2,
           "minimumPpi": 300,
           "status": "hold",
           "reason": "Below 300 PPI."

@@ -40,43 +40,40 @@ def image_list(display, thumb, enlarged):
     return "|".join([thumb, display, enlarged])
 
 
-HELD_NUMBERS = {14, 18, 24}
+def framed_16x24_ppi(item):
+    width = item["sourceWidth"]
+    height = item["sourceHeight"]
+    long_side = max(width, height)
+    short_side = min(width, height)
+    if abs((long_side / short_side) - 1.5) / 1.5 > 0.005:
+        return None
+    print_width, print_height = (24, 16) if width >= height else (16, 24)
+    return round(min(width / print_width, height / print_height) + 1e-9, 1)
 
 
 def print_ready(item):
-    if item["portfolioNumber"] in HELD_NUMBERS:
-        return False
-    long_side = max(item["sourceWidth"], item["sourceHeight"])
-    short_side = min(item["sourceWidth"], item["sourceHeight"])
-    return abs((long_side / short_side) - 1.5) / 1.5 <= 0.005
+    ppi = framed_16x24_ppi(item)
+    return ppi is not None and ppi >= 200
 
 
 def photo_row(item):
     number = item["portfolioNumber"]
     name = item["title"]
-    link = "/photography/prints/grand-tetons/" if number == 1 else f"/photography/prints/{print_slug(name, number)}/"
-    if number in HELD_NUMBERS:
-        materials = "On hold. No price is published."
-        retail = ""
-        availability = "on-hold"
-        description = f"Portfolio photograph #{number:02d}. On hold. No price is published. No checkout on this website."
-    elif print_ready(item):
-        materials = "16×24 open-edition 1.5-inch framed canvas: $199.33. Other workbook list prices are on the inquiry page."
+    link = f"/photography/prints/{print_slug(name, number)}/"
+    if print_ready(item):
+        materials = "16×24 open-edition 1.5-inch framed canvas: $199.33. Other workbook list prices are on the inquiry page. Checkout is not enabled."
         retail = "199.33"
         availability = "inquiry"
-        prefix = "Portfolio photograph #01, DSC_2626." if number == 1 else f"Portfolio photograph #{number:02d}."
-        description = prefix + " 16×24 framed canvas $199.33. Other listed prices on the inquiry page are workbook list prices. No checkout on this website."
     else:
-        materials = "No listed size matches this photograph without cropping."
+        materials = "No approved price is published. A listed size is omitted when it would crop the photograph or the file is below the PPI minimum. Checkout is not enabled."
         retail = ""
         availability = "inquiry"
-        description = f"Portfolio photograph #{number:02d}. Inquire to ask about a print. No price is published. No checkout on this website."
     return {
-        "id": f"bb-photo-{number:02d}",
+        "id": item["permanentId"],
         "name": name,
         "category": "photography prints",
         "images": image_list(item["display"], item["thumbnail"], item["enlarged"]),
-        "description": description,
+        "description": item["story"],
         "materials_and_sizes": materials,
         "retail_price": retail,
         "supplier_cost": "",

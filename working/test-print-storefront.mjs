@@ -82,7 +82,7 @@ test("pilot catalog is one photograph and three canvas sizes", () => {
     assert.equal(item.lumaprintsSubcategoryId, null);
     assert.equal(item.priorUnframedQuote.selectedProduct, false);
   }
-  assert.equal(PHOTOGRAPH.title, "Grand Tetons");
+  assert.equal(PHOTOGRAPH.title, "Stormborn Grand Tetons");
   assert.equal(PHOTOGRAPH.masterReady, false);
 });
 

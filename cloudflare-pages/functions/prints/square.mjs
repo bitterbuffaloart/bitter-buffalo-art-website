@@ -21,7 +21,7 @@ export function buildPaymentLinkRequest({ orderId, configuration, locationId, id
       location_id: locationId,
       reference_id: orderId.slice(0, 40),
       line_items: [{
-        name: `Grand Tetons ${configuration.label} premium 1.5-inch floating-frame canvas`,
+        name: `Stormborn Grand Tetons ${configuration.label} premium 1.5-inch floating-frame canvas`,
         quantity: "1",
         note: configuration.configurationId,
         base_price_money: { amount: configuration.retailCents, currency: "USD" },
