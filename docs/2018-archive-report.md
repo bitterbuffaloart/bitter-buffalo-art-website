@@ -1,6 +1,6 @@
 # 2018 archive report
 
-Checked 2026-10-21 01:56 Mountain Time. Live site content is `53b2d9c` (`53b2d9cb63ca11a780532479d40543ac5de6e201`) on https://bitterbuffaloart.com and https://www.bitterbuffaloart.com. At the start of this pass the live content was `95ee113` and HEAD was `bed06ee`.
+Checked 2026-10-21 02:14 Mountain Time. Live site content is `ff36bc9` (`ff36bc9c7afadfc93bd482434d001a207e361196`) on https://bitterbuffaloart.com and https://www.bitterbuffaloart.com. The favicon and Sketchbook commit `53b2d9c` is an ancestor. At the start of this pass the live content was `95ee113` and HEAD was `bed06ee`.
 
 ## Status
 
@@ -14,8 +14,8 @@ Checked 2026-10-21 01:56 Mountain Time. Live site content is `53b2d9c` (`53b2d9c
 | DSC_9791 capture check | COMPLETE, not moved |
 | 2016 and 2017 file counts against real folders | COMPLETE |
 | File-by-file 2016 and 2017 spreadsheet match | BLOCKED, no matching spreadsheet |
-| New public portfolio pages | IMPLEMENTED and tested locally, PENDING deploy |
-| Deploy | COMPLETE, verified live for 53b2d9c |
+| New public portfolio pages | COMPLETE, verified live |
+| Deploy | COMPLETE, verified live for ff36bc9 |
 
 ## Starting conditions
 
@@ -66,6 +66,7 @@ Laser Art still has 16 catalog records. Tie-dye still has 25 listing links. Phot
 - `python working/qa-site.py cloudflare-pages`: 63 pages, 344 resources, 53 portfolio numbers, errors `[]`.
 - `node --test working/test-contact.mjs working/test-site-chrome.mjs working/test-print-inquiry.mjs`: 7 passed, 0 failed.
 - Local Sketchbook at 1440×900, 768×1024, and 390×844. Static Mischief zoom measured 1800×2400. Keyboard Escape and the Close control closed the dialog.
+- After the three photographs were added, `python working/qa-site.py cloudflare-pages` reported 66 pages, 356 resources, 56 portfolio numbers, and errors `[]`. The node tests passed, 8 tests and 0 failures.
 
 ## Deploy and live check
 
@@ -91,8 +92,10 @@ Three clean parents were published as gallery photographs. Web JPEGs are 1400×9
 | 55 | Iris Under a Broken Sky | DSC_9580-2-Edit.tif | portfolio/55.jpg |
 | 56 | The Valley Keeps Its Gold | DSC_9882.JPG | portfolio/56.jpg |
 
-Pixel comparison against the existing 53 gallery frames did not find a duplicate. DSC_9535 was not given a second page. Watermarked JPEGs and the 9000-pixel DSC_9365 resample were not used. QA reported 66 pages, 56 portfolio numbers, and no errors. The node tests passed, 8 tests and 0 failures. This addition is not deployed.
+Pixel comparison against the existing 53 gallery frames did not find a duplicate. DSC_9535 was not given a second page. Watermarked JPEGs and the 9000-pixel DSC_9365 resample were not used.
+
+Preview https://b605fded.bitter-buffalo-art.pages.dev from run 39567100899 matched the three JPEG files. Production job https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39567503710 publish-production succeeded for ff36bc9. On 2026-10-21 02:14 MT both live hosts returned the three JPEGs at the same byte size, showed Fifty-six photographs, and served the three print pages. Favicon, the Treetop JPEG, and the overalls display were unchanged. The live tower image measured 1400×935. At 390×844 it rendered at 346×231, the same proportion, with no crop.
 
 ## Next path
 
-Stage this commit from a clean checkout, preview it, then publish production and verify both hosts. Do not redeploy the documentation commit by itself. Do not add a second page for DSC_9535.
+File-by-file 2016 and 2017 spreadsheet reconciliation stays blocked. No matching workbook was inside those year folders. Do not publish a second DSC_9535 page. Do not publish a watermarked JPEG. Do not redeploy this documentation commit.
