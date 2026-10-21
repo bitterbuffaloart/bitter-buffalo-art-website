@@ -64,7 +64,7 @@ function expected(photo, productId, size) {
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
-  assert.equal(catalog.photographs.length, 62);
+  assert.equal(catalog.photographs.length, 64);
   assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
@@ -188,7 +188,7 @@ test("every photograph keeps its measured sizes, price, and page", () => {
 
 test("gallery links each photograph to its own inquiry page", () => {
   const photos = products.products.filter((product) => product.category === "photography prints");
-  assert.equal(photos.length, 62);
+  assert.equal(photos.length, 64);
   assert.deepEqual(
     photos.map((product) => product.inquiry_or_external_link),
     catalog.photographs.map((photo) => photo.url),
