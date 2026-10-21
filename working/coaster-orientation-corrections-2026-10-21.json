@@ -1,0 +1,170 @@
+{
+  "instructions": "Owner-specified rotation of current published images once. 02 and 08 unchanged.",
+  "note": "This changes only website images, thumbnails, and image dimensions. Etsy listing photos and dress sizes are not changed.",
+  "files": {
+    "01-coaster-4pc-001.jpg": {
+      "operation": "left",
+      "old_size": [
+        1200,
+        1600
+      ],
+      "new_size": [
+        1600,
+        1200
+      ],
+      "old_sha256": "72dfad3e83ec55f8f0dd1df15c3c0a0140a29e10a646ee89237da19f233b7936",
+      "new_sha256": "3be8b5aa00ac236d8fde518ea38467b68a1c6eab73c4cc69f58ac7a4c6555711"
+    },
+    "thumbs/01-coaster-4pc-001.jpg": {
+      "operation": "left",
+      "old_size": [
+        360,
+        480
+      ],
+      "new_size": [
+        480,
+        360
+      ],
+      "old_sha256": "ddec88d35da9decd086761e60cea6e2b62726fda2fe806f208849d2618aec3c3",
+      "new_sha256": "c694e1de48dc14c8d52768802c3e8383632741680dba3504d5e47d834a523232"
+    },
+    "03-coaster-4pc-003.jpg": {
+      "operation": "right",
+      "old_size": [
+        1600,
+        1200
+      ],
+      "new_size": [
+        1200,
+        1600
+      ],
+      "old_sha256": "78ef2dd9d9071cf41fde9326e8788f4a5f3877a75284e2c9b417e09fa1a47a12",
+      "new_sha256": "4f0cab12e8e41f36a459bc5adb5baa4b5d7570f9c06819fe63770944b420aa98"
+    },
+    "thumbs/03-coaster-4pc-003.jpg": {
+      "operation": "right",
+      "old_size": [
+        480,
+        360
+      ],
+      "new_size": [
+        360,
+        480
+      ],
+      "old_sha256": "c62d94b1fb755592aac60318f511ba0b00a4b44dfe4e68882f10aa9cf0ca9b4c",
+      "new_sha256": "35eb31e7b12af1eb3d359fb8ca57ea6f7e3bc83fea5b20d077b9b573717e984e"
+    },
+    "04-coaster-5pc-001.jpg": {
+      "operation": "right",
+      "old_size": [
+        1200,
+        1600
+      ],
+      "new_size": [
+        1600,
+        1200
+      ],
+      "old_sha256": "ae1b0e405f377b9288d326b09be20e904c3b7728464c591dcdc2a8d56a0a9628",
+      "new_sha256": "a977538f27d089ac7e416adcc4aab98892c61df44fb49385b22429d2c2a06cbe"
+    },
+    "thumbs/04-coaster-5pc-001.jpg": {
+      "operation": "right",
+      "old_size": [
+        360,
+        480
+      ],
+      "new_size": [
+        480,
+        360
+      ],
+      "old_sha256": "6c7b0e04c88ecc00c08450fb36cb71a8e81925333fbdcf92d9b8e6cc365ac73d",
+      "new_sha256": "10390306431e245413479fbe798897bb48e4e769aaf649110e307443456cf982"
+    },
+    "05-coaster-4pc-004.jpg": {
+      "operation": "left",
+      "old_size": [
+        1200,
+        1600
+      ],
+      "new_size": [
+        1600,
+        1200
+      ],
+      "old_sha256": "e4dfb0af6eb43ebe4f8110a6698fd01d5d57eaf82c0475e9b9fefcd75fa3215a",
+      "new_sha256": "398e4e0e1fb4cb2471294c17c0bcfb4c8b83f49cd5beaecd82dec42bb1e60afb"
+    },
+    "thumbs/05-coaster-4pc-004.jpg": {
+      "operation": "left",
+      "old_size": [
+        360,
+        480
+      ],
+      "new_size": [
+        480,
+        360
+      ],
+      "old_sha256": "aa9f3a11a7efe52bb920c4a06f67e3dce0b4bc6a11e8d55db7e15cf0e4958392",
+      "new_sha256": "eb4e4e9c5186488a0ed56ae02040a7fb729f75c1abc66f4c6cb067563702e7f1"
+    },
+    "06-coaster-4pc-005.jpg": {
+      "operation": "flip_vertical",
+      "old_size": [
+        1200,
+        1600
+      ],
+      "new_size": [
+        1200,
+        1600
+      ],
+      "old_sha256": "6dcc36791eeac9b915139aa56b5d6b2e2adca6f243792bd6d90a3a088b354e2e",
+      "new_sha256": "292b04d331cb478719a4e6d7d8d69368bc6e16e90f93dcc786448bd463cfaced"
+    },
+    "thumbs/06-coaster-4pc-005.jpg": {
+      "operation": "flip_vertical",
+      "old_size": [
+        360,
+        480
+      ],
+      "new_size": [
+        360,
+        480
+      ],
+      "old_sha256": "20d69863a34902faee0b644685c43f7b304a90fef7c039f069212c55fc6e3092",
+      "new_sha256": "b4fbd9c26065fc3e906769e047274cd45650c23154ead17f5558dee2719a8b6e"
+    },
+    "07-coaster-4pc-006.jpg": {
+      "operation": "left",
+      "old_size": [
+        1200,
+        1600
+      ],
+      "new_size": [
+        1600,
+        1200
+      ],
+      "old_sha256": "5a6ad5adcae0481ab2dc2aa1d1f4bf3267e626f3c0c56ff40e132e89c5d20683",
+      "new_sha256": "c30040801e4f1a2be59b856f5b4e8df860304ac5dd75574a2834138be02550dd"
+    },
+    "thumbs/07-coaster-4pc-006.jpg": {
+      "operation": "left",
+      "old_size": [
+        360,
+        480
+      ],
+      "new_size": [
+        480,
+        360
+      ],
+      "old_sha256": "25ea850b36b178520ccc2c0788736a32646e0cc3c67bb460deafdfd71e47e22e",
+      "new_sha256": "77645d8cbdf3d0701ae518eabd3bea46a8be0030e2f39c51493eb0abceee09de"
+    }
+  },
+  "catalog_ids": [
+    "bb-01-coaster-4pc-001",
+    "bb-03-coaster-4pc-003",
+    "bb-04-coaster-5pc-001",
+    "bb-05-coaster-4pc-004",
+    "bb-06-coaster-4pc-005",
+    "bb-07-coaster-4pc-006"
+  ]
+}
