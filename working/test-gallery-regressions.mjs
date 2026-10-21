@@ -56,6 +56,23 @@ test("a broken category name is rejected and the public pages exist", () => {
   assert.match(missing, /href="\/photography\/">Return to the photography portfolio/);
 });
 
+test("a laser page without a pager keeps every catalog card", () => {
+  const script = readFileSync(resolve(root, "cloudflare-pages/assets/js/catalog.js"), "utf8");
+  assert.match(script, /const slice = pager \? items\.slice\(\(safePage - 1\) \* pageSize, safePage \* pageSize\) : items/);
+  const laser = catalog.products.filter((product) => product.category === "laser");
+  assert.equal(laser.length, 16);
+  assert.equal(new Set(laser.map((product) => product.id)).size, 16);
+  const page = readFileSync(resolve(root, "cloudflare-pages/laser-art/index.html"), "utf8");
+  assert.equal(page.includes("data-catalog-pager"), false);
+  assert.equal((page.match(/data-catalog-grid/g) || []).length, 1);
+  for (const id of ["bb-05-coaster-4pc-004", "bb-06-coaster-4pc-005", "bb-07-coaster-4pc-006", "bb-08-coaster-4pc-007"]) {
+    const product = laser.find((item) => item.id === id);
+    assert.equal(product.retail_price, "33.33");
+    assert.match(product.images, /\/assets\/images\/products\//);
+    assert.match(product.inquiry_or_external_link, /^https:\/\/www\.etsy\.com\/listing\/\d+\//);
+  }
+});
+
 test("near-duplicate pairs are not adjacent when another photograph is present", () => {
   const samples = [
     { name: "Still Standing, Still Flowing" },

@@ -136,11 +136,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const paint = (root, items) => {
+    const pager = root.parentElement ? root.parentElement.querySelector("[data-catalog-pager]") : null;
     const page = Number(root.dataset.page || "1");
-    const pages = Math.max(1, Math.ceil(items.length / pageSize));
-    const safePage = Math.min(Math.max(page, 1), pages);
+    const pages = pager ? Math.max(1, Math.ceil(items.length / pageSize)) : 1;
+    const safePage = pager ? Math.min(Math.max(page, 1), pages) : 1;
     root.dataset.page = String(safePage);
-    const slice = items.slice((safePage - 1) * pageSize, safePage * pageSize);
+    const slice = pager ? items.slice((safePage - 1) * pageSize, safePage * pageSize) : items;
     if (!slice.length) {
       const empty = document.createElement("p");
       empty.className = "catalog-empty";
@@ -150,7 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
       root.replaceChildren(...slice.map((product) => card(product, root.inquiryById)));
     }
     root.dataset.catalogCount = String(items.length);
-    const pager = root.parentElement ? root.parentElement.querySelector("[data-catalog-pager]") : null;
     if (!pager) return;
     const status = pager.querySelector("[data-page-status]");
     if (status) status.textContent = `Page ${safePage} of ${pages}. Showing ${slice.length} of ${items.length}.`;
