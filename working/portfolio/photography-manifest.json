@@ -1,5 +1,5 @@
 {
-  "displayed": 71,
+  "displayed": 72,
   "photographs": [
     {
       "permanentId": "bb-photo-01",
@@ -1711,6 +1711,30 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "previousTitle": "A Fence Across the Foreground"
+    },
+    {
+      "permanentId": "bb-photo-73",
+      "portfolioNumber": 72,
+      "title": "Warm Light on the Rock Wall",
+      "story": "A long rock wall catches warm light. Forested ridges drop away under a clear sky.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-07\\DSC_7054-Edit.tif",
+      "sourceFilename": "DSC_7054-Edit.tif",
+      "sourceWidth": 6016,
+      "sourceHeight": 4016,
+      "aspectClass": 1.498,
+      "display": "/assets/images/portfolio/72.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "thumbnail": "/assets/images/portfolio/thumbs/72.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/72.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1602,
+      "galleryReference": "/photography/#bb-photo-73",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Warm Light on the Rock Wall"
     }
   ],
   "archived": [
