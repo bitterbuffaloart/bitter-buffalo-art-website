@@ -1,18 +1,19 @@
 # Sitewide restoration report
 
-Checked 2026-10-21 00:02 Mountain Time. The public site is not finished.
+Checked 2026-10-21 00:32 Mountain Time. The public site is not finished.
 
 ## Production
 
 - Site: https://bitterbuffaloart.com and https://www.bitterbuffaloart.com
 - Events: https://bitterbuffaloart.com/events/ and https://www.bitterbuffaloart.com/events/
 - Laser Art: https://bitterbuffaloart.com/laser-art/
-- Live content commit: `3552a6d` (2026-10-20 23:49:12 MT), “Show the Treetop Holiday Kickoff Market flyer.”
-- Preview: https://10608a7a.bitter-buffalo-art.pages.dev
-- Preview run: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39551797045 (branch-preview completed 23:50 MT)
-- Production run: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39552095571 (publish-production succeeded 23:53:55 MT)
-- Laser Art content remains `f3df65a`, an ancestor of `3552a6d`. Its production run was https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39542726670.
-- A documentation commit after `3552a6d` records this report. It was not deployed again. DNS, Square, and LumaPrints were not changed.
+- Live content commit: `95ee113` (2026-10-21 00:21:05 MT), “Replace the overalls photo that showed the floor.”
+- The Treetop flyer file is still the accepted `3552a6d` JPEG. It was not redrawn. Both public hosts still return 94909 bytes and SHA-256 `850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc`.
+- Overalls preview: https://b6c6aaf9.bitter-buffalo-art.pages.dev from run https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39555029771.
+- Overalls production run: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39555552953. publish-production succeeded at 00:28:35 MT.
+- The earlier flyer production run remains https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39552095571 for `3552a6d`.
+- Laser Art content remains `f3df65a`. Its production run was https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39542726670.
+- DNS, Square, and LumaPrints were not changed.
 
 ## Pages audited
 
@@ -59,11 +60,28 @@ Coasters re-read at full size and left as they were:
 - `07-coaster-4pc-006` — already rotated 90° clockwise once in `f3df65a`; not rotated again
 - `08-coaster-4pc-007` — upright, no rotation
 
-Coasters 03 and 05 were left at the earlier upright reading from the `f3df65a` enlargement check. They were not opened again as files this pass. No public image under `cloudflare-pages/assets/images` had an EXIF orientation other than none.
+On 2026-10-21 the full files for coasters 03 and 05 were opened. Both are upright and were not rotated. No EXIF orientation tag is set.
+
+- `03-coaster-4pc-003.jpg` — 1600×1200. Four bison skulls, horns up, trees growing upward. Thumb is the same orientation.
+- `05-coaster-4pc-004.jpg` — 1200×1600. Trees grow upward, the bison skull is horns-up, and the Sri Yantra points up. Thumb is the same orientation.
 
 Static Mischief was not rotated again. Sky Within, Grit & Grin, and Static Mischief stay on their matching Etsy listings.
 
-The only new image is the Treetop flyer, copied rather than redrawn.
+## Tie-dye visual pass
+
+All 25 published listing photographs were opened. Each garment is upright, on a sheet or plain backdrop, and shows the piece rather than a floor. None was replaced. Wildfire Bramble (`4599061887.jpg`) and Midnight Bramble (`4599062615.jpg`) sizes were not changed. The edited files in `OneDrive\Desktop\New folder` are not the same frames as those 25 listing photographs.
+
+The studio lace top, `lace-top-display.jpg`, is the lace side from `20260630_125720.jpg`. Its related view, `20260630_130013.jpg`, is the plain spiral side of the same top. The published lace photograph is fully visible and was left as it is. `tie-dye.jpg` is a flat shirt with the collar at the top and was left as it is.
+
+One garment was replaced:
+
+- Published file: `assets/images/tie-dye/overalls-display.jpg`, plus `overalls-thumb.jpg` and `overalls-large.jpg`
+- Problem: the camera photograph `20260630_124345.jpg` included the hardwood floor and a person’s feet
+- Replacement source: `20260630_124345_edited.jpg`, the same front, 2189×3000, background already removed
+- New sizes: display 1167×1600, thumb 350×480, large 1751×2400
+- The reverse, `20260630_125013.jpg`, stays the other side and was not published as a second product
+
+Live check at 00:32 MT: both https://bitterbuffaloart.com/assets/images/tie-dye/overalls-display.jpg and the www host return 132650 bytes, matching the commit. Desktop and mobile cards show the full front, straps up, with no floor. `object-fit` is contain.
 
 ## Missing assets
 
@@ -93,6 +111,8 @@ These four files are 16:9 and were not cropped to 3:2:
 
 Their print pages use the native width and height with `object-fit: contain`.
 
+On 2026-10-21 each of the 53 published displays was compared with its approved original after EXIF orientation was applied. The thumbnail and the enlarged file were compared with the display. All 53 matched rotation 0, and the display aspect stayed within 0.03 of the original. No photograph file was changed. The 21 FAA links and the 32 holds were not changed. Small Life, Wide Silence had the smallest numeric margin because most of the frame is blank sky; the published file shows the bird upright on the wire, so it was left 16:9.
+
 ## Validation
 
 - Before the flyer edit: `python working/qa-site.py cloudflare-pages` reported 63 pages, 343 resources, 53 portfolio numbers, and no errors. `node --test working/test-contact.mjs working/test-site-chrome.mjs working/test-print-inquiry.mjs` reported 7 tests and 0 failures.
@@ -100,12 +120,18 @@ Their print pages use the native width and height with `object-fit: contain`.
 - No failed test was recorded.
 - No secrets or payment credentials were added.
 
-## What this pass did not finish
+## Validation for the overalls change
 
-- A garment-by-garment visual review for floor and clutter was not completed. No tie-dye image was replaced.
-- A photograph-by-photograph comparison of all 53 images against camera originals was not completed. No photograph file was changed.
+- `python working/qa-site.py cloudflare-pages` reported 63 pages, 343 resources, 53 portfolio numbers, and no errors.
+- `node --test working/test-contact.mjs working/test-site-chrome.mjs working/test-print-inquiry.mjs` reported 7 tests and 0 failures.
+- A clean stage of `95ee113` succeeded. The staged flyer still matched SHA-256 `850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc`.
+- GitHub verify succeeded on the preview run and the production run. No failed test was recorded.
+
+## What remains unfinished
+
 - The Sketchbook “View larger” control still does not grow Static Mischief past the dialog’s max height. The dialog fits, scrolls, and closes. It was not changed.
 - A favicon request still returns 404. That predates this restoration.
 - The other 32 photographs stay without an FAA link. Pinterest is not connected.
+- No ornament photograph has been found.
 
 Next actions: leave the two dress sizes unchanged until the owner supplies one size for each listing; add an ornament only if an authentic photograph is found; keep the 32 FAA holds and Pinterest unpublished until each match is verified.
