@@ -506,8 +506,8 @@ def main():
             "printHolds": holds,
             "sizes": sizes,
         })
-    if len(photographs) != 53:
-        raise SystemExit(f"expected 53 photographs, found {len(photographs)}")
+    if len(photographs) != 56:
+        raise SystemExit(f"expected 56 photographs, found {len(photographs)}")
     write_pricing_master(photographs)
     public_photographs = [public_photo(photo) for photo in photographs]
     payload = {

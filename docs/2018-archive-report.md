@@ -14,7 +14,7 @@ Checked 2026-10-21 01:56 Mountain Time. Live site content is `53b2d9c` (`53b2d9c
 | DSC_9791 capture check | COMPLETE, not moved |
 | 2016 and 2017 file counts against real folders | COMPLETE |
 | File-by-file 2016 and 2017 spreadsheet match | BLOCKED, no matching spreadsheet |
-| New public portfolio pages | PENDING, no placeholder pages added |
+| New public portfolio pages | IMPLEMENTED and tested locally, PENDING deploy |
 | Deploy | COMPLETE, verified live for 53b2d9c |
 
 ## Starting conditions
@@ -81,6 +81,18 @@ On 2026-10-21 01:56 MT, both https://bitterbuffaloart.com and https://www.bitter
 
 www applied that rule on a fresh load. Static Mischief zoom measured 1800×2400 at 1440×900, 768×1024, and 390×844. The stage scrolled. Escape and Close both closed the dialog. No source file was copied onto F:\ or C:\. No new photograph was published.
 
+## Portfolio additions
+
+Three clean parents were published as gallery photographs. Web JPEGs are 1400×935, 480×320, and 2400×1602. The 6016×4016 masters were not copied into the site. No landmark is named. Checkout stays off. The 16×24 framed-canvas price is the existing authorized $199.33. Sizes below the PPI minimum stay disabled.
+
+| Number | Title | Parent | Public file |
+| --- | --- | --- | --- |
+| 54 | Towers Before the Storm | DSC_9365-Edit.tif, clean of the watermark that is on the JPEG | portfolio/54.jpg |
+| 55 | Iris Under a Broken Sky | DSC_9580-2-Edit.tif | portfolio/55.jpg |
+| 56 | The Valley Keeps Its Gold | DSC_9882.JPG | portfolio/56.jpg |
+
+Pixel comparison against the existing 53 gallery frames did not find a duplicate. DSC_9535 was not given a second page. Watermarked JPEGs and the 9000-pixel DSC_9365 resample were not used. QA reported 66 pages, 56 portfolio numbers, and no errors. The node tests passed, 8 tests and 0 failures. This addition is not deployed.
+
 ## Next path
 
-Build web derivatives only from the clean parents BB-2018-9365, BB-2018-9580, and BB-2018-9882. Do not use a watermarked JPEG or the 9000-pixel DSC_9365 resample as the original. Do not add a second public page for DSC_9535. Then run the same QA and node tests, stage from a clean checkout, preview, and deploy.
+Stage this commit from a clean checkout, preview it, then publish production and verify both hosts. Do not redeploy the documentation commit by itself. Do not add a second page for DSC_9535.
