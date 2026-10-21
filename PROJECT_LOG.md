@@ -11,14 +11,15 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-20 22:15 Mountain Time
+## Last confirmed state — 2026-10-21 00:02 Mountain Time
 
 - Website: https://bitterbuffaloart.com and https://www.bitterbuffaloart.com
 - Working branch: cursor/photography-storefront-pilot-3433
-- Site content commit: f3df65a. Purchase-guidance commit 64a827c and project-log commit 90560b6 are ancestors. Laser Art navigation commit 2910fe5 is an ancestor and was not itself a finished restoration.
-- Production job for this correction: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39542726670. The publish-production job succeeded for f3df65a.
-- Preview checked before production: https://cc2c606a.bitter-buffalo-art.pages.dev from run https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39541245345.
-- Laser Art now displays the buffalo aspen round, three other decorative engraved wood rounds, four engraved wood cutting boards, and eight coaster sets. `laser.png` and `custom.png` are no longer referenced by public pages. Those files remain in the repository.
+- Live site content commit: 3552a6d. It adds the Treetop Holiday Kickoff Market flyer and keeps the Laser Art restoration from f3df65a. Purchase-guidance commit 64a827c and project-log commit 90560b6 are ancestors. A later documentation commit, if one follows this entry, is a record only. It is not a second production deploy.
+- Production job for the flyer: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39552095571. publish-production succeeded for 3552a6d at 23:53:55 MT on 2026-10-20. The earlier Laser Art job 39542726670 remains the production record for f3df65a.
+- Preview checked before this production publish: https://10608a7a.bitter-buffalo-art.pages.dev from run https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39551797045. branch-preview completed at 23:50 MT.
+- Events shows the Holiday Kickoff Market flyer at cloudflare-pages/assets/images/events/treetop-holiday-kickoff-market-2026.jpg. It is the uploaded JPEG, 1115×627, 94909 bytes, SHA-256 850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc. It sits after DISCONNECT in the 2026 date order. The card names Treetop Child Advocacy Center, Saturday, November 21, 2026, 10:00 AM–3:00 PM, and Summit County Community & Senior Center. It does not say Bitter Buffalo Art attended or has a vendor space. Earlier flyers and years remain.
+- Laser Art now displays the buffalo aspen round, three other decorative engraved wood rounds, four engraved wood cutting boards, and eight coaster sets. `laser.png` and `custom.png` are no longer referenced by public pages. Those files remain in the repository. On this pass, coasters 01, 04, 06, and 08 were re-read at full size and left unrotated. Coasters 02 and 07 were not rotated again.
 - Coaster photographs 02 (Tree of Life) and 07 (Sri Yantra and Tree of Life) were rotated 90 degrees clockwise. The other six already read upright and were not rotated. JPEG rotation was a quality-95 re-encode because a lossless jpegtran tool was not available. Unrotated bytes are kept under `working/laser-art-originals/coasters-before-rotation/`. No EXIF orientation tag was written.
 - Static Mischief thumb, display, and zoom remain the single 90-degree clockwise rotation made from commit 2f8c159. Desktop and mobile dialogs loaded the 1800×2400 image, fit the window, could scroll, and closed. It was not rotated again.
 - No ornament photograph was recovered. The Laser Art page says so and does not show a substitute. No higher-resolution camera originals of the rounds or cutting boards were found. The displayed files are the previously published 800×800 photographs from origin/main.
@@ -27,14 +28,17 @@ Read this file before starting website work and update it before ending a work s
 
 ## Open work
 
-Laser Art restoration of the recovered photographs: implemented in f3df65a, tested on the preview, deployed, and verified live.
+The public site is not finished. Laser Art from f3df65a is live, and the Treetop flyer from 3552a6d is live. Do not treat either as a rollback target.
 
-1. Recovered and displayed. Missing authentic photograph: an ornament. Leave that gap.
-2. Orientation correction is verified on preview enlargements and on the live image bytes.
-3. Static Mischief browser check passed. Do not rotate it again.
-4. The sixteen laser Etsy URLs are the exact listings checked available on 2026-10-20. They were not opened again after this production deploy.
-5. Verify exact counterparts or print masters for the remaining 32 FAA-unmatched photographs before adding links.
-6. Pinterest account connection/domain claim and scheduling remain unconfirmed. Prepared Pin copy is not published content.
+1. Missing authentic photograph: a laser ornament. The Laser Art page says none is shown. Do not invent one.
+2. Union Peak still has no flyer. The card already says so.
+3. Wildfire Bramble (https://www.etsy.com/listing/4599061887/wildfire-bramble-hand-dyed-v-neck-ruffle) and Midnight Bramble (https://www.etsy.com/listing/4599062615/midnight-bramble-hand-dyed-pink-and) disagree with themselves on size. Titles and descriptions say Medium and Large. The Etsy size attributes say L and M. The website still shows both conflicting strings. Do not guess.
+4. A full visual pass of all 25 tie-dye garments for floor or clutter was not completed. No garment image was replaced.
+5. Four photographs stay 16:9 and were not cropped to 3:2: portfolio/10.jpg, portfolio/18.jpg, portfolio/24.jpg, and portfolio/37.jpg. A full visual comparison of all 53 photographs against originals was not completed. The other 32 remain without an FAA link.
+6. The sixteen laser Etsy URLs were checked available on 2026-10-20 and were not opened again after f3df65a. Four round listing slugs still say “cutting-board.” Change a URL only when a different individual listing is verified.
+7. Pinterest account connection, domain claim, and scheduling remain unconfirmed.
+8. Static Mischief stays at its single clockwise rotation. Do not rotate it again.
+9. A favicon request still returns 404. That predates this restoration.
 
 ## Check procedure
 
@@ -55,3 +59,6 @@ Laser Art restoration of the recovered photographs: implemented in f3df65a, test
 - 2026-10-20 22:15 MT — Verified live. https://bitterbuffaloart.com/laser-art/ and the www host return the buffalo hero and do not reference laser.png or custom.png. The live catalog has 16 laser records. Every laser product image returned HTTP 200 at the expected pixel size with no EXIF orientation tag. SHA-256 of the buffalo round, Solar Summit board, and coasters 02 and 07 matched f3df65a. The production page rendered 16 cards, and the enlarged Tree of Life photograph was 1200×1600. Inventory: docs/laser-art-inventory.md.
 - 2026-10-20 23:39 MT — Planned. Sitewide restoration of the existing live site. Laser Art at f3df65a stays the starting point and is not a rollback target. Next: re-inspect all eight coasters at full size, search again for an ornament photograph, then audit tie-dye, all 53 photographs, and every public page. Not implemented yet for this pass.
 - 2026-10-20 23:48 MT — Implemented, not yet tested or deployed. Copied the Treetop Holiday Kickoff Market flyer byte for byte to cloudflare-pages/assets/images/events/treetop-holiday-kickoff-market-2026.jpg. SHA-256 850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc. Added it to the 2026 event cards in date order. The card does not say Bitter Buffalo Art attended or has a booth. Re-inspected coasters 01, 04, 06, and 08 at full size; they already read upright. Coasters 02 and 07 stay at the earlier clockwise rotation. No public image has an EXIF orientation other than none. No ornament photograph was found. Four photographs remain 16:9 and are not cropped to 3:2. Wildfire Bramble and Midnight Bramble size lines still conflict inside the Etsy listings themselves, so the website sizes were not guessed.
+- 2026-10-20 23:51 MT — Tested. Preview https://10608a7a.bitter-buffalo-art.pages.dev from run 39551797045. branch-preview completed at 23:50 MT for 3552a6d. The flyer displayed complete: desktop at its native 1115×627, mobile at 293×165, object-fit contain. Date, time, and venue were visible. GitHub verify ran qa-site.py and test-contact.mjs and succeeded. Not production yet. Local qa-site.py, test-contact, test-site-chrome, and test-print-inquiry had passed before the flyer edit. A clean stage of 3552a6d succeeded. No failed test was recorded.
+- 2026-10-20 23:53 MT — Deployed. Production job 39552095571. publish-production succeeded for 3552a6d at 23:53:55 MT. verify succeeded. The plain deploy job was skipped, which is the established path for this production dispatch.
+- 2026-10-21 00:02 MT — Verified live. https://bitterbuffaloart.com/events/ and https://www.bitterbuffaloart.com/events/ both returned HTTP 200, include treetop-holiday-kickoff-market-2026.jpg, and include the sentence that the flyer is not a record that Bitter Buffalo Art attended or has a vendor space. Both JPEG URLs returned HTTP 200, 94909 bytes, and SHA-256 850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc. Desktop and mobile screenshots show the complete flyer, including Saturday, November 21, 10:00 AM–3:00 PM, and Summit County Community & Senior Center. Existing 2026 flyers and years remain. Laser Art still shows the buffalo aspen round. The website is not finished. Report: docs/sitewide-restoration-report.md.
