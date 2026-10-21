@@ -1,5 +1,5 @@
 {
-  "displayed": 64,
+  "displayed": 66,
   "photographs": [
     {
       "permanentId": "bb-photo-01",
@@ -1543,6 +1543,54 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "previousTitle": "The Cabin Under the Stars"
+    },
+    {
+      "permanentId": "bb-photo-66",
+      "portfolioNumber": 65,
+      "title": "Green Light Over the Peak",
+      "story": "Green light moves across a dark sky above a rocky peak. Yellow trees fill the slope.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-06\\DSC_4751-Edit.tif",
+      "sourceFilename": "DSC_4751-Edit.tif",
+      "sourceWidth": 5568,
+      "sourceHeight": 3712,
+      "aspectClass": 1.5,
+      "display": "/assets/images/portfolio/65.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "thumbnail": "/assets/images/portfolio/thumbs/65.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/65.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1600,
+      "galleryReference": "/photography/#bb-photo-66",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Green Light Over the Peak"
+    },
+    {
+      "permanentId": "bb-photo-67",
+      "portfolioNumber": 66,
+      "title": "Stars Above the Rock Ridge",
+      "story": "A bright band of stars stands over a dark rock ridge. Yellow trees cover the slopes below.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-07\\DSC_6979-Edit.tif",
+      "sourceFilename": "DSC_6979-Edit.tif",
+      "sourceWidth": 6016,
+      "sourceHeight": 4016,
+      "aspectClass": 1.498,
+      "display": "/assets/images/portfolio/66.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "thumbnail": "/assets/images/portfolio/thumbs/66.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/66.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1602,
+      "galleryReference": "/photography/#bb-photo-67",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "Stars Above the Rock Ridge"
     }
   ],
   "archived": [
