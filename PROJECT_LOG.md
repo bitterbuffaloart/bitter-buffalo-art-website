@@ -11,8 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-21 13:30 Mountain Time
+## Last confirmed state — 2026-10-21 13:38 Mountain Time
 
+- Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_1437_1.jpg` is a living room. `DSC_0165.NEF` and `DSC_0178.NEF` are other views of the published valley. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0178-Edit.tif`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0243_1.jpg` and `DSC_0246_1.jpg` are the same pond as Still Water and Yellow Brush. `DSC_0267_1.jpg` is Yellow Trees Beside the Meadow. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0234_1.jpg` is the same overlook. `DSC_0237_1.jpg` is a pond with dust across the sky. `DSC_0240_1.jpg` is the camera file behind Still Water and Yellow Brush. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - Three more frames from the same valley overlook are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0225_1.jpg`, `DSC_0228_1.jpg`, and `DSC_0231_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
@@ -389,5 +390,17 @@ Live content stays `91cadfe` on production run 39655799039. `4b4b9be`, `eb58d53`
 `DSC_0246_1.jpg` is 6034×4028, 27,237,796 bytes, 2018-10-03 10:15:20. Crop 0.0013. No readable watermark. Dust spots cover the sky. It differs from `DSC_0243_1.jpg` by 30.19. The nearest public thumb is portfolio/05.jpg, The Canyon Keeps Moving, at 33.95, and portfolio/84.jpg is 37.32. Another view of that pond. Held.
 
 `DSC_0267_1.jpg` is 6034×4028, 23,882,428 bytes. Crop 0.0013. The file carries no capture time in its EXIF. It differs from portfolio/85.jpg by 0.62. That thumb is Yellow Trees Beside the Meadow, and the published record names this file as its source. Not republished. Third consecutive hold. `DSC_1437_1.jpg` was not opened.
+
+This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
+
+## Interior and two valley raws — 2026-10-21 13:38 Mountain Time
+
+Live content stays `91cadfe` on production run 39655799039. `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. No photograph was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. The pond frames and the camera file behind Yellow Trees Beside the Meadow were not republished. 2016 and 2017 were not opened. The folder was not hashed. `10-02` ends at `DSC_1437_1.jpg`.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-02\DSC_1437_1.jpg` is 6034×4028, 25,127,081 bytes, 2019-02-08 15:27:17. Crop 0.0013. It is a living room. The nearest public thumb is portfolio/43.jpg, Embers Above the Desert, at 34.13. Not strong enough to keep. Held.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0165.NEF` is 30,422,508 bytes, 2018-10-03 09:19:40. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0162_1.jpg` by 34.73. The nearest public thumb is portfolio/82.jpg, Yellow Trees on the Hill, at 36.90. Another view of that valley. Held.
+
+`DSC_0178.NEF` is 30,235,983 bytes, 2018-10-03 09:22:40. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0165.NEF` by 43.63 and from `DSC_0180_1.jpg` by 50.16. The nearest public thumb is portfolio/83.jpg, Light on the Far Peak, at 33.00. Another view of that peak. Third consecutive hold. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0178-Edit.tif`.
 
 This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
