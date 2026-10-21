@@ -5,8 +5,8 @@ import test from "node:test";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../cloudflare-pages");
-const expected = ["Home", "Shop", "Tie-Dye", "Photography", "Sketchbook", "Custom Art", "Events", "About"];
-const hrefs = ["/", "/shop/", "/tie-dye/", "/photography/", "/sketchbook/", "/custom/", "/events/", "/about/"];
+const expected = ["Home", "Shop", "Tie-Dye", "Photography", "Sketchbook", "Laser Art", "Custom Art", "Events", "About", "Contact"];
+const hrefs = ["/", "/shop/", "/tie-dye/", "/photography/", "/sketchbook/", "/laser-art/", "/custom/", "/events/", "/about/", "/contact/"];
 
 function walk(dir) {
   const files = [];
@@ -18,7 +18,7 @@ function walk(dir) {
   return files;
 }
 
-test("every public page uses the same eight-item header", () => {
+test("every public page uses the same ten-item header", () => {
   const files = walk(root);
   assert.ok(files.length > 8);
   for (const file of files) {
@@ -30,8 +30,6 @@ test("every public page uses the same eight-item header", () => {
     assert.deepEqual(labels, expected, file);
     assert.deepEqual(links, hrefs, file);
     assert.equal(nav.includes("Shop Etsy"), false, file);
-    assert.equal(nav.includes("Laser Art"), false, file);
-    assert.equal(nav.includes("Contact"), false, file);
   }
 });
 

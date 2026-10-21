@@ -15,9 +15,11 @@ NAV_ITEMS = (
     ("Tie-Dye", "/tie-dye/"),
     ("Photography", "/photography/"),
     ("Sketchbook", "/sketchbook/"),
+    ("Laser Art", "/laser-art/"),
     ("Custom Art", "/custom/"),
     ("Events", "/events/"),
     ("About", "/about/"),
+    ("Contact", "/contact/"),
 )
 
 FOOTER_NOTE = (
@@ -43,9 +45,11 @@ def active_label(relative_path):
         "tie-dye": "Tie-Dye",
         "photography": "Photography",
         "sketchbook": "Sketchbook",
+        "laser-art": "Laser Art",
         "custom": "Custom Art",
         "events": "Events",
         "about": "About",
+        "contact": "Contact",
     }.get(section, "")
 
 

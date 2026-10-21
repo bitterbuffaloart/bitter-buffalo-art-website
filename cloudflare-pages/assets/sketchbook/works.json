@@ -65,13 +65,14 @@
       "year": null,
       "dimensions": "11×14",
       "availability": null,
-      "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
+      "story": "The listing photograph matches this canvas.",
       "alt": "A canvas painting of an eye inside a pink diamond, on a blue sky with clouds and ink marks.",
       "thumb": "/assets/sketchbook/thumbs/sky-within.jpg",
       "display": "/assets/sketchbook/display/sky-within.jpg",
       "zoom": "/assets/sketchbook/zoom/sky-within.jpg",
       "width": 1600,
-      "height": 1200
+      "height": 1200,
+      "etsyUrl": "https://www.etsy.com/listing/4597017486/the-sky-within-original-11x14-surreal"
     },
     {
       "id": "grit-grin",
@@ -84,13 +85,14 @@
       "year": null,
       "dimensions": "5×7",
       "availability": null,
-      "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
+      "story": "The listing photograph matches this canvas.",
       "alt": "A small blue canvas painted with rows of teeth in thick black outlines.",
       "thumb": "/assets/sketchbook/thumbs/grit-grin.jpg",
       "display": "/assets/sketchbook/display/grit-grin.jpg",
       "zoom": "/assets/sketchbook/zoom/grit-grin.jpg",
       "width": 1600,
-      "height": 1200
+      "height": 1200,
+      "etsyUrl": "https://www.etsy.com/listing/4597018002/grit-grin-original-5x7-teeth-painting-on"
     },
     {
       "id": "static-mischief",
@@ -104,13 +106,14 @@
       "year": null,
       "dimensions": "8×10",
       "availability": null,
-      "story": "Title, medium, and size come from the existing shop listing. This gallery does not sell the piece.",
+      "story": "The listing photograph matches this canvas.",
       "alt": "A dark mixed-media canvas with neon scribbles, a bottle cap, and a small grinning figure.",
       "thumb": "/assets/sketchbook/thumbs/static-mischief.jpg",
       "display": "/assets/sketchbook/display/static-mischief.jpg",
       "zoom": "/assets/sketchbook/zoom/static-mischief.jpg",
-      "width": 1600,
-      "height": 1200
+      "width": 1200,
+      "height": 1600,
+      "etsyUrl": "https://www.etsy.com/listing/4597016668/static-mischief-original-8x10-mixed"
     },
     {
       "id": "the-color-between-worlds",

@@ -52,28 +52,64 @@ document.addEventListener("DOMContentLoaded", () => {
     copy.className = "catalog-copy";
     copy.textContent = product.description;
     text.append(title, copy);
-    if (product.retail_price) {
+    const faa = typeof product.faa_artwork_url === "string" ? product.faa_artwork_url : "";
+    if (photography) {
       const price = document.createElement("span");
       price.className = "catalog-price";
-      price.textContent = photography && product.retail_price === "199.33"
-        ? "16×24 framed canvas $199.33"
-        : money(product.retail_price);
+      if (product.retail_price) {
+        const amount = product.retail_price === "199.33"
+          ? "16×24 framed canvas $199.33"
+          : money(product.retail_price);
+        price.textContent = faa ? `Website price: ${amount}` : amount;
+      } else {
+        price.textContent = "Contact for Pricing.";
+      }
       text.append(price);
-    } else if (product.availability === "on-hold") {
-      const hold = document.createElement("span");
-      hold.className = "portfolio-badge";
-      hold.textContent = "On hold";
-      text.append(hold);
+      if (faa && product.retail_price) {
+        const note = document.createElement("p");
+        note.className = "catalog-copy";
+        note.textContent = "Fine Art America sets its own price.";
+        text.append(note);
+      }
+      const actions = document.createElement("p");
+      actions.className = "catalog-actions";
+      const buy = document.createElement("a");
+      if (faa) {
+        buy.href = faa;
+        buy.target = "_blank";
+        buy.rel = "noopener noreferrer";
+        buy.textContent = "Buy Prints on Fine Art America";
+      } else {
+        buy.href = `/contact/?topic=print&piece=${encodeURIComponent(product.name)}`;
+        buy.textContent = "Contact to Purchase";
+      }
+      actions.append(buy);
+      text.append(actions);
+    } else {
+      if (product.retail_price) {
+        const price = document.createElement("span");
+        price.className = "catalog-price";
+        price.textContent = money(product.retail_price);
+        text.append(price);
+      } else if (product.availability === "on-hold") {
+        const hold = document.createElement("span");
+        hold.className = "portfolio-badge";
+        hold.textContent = "On hold";
+        text.append(hold);
+      }
+      const link = document.createElement("a");
+      link.href = product.inquiry_or_external_link;
+      if (product.inquiry_or_external_link.includes("etsy.com/listing/")) {
+        link.textContent = "Buy on Etsy";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      } else if (product.inquiry_or_external_link.includes("/contact/")) {
+        link.textContent = "Inquire";
+      } else {
+        link.textContent = "View print";
+      }
+      text.append(link);
     }
-    const link = document.createElement("a");
-    link.href = product.inquiry_or_external_link;
-    if (photography || product.inquiry_or_external_link.includes("/contact/")) link.textContent = "Inquire";
-    else if (product.inquiry_or_external_link.startsWith("http")) {
-      link.textContent = "View on Etsy";
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-    } else link.textContent = "View print";
-    text.append(link);
     figure.append(media, text);
     return figure;
   };

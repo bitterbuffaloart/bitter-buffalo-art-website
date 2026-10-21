@@ -39,9 +39,11 @@
         <a href="/tie-dye/" class="nav-link">Tie-Dye</a>
         <a href="/photography/" class="nav-link">Photography</a>
         <a href="/sketchbook/" class="nav-link is-active" aria-current="page">Sketchbook</a>
+        <a href="/laser-art/" class="nav-link">Laser Art</a>
         <a href="/custom/" class="nav-link">Custom Art</a>
         <a href="/events/" class="nav-link">Events</a>
         <a href="/about/" class="nav-link">About</a>
+        <a href="/contact/" class="nav-link">Contact</a>
       </nav>
     </div>
   </header>
@@ -107,6 +109,7 @@
       <h2 id="sketch-dialog-title"></h2>
       <p id="sketch-meta"></p>
       <p id="sketch-story"></p>
+      <p><a id="sketch-buy" hidden target="_blank" rel="noopener noreferrer">Buy on Etsy</a></p>
       <p><a id="sketch-inquire" href="../contact/">Inquire About This Artwork</a></p>
     </div>
   </dialog>
@@ -146,6 +149,14 @@
       note.className = "sketch-note";
       note.textContent = work.story || metaLine(work);
       cap.append(title, note);
+      if (work.etsyUrl) {
+        const buy = document.createElement("a");
+        buy.href = work.etsyUrl;
+        buy.target = "_blank";
+        buy.rel = "noopener noreferrer";
+        buy.textContent = "Buy on Etsy";
+        cap.append(buy);
+      }
       figure.append(button, cap);
       return figure;
     }
@@ -169,6 +180,14 @@
       document.getElementById("sketch-meta").textContent = metaLine(work);
       document.getElementById("sketch-story").textContent = work.story || "";
       document.getElementById("sketch-inquire").href = "../contact/?topic=custom&piece=" + encodeURIComponent(work.title);
+      const buy = document.getElementById("sketch-buy");
+      if (work.etsyUrl) {
+        buy.hidden = false;
+        buy.href = work.etsyUrl;
+      } else {
+        buy.hidden = true;
+        buy.removeAttribute("href");
+      }
       stage.classList.remove("is-zoomed");
       zoomBtn.textContent = "View larger";
       zoomBtn.setAttribute("aria-pressed", "false");
