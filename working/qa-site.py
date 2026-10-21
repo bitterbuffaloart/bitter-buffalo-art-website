@@ -68,9 +68,9 @@ def check(root, base=None):
     for product in catalog['products']:
         if product.get('category')=='photography prints':
             numbers.update(re.findall(r'portfolio/(?:thumbs/|large/)?(\d+)\.jpg', product.get('images','')))
-    if numbers!={f'{n:02}' for n in range(1,83)}: errors.append('Portfolio must contain exactly 82 photographs')
-    if 'Explore 82 original landscapes' not in photo or '53 original' in photo:
-        errors.append('Photography description must name 82 photographs')
+    if numbers!={f'{n:02}' for n in range(1,86)}: errors.append('Portfolio must contain exactly 85 photographs')
+    if 'Explore 85 original landscapes' not in photo or '53 original' in photo:
+        errors.append('Photography description must name 85 photographs')
     wide_titles = ('Small Life, Wide Silence', 'Where Stone Holds the Stars', 'Gold Beneath the Wild', 'The Gold That Stayed')
     if any(title not in photo for title in wide_titles):
         errors.append('Photography page must name every 16:9 photograph that has no published price')
