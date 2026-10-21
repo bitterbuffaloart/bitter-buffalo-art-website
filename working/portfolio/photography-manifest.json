@@ -1,5 +1,5 @@
 {
-  "displayed": 72,
+  "displayed": 73,
   "photographs": [
     {
       "permanentId": "bb-photo-01",
@@ -1735,6 +1735,30 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "previousTitle": "Warm Light on the Rock Wall"
+    },
+    {
+      "permanentId": "bb-photo-74",
+      "portfolioNumber": 73,
+      "title": "A Pole Fence in the Warm Light",
+      "story": "A pole fence fills the right side of a dry slope. Warm light touches the rocky ridge above the trees.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-09\\DSC_4974-Edit.tif",
+      "sourceFilename": "DSC_4974-Edit.tif",
+      "sourceWidth": 5568,
+      "sourceHeight": 3712,
+      "aspectClass": 1.5,
+      "display": "/assets/images/portfolio/73.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "thumbnail": "/assets/images/portfolio/thumbs/73.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/73.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1600,
+      "galleryReference": "/photography/#bb-photo-74",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "A Pole Fence in the Warm Light"
     }
   ],
   "archived": [
