@@ -1,5 +1,5 @@
 {
-  "displayed": 69,
+  "displayed": 71,
   "photographs": [
     {
       "permanentId": "bb-photo-01",
@@ -1663,6 +1663,54 @@
       "highResolutionMaster": "measured",
       "printMasterIsWebJpeg": false,
       "previousTitle": "A Stand of Pale Trunks"
+    },
+    {
+      "permanentId": "bb-photo-71",
+      "portfolioNumber": 70,
+      "title": "The Log Fence Above the Valley",
+      "story": "A log fence stands at the left of a dry slope. Yellow trees fill the valley beneath a rocky ridge.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-09\\DSC_4966-Edit.tif",
+      "sourceFilename": "DSC_4966-Edit.tif",
+      "sourceWidth": 5568,
+      "sourceHeight": 3712,
+      "aspectClass": 1.5,
+      "display": "/assets/images/portfolio/70.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 933,
+      "thumbnail": "/assets/images/portfolio/thumbs/70.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/70.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1600,
+      "galleryReference": "/photography/#bb-photo-71",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "The Log Fence Above the Valley"
+    },
+    {
+      "permanentId": "bb-photo-72",
+      "portfolioNumber": 71,
+      "title": "A Fence Across the Foreground",
+      "story": "A rail fence crosses the near ground. Yellow trees and a rocky ridge sit under a blue sky.",
+      "sourcePath": "F:\\Masters\\2019\\PRINT_WORTHY\\M\\2019\\2019-10-08\\DSC_7770-HDR-Edit.tif",
+      "sourceFilename": "DSC_7770-HDR-Edit.tif",
+      "sourceWidth": 5994,
+      "sourceHeight": 4001,
+      "aspectClass": 1.4981,
+      "display": "/assets/images/portfolio/71.jpg",
+      "displayWidth": 1400,
+      "displayHeight": 935,
+      "thumbnail": "/assets/images/portfolio/thumbs/71.jpg",
+      "thumbnailWidth": 480,
+      "thumbnailHeight": 320,
+      "enlarged": "/assets/images/portfolio/large/71.jpg",
+      "enlargedWidth": 2400,
+      "enlargedHeight": 1602,
+      "galleryReference": "/photography/#bb-photo-72",
+      "highResolutionMaster": "measured",
+      "printMasterIsWebJpeg": false,
+      "previousTitle": "A Fence Across the Foreground"
     }
   ],
   "archived": [
