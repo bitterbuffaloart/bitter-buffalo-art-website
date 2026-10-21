@@ -64,7 +64,7 @@ function expected(photo, productId, size) {
 }
 
 test("inquiry catalog publishes only workbook sizes that are on a supplier sheet", () => {
-  assert.equal(catalog.photographs.length, 86);
+  assert.equal(catalog.photographs.length, 87);
   assert.deepEqual(catalog.products.map((product) => product.id), Object.keys(OFFERS));
   assert.deepEqual(catalog.omittedFamilies.map((family) => family.name), [
     "Traditional photographic paper",
