@@ -69,6 +69,11 @@ def check(root, base=None):
         if product.get('category')=='photography prints':
             numbers.update(re.findall(r'portfolio/(?:thumbs/|large/)?(\d+)\.jpg', product.get('images','')))
     if numbers!={f'{n:02}' for n in range(1,74)}: errors.append('Portfolio must contain exactly 73 photographs')
+    if 'Explore 73 original landscapes' not in photo or '53 original' in photo:
+        errors.append('Photography description must name 73 photographs')
+    wide_titles = ('Small Life, Wide Silence', 'Where Stone Holds the Stars', 'Gold Beneath the Wild', 'The Gold That Stayed')
+    if any(title not in photo for title in wide_titles):
+        errors.append('Photography page must name every 16:9 photograph that has no published price')
     if 'data-catalog-grid' not in photo: errors.append('Photography gallery is not connected to the catalog')
     events=(root/'events/index.html').read_text(encoding='utf-8')
     required_events = ['booth-market.jpg','booth-tiedye.jpg','Union Peak','DISCONNECT','soul-rebel-black-uhuru.jpg','questing-the-wilderealm.jpg','elevate-love-2026-lineup.jpg','elevate-love-2026-poster.jpg','Soul Rebel Festival','WildeRealm','Elevate Love']
