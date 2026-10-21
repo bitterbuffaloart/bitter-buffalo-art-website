@@ -11,8 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-21 14:36 Mountain Time
+## Last confirmed state — 2026-10-21 14:40 Mountain Time
 
+- Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `fb0fd2c`, `6faaabc`, `aa6cf8e`, `427f98f`, `6d81497`, `1ba0b52`, `be40318`, and earlier notes commits were not deployed. `DSC_0223.NEF` is a one-second darker bracket of the same overlook. `DSC_0225.NEF` matches the held JPEG of the same name by clock time. `DSC_0227.NEF` is the same overlook, two seconds later and brighter. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0228.NEF`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `6faaabc`, `aa6cf8e`, `427f98f`, `6d81497`, `1ba0b52`, `be40318`, and earlier notes commits were not deployed. `DSC_0220.NEF` and `DSC_0221.NEF` are a one-second exposure bracket of the same overlook. `DSC_0222.NEF` matches the held JPEG of the same name by clock time. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0223.NEF`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `aa6cf8e`, `427f98f`, `6d81497`, `1ba0b52`, `be40318`, and earlier notes commits were not deployed. `DSC_0217.NEF` and `DSC_0218.NEF` are a one-second exposure bracket of the same overlook. `DSC_0219.NEF` matches the held JPEG of the same name by clock time. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0220.NEF`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `427f98f`, `6d81497`, `1ba0b52`, `be40318`, and earlier notes commits were not deployed. `DSC_0214.NEF` and `DSC_0215.NEF` are darker and brighter views of the same overlook. `DSC_0216.NEF` matches the held JPEG of the same name by clock time. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0217.NEF`. This log line is a record only. Do not redeploy it.
@@ -496,5 +497,17 @@ Live content stays `91cadfe` on production run 39655799039. `6faaabc`, `aa6cf8e`
 `DSC_0221.NEF` is 32,007,044 bytes, 2018-10-03 09:31:31. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0220.NEF` by 80.50 and from `DSC_0219.NEF` by 40.16. It is one second later and brighter. Same overlook. Held.
 
 `DSC_0222.NEF` is 30,780,876 bytes, 2018-10-03 09:32:40. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0219.NEF` by 13.95. Flares sit on both sides. The clock time matches the held JPEG `DSC_0222_1.jpg`. Same overlook. Third consecutive hold. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0223.NEF`.
+
+This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
+
+## Three more overlook raws — 2026-10-21 14:40 Mountain Time
+
+Live content stays `91cadfe` on production run 39655799039. `fb0fd2c`, `6faaabc`, `aa6cf8e`, `427f98f`, `6d81497`, `1ba0b52`, `be40318`, and earlier notes commits were not deployed. No photograph was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. The overlook raws already held were not republished. 2016 and 2017 were not opened. `10-02` was not opened. The folder was not hashed.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0223.NEF` is 29,456,492 bytes, 2018-10-03 09:32:41. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0222.NEF` by 38.93. It is one second later and darker. Same overlook. Held.
+
+`DSC_0225.NEF` is 31,167,561 bytes, 2018-10-03 09:33:31. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0222.NEF` by 7.02. The clock time matches the held JPEG `DSC_0225_1.jpg`. Same overlook. Held.
+
+`DSC_0227.NEF` is 31,976,864 bytes, 2018-10-03 09:33:33. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0225.NEF` by 38.75. It is two seconds later and brighter. Same overlook. Third consecutive hold. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0228.NEF`.
 
 This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
