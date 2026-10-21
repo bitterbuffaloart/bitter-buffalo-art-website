@@ -380,7 +380,23 @@ export const PUBLISHED_PRICES = {
   "bb-photo-57|metal-aluminum|12x18": "$179.99",
   "bb-photo-57|paper-archival|12x18": "$89.99",
   "bb-photo-57|paper-semigloss|12x18": "$69.99",
-  "bb-photo-57|paper-somerset|12x18": "$109.99"
+  "bb-photo-57|paper-somerset|12x18": "$109.99",
+  "bb-photo-58|canvas-floating-15|12x18": "$149.33",
+  "bb-photo-58|canvas-floating-15|16x24": "$199.33",
+  "bb-photo-58|canvas-15|12x18": "$134.99",
+  "bb-photo-58|canvas-15|16x24": "$224.99",
+  "bb-photo-59|canvas-floating-15|12x18": "$149.33",
+  "bb-photo-59|canvas-15|12x18": "$134.99",
+  "bb-photo-60|canvas-floating-15|12x18": "$149.33",
+  "bb-photo-60|canvas-floating-15|16x24": "$199.33",
+  "bb-photo-60|canvas-floating-15|20x30": "$299.33",
+  "bb-photo-60|canvas-15|12x18": "$134.99",
+  "bb-photo-60|canvas-15|16x24": "$224.99",
+  "bb-photo-60|canvas-15|20x30": "$314.99",
+  "bb-photo-60|metal-aluminum|12x18": "$179.99",
+  "bb-photo-60|paper-archival|12x18": "$89.99",
+  "bb-photo-60|paper-semigloss|12x18": "$69.99",
+  "bb-photo-60|paper-somerset|12x18": "$109.99"
 };
 
 export function quoteText(photographId, productId, sizeId) {
