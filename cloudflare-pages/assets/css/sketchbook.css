@@ -79,6 +79,9 @@
 .sketch-dialog {
   width: min(1100px, 96vw);
   max-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   border: 1px solid rgba(45,36,24,.3);
   background: #f7f4ee;
   color: var(--ink);
@@ -95,14 +98,19 @@
 }
 .sketch-dialog__stage {
   overflow: auto;
+  flex: 1 1 auto;
+  min-height: 0;
   max-height: calc(96vh - 9rem);
   background: #efe6d4;
 }
 .sketch-dialog__stage img {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  max-width: 100%;
+  max-height: calc(96vh - 9rem);
   margin: 0 auto;
+  object-fit: contain;
 }
 .sketch-dialog__stage.is-zoomed img { width: auto; max-width: none; }
 .sketch-dialog__copy { padding: .9rem 1rem 1.1rem; }
