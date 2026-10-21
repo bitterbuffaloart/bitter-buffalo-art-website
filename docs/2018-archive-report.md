@@ -115,6 +115,10 @@ A 96-pixel compare against the existing gallery did not find a duplicate. Photog
 
 Preview https://4261ffca.bitter-buffalo-art.pages.dev from run 39569849712 matched the three JPEG files. Production job https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39570416883 publish-production succeeded for 0a9c350. On 2026-10-21 02:37 MT both live hosts returned the three JPEGs at the same byte size, showed Fifty-nine photographs, and served the three print pages. Favicon, the Treetop JPEG, and the overalls display were unchanged. At 390×844, photograph 59 rendered at 346×231, the same proportion, with no crop.
 
+## Missing photographs
+
+A filename search on 2026-10-21 02:40 MT found no file named with ornament or Union Peak under F:\Masters, F:\Portfolio, the Desktop, or the OneDrive Desktop. No substitute image was added.
+
 ## Next path
 
-File-by-file 2016 and 2017 spreadsheet reconciliation stays blocked. The workbook that was found does not list those years. Do not publish a second DSC_9535 page. Do not publish DSC_8395. Do not publish a watermarked JPEG. Do not redeploy this documentation commit.
+File-by-file 2016 and 2017 spreadsheet reconciliation stays blocked. The workbook that was found does not list those years. No ornament photograph and no Union Peak flyer were found by name. Do not publish a second DSC_9535 page. Do not publish DSC_8395. Do not publish a watermarked JPEG. Do not guess the two dress sizes. Do not redeploy this documentation commit.
