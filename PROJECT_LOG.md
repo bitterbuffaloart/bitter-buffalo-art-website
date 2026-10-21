@@ -11,8 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-21 13:48 Mountain Time
+## Last confirmed state — 2026-10-21 13:53 Mountain Time
 
+- Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `b206350`, `95efc3e`, `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0181.NEF`, `DSC_0195.NEF`, and `DSC_0198.NEF` are other views of the published valley. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0201.NEF`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `95efc3e`, `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0178-Edit.tif` is the edited peaks raw. `DSC_0180-HDR-Pano-Edit.jpg` and `DSC_0180-HDR-Pano-Edit.tif` are the same watermarked panorama. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. `10-02` was not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0181.NEF`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_1437_1.jpg` is a living room. `DSC_0165.NEF` and `DSC_0178.NEF` are other views of the published valley. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0178-Edit.tif`. This log line is a record only. Do not redeploy it.
 - Three frames are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0243_1.jpg` and `DSC_0246_1.jpg` are the same pond as Still Water and Yellow Brush. `DSC_0267_1.jpg` is Yellow Trees Beside the Meadow. None was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
@@ -415,5 +416,17 @@ Live content stays `91cadfe` on production run 39655799039. `95efc3e`, `f3b6000`
 `DSC_0180-HDR-Pano-Edit.jpg` is 8991×2997, 22,700,936 bytes, 2019-02-06 15:45:54. The ratio is 3.0, so a 3:2 size would crop it (crop 1.0). A readable watermark, BitterBuffaloPhoto.com, sits in the lower right. It is another view of the published peak valley. It differs from portfolio/86.jpg, The Peak Behind the Yellow Trees, by 57.84. Held.
 
 `DSC_0180-HDR-Pano-Edit.tif` is 8991×2997, 649,525,788 bytes, 2019-02-06 15:45:29. Crop 1.0. It differs from the JPEG by 0.36. Same frame. Third consecutive hold. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0181.NEF`.
+
+This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
+
+## Three valley raws — 2026-10-21 13:53 Mountain Time
+
+Live content stays `91cadfe` on production run 39655799039. `b206350`, `95efc3e`, `f3b6000`, `4b4b9be`, `eb58d53`, `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. No photograph was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. The edited peak and the watermarked panorama were not republished. 2016 and 2017 were not opened. `10-02` was not opened. The folder was not hashed.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0181.NEF` is 30,079,270 bytes, 2018-10-03 09:23:15. Its embedded preview is 6016×4016, crop 0.0013. The nearest public thumb is portfolio/82.jpg, Yellow Trees on the Hill, at 37.26. portfolio/86.jpg, The Peak Behind the Yellow Trees, is 38.78. Same valley. Held.
+
+`DSC_0195.NEF` is 30,892,629 bytes, 2018-10-03 09:25:45. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0181.NEF` by 32.05. The nearest public thumb is portfolio/87.jpg, The Sun Breaks Over the Peak, at 33.59. The clock time matches the held JPEG of the same name. Same valley. Held.
+
+`DSC_0198.NEF` is 31,157,197 bytes, 2018-10-03 09:26:28. Its embedded preview is 6016×4016, crop 0.0013. It differs from `DSC_0195.NEF` by 7.13. The nearest public thumb is portfolio/87.jpg at 32.35. The clock time matches the held JPEG of the same name. Same valley. Third consecutive hold. The next unopened file is `F:\Masters\2018\PRINT_WORTHY\M\2018\10-03\DSC_0201.NEF`.
 
 This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
