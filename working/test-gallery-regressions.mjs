@@ -81,6 +81,14 @@ test("near-duplicate pairs are not adjacent when another photograph is present",
   ];
   const separated = prices.separatePairs(samples);
   assert.notEqual(Math.abs(separated.findIndex((item) => item.name === "Still Standing, Still Flowing") - separated.findIndex((item) => item.name === "The Night Keeps Watch")), 1);
+  const photos = catalog.products.filter((product) => product.category === "photography prints" && product.availability !== "withheld");
+  const landscapes = photos.filter((product) => Array.isArray(product.subjects) && product.subjects.includes("Landscapes"));
+  for (const items of [photos, landscapes]) {
+    const order = prices.separatePairs(items);
+    const peak = order.findIndex((item) => item.name === "The Peak Behind the Yellow Trees");
+    const sun = order.findIndex((item) => item.name === "The Sun Breaks Over the Peak");
+    assert.notEqual(Math.abs(peak - sun), 1);
+  }
 });
 
 test("a public original without a watermark record fails, and watermarking does not change the source", () => {

@@ -30,6 +30,7 @@
   const PAIRS = [
     ["Still Standing, Still Flowing", "The Night Keeps Watch"],
     ["Where the Fence Meets the Trees", "The Tree That Leans Into the Wind"],
+    ["The Peak Behind the Yellow Trees", "The Sun Breaks Over the Peak"],
   ];
 
   function pricedPublicOffers(photo) {
@@ -68,7 +69,15 @@
         const j = list.findIndex((item) => item.name === pair[1]);
         if (i < 0 || j < 0 || Math.abs(i - j) !== 1) continue;
         const later = Math.max(i, j);
-        if (later >= list.length - 1) continue;
+        if (later >= list.length - 1) {
+          const earlier = Math.min(i, j);
+          if (earlier === 0) continue;
+          const between = list[earlier - 1];
+          list.splice(earlier - 1, 1);
+          list.splice(later - 1, 0, between);
+          moved = true;
+          continue;
+        }
         const item = list[later];
         list.splice(later, 1);
         list.splice(later + 1, 0, item);
