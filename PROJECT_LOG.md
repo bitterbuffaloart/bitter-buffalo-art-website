@@ -11,8 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-21 12:52 Mountain Time
+## Last confirmed state — 2026-10-21 12:58 Mountain Time
 
+- Three more frames from the same valley are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `0401416`, `81f00bd`, and `da632ad` were not deployed. `DSC_0198_1.jpg`, `DSC_0201_1.jpg`, and `DSC_0204_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - The two peak photographs are separated on `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`), production run 39655799039. verify, record-production, branch-preview, and publish-production succeeded. The separate deploy job was skipped. `81f00bd` and `da632ad` were not deployed. Yellow Trees Beside the Meadow sits between The Peak Behind the Yellow Trees and The Sun Breaks Over the Peak on All photographs and in Landscapes. The public count stays 84. No new photograph was published. `DSC_0189_1.jpg`, `DSC_0192_1.jpg`, and `DSC_0195_1.jpg` are the same valley and are held. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. This log line is a record only. Do not redeploy it.
 - The Sun Breaks Over the Peak is live from `cfae86b` (`cfae86b40d0097e3c51528a36b8a189f040f8717`) on production run 39653221345. verify, record-production, branch-preview, and publish-production succeeded. The separate deploy job was skipped. `da632ad` and the earlier notes commits were not deployed. The catalog now has 87 photography records and 3 withheld titles, so the public count is 84. Both hosts say “Eighty-four photographs.” The source is `DSC_0186_1.jpg`. The Peak Behind the Yellow Trees was not republished. Laser prices, Etsy URLs, existing watermarks, and coaster orientation were not changed. This log line is a record only. Do not redeploy it.
 - The Peak Behind the Yellow Trees is live from `c7a9989` (`c7a998916a6c47a20695f09b6d3fa103ce3c8b1d`) on production run 39650141859. verify, record-production, branch-preview, and publish-production succeeded. The separate deploy job was skipped. `88d0a4f` and the earlier notes commits were not deployed. The catalog now has 86 photography records and 3 withheld titles, so the public count is 83. Both hosts say “Eighty-three photographs.” The source is `DSC_0180_1.jpg`. Yellow Trees on the Hill was not republished. Laser prices, Etsy URLs, existing watermarks, and coaster orientation were not changed. This log line is a record only. Do not redeploy it.
@@ -311,5 +312,17 @@ The Peak Behind the Yellow Trees and The Sun Breaks Over the Peak were the last 
 `DSC_0195_1.jpg` is 6034×4028, 26,108,160 bytes, 2018-10-03 09:25:45. Crop 0.0013. It differs from `DSC_0186_1.jpg` by 24.79 and from `DSC_0180_1.jpg` by 27.33. Another view of the same valley. Third consecutive hold. `DSC_0198_1.jpg` was not opened. 2016 and 2017 were not opened. The folder was not hashed. No new page was published, so no `archive-2020-photo88` screenshot was made.
 
 qa-site.py reported 106 pages, 491 resources, 84 public photographs, 26 Etsy URLs, and no errors. Node tests: 28 passed, 0 failed. Desktop 1440×900 and mobile 390×844 were checked on both hosts. The mobile All photographs page has no horizontal overflow. The Landscapes page recorded no console error.
+
+This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
+
+## Three more valley holds — 2026-10-21 12:58 Mountain Time
+
+Live content stays `91cadfe` on production run 39655799039. `0401416`, `81f00bd`, and `da632ad` were not deployed. No photograph was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. The peak photographs and `DSC_0189_1.jpg`, `DSC_0192_1.jpg`, and `DSC_0195_1.jpg` were not republished. 2016 and 2017 were not opened. The folder was not hashed.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-02\DSC_0198_1.jpg` is 6034×4028, 22,537,760 bytes, 2018-10-03 09:26:28. Crop 0.0013. No readable watermark. It differs from `DSC_0195_1.jpg` by 7.81, from `DSC_0186_1.jpg` by 24.41, and from `DSC_0180_1.jpg` by 28.37. Same valley. Held.
+
+`DSC_0201_1.jpg` is 6034×4028, 21,479,227 bytes, 2018-10-03 09:26:55. Crop 0.0013. No readable watermark. The camera turned, and the sharp peak is no longer the subject. It differs from `DSC_0186_1.jpg` by 34.46 and from `DSC_0180_1.jpg` by 44.65. It is still that valley. Held.
+
+`DSC_0204_1.jpg` is 6034×4028, 22,217,581 bytes, 2018-10-03 09:27:19. Crop 0.0013. No readable watermark. It differs from `DSC_0201_1.jpg` by 7.73. Same frame. Third consecutive hold. `DSC_0207_1.jpg` was not opened. Not published.
 
 This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
