@@ -11,8 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-21 13:10 Mountain Time
+## Last confirmed state — 2026-10-21 13:16 Mountain Time
 
+- Three more frames from the same valley overlook are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0225_1.jpg`, `DSC_0228_1.jpg`, and `DSC_0231_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - Three more frames from the same valley overlook are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. `DSC_0216_1.jpg`, `DSC_0219_1.jpg`, and `DSC_0222_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - Three more frames from the same valley overlook are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `3bcb75f` and earlier notes commits were not deployed. `DSC_0207_1.jpg`, `DSC_0211_1.jpg`, and `DSC_0213_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
 - Three more frames from the same valley are held. Live content stays `91cadfe` (`91cadfe63c70d094098bdfa20760d5f46e95885b`) on production run 39655799039. `0401416`, `81f00bd`, and `da632ad` were not deployed. `DSC_0198_1.jpg`, `DSC_0201_1.jpg`, and `DSC_0204_1.jpg` were not published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. 2016 and 2017 were not opened. This log line is a record only. Do not redeploy it.
@@ -350,5 +351,17 @@ Live content stays `91cadfe` on production run 39655799039. `6278a95`, `3bcb75f`
 `DSC_0219_1.jpg` is 6034×4028, 26,371,066 bytes, 2018-10-03 09:31:29. Crop 0.0013. No readable watermark. The flares remain. It differs from `DSC_0216_1.jpg` by 12.59 and from `DSC_0186_1.jpg` by 48.22. The nearest public thumb is portfolio/34.jpg at 33.65. Same overlook. Held.
 
 `DSC_0222_1.jpg` is 6034×4028, 25,089,317 bytes, 2018-10-03 09:32:40. Crop 0.0013. No readable watermark. The flares remain. It differs from `DSC_0219_1.jpg` by 11.42 and from `DSC_0186_1.jpg` by 44.07. The nearest public thumb is portfolio/34.jpg at 34.83. Same overlook. Third consecutive hold. `DSC_0225_1.jpg` was not opened. Not published.
+
+This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
+
+## Three more valley-overlook holds — 2026-10-21 13:16 Mountain Time
+
+Live content stays `91cadfe` on production run 39655799039. `92d1c99`, `6278a95`, `3bcb75f`, and earlier notes commits were not deployed. No photograph was published. No page changed, so nothing was deployed. The public count stays 84. Laser prices, Etsy URLs, watermarks, and coaster orientation were not changed. The peak photographs and the overlook frames already held were not republished. 2016 and 2017 were not opened. The folder was not hashed.
+
+`F:\Masters\2018\PRINT_WORTHY\M\2018\10-02\DSC_0225_1.jpg` is 6034×4028, 29,007,564 bytes, 2018-10-03 09:33:31. Crop 0.0013. No readable watermark. Flares sit on both sides. It differs from `DSC_0222_1.jpg` by 8.27, from `DSC_0186_1.jpg` by 43.39, and from `DSC_0180_1.jpg` by 54.97. The nearest public thumb is portfolio/34.jpg at 34.70. Same overlook. Held.
+
+`DSC_0228_1.jpg` is 6034×4028, 25,061,442 bytes, 2018-10-03 09:34:36. Crop 0.0013. No readable watermark. The flares remain. It differs from `DSC_0225_1.jpg` by 10.64 and from `DSC_0186_1.jpg` by 40.40. The nearest public thumb is portfolio/82.jpg at 37.82. Same overlook. Held.
+
+`DSC_0231_1.jpg` is 6034×4028, 25,085,985 bytes, 2018-10-03 09:35:13. Crop 0.0013. No readable watermark. The flares remain, and a finger enters the upper left. It differs from `DSC_0228_1.jpg` by 14.50 and from `DSC_0186_1.jpg` by 46.82. The nearest public thumb is portfolio/67.jpg at 36.40. Same overlook. Third consecutive hold. `DSC_0234_1.jpg` was not opened. Not published.
 
 This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
