@@ -16,7 +16,7 @@ def check(root, base=None):
         for selector in ['<title>', 'name="description"', 'name="viewport"', 'rel="canonical"']:
             if selector not in text: errors.append(f'{file}: missing {selector}')
         rel = file.relative_to(root).as_posix()
-        if 'aria-current="page"' not in text and rel not in {'contact/index.html', 'laser-art/index.html'}:
+        if 'aria-current="page"' not in text and rel not in {'contact/index.html', 'laser-art/index.html', '404.html'}:
             errors.append(f'{file}: missing aria-current="page"')
         for tag,a in p.tags:
             if tag=='img' and 'alt' not in a: errors.append(f'{file}: image missing alt')

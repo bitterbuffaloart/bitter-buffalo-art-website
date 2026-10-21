@@ -576,7 +576,11 @@ main,
 }
 .collection-nav, .catalog-pager {
   display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+  position: relative; z-index: 2;
   max-width: 1200px; margin: 0 auto 1.25rem; padding: 0 1.25rem;
+}
+.collection-nav a {
+  display: inline-flex; align-items: center; flex: 0 0 auto; white-space: nowrap;
 }
 .collection-nav a, .catalog-pager button, .sketch-filters button {
   font: inherit; font-weight: 700; color: var(--ink); text-decoration: none;

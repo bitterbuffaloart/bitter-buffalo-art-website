@@ -33,6 +33,27 @@ test("a broken category name is rejected and the public pages exist", () => {
   }
   const publicPhotos = catalog.products.filter((product) => product.category === "photography prints" && product.availability !== "withheld");
   for (const product of publicPhotos) assert.deepEqual(prices.unknownSubjects(product.subjects || []), []);
+  const css = readFileSync(resolve(root, "cloudflare-pages/assets/css/site.css"), "utf8");
+  assert.match(css, /\.collection-nav a \{[^}]*display:\s*inline-flex/);
+  const navPages = [
+    "cloudflare-pages/photography/index.html",
+    "cloudflare-pages/photography/all/index.html",
+    "cloudflare-pages/sketchbook/index.html",
+    "cloudflare-pages/sketchbook/digital-art/index.html",
+    "cloudflare-pages/sketchbook/drawings/index.html",
+    "cloudflare-pages/sketchbook/paintings/index.html",
+    "cloudflare-pages/sketchbook/mixed-media/index.html",
+    ...prices.SUBJECTS.map((subject) => `cloudflare-pages/photography/${subject.slug}/index.html`),
+  ];
+  for (const page of navPages) {
+    const html = readFileSync(resolve(root, page), "utf8");
+    const start = html.indexOf('<nav class="collection-nav"');
+    const nav = html.slice(start, html.indexOf("</nav>", start));
+    assert.equal(nav.includes("</a><a"), false, page);
+  }
+  const missing = readFileSync(resolve(root, "cloudflare-pages/404.html"), "utf8");
+  assert.match(missing, /class="site-header"/);
+  assert.match(missing, /href="\/photography\/">Return to the photography portfolio/);
 });
 
 test("near-duplicate pairs are not adjacent when another photograph is present", () => {
