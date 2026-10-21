@@ -15,9 +15,9 @@ GARMENTS = [
     {
         "id": "bb-tiedye-overalls",
         "name": "Hand-dyed overalls",
-        "source": FOLDER / "20260630_124345.jpg",
+        "source": FOLDER / "20260630_124345_edited.jpg",
         "related": ["20260630_125013.jpg"],
-        "note": "Front of one pair. The purple and green view in the same folder is the reverse of this garment, not a second product.",
+        "note": "Front of one pair, from the edited original that removes the floor and feet. The purple and green view in the same folder is the reverse of this garment, not a second product.",
         "stem": "overalls",
     },
     {
