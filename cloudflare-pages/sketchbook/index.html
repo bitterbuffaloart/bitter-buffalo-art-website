@@ -23,7 +23,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://bitterbuffaloart.com/assets/sketchbook/thumbs/frog-mushroom.jpg" />
 </head>
-<body class="western-page">
+<body class="western-page" data-asset-prefix=".." data-sketch-filter="all">
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="site-header__inner">
@@ -55,11 +55,19 @@
       <h1 id="sketch-title">The Bitter Buffalo Sketchbook</h1>
       <p class="lede">Paintings, drawings, and digital work from the studio. Selected original artworks are available through their individual Etsy listings below. Contact us about pieces without a purchase link.</p>
     </section>
-    <div class="sketch-filters" role="toolbar" aria-label="Artwork categories">
-      <button type="button" data-filter="all" aria-pressed="true">All Artwork</button>
+    <nav class="collection-nav" aria-label="Sketchbook collections">
+      <a href="/sketchbook/" aria-current="page">All artwork</a>
+      <a href="/sketchbook/digital-art/">Digital Art &amp; Symmetry</a>
+      <a href="/sketchbook/drawings/">Drawings</a>
+      <a href="/sketchbook/paintings/">Paintings</a>
+      <a href="/sketchbook/mixed-media/">Mixed Media</a>
+    </nav>
+    <div class="sketch-filters" role="group" aria-label="Filter this page">
+      <button type="button" data-filter="all" aria-pressed="true">All artwork</button>
+      <button type="button" data-filter="digital" aria-pressed="false">Digital Art &amp; Symmetry</button>
+      <button type="button" data-filter="drawings" aria-pressed="false">Drawings</button>
       <button type="button" data-filter="paintings" aria-pressed="false">Paintings</button>
-      <button type="button" data-filter="drawings" aria-pressed="false">Drawings &amp; Scribbles</button>
-      <button type="button" data-filter="mixed" aria-pressed="false">Digital &amp; Mixed Media</button>
+      <button type="button" data-filter="mixed" aria-pressed="false">Mixed Media</button>
     </div>
     <p id="sketch-empty" class="sketch-empty" hidden>No pieces in this category yet.</p>
     <div id="sketch-grid" class="sketch-grid" aria-live="polite"></div>
@@ -116,117 +124,6 @@
     </div>
   </dialog>
   <script src="../assets/js/site.js"></script>
-  <script>
-    const grid = document.getElementById("sketch-grid");
-    const empty = document.getElementById("sketch-empty");
-    const dialog = document.getElementById("sketch-dialog");
-    const stage = document.getElementById("sketch-stage");
-    const full = document.getElementById("sketch-full");
-    const zoomBtn = document.getElementById("sketch-zoom");
-
-    function metaLine(work) {
-      return [work.medium, work.year, work.dimensions, work.availability].filter(Boolean).join(" · ");
-    }
-
-    function card(work) {
-      const figure = document.createElement("figure");
-      figure.className = "sketch-card";
-      figure.dataset.categories = work.categories.join(" ");
-      figure.id = work.id;
-      const button = document.createElement("button");
-      button.type = "button";
-      const img = document.createElement("img");
-      img.src = work.thumb;
-      img.alt = work.alt;
-      img.width = work.width;
-      img.height = work.height;
-      img.decoding = "async";
-      img.loading = "lazy";
-      button.append(img);
-      button.addEventListener("click", () => openWork(work));
-      const cap = document.createElement("figcaption");
-      const title = document.createElement("h2");
-      title.textContent = work.title;
-      const note = document.createElement("p");
-      note.className = "sketch-note";
-      note.textContent = work.story || metaLine(work);
-      cap.append(title, note);
-      if (work.etsyUrl) {
-        const buy = document.createElement("a");
-        buy.href = work.etsyUrl;
-        buy.target = "_blank";
-        buy.rel = "noopener noreferrer";
-        buy.textContent = "Buy on Etsy";
-        cap.append(buy);
-      }
-      figure.append(button, cap);
-      return figure;
-    }
-
-    function applyFilter(name) {
-      let shown = 0;
-      for (const cardEl of grid.children) {
-        const ok = name === "all" || cardEl.dataset.categories.split(" ").includes(name);
-        cardEl.hidden = !ok;
-        if (ok) shown += 1;
-      }
-      empty.hidden = shown > 0;
-    }
-
-    function openWork(work) {
-      full.src = work.zoom;
-      full.alt = work.alt;
-      full.width = work.width;
-      full.height = work.height;
-      document.getElementById("sketch-dialog-title").textContent = work.title;
-      document.getElementById("sketch-meta").textContent = metaLine(work);
-      document.getElementById("sketch-story").textContent = work.story || "";
-      document.getElementById("sketch-inquire").href = "../contact/?topic=custom&piece=" + encodeURIComponent(work.title);
-      const buy = document.getElementById("sketch-buy");
-      if (work.etsyUrl) {
-        buy.hidden = false;
-        buy.href = work.etsyUrl;
-      } else {
-        buy.hidden = true;
-        buy.removeAttribute("href");
-      }
-      stage.classList.remove("is-zoomed");
-      zoomBtn.textContent = "View larger";
-      zoomBtn.setAttribute("aria-pressed", "false");
-      if (typeof dialog.showModal === "function") dialog.showModal();
-      document.getElementById("sketch-close").focus();
-    }
-
-    document.getElementById("sketch-close").addEventListener("click", () => dialog.close());
-    zoomBtn.addEventListener("click", () => {
-      const on = stage.classList.toggle("is-zoomed");
-      zoomBtn.textContent = on ? "Fit to window" : "View larger";
-      zoomBtn.setAttribute("aria-pressed", on ? "true" : "false");
-    });
-    dialog.addEventListener("click", (event) => {
-      if (event.target === dialog) dialog.close();
-    });
-    document.querySelector(".sketch-filters").addEventListener("click", (event) => {
-      const button = event.target.closest("button");
-      if (!button) return;
-      for (const item of event.currentTarget.querySelectorAll("button")) {
-        item.setAttribute("aria-pressed", item === button ? "true" : "false");
-      }
-      applyFilter(button.dataset.filter);
-    });
-
-    fetch("../assets/sketchbook/works.json")
-      .then((response) => response.json())
-      .then((data) => {
-        for (const work of data.works) grid.append(card(work));
-        const hash = location.hash.replace("#", "");
-        const match = data.works.find((work) => work.id === hash);
-        if (match) openWork(match);
-      })
-      .catch(() => {
-        empty.hidden = false;
-        empty.textContent = "The sketchbook list did not load.";
-      });
-  </script>
+  <script src="../assets/js/sketchbook.js"></script>
 </body>
 </html>

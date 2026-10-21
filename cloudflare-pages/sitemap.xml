@@ -2,6 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bitterbuffaloart.com/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/all/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/landscapes/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/wildlife/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/waterscapes/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/night-skies/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/historic-rural/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/photography/desert-rock/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/sketchbook/digital-art/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/sketchbook/drawings/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/sketchbook/paintings/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://bitterbuffaloart.com/sketchbook/mixed-media/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/sketchbook/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/shop/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/tie-dye/</loc><changefreq>weekly</changefreq></url>
@@ -74,7 +85,6 @@
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-tree-that-leans-into-the-wind/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-tractor-and-the-wagon/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-cabin-under-the-stars/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/green-light-over-the-peak/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/stars-above-the-rock-ridge/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/gold-under-a-heavy-sky/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-road-between-the-yellow-trees/</loc><changefreq>weekly</changefreq></url>
@@ -84,8 +94,6 @@
   <url><loc>https://bitterbuffaloart.com/photography/prints/warm-light-on-the-rock-wall/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/a-pole-fence-in-the-warm-light/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/sun-on-the-snow-above-the-river/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/snow-on-the-near-bank/</loc><changefreq>weekly</changefreq></url>
-  <url><loc>https://bitterbuffaloart.com/photography/prints/the-creek-under-bare-branches/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/posts-standing-in-the-water/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-creek-runs-white/</loc><changefreq>weekly</changefreq></url>
   <url><loc>https://bitterbuffaloart.com/photography/prints/the-car-in-the-tall-grass/</loc><changefreq>weekly</changefreq></url>

@@ -64,13 +64,26 @@ def check(root, base=None):
     if not etsy <= allowed_etsy: errors.append(f'Unexpected Etsy links: {etsy - allowed_etsy}')
     photo=(root/'photography/index.html').read_text(encoding='utf-8')
     catalog=json.loads((root/'assets/data/catalog.json').read_text(encoding='utf-8'))
-    numbers=set()
-    for product in catalog['products']:
-        if product.get('category')=='photography prints':
-            numbers.update(re.findall(r'portfolio/(?:thumbs/|large/)?(\d+)\.jpg', product.get('images','')))
-    if numbers!={f'{n:02}' for n in range(1,86)}: errors.append('Portfolio must contain exactly 85 photographs')
-    if 'Explore 85 original landscapes' not in photo or '53 original' in photo:
-        errors.append('Photography description must name 85 photographs')
+    known_subjects={'Landscapes','Wildlife','Waterscapes','Night Skies','Historic/Rural','Desert/Rock'}
+    public=[p for p in catalog['products'] if p.get('category')=='photography prints' and p.get('availability')!='withheld']
+    withheld=[p for p in catalog['products'] if p.get('availability')=='withheld']
+    count=len(public)
+    if {p.get('name') for p in withheld}!={'Green Light Over the Peak','Snow on the Near Bank','The Creek Under Bare Branches'}:
+        errors.append('Withheld photographs must be the three rejected titles')
+    if f'Explore {count} original landscapes' not in photo or '53 original' in photo:
+        errors.append(f'Photography description must name the calculated {count} photographs')
+    sitemap=(root/'sitemap.xml').read_text(encoding='utf-8')
+    for slug in ('green-light-over-the-peak','snow-on-the-near-bank','the-creek-under-bare-branches'):
+        if slug in sitemap: errors.append(f'sitemap still lists {slug}')
+        if (root/'photography'/'prints'/slug/'index.html').exists(): errors.append(f'retired print page remains {slug}')
+    for subject in ('all','landscapes','wildlife','waterscapes','night-skies','historic-rural','desert-rock'):
+        if not (root/'photography'/subject/'index.html').is_file(): errors.append(f'missing photography collection {subject}')
+        if f'/photography/{subject}/' not in photo: errors.append(f'photography index missing /photography/{subject}/')
+    for product in public:
+        link=product.get('inquiry_or_external_link','').strip('/')
+        if not (root/link/'index.html').is_file(): errors.append(f'missing print page for {product.get("id")}')
+        unknown=[name for name in product.get('subjects') or [] if name not in known_subjects]
+        if unknown: errors.append(f'unknown subject on {product.get("id")}: {unknown}')
     wide_titles = ('Small Life, Wide Silence', 'Where Stone Holds the Stars', 'Gold Beneath the Wild', 'The Gold That Stayed')
     if any(title not in photo for title in wide_titles):
         errors.append('Photography page must name every 16:9 photograph that has no published price')
@@ -110,7 +123,7 @@ def check(root, base=None):
         except Exception: valid=False
         http.append({'path':'api/contact (invalid input only)','status':status,'validation_pass':valid})
         if not valid: errors.append(f'Contact Function must return JSON 400 for invalid input (got HTTP {status})')
-    return {'pages':len(pages),'resources':len(resources),'portfolio_unique':len(numbers),'etsy_urls':sorted(etsy),'errors':errors,'http':http}
+    return {'pages':len(pages),'resources':len(resources),'portfolio_unique':count,'etsy_urls':sorted(etsy),'errors':errors,'http':http}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(); p.add_argument('root'); p.add_argument('--base'); p.add_argument('--output'); a=p.parse_args()

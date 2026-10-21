@@ -574,3 +574,25 @@ main,
   .western-page::before,
   .western-page::after { animation: none; }
 }
+.collection-nav, .catalog-pager {
+  display: flex; flex-wrap: wrap; gap: .5rem; align-items: center;
+  max-width: 1200px; margin: 0 auto 1.25rem; padding: 0 1.25rem;
+}
+.collection-nav a, .catalog-pager button, .sketch-filters button {
+  font: inherit; font-weight: 700; color: var(--ink); text-decoration: none;
+  background: #fff; border: 1px solid rgba(45,36,24,.28); padding: .45rem .7rem;
+}
+.collection-nav a[aria-current="page"], .sketch-filters button[aria-pressed="true"] {
+  background: var(--ink); color: #f7f4ee;
+}
+.collection-nav a:focus-visible, .catalog-pager button:focus-visible, .sketch-filters button:focus-visible {
+  outline: 3px solid var(--teal-bright); outline-offset: 2px;
+}
+.catalog-pager button:disabled { opacity: .45; }
+.catalog-offers { list-style: none; margin: .35rem 0 0; padding: 0; }
+.catalog-offers li { margin: 0 0 .2rem; }
+.page-section { max-width: 1200px; margin: 0 auto 2rem; }
+.page-section h2 { font-family: var(--font-display); color: var(--ink); margin: 0 1.25rem .75rem; }
+@media (max-width: 640px) {
+  .collection-nav a, .catalog-pager button { min-height: 44px; }
+}

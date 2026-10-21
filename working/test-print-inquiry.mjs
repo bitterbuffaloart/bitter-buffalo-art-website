@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync, readdirSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 import test from "node:test";
 import { inquiryDetails, quoteText } from "../cloudflare-pages/assets/js/print-inquiry.js";
@@ -79,18 +79,24 @@ test("inquiry catalog publishes only workbook sizes that are on a supplier sheet
 
 test("every photograph keeps its measured sizes, price, and page", () => {
   const slugs = new Set();
+  const withheld = new Set(["bb-photo-66", "bb-photo-76", "bb-photo-77"]);
   for (const photo of catalog.photographs) {
     assert.equal(slugs.has(photo.slug), false);
     slugs.add(photo.slug);
-    const html = readFileSync(resolve(root, "cloudflare-pages/photography/prints", photo.slug, "index.html"), "utf8");
-    assert.equal(html.match(/<h1[ >]/g).length, 1);
-    assert.match(html, new RegExp(`<h1>${photo.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h1>`));
-    assert.match(html, new RegExp(photo.display.replace(/^\//, "")));
-    assert.match(html, new RegExp(`width="${photo.displayWidth}" height="${photo.displayHeight}"`));
-    assert.match(html, /Select a product/);
-    assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout|acrylic/i);
-    assert.doesNotMatch(html, /Workbook list price|Pending\. Inquiry only\.|\$74\.01|\$90\.13|\$50\.51|\$34\.39/);
-    if (NO_MASTER.has(photo.portfolioNumber) || WEB_DERIVATIVE.has(photo.portfolioNumber)) assert.doesNotMatch(html, /\$\d/);
+    const pagePath = resolve(root, "cloudflare-pages/photography/prints", photo.slug, "index.html");
+    const published = !withheld.has(photo.id);
+    if (!published) assert.equal(existsSync(pagePath), false, photo.slug);
+    const html = published ? readFileSync(pagePath, "utf8") : "";
+    if (published) {
+      assert.equal(html.match(/<h1[ >]/g).length, 1);
+      assert.match(html, new RegExp(`<h1>${photo.title.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h1>`));
+      assert.match(html, new RegExp(photo.display.replace(/^\//, "")));
+      assert.match(html, new RegExp(`width="${photo.displayWidth}" height="${photo.displayHeight}"`));
+      assert.match(html, /Select a product/);
+      assert.doesNotMatch(html, /etsy\.com|Buy<\/button>|\/api\/prints\/checkout|acrylic/i);
+      assert.doesNotMatch(html, /Workbook list price|Pending\. Inquiry only\.|\$74\.01|\$90\.13|\$50\.51|\$34\.39/);
+      if (NO_MASTER.has(photo.portfolioNumber) || WEB_DERIVATIVE.has(photo.portfolioNumber)) assert.doesNotMatch(html, /\$\d/);
+    }
     let framedPrices = 0;
     for (const productId of Object.keys(OFFERS)) {
       for (const size of SIZES) {
@@ -101,8 +107,8 @@ test("every photograph keeps its measured sizes, price, and page", () => {
         if (want.text) {
           assert.equal(actual.priceText, want.text);
           const publicSale = ["canvas-floating-15", "metal-aluminum", "paper-archival"].includes(productId);
-          if (publicSale) assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
-          else assert.doesNotMatch(html, new RegExp(`<option value="${productId}"`));
+          if (published && publicSale) assert.match(html, new RegExp(want.text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+          else if (published) assert.doesNotMatch(html, new RegExp(`<option value="${productId}"`));
           if (want.status === "priced") {
             assert.equal(actual.retail, want.retail);
             if (productId === "canvas-floating-15" && size.id === "16x24") framedPrices += 1;
@@ -113,13 +119,13 @@ test("every photograph keeps its measured sizes, price, and page", () => {
           assert.equal(actual.retail, undefined);
           assert.equal(actual.priceText, undefined);
         }
-        if (want.status === "unavailable") {
+        if (published && want.status === "unavailable") {
           assert.doesNotMatch(html, new RegExp(`data-product="${productId}" data-size="${size.id}"`));
         }
         assert.equal(quoteText(photo.id, productId, size.id), want.text || "Request a quote.");
       }
     }
-    assert.equal((html.match(/\$199\.33/g) || []).length, framedPrices);
+    if (published) assert.equal((html.match(/\$199\.33/g) || []).length, framedPrices);
   }
   const tetons = catalog.photographs[0];
   const framedLarge = tetons.sizes.find((item) => item.productId === "canvas-floating-15" && item.sizeId === "20x30");
@@ -187,12 +193,15 @@ test("every photograph keeps its measured sizes, price, and page", () => {
 });
 
 test("gallery links each photograph to its own inquiry page", () => {
-  const photos = products.products.filter((product) => product.category === "photography prints");
-  assert.equal(photos.length, 85);
-  assert.deepEqual(
-    photos.map((product) => product.inquiry_or_external_link),
-    catalog.photographs.map((photo) => photo.url),
-  );
+  const withheld = new Set(["bb-photo-66", "bb-photo-76", "bb-photo-77"]);
+  const photos = products.products.filter((product) => product.category === "photography prints" && product.availability !== "withheld");
+  const published = catalog.photographs.filter((photo) => !withheld.has(photo.id));
+  assert.equal(photos.length, published.length);
+  const byId = new Map(published.map((photo) => [photo.id, photo.url]));
+  for (const product of photos) assert.equal(product.inquiry_or_external_link, byId.get(product.id));
+  for (const id of withheld) {
+    assert.equal(products.products.some((product) => product.id === id && product.availability === "withheld"), true);
+  }
 });
 
 test("contact accepts the inquiry fields and does not report success when send is unavailable", async () => {

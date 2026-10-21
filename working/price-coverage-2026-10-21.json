@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "photographs": 85,
+    "withAuthorizedOffer": 63,
+    "withoutAuthorizedOffer": 22
+  },
+  "public": {
+    "photographs": 82,
+    "withAuthorizedOffer": 60,
+    "withoutAuthorizedOffer": 22
+  },
+  "withheld": [
+    {
+      "id": "bb-photo-66",
+      "title": "Green Light Over the Peak"
+    },
+    {
+      "id": "bb-photo-76",
+      "title": "Snow on the Near Bank"
+    },
+    {
+      "id": "bb-photo-77",
+      "title": "The Creek Under Bare Branches"
+    }
+  ],
+  "note": "Baseline is the print-inquiry archive. Public counts exclude withheld titles and are calculated from catalog.json."
+}

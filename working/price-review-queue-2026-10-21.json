@@ -1,0 +1,3211 @@
+[
+  {
+    "id": "bb-photo-01",
+    "title": "Stormborn Grand Tetons",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-03",
+    "title": "The Long Way Through",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-04",
+    "title": "Fire Beneath the Arch",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-05",
+    "title": "The Canyon Keeps Moving",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-06",
+    "title": "Twice the Fire",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-07",
+    "title": "Gold Beyond the Ridge",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-08",
+    "title": "A Thousand Edges of Light",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-09",
+    "title": "The Exchange Still Stands",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-10",
+    "title": "Small Life, Wide Silence",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-11",
+    "title": "Crowned in Timber",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-12",
+    "title": "Learning the Steep Way",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-13",
+    "title": "Carried by the Open Sky",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-45",
+    "title": "Born to Roam",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-15",
+    "title": "Iron at Rest",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-16",
+    "title": "Let the Water Speak",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-17",
+    "title": "The Night Writes Back",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-18",
+    "title": "Where Stone Holds the Stars",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-19",
+    "title": "Winter Keeps the Keys",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-20",
+    "title": "A Little Color Against the Storm",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-21",
+    "title": "Into the Mist",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-22",
+    "title": "What the Water Remembers",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-23",
+    "title": "Fuel for the Long Way Home",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-24",
+    "title": "Gold Beneath the Wild",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-25",
+    "title": "A Roof Beneath the Fire",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-26",
+    "title": "Iron Remembers",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-27",
+    "title": "The Last Stop Is Quiet",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-28",
+    "title": "Rooted Beneath Giants",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-29",
+    "title": "Room for the Sky",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-30",
+    "title": "The Hills Come Alive in Gold",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-31",
+    "title": "A Small Flame of Violet",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-32",
+    "title": "What the Storm Left Glowing",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-33",
+    "title": "Main Street, Still Standing",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-34",
+    "title": "Where Winter Meets Wildflowers",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-35",
+    "title": "Cold Water, Wild Blood",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-36",
+    "title": "The Wild Holds Its Own",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-37",
+    "title": "The Gold That Stayed",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-38",
+    "title": "Take the Golden Way",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-39",
+    "title": "Westbound After Dark",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-40",
+    "title": "Growing Gold from Stone",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-41",
+    "title": "Still Standing, Still Flowing",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-42",
+    "title": "The Night Keeps Watch",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-43",
+    "title": "Embers Above the Desert",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "unavailable",
+        "reason": "This size would crop the photograph."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-44",
+    "title": "When the Work Was Done",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-47",
+    "title": "The River Knows the Way",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-48",
+    "title": "Where the Canyon Opens",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-49",
+    "title": "Where Silence Has Antlers",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-50",
+    "title": "Little Flame in the Meadow",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "No verified print master. Gallery and inquiry only."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-51",
+    "title": "The Long Fall Home",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-52",
+    "title": "A Voice Against the Stone",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-53",
+    "title": "Gold Along the Waterline",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-54",
+    "title": "The Meadow Finds Its River",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "2048-pixel web derivative. No verified print master."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-55",
+    "title": "Towers Before the Storm",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-56",
+    "title": "Iris Under a Broken Sky",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-57",
+    "title": "The Valley Keeps Its Gold",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-58",
+    "title": "Rooms Under the Stone Roof",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-59",
+    "title": "A Watcher on the Warm Rock",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "12x18",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-60",
+    "title": "The Shore Keeps the Last Light",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-61",
+    "title": "The Machine Beside the Hay",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-62",
+    "title": "Where the Fence Meets the Trees",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-63",
+    "title": "The Tree That Leans Into the Wind",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-64",
+    "title": "The Tractor and the Wagon",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-65",
+    "title": "The Cabin Under the Stars",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-66",
+    "title": "Green Light Over the Peak",
+    "public": false,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-67",
+    "title": "Stars Above the Rock Ridge",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-68",
+    "title": "Gold Under a Heavy Sky",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-69",
+    "title": "The Road Between the Yellow Trees",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-70",
+    "title": "A Stand of Pale Trunks",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-71",
+    "title": "The Log Fence Above the Valley",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-72",
+    "title": "A Fence Across the Foreground",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-73",
+    "title": "Warm Light on the Rock Wall",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-74",
+    "title": "A Pole Fence in the Warm Light",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "canvas-floating-15",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 200 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-75",
+    "title": "Sun on the Snow Above the River",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-76",
+    "title": "Snow on the Near Bank",
+    "public": false,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-77",
+    "title": "The Creek Under Bare Branches",
+    "public": false,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-78",
+    "title": "Posts Standing in the Water",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-79",
+    "title": "The Creek Runs White",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-80",
+    "title": "The Car in the Tall Grass",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-81",
+    "title": "The Torn Door",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-82",
+    "title": "The Rail Fence in Dry Grass",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-83",
+    "title": "Yellow Trees on the Hill",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-84",
+    "title": "Light on the Far Peak",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-85",
+    "title": "Still Water and Yellow Brush",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  },
+  {
+    "id": "bb-photo-86",
+    "title": "Yellow Trees Beside the Meadow",
+    "public": true,
+    "needsAuthorization": [
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "metal-aluminum",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "16x24",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      },
+      {
+        "productId": "paper-archival",
+        "sizeId": "20x30",
+        "status": "hold",
+        "reason": "Below 300 PPI."
+      }
+    ]
+  }
+]

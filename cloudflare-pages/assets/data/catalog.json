@@ -16,7 +16,11 @@
       "display_height": 933,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/tetons-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/tetons-bitter-buffalo-photography.html",
+      "subjects": [
+        "Landscapes"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-02",
@@ -34,7 +38,12 @@
       "display_height": 933,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/maroon-morning-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/maroon-morning-bitter-buffalo-photography.html",
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-03",
@@ -51,7 +60,11 @@
       "display_width": 1600,
       "display_height": 1086,
       "thumb_width": 480,
-      "thumb_height": 326
+      "thumb_height": 326,
+      "subjects": [
+        "Waterscapes",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-04",
@@ -69,7 +82,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/1-mesa-arch-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/1-mesa-arch-bitter-buffalo-photography.html",
+      "subjects": [
+        "Desert/Rock"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-05",
@@ -86,7 +103,11 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-06",
@@ -104,7 +125,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/schwabacher-landing-sunset-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/schwabacher-landing-sunset-bitter-buffalo-photography.html",
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-07",
@@ -121,7 +146,10 @@
       "display_width": 1600,
       "display_height": 989,
       "thumb_width": 480,
-      "thumb_height": 297
+      "thumb_height": 297,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-08",
@@ -138,7 +166,10 @@
       "display_width": 1600,
       "display_height": 533,
       "thumb_width": 480,
-      "thumb_height": 160
+      "thumb_height": 160,
+      "subjects": [
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-09",
@@ -155,7 +186,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-10",
@@ -173,7 +208,10 @@
       "display_height": 788,
       "thumb_width": 480,
       "thumb_height": 270,
-      "faa_artwork_url": "https://fineartamerica.com/featured/alone-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/alone-bitter-buffalo-photography.html",
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-11",
@@ -190,7 +228,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-12",
@@ -208,7 +250,10 @@
       "display_height": 1169,
       "thumb_width": 480,
       "thumb_height": 351,
-      "faa_artwork_url": "https://fineartamerica.com/featured/hanging-with-nanny-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/hanging-with-nanny-bitter-buffalo-photography.html",
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-13",
@@ -226,7 +271,10 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/mates-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/mates-bitter-buffalo-photography.html",
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-45",
@@ -234,8 +282,8 @@
       "category": "photography prints",
       "images": "/assets/images/portfolio/thumbs/14.jpg|/assets/images/portfolio/14.jpg|/assets/images/portfolio/large/14.jpg",
       "description": "A rust-colored bison calf stands among sage and grass, surrounded by the heavy shapes of the herd. Small legs, watchful eyes, and a whole stretch of wild country ahead. The next generation is already finding its footing.",
-      "materials_and_sizes": "Authorized sizes that meet the PPI minimum are on the inquiry page. Checkout is not enabled.",
-      "retail_price": "",
+      "materials_and_sizes": "12\u00d718 premium 1.5-inch framed canvas: $149.33. Larger sizes of this file stay below the PPI minimum. Checkout is not enabled.",
+      "retail_price": "149.33",
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
@@ -243,7 +291,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-15",
@@ -261,7 +312,10 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/retirement-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/retirement-bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-16",
@@ -279,7 +333,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/monte-cristo-creek-falls-2-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/monte-cristo-creek-falls-2-bitter-buffalo-photography.html",
+      "subjects": [
+        "Waterscapes"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-17",
@@ -297,7 +355,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/breckenridge-star-trails-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/breckenridge-star-trails-bitter-buffalo-photography.html",
+      "subjects": [
+        "Night Skies",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-18",
@@ -314,7 +376,12 @@
       "display_width": 1600,
       "display_height": 900,
       "thumb_width": 480,
-      "thumb_height": 270
+      "thumb_height": 270,
+      "subjects": [
+        "Night Skies",
+        "Desert/Rock"
+      ],
+      "featured": true
     },
     {
       "id": "bb-photo-19",
@@ -331,7 +398,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-20",
@@ -349,7 +419,10 @@
       "display_height": 1066,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/1-st-elmo-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/1-st-elmo-bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-21",
@@ -366,7 +439,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 321
+      "thumb_height": 321,
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-22",
@@ -384,7 +460,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/reiling-dredge-gold-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/reiling-dredge-gold-bitter-buffalo-photography.html",
+      "subjects": [
+        "Waterscapes",
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-23",
@@ -401,7 +481,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-24",
@@ -418,7 +501,11 @@
       "display_width": 1600,
       "display_height": 900,
       "thumb_width": 480,
-      "thumb_height": 270
+      "thumb_height": 270,
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-25",
@@ -436,7 +523,11 @@
       "display_height": 1067,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/1--bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/1--bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-26",
@@ -454,7 +545,10 @@
       "display_height": 1600,
       "thumb_width": 320,
       "thumb_height": 480,
-      "faa_artwork_url": "https://fineartamerica.com/featured/train-kept-a-rollin-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/train-kept-a-rollin-bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-27",
@@ -472,7 +566,10 @@
       "display_height": 1036,
       "thumb_width": 480,
       "thumb_height": 311,
-      "faa_artwork_url": "https://fineartamerica.com/featured/little-red-caboose-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/little-red-caboose-bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-28",
@@ -489,7 +586,11 @@
       "display_width": 1600,
       "display_height": 698,
       "thumb_width": 480,
-      "thumb_height": 209
+      "thumb_height": 209,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-29",
@@ -506,7 +607,10 @@
       "display_width": 1600,
       "display_height": 765,
       "thumb_width": 480,
-      "thumb_height": 229
+      "thumb_height": 229,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-30",
@@ -523,7 +627,10 @@
       "display_width": 1400,
       "display_height": 467,
       "thumb_width": 480,
-      "thumb_height": 160
+      "thumb_height": 160,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-31",
@@ -540,7 +647,8 @@
       "display_width": 933,
       "display_height": 1400,
       "thumb_width": 320,
-      "thumb_height": 480
+      "thumb_height": 480,
+      "subjects": []
     },
     {
       "id": "bb-photo-32",
@@ -557,7 +665,10 @@
       "display_width": 1400,
       "display_height": 672,
       "thumb_width": 480,
-      "thumb_height": 230
+      "thumb_height": 230,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-33",
@@ -574,7 +685,10 @@
       "display_width": 1600,
       "display_height": 1066,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-34",
@@ -592,7 +706,10 @@
       "display_height": 1600,
       "thumb_width": 343,
       "thumb_height": 480,
-      "faa_artwork_url": "https://fineartamerica.com/featured/1-lovely-lupines-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/1-lovely-lupines-bitter-buffalo-photography.html",
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-35",
@@ -609,7 +726,11 @@
       "display_width": 1067,
       "display_height": 1600,
       "thumb_width": 320,
-      "thumb_height": 480
+      "thumb_height": 480,
+      "subjects": [
+        "Wildlife",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-36",
@@ -626,7 +747,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-37",
@@ -643,7 +767,11 @@
       "display_width": 1600,
       "display_height": 899,
       "thumb_width": 480,
-      "thumb_height": 270
+      "thumb_height": 270,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-38",
@@ -660,7 +788,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-39",
@@ -677,7 +808,10 @@
       "display_width": 1600,
       "display_height": 945,
       "thumb_width": 480,
-      "thumb_height": 283
+      "thumb_height": 283,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-40",
@@ -695,7 +829,10 @@
       "display_height": 1066,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/trace-aspens-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/trace-aspens-bitter-buffalo-photography.html",
+      "subjects": [
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-41",
@@ -713,25 +850,11 @@
       "display_height": 1600,
       "thumb_width": 320,
       "thumb_height": 480,
-      "faa_artwork_url": "https://fineartamerica.com/featured/old-mill-crystal-mill-bitter-buffalo-photography.html"
-    },
-    {
-      "id": "bb-photo-42",
-      "name": "The Night Keeps Watch",
-      "category": "photography prints",
-      "images": "/assets/images/portfolio/thumbs/42.jpg|/assets/images/portfolio/42.jpg|/assets/images/portfolio/large/42.jpg",
-      "description": "Stars gather above the dark forest while light picks out weathered boards and a pale ribbon of falling water. The structure takes on a quieter presence after dark. Above the river's movement, the sky opens wide.",
-      "materials_and_sizes": "16\u00d724 premium 1.5-inch framed canvas: $199.33. Other authorized sizes are on the inquiry page when this file qualifies. Checkout is not enabled.",
-      "retail_price": "199.33",
-      "supplier_cost": "",
-      "shipping_estimate": "",
-      "availability": "inquiry",
-      "inquiry_or_external_link": "/photography/prints/the-night-keeps-watch/",
-      "display_width": 1067,
-      "display_height": 1600,
-      "thumb_width": 320,
-      "thumb_height": 480,
-      "faa_artwork_url": "https://fineartamerica.com/featured/lights-on-the-mill-bitter-buffalo-photography-.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/old-mill-crystal-mill-bitter-buffalo-photography.html",
+      "subjects": [
+        "Historic/Rural",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-43",
@@ -748,7 +871,11 @@
       "display_width": 1600,
       "display_height": 1020,
       "thumb_width": 480,
-      "thumb_height": 306
+      "thumb_height": 306,
+      "subjects": [
+        "Desert/Rock",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-44",
@@ -765,7 +892,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-46",
@@ -783,7 +913,10 @@
       "display_height": 1068,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/mt-sneffels-bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/mt-sneffels-bitter-buffalo-photography.html",
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-47",
@@ -800,7 +933,12 @@
       "display_width": 1600,
       "display_height": 1066,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes",
+        "Desert/Rock",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-48",
@@ -817,7 +955,11 @@
       "display_width": 1067,
       "display_height": 1600,
       "thumb_width": 320,
-      "thumb_height": 480
+      "thumb_height": 480,
+      "subjects": [
+        "Waterscapes",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-49",
@@ -834,7 +976,10 @@
       "display_width": 1600,
       "display_height": 1067,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-50",
@@ -852,7 +997,10 @@
       "display_height": 720,
       "thumb_width": 480,
       "thumb_height": 320,
-      "faa_artwork_url": "https://fineartamerica.com/featured/19--bitter-buffalo-photography.html"
+      "faa_artwork_url": "https://fineartamerica.com/featured/19--bitter-buffalo-photography.html",
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-51",
@@ -869,7 +1017,34 @@
       "display_width": 1067,
       "display_height": 1600,
       "thumb_width": 320,
-      "thumb_height": 480
+      "thumb_height": 480,
+      "subjects": [
+        "Waterscapes",
+        "Landscapes"
+      ]
+    },
+    {
+      "id": "bb-photo-42",
+      "name": "The Night Keeps Watch",
+      "category": "photography prints",
+      "images": "/assets/images/portfolio/thumbs/42.jpg|/assets/images/portfolio/42.jpg|/assets/images/portfolio/large/42.jpg",
+      "description": "Stars gather above the dark forest while light picks out weathered boards and a pale ribbon of falling water. The structure takes on a quieter presence after dark. Above the river's movement, the sky opens wide.",
+      "materials_and_sizes": "16\u00d724 premium 1.5-inch framed canvas: $199.33. Other authorized sizes are on the inquiry page when this file qualifies. Checkout is not enabled.",
+      "retail_price": "199.33",
+      "supplier_cost": "",
+      "shipping_estimate": "",
+      "availability": "inquiry",
+      "inquiry_or_external_link": "/photography/prints/the-night-keeps-watch/",
+      "display_width": 1067,
+      "display_height": 1600,
+      "thumb_width": 320,
+      "thumb_height": 480,
+      "faa_artwork_url": "https://fineartamerica.com/featured/lights-on-the-mill-bitter-buffalo-photography-.html",
+      "subjects": [
+        "Night Skies",
+        "Historic/Rural",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-52",
@@ -886,7 +1061,10 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife"
+      ]
     },
     {
       "id": "bb-photo-53",
@@ -903,7 +1081,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-54",
@@ -920,7 +1102,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-55",
@@ -937,7 +1123,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Desert/Rock",
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-56",
@@ -954,7 +1144,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-57",
@@ -971,7 +1164,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes",
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-58",
@@ -988,7 +1185,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-59",
@@ -997,7 +1198,7 @@
       "images": "/assets/images/portfolio/thumbs/58.jpg|/assets/images/portfolio/58.jpg|/assets/images/portfolio/large/58.jpg",
       "description": "A marmot sits on layered rock, turned toward the light. The stones in front are sharp, and the slope behind falls out of focus.",
       "materials_and_sizes": "12\u00d718 premium 1.5-inch framed canvas: $149.33. Larger sizes of this file stay below the PPI minimum. Checkout is not enabled.",
-      "retail_price": "",
+      "retail_price": "149.33",
       "supplier_cost": "",
       "shipping_estimate": "",
       "availability": "inquiry",
@@ -1005,7 +1206,11 @@
       "display_width": 1400,
       "display_height": 934,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Wildlife",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-60",
@@ -1022,7 +1227,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-61",
@@ -1039,7 +1248,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-62",
@@ -1056,24 +1268,11 @@
       "display_width": 1400,
       "display_height": 2097,
       "thumb_width": 480,
-      "thumb_height": 719
-    },
-    {
-      "id": "bb-photo-63",
-      "name": "The Tree That Leans Into the Wind",
-      "category": "photography prints",
-      "images": "/assets/images/portfolio/thumbs/62.jpg|/assets/images/portfolio/62.jpg|/assets/images/portfolio/large/62.jpg",
-      "description": "An old tree leans over a high meadow. Yellow blooms sit in the grass, and the valley opens under a broken sky.",
-      "materials_and_sizes": "16\u00d724 premium 1.5-inch framed canvas: $199.33. Other authorized sizes are on the inquiry page when this file qualifies. Checkout is not enabled.",
-      "retail_price": "199.33",
-      "supplier_cost": "",
-      "shipping_estimate": "",
-      "availability": "inquiry",
-      "inquiry_or_external_link": "/photography/prints/the-tree-that-leans-into-the-wind/",
-      "display_width": 1400,
-      "display_height": 2097,
-      "thumb_width": 480,
-      "thumb_height": 719
+      "thumb_height": 719,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-64",
@@ -1090,7 +1289,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-65",
@@ -1107,7 +1309,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural",
+        "Night Skies"
+      ]
     },
     {
       "id": "bb-photo-66",
@@ -1119,12 +1325,16 @@
       "retail_price": "199.33",
       "supplier_cost": "",
       "shipping_estimate": "",
-      "availability": "inquiry",
+      "availability": "withheld",
       "inquiry_or_external_link": "/photography/prints/green-light-over-the-peak/",
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Night Skies",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-67",
@@ -1141,7 +1351,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Night Skies",
+        "Desert/Rock"
+      ]
     },
     {
       "id": "bb-photo-68",
@@ -1158,7 +1372,10 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-69",
@@ -1175,7 +1392,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-70",
@@ -1192,7 +1412,8 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": []
     },
     {
       "id": "bb-photo-71",
@@ -1209,7 +1430,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-72",
@@ -1226,7 +1451,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-73",
@@ -1243,7 +1472,31 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Desert/Rock",
+        "Landscapes"
+      ]
+    },
+    {
+      "id": "bb-photo-63",
+      "name": "The Tree That Leans Into the Wind",
+      "category": "photography prints",
+      "images": "/assets/images/portfolio/thumbs/62.jpg|/assets/images/portfolio/62.jpg|/assets/images/portfolio/large/62.jpg",
+      "description": "An old tree leans over a high meadow. Yellow blooms sit in the grass, and the valley opens under a broken sky.",
+      "materials_and_sizes": "16\u00d724 premium 1.5-inch framed canvas: $199.33. Other authorized sizes are on the inquiry page when this file qualifies. Checkout is not enabled.",
+      "retail_price": "199.33",
+      "supplier_cost": "",
+      "shipping_estimate": "",
+      "availability": "inquiry",
+      "inquiry_or_external_link": "/photography/prints/the-tree-that-leans-into-the-wind/",
+      "display_width": 1400,
+      "display_height": 2097,
+      "thumb_width": 480,
+      "thumb_height": 719,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-74",
@@ -1260,7 +1513,11 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-75",
@@ -1277,7 +1534,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-76",
@@ -1289,12 +1550,15 @@
       "retail_price": "199.33",
       "supplier_cost": "",
       "shipping_estimate": "",
-      "availability": "inquiry",
+      "availability": "withheld",
       "inquiry_or_external_link": "/photography/prints/snow-on-the-near-bank/",
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-77",
@@ -1306,12 +1570,15 @@
       "retail_price": "199.33",
       "supplier_cost": "",
       "shipping_estimate": "",
-      "availability": "inquiry",
+      "availability": "withheld",
       "inquiry_or_external_link": "/photography/prints/the-creek-under-bare-branches/",
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-78",
@@ -1328,7 +1595,11 @@
       "display_width": 1400,
       "display_height": 2100,
       "thumb_width": 480,
-      "thumb_height": 720
+      "thumb_height": 720,
+      "subjects": [
+        "Waterscapes",
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-79",
@@ -1345,7 +1616,10 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes"
+      ]
     },
     {
       "id": "bb-photo-80",
@@ -1362,7 +1636,10 @@
       "display_width": 1400,
       "display_height": 933,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-81",
@@ -1379,7 +1656,10 @@
       "display_width": 1400,
       "display_height": 2100,
       "thumb_width": 480,
-      "thumb_height": 720
+      "thumb_height": 720,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-82",
@@ -1396,7 +1676,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Historic/Rural"
+      ]
     },
     {
       "id": "bb-photo-83",
@@ -1413,7 +1696,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-84",
@@ -1430,7 +1716,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-85",
@@ -1447,7 +1736,11 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Waterscapes",
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-photo-86",
@@ -1464,7 +1757,10 @@
       "display_width": 1400,
       "display_height": 935,
       "thumb_width": 480,
-      "thumb_height": 320
+      "thumb_height": 320,
+      "subjects": [
+        "Landscapes"
+      ]
     },
     {
       "id": "bb-aspen-round-buffalo",
