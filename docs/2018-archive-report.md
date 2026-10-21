@@ -1,6 +1,6 @@
 # 2018 archive report
 
-Checked 2026-10-21 01:36 Mountain Time. Live site content at the start of this pass was `95ee113` on https://bitterbuffaloart.com and https://www.bitterbuffaloart.com. HEAD before this change was `bed06ee`. This report does not claim a new production deploy.
+Checked 2026-10-21 01:56 Mountain Time. Live site content is `53b2d9c` (`53b2d9cb63ca11a780532479d40543ac5de6e201`) on https://bitterbuffaloart.com and https://www.bitterbuffaloart.com. At the start of this pass the live content was `95ee113` and HEAD was `bed06ee`.
 
 ## Status
 
@@ -8,14 +8,14 @@ Checked 2026-10-21 01:36 Mountain Time. Live site content at the start of this p
 | --- | --- |
 | Git and live commit confirmed | COMPLETE |
 | F:\ and C:\ located, not overwritten | COMPLETE |
-| Sketchbook full-image view | COMPLETE locally, PENDING production |
-| Favicon HTTP 200 | COMPLETE locally, PENDING production |
+| Sketchbook full-image view | COMPLETE |
+| Favicon HTTP 200 | COMPLETE |
 | Nine named 2018 files found and cataloged | COMPLETE |
 | DSC_9791 capture check | COMPLETE, not moved |
 | 2016 and 2017 file counts against real folders | COMPLETE |
 | File-by-file 2016 and 2017 spreadsheet match | BLOCKED, no matching spreadsheet |
 | New public portfolio pages | PENDING, no placeholder pages added |
-| Deploy | PENDING |
+| Deploy | COMPLETE, verified live for 53b2d9c |
 
 ## Starting conditions
 
@@ -66,6 +66,20 @@ Laser Art still has 16 catalog records. Tie-dye still has 25 listing links. Phot
 - `python working/qa-site.py cloudflare-pages`: 63 pages, 344 resources, 53 portfolio numbers, errors `[]`.
 - `node --test working/test-contact.mjs working/test-site-chrome.mjs working/test-print-inquiry.mjs`: 7 passed, 0 failed.
 - Local Sketchbook at 1440×900, 768×1024, and 390×844. Static Mischief zoom measured 1800×2400. Keyboard Escape and the Close control closed the dialog.
+
+## Deploy and live check
+
+Production job https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39564002271 publish-production succeeded for 53b2d9c. Preview was https://96e00992.bitter-buffalo-art.pages.dev from run 39563639498.
+
+On 2026-10-21 01:56 MT, both https://bitterbuffaloart.com and https://www.bitterbuffaloart.com returned:
+
+- `/favicon.ico` HTTP 200, 962 bytes, SHA-256 `54ff625301036c867a951e37f57ab20672fd1747e3e95ddd3ec6e7d93cf9053e`
+- `/assets/images/logo.png` HTTP 200, 150382 bytes
+- Treetop JPEG HTTP 200, 94909 bytes, SHA-256 `850be805812324a1d5f95d001d0caff5a815273aacb37c56849ac8e5c489b2fc`
+- overalls-display.jpg HTTP 200, 132650 bytes, SHA-256 `c1bf860caeac6d0d23ffb109363f0bf4ef1adc3ad8477ab4a367dd50b21703b5`
+- sketchbook.css HTTP 200, and the zoom rule includes `max-height: none`
+
+www applied that rule on a fresh load. Static Mischief zoom measured 1800×2400 at 1440×900, 768×1024, and 390×844. The stage scrolled. Escape and Close both closed the dialog. No source file was copied onto F:\ or C:\. No new photograph was published.
 
 ## Next path
 
