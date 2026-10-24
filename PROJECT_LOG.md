@@ -1771,3 +1771,36 @@ Checked in a browser on https://bitterbuffaloart.com after JavaScript:
 - Contact: general, custom-project, and laser-intake forms, with the send button and backcountrytiedye@gmail.com visible.
 
 Later commits, painting photographs, and the orientation preview remain at https://93a90af5.bitter-buffalo-art.pages.dev. Git history was not rewritten. This note does not publish a new deployment.
+
+## Gallery preview — 2026-10-24 3:23 PM Mountain Time
+
+Production was left on deployment `a0dcf374-49d2-4cdf-ba6b-37694049ae7b`. https://bitterbuffaloart.com still serves that catalog: Resonance in Eight Dimensions $199.33 and Architecture of Infinity $199.99. The gallery repair is an isolated preview only.
+
+Preview deployment `e5fde096-970e-453f-bec9-47742875daef`, environment preview, branch `qa-53bfc57386f0a8590e0bf41446761a49f69dfd41`, commit `53bfc57386f0a8590e0bf41446761a49f69dfd41`. URL https://e5fde096.bitter-buffalo-art.pages.dev. Workflow https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40133961070. `publish-production` was skipped. `branch-preview` succeeded.
+
+Sketchbook inventory: Git history of `cloudflare-pages/assets/sketchbook/works.json` contains the same seven ids that are published now. No additional Sketchbook photograph was found in the artwork folders. The five physical paintings stay in `cloudflare-pages/assets/original-fine-art/works.json` and are not in the Sketchbook list. `origin/main` uses different titles for three of the same files — The Amanita Paradox, The Fox & the Sacred Pattern, and The Fifth Dimension — and omits The Color Between Worlds. Those titles were not copied onto this branch. The seven current titles and photographs were left in place.
+
+Laser photographs were already corrected in `43d0dbe` and were checked against the originals. A second rotation was not applied. Originals remain beside the `-corrected` files.
+
+| File | Transform checked |
+|---|---|
+| `resonance-in-eight-dimensions.jpg` and its thumb, large, and detail files | 90° left |
+| `08-coaster-4pc-007.jpg` and its thumb | 90° left |
+| `07-coaster-4pc-006.jpg` and its thumb | 90° left |
+| `06-coaster-4pc-005.jpg` and its thumb | 90° left |
+| `05-coaster-4pc-004.jpg` and its thumb | vertical flip |
+| `04-coaster-5pc-001.jpg` and its thumb | vertical flip |
+
+Coaster zoom uses the corrected display file. There is no separate coaster zoom directory. Architecture of Infinity was not rotated. Aspen rounds, cutting boards, and the other coaster sets were not changed. `BBOrientImage` is not in `site.js`. Closed `.bb-lightbox` and `.sketch-dialog` use `display: none`.
+
+Prices on the preview catalog: Resonance in Eight Dimensions $166.66, Architecture of Infinity $133.33. Those values come from `fa92005` and were not reverted.
+
+Local browser checks at http://127.0.0.1:8893, then the preview JSON:
+
+- Desktop 1440×900 and mobile 390×844. Laser cards had no horizontal overflow. The closed viewer measured 0×0.
+- Guitar, coasters 004–007, the five-piece set, and the mandala loaded. Screenshots: `C:\Users\bitte\AppData\Local\Temp\cursor\screenshots\laser-desktop-guitar.png`, `laser-desktop-coasters.png`, `laser-desktop-five-piece.png`, `laser-mobile-guitar.png`, `sketchbook-desktop.png`, `sketchbook-mobile.png`.
+- Sketchbook showed the seven titles and seven loaded thumbnails. The five painting ids were absent from that page.
+
+Tests: `qa-site.py` reported 107 pages and no errors. Gallery, contact, print-inquiry, and print-storefront tests passed. `test-site-chrome.mjs` and `seo-check.js` still fail on Home, Shop, and Laser Art because those headers include Original Fine Art ahead of Sketchbook. That navigation was left in place.
+
+This log commit is not a production publish. A rerun of the main deploy can still replace the public alias.
