@@ -2,13 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const roots = [...document.querySelectorAll("[data-catalog-grid]")];
   if (!roots.length) return;
   const money = (value) => (value ? `$${value}` : "");
+  // Studio orientation corrections, keyed to original photo sequence IDs.
+  const orientation = (product) => {
+    const id = product.id;
+    if (["bb-resonance-in-eight-dimensions", "bb-08-coaster-4pc-007", "bb-07-coaster-4pc-006", "bb-06-coaster-4pc-005"].includes(id)) return { rotation: -90, flipY: false };
+    if (["bb-05-coaster-4pc-004", "bb-04-coaster-5pc-001"].includes(id)) return { rotation: 0, flipY: true };
+    return { rotation: 0, flipY: false };
+  };
   const slideFor = (product) => {
     const parts = String(product.images || "").split("|");
     const large = parts[2] || parts[1] || parts[0];
-    const rotation = product.id === "bb-resonance-in-eight-dimensions" ? -90 : 0;
-    const frames = [{ src: large, alt: product.name, rotation }];
+    const { rotation, flipY } = orientation(product);
+    const frames = [{ src: large, alt: product.name, rotation, flipY }];
     if (Array.isArray(product.detail_images)) {
-      for (const src of product.detail_images) frames.push({ src, alt: `${product.name} detail`, rotation });
+      for (const src of product.detail_images) frames.push({ src, alt: `${product.name} detail`, rotation, flipY });
     }
     const href = product.inquiry_or_external_link || "";
     const faa = typeof product.faa_artwork_url === "string" ? product.faa_artwork_url : "";
@@ -34,8 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const image = document.createElement("img");
     image.src = thumb || display;
     image.alt = product.name;
-    if (product.id === "bb-resonance-in-eight-dimensions") {
-      image.style.transform = "rotate(-90deg) scale(0.75)";
+    const { rotation, flipY } = orientation(product);
+    if (rotation || flipY) {
+      image.style.transform = `rotate(${rotation}deg) scale(${rotation ? 0.75 : 1}) scaleY(${flipY ? -1 : 1})`;
       image.style.objectFit = "contain";
     }
     image.width = Number(product.thumb_width) || Number(product.display_width) || 480;
