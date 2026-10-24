@@ -1,21 +1,31 @@
 document.addEventListener("DOMContentLoaded", () => {
   const roots = [...document.querySelectorAll("[data-catalog-grid]")];
   if (!roots.length) return;
-  const dialog = document.createElement("dialog");
-  dialog.className = "catalog-enlarge";
-  dialog.innerHTML = '<button type="button" class="catalog-enlarge__close">Close</button><img alt=""><p></p>';
-  document.body.append(dialog);
-  const enlarged = dialog.querySelector("img");
-  const caption = dialog.querySelector("p");
-  dialog.querySelector("button").addEventListener("click", () => dialog.close());
-  dialog.addEventListener("click", (event) => {
-    if (event.target === dialog) dialog.close();
-  });
-
   const money = (value) => (value ? `$${value}` : "");
+  const slideFor = (product) => {
+    const parts = String(product.images || "").split("|");
+    const large = parts[2] || parts[1] || parts[0];
+    const frames = [{ src: large, alt: product.name }];
+    if (Array.isArray(product.detail_images)) {
+      for (const src of product.detail_images) frames.push({ src, alt: `${product.name} detail` });
+    }
+    const href = product.inquiry_or_external_link || "";
+    const faa = typeof product.faa_artwork_url === "string" ? product.faa_artwork_url : "";
+    let purchase = null;
+    if (product.category === "photography prints") {
+      purchase = faa
+        ? { href: faa, label: "Buy Prints on Fine Art America", external: true }
+        : { href: `/contact/?topic=print&piece=${encodeURIComponent(product.name)}`, label: "Contact to Purchase" };
+    } else if (href.includes("etsy.com/listing/")) {
+      purchase = { href, label: "Buy on Etsy", external: true };
+    } else if (href.includes("/contact/")) {
+      purchase = { href, label: "Inquire" };
+    }
+    return { frames, caption: product.name, purchase };
+  };
   const pageSize = 12;
 
-  const card = (product, inquiryById) => {
+  const card = (product, inquiryById, openGallery) => {
     const [thumb, display, large] = product.images.split("|");
     const figure = document.createElement("figure");
     figure.className = "portfolio-card";
@@ -26,24 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
     image.width = Number(product.thumb_width) || Number(product.display_width) || 480;
     image.height = Number(product.thumb_height) || Number(product.display_height) || 320;
     const photography = product.category === "photography prints";
-    let media;
-    if (photography) {
-      media = document.createElement("a");
-      media.className = "catalog-thumb";
-      media.href = product.inquiry_or_external_link;
-      media.append(image);
-    } else {
-      media = document.createElement("button");
-      media.type = "button";
-      media.className = "catalog-thumb";
-      media.append(image);
-      media.addEventListener("click", () => {
-        enlarged.src = large || display;
-        enlarged.alt = product.name;
-        caption.textContent = product.name;
-        dialog.showModal();
-      });
-    }
+    const media = document.createElement("button");
+    media.type = "button";
+    media.className = "catalog-thumb";
+    media.append(image);
+    media.addEventListener("click", () => openGallery());
     const text = document.createElement("figcaption");
     const title = photography ? document.createElement("a") : document.createElement("p");
     title.className = "catalog-title";
@@ -148,7 +145,9 @@ document.addEventListener("DOMContentLoaded", () => {
       empty.textContent = "No photographs are published in this subject.";
       root.replaceChildren(empty);
     } else {
-      root.replaceChildren(...slice.map((product) => card(product, root.inquiryById)));
+      root.replaceChildren(...slice.map((product, index) => card(product, root.inquiryById, () => {
+        if (window.BBLightbox) window.BBLightbox.open(slice.map(slideFor), index);
+      })));
     }
     root.dataset.catalogCount = String(items.length);
     if (!pager) return;

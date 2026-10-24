@@ -9,6 +9,7 @@ const pages = [
   'shop/index.html',
   'tie-dye/index.html',
   'laser-art/index.html',
+  'original-fine-art/index.html',
   'custom/index.html',
   'about/index.html',
   'events/index.html',
@@ -30,7 +31,7 @@ for (const p of pages) {
   }
   const nav = html.slice(html.indexOf('id="site-nav"'), html.indexOf('</nav>'));
   const labels = [...nav.matchAll(/>([^<]+)<\/a>/g)].map((match) => match[1]);
-  const expected = ['Home', 'Shop', 'Tie-Dye', 'Photography', 'Sketchbook', 'Custom Art', 'Events', 'About'];
+  const expected = ['Home', 'Shop', 'Tie-Dye', 'Photography', 'Sketchbook', 'Laser Art', 'Custom Art', 'Events', 'About', 'Contact'];
   if (labels.join('|') !== expected.join('|')) issues.push(p + ': nav order ' + labels.join('|'));
   if (/Shop Etsy/.test(nav)) issues.push(p + ': header still has Shop Etsy');
   if (/Buy<\/button>|action="\/api\/prints\/checkout"/.test(html)) issues.push(p + ': page offers a buy button');

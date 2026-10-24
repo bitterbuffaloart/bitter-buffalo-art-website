@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-24",
+  "status": "Website records prepared. Etsy listings were not created. Nothing on Etsy is live for these pieces.",
+  "etsy": {
+    "created": false,
+    "reason": "This session has no Etsy seller listing API. Listing IDs were not invented.",
+    "stockPlan": "Each saleable piece is quantity 1. The website uses an inquiry link until a verified Etsy listing URL exists. After a listing is live, replace that inquiry link with the verified URL and remove or mark the website inquiry so the same piece cannot sell twice."
+  },
+  "titles": "Working titles. The owner authorized naming. Titles are not individually ratified.",
+  "measurements": "Dimensions, depth, layer counts, and prices are the owner specifications from the 2026-10-24 handoff. They were not remeasured with a ruler. Paint brand, finish, hanging hardware, weight, year, and shipping carton size are not stated because they were not confirmed.",
+  "excludedFromSale": {
+    "title": "The Anatomy of Unreason",
+    "placement": "Original Fine Art collection only. Not in the digital Sketchbook list. Not for sale.",
+    "saleable": false
+  },
+  "notTheseProducts": "The engraved buffalo-skull board in the 2026-10-21 photo group is a different object and was not added.",
+  "pieces": [
+    {
+      "sku": "BBA-ART-20261024-01",
+      "title": "Mycelial Delirium",
+      "price": "93.33",
+      "quantity": 1,
+      "hero": "20261023_163922.jpg",
+      "heroNote": "Rotated 90 degrees counterclockwise so the cap is at the top.",
+      "site": "/original-fine-art/#mycelial-delirium",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    },
+    {
+      "sku": "BBA-ART-20261024-02",
+      "title": "Chromatic Rupture",
+      "price": "133.33",
+      "quantity": 1,
+      "hero": "20261023_163743.jpg",
+      "site": "/original-fine-art/#chromatic-rupture",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    },
+    {
+      "sku": "BBA-ART-20261024-03",
+      "title": "The Unquiet Interior",
+      "price": "166.66",
+      "quantity": 1,
+      "hero": "20261023_163443.jpg",
+      "site": "/original-fine-art/#the-unquiet-interior",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    },
+    {
+      "sku": "BBA-ART-20261024-04",
+      "title": "Fragments of the Unconscious",
+      "price": "166.66",
+      "quantity": 1,
+      "hero": "20261023_144135.jpg",
+      "heroNote": "Crop is (148, 1036, 3868, 2926) on the oriented 4000×3000 frame. Poster ends at y=1036. The panel stays dark through y=2924. Public display is 1400×711.",
+      "site": "/original-fine-art/#fragments-of-the-unconscious",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    },
+    {
+      "sku": "BBA-LASER-20261024-05",
+      "title": "Resonance in Eight Dimensions",
+      "price": "199.33",
+      "quantity": 1,
+      "hero": "20261021_170417.jpg",
+      "detail": "20261021_170512.jpg",
+      "site": "/laser-art/#bb-resonance-in-eight-dimensions",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    },
+    {
+      "sku": "BBA-LASER-20261024-06",
+      "title": "Architecture of Infinity",
+      "price": "199.99",
+      "quantity": 1,
+      "hero": "20261021_165923.jpg",
+      "detail": "20261021_165956.jpg",
+      "site": "/laser-art/#bb-architecture-of-infinity",
+      "etsyListingId": null,
+      "etsyListingUrl": null,
+      "purchasePath": "inquiry"
+    }
+  ]
+}

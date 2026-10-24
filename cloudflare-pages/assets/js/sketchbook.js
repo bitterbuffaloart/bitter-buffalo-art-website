@@ -33,18 +33,27 @@ function card(work) {
   note.className = "sketch-note";
   note.textContent = work.story || metaLine(work);
   cap.append(title, note);
-  if (work.etsyUrl) {
-    const buy = document.createElement("a");
-    buy.href = work.etsyUrl;
-    buy.target = "_blank";
-    buy.rel = "noopener noreferrer";
-    buy.textContent = "Buy on Etsy";
-    cap.append(buy);
-  } else {
-    const inquire = document.createElement("a");
-    inquire.href = "/contact/?topic=custom&piece=" + encodeURIComponent(work.title);
-    inquire.textContent = "Inquire About This Artwork";
-    cap.append(inquire);
+  const facts = metaLine(work);
+  if (facts) {
+    const line = document.createElement("p");
+    line.className = "sketch-note";
+    line.textContent = facts;
+    cap.append(line);
+  }
+  if (work.saleable !== false) {
+    if (work.etsyUrl) {
+      const buy = document.createElement("a");
+      buy.href = work.etsyUrl;
+      buy.target = "_blank";
+      buy.rel = "noopener noreferrer";
+      buy.textContent = "Buy on Etsy";
+      cap.append(buy);
+    } else {
+      const inquire = document.createElement("a");
+      inquire.href = "/contact/?topic=custom&piece=" + encodeURIComponent(work.title);
+      inquire.textContent = "Inquire About This Artwork";
+      cap.append(inquire);
+    }
   }
   figure.append(button, cap);
   return figure;
@@ -63,7 +72,25 @@ function applyFilter(name) {
   }
 }
 
+function slideFor(work) {
+  const purchase = work.saleable === false
+    ? null
+    : work.etsyUrl
+      ? { href: work.etsyUrl, label: "Buy on Etsy", external: true }
+      : { href: "/contact/?topic=custom&piece=" + encodeURIComponent(work.title), label: "Inquire About This Artwork" };
+  return {
+    frames: [{ src: work.zoom || work.display, alt: work.alt }],
+    caption: [work.title, metaLine(work)].filter(Boolean).join(" — "),
+    purchase,
+  };
+}
+
 function openWork(work) {
+  const index = Math.max(0, loadedWorks.findIndex((item) => item.id === work.id));
+  if (window.BBLightbox) {
+    window.BBLightbox.open(loadedWorks.map(slideFor), index);
+    return;
+  }
   full.src = work.zoom;
   full.alt = work.alt;
   full.width = work.width;
@@ -72,7 +99,12 @@ function openWork(work) {
   document.getElementById("sketch-meta").textContent = metaLine(work);
   document.getElementById("sketch-story").textContent = work.story || "";
   const prefix = document.body.dataset.assetPrefix || "..";
-  document.getElementById("sketch-inquire").href = prefix + "/contact/?topic=custom&piece=" + encodeURIComponent(work.title);
+  const inquire = document.getElementById("sketch-inquire");
+  const privatePiece = work.saleable === false;
+  inquire.hidden = privatePiece;
+  if (!privatePiece) {
+    inquire.href = prefix + "/contact/?topic=custom&piece=" + encodeURIComponent(work.title);
+  }
   const buy = document.getElementById("sketch-buy");
   if (work.etsyUrl) {
     buy.hidden = false;
@@ -106,10 +138,13 @@ if (filters) {
   });
 }
 
-const listUrl = (document.body.dataset.assetPrefix || "..") + "/assets/sketchbook/works.json";
+let loadedWorks = [];
+const listUrl = document.body.dataset.worksUrl
+  || ((document.body.dataset.assetPrefix || "..") + "/assets/sketchbook/works.json");
 fetch(listUrl)
   .then((response) => response.json())
   .then((data) => {
+    loadedWorks = data.works;
     for (const work of data.works) grid.append(card(work));
     applyFilter(preset);
     const hash = location.hash.replace("#", "");

@@ -11,6 +11,8 @@ test("product import keeps 87 photographs and the one approved price", () => {
     .filter((photo) => photo.sizes.some((size) => size.productId === "canvas-floating-15" && size.sizeId === "16x24" && size.status === "priced"))
     .map((photo) => [photo.id, "199.33"]);
   assert.equal(photos.length, 87);
+  // products.csv holds the eight coaster rows. Live catalog.json started at 16 laser
+  // products (those coasters plus eight boards and rounds) before two new pieces.
   assert.equal(products.filter((product) => product.category === "laser").length, 8);
   assert.equal(products.filter((product) => product.category === "tie-dye").length, 3);
   assert.equal(products.filter((product) => product.category === "sketchbook").length, 1);

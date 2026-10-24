@@ -1,4 +1,243 @@
+const BBLightbox = (() => {
+  const dialog = document.createElement("dialog");
+  dialog.className = "bb-lightbox";
+  dialog.innerHTML = [
+    '<div class="bb-lightbox__bar">',
+    '<button type="button" data-zoom-out>Zoom out</button>',
+    '<button type="button" data-fit>Fit artwork</button>',
+    '<button type="button" data-zoom-in>Zoom in</button>',
+    '<button type="button" data-close>Close</button>',
+    "</div>",
+    '<div class="bb-lightbox__stage">',
+    '<button type="button" class="bb-lightbox__nav" data-prev>Previous</button>',
+    '<img class="bb-lightbox__photo" alt="">',
+    '<img class="bb-lightbox__mark" src="/assets/images/logo.png" alt="">',
+    '<button type="button" class="bb-lightbox__nav" data-next>Next</button>',
+    "</div>",
+    '<div class="bb-lightbox__thumbs"></div>',
+    '<div class="bb-lightbox__meta"><p class="bb-lightbox__caption"></p><a class="bb-lightbox__buy"></a></div>',
+  ].join("");
+  document.body.append(dialog);
+  const photo = dialog.querySelector(".bb-lightbox__photo");
+  const caption = dialog.querySelector(".bb-lightbox__caption");
+  const buy = dialog.querySelector(".bb-lightbox__buy");
+  const thumbs = dialog.querySelector(".bb-lightbox__thumbs");
+  const state = { slides: [], index: 0, frame: 0, scale: 1, x: 0, y: 0, pointers: new Map(), pinch: 0 };
+  const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+  const currentFrames = () => state.slides[state.index]?.frames || [];
+  const apply = () => {
+    photo.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+    dialog.classList.toggle("is-zoomed", state.scale > 1);
+  };
+  const fit = () => {
+    state.scale = 1;
+    state.x = 0;
+    state.y = 0;
+    apply();
+  };
+  const zoomBy = (factor) => {
+    state.scale = clamp(state.scale * factor, 1, 4);
+    if (state.scale === 1) fit();
+    else apply();
+  };
+  const show = () => {
+    const slide = state.slides[state.index];
+    if (!slide) return;
+    const frames = currentFrames();
+    state.frame = clamp(state.frame, 0, Math.max(0, frames.length - 1));
+    const frame = frames[state.frame] || { src: "", alt: "" };
+    fit();
+    photo.onerror = () => {
+      if (frame.fallback && photo.getAttribute("src") !== frame.fallback) photo.src = frame.fallback;
+    };
+    photo.src = frame.src;
+    photo.alt = frame.alt || slide.caption || "";
+    caption.textContent = slide.caption || "";
+    if (slide.purchase && slide.purchase.href) {
+      buy.hidden = false;
+      buy.href = slide.purchase.href;
+      buy.textContent = slide.purchase.label || "View";
+      if (slide.purchase.external) {
+        buy.target = "_blank";
+        buy.rel = "noopener noreferrer";
+      } else {
+        buy.removeAttribute("target");
+        buy.removeAttribute("rel");
+      }
+    } else {
+      buy.hidden = true;
+      buy.removeAttribute("href");
+    }
+    thumbs.replaceChildren();
+    if (frames.length > 1) {
+      frames.forEach((item, index) => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.setAttribute("aria-current", index === state.frame ? "true" : "false");
+        button.setAttribute("aria-label", item.alt || `Photograph ${index + 1}`);
+        const thumb = document.createElement("img");
+        thumb.src = item.thumb || item.src;
+        thumb.alt = "";
+        button.append(thumb);
+        button.addEventListener("click", () => {
+          state.frame = index;
+          show();
+        });
+        thumbs.append(button);
+      });
+    }
+    const single = state.slides.length < 2;
+    dialog.querySelector("[data-prev]").hidden = single;
+    dialog.querySelector("[data-next]").hidden = single;
+  };
+  const move = (step) => {
+    if (state.slides.length < 2) return;
+    state.index = (state.index + step + state.slides.length) % state.slides.length;
+    state.frame = 0;
+    show();
+  };
+  const open = (slides, index) => {
+    state.slides = slides.filter((slide) => slide && slide.frames && slide.frames.length);
+    state.index = clamp(index || 0, 0, Math.max(0, state.slides.length - 1));
+    state.frame = 0;
+    if (!state.slides.length) return;
+    show();
+    if (!dialog.open) dialog.showModal();
+    dialog.querySelector("[data-close]").focus();
+  };
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.querySelector("[data-prev]").addEventListener("click", () => move(-1));
+  dialog.querySelector("[data-next]").addEventListener("click", () => move(1));
+  dialog.querySelector("[data-zoom-in]").addEventListener("click", () => zoomBy(1.4));
+  dialog.querySelector("[data-zoom-out]").addEventListener("click", () => zoomBy(1 / 1.4));
+  dialog.querySelector("[data-fit]").addEventListener("click", fit);
+  dialog.addEventListener("close", fit);
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight" && state.scale === 1) { event.preventDefault(); move(1); }
+    else if (event.key === "ArrowLeft" && state.scale === 1) { event.preventDefault(); move(-1); }
+    else if (event.key === "ArrowRight") { state.x -= 40; apply(); }
+    else if (event.key === "ArrowLeft") { state.x += 40; apply(); }
+    else if (event.key === "ArrowDown") { state.y -= 40; apply(); }
+    else if (event.key === "ArrowUp") { state.y += 40; apply(); }
+    else if (event.key === "+" || event.key === "=") zoomBy(1.25);
+    else if (event.key === "-" || event.key === "_") zoomBy(0.8);
+    else if (event.key === "Home") fit();
+  });
+  photo.addEventListener("wheel", (event) => {
+    if (!dialog.open) return;
+    event.preventDefault();
+    zoomBy(event.deltaY < 0 ? 1.12 : 0.9);
+  }, { passive: false });
+  photo.addEventListener("dblclick", () => (state.scale > 1 ? fit() : zoomBy(2)));
+  const stage = dialog.querySelector(".bb-lightbox__stage");
+  stage.addEventListener("pointerdown", (event) => {
+    if (event.target.closest("button, a")) return;
+    state.pointers.set(event.pointerId, { x: event.clientX, y: event.clientY, startX: event.clientX, startY: event.clientY });
+    stage.setPointerCapture(event.pointerId);
+    if (state.pointers.size === 2) {
+      const [a, b] = [...state.pointers.values()];
+      state.pinch = Math.hypot(a.x - b.x, a.y - b.y);
+    }
+  });
+  stage.addEventListener("pointermove", (event) => {
+    const point = state.pointers.get(event.pointerId);
+    if (!point) return;
+    const dx = event.clientX - point.x;
+    const dy = event.clientY - point.y;
+    point.x = event.clientX;
+    point.y = event.clientY;
+    if (state.pointers.size === 2 && state.pinch) {
+      const [a, b] = [...state.pointers.values()];
+      const distance = Math.hypot(a.x - b.x, a.y - b.y);
+      zoomBy(distance / state.pinch);
+      state.pinch = distance;
+      return;
+    }
+    if (state.scale > 1) {
+      state.x += dx;
+      state.y += dy;
+      apply();
+    }
+  });
+  const endPointer = (event) => {
+    const point = state.pointers.get(event.pointerId);
+    state.pointers.delete(event.pointerId);
+    state.pinch = 0;
+    if (!point || state.scale > 1 || state.pointers.size) return;
+    const dx = event.clientX - point.startX;
+    const dy = event.clientY - point.startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
+  };
+  stage.addEventListener("pointerup", endPointer);
+  stage.addEventListener("pointercancel", endPointer);
+  return { open };
+})();
+window.BBLightbox = BBLightbox;
+
+function bindStaticArtwork() {
+  document.querySelectorAll(".gallery--etsy, .gallery--portfolio:not([data-catalog-grid])").forEach((root) => {
+    const figures = [...root.querySelectorAll("figure")].filter((figure) => figure.querySelector("img"));
+    const slides = figures.map((figure) => {
+      const image = figure.querySelector("img");
+      const link = [...figure.querySelectorAll("a")].find((anchor) => /etsy\.com\/listing\//.test(anchor.href));
+      const frames = [{ src: image.getAttribute("src"), alt: image.alt }];
+      if (figure.dataset.detail) frames.push({ src: figure.dataset.detail, alt: `${image.alt} detail` });
+      return {
+        frames,
+        caption: figure.querySelector(".catalog-title")?.textContent || image.alt,
+        purchase: link ? { href: link.href, label: "Buy on Etsy", external: true } : null,
+      };
+    });
+    figures.forEach((figure, index) => {
+      const image = figure.querySelector("img");
+      if (image.closest("a")) return;
+      image.style.cursor = "zoom-in";
+      image.tabIndex = 0;
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", `View ${image.alt} full size`);
+      const open = () => BBLightbox.open(slides, index);
+      image.addEventListener("click", (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        open();
+      });
+      image.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        open();
+      });
+    });
+  });
+  const printPhoto = document.querySelector(".print-inquiry__photo img");
+  if (printPhoto && !printPhoto.closest("a")) {
+    const display = printPhoto.getAttribute("src");
+    const large = display.includes("/portfolio/") && !display.includes("/portfolio/large/")
+      ? display.replace("/portfolio/", "/portfolio/large/")
+      : display;
+    printPhoto.style.cursor = "zoom-in";
+    printPhoto.tabIndex = 0;
+    printPhoto.setAttribute("role", "button");
+    const purchase = document.querySelector(".purchase-actions a");
+    const open = () => BBLightbox.open([{
+      frames: [{ src: large, fallback: display, alt: printPhoto.alt }],
+      caption: printPhoto.alt,
+      purchase: purchase ? { href: purchase.href, label: purchase.textContent.trim(), external: purchase.target === "_blank" } : null,
+    }], 0);
+    printPhoto.addEventListener("click", open);
+    printPhoto.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") { event.preventDefault(); open(); }
+    });
+    printPhoto.addEventListener("error", () => {
+      if (printPhoto.getAttribute("src") !== display) printPhoto.setAttribute("src", display);
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
+  bindStaticArtwork();
   const params = new URLSearchParams(window.location.search);
   const piece = params.get('piece');
   const topic = params.get('topic');

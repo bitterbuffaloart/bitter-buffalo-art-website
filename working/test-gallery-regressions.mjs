@@ -60,8 +60,33 @@ test("a laser page without a pager keeps every catalog card", () => {
   const script = readFileSync(resolve(root, "cloudflare-pages/assets/js/catalog.js"), "utf8");
   assert.match(script, /const slice = pager \? items\.slice\(\(safePage - 1\) \* pageSize, safePage \* pageSize\) : items/);
   const laser = catalog.products.filter((product) => product.category === "laser");
-  assert.equal(laser.length, 16);
-  assert.equal(new Set(laser.map((product) => product.id)).size, 16);
+  const baselineLaser = [
+    "bb-aspen-round-buffalo",
+    "bb-wood-round-fox",
+    "bb-wood-round-elk-trail",
+    "bb-wood-round-cracked-elk",
+    "bb-cutting-board-solar-summit",
+    "bb-cutting-board-moonrise-ridge",
+    "bb-cutting-board-celestial-trail",
+    "bb-cutting-board-alpine-orbit",
+    "bb-01-coaster-4pc-001",
+    "bb-02-coaster-4pc-002",
+    "bb-03-coaster-4pc-003",
+    "bb-04-coaster-5pc-001",
+    "bb-05-coaster-4pc-004",
+    "bb-06-coaster-4pc-005",
+    "bb-07-coaster-4pc-006",
+    "bb-08-coaster-4pc-007",
+  ];
+  const addedLaser = ["bb-architecture-of-infinity", "bb-resonance-in-eight-dimensions"];
+  for (const id of baselineLaser) {
+    assert.ok(laser.some((item) => item.id === id), id);
+  }
+  assert.deepEqual(
+    laser.filter((item) => !baselineLaser.includes(item.id)).map((item) => item.id).sort(),
+    addedLaser,
+  );
+  assert.equal(laser.length, baselineLaser.length + addedLaser.length);
   const page = readFileSync(resolve(root, "cloudflare-pages/laser-art/index.html"), "utf8");
   assert.equal(page.includes("data-catalog-pager"), false);
   assert.equal((page.match(/data-catalog-grid/g) || []).length, 1);
@@ -70,6 +95,49 @@ test("a laser page without a pager keeps every catalog card", () => {
     assert.equal(product.retail_price, "33.33");
     assert.match(product.images, /\/assets\/images\/products\//);
     assert.match(product.inquiry_or_external_link, /^https:\/\/www\.etsy\.com\/listing\/\d+\//);
+  }
+  const resonance = laser.find((item) => item.id === "bb-resonance-in-eight-dimensions");
+  const mandala = laser.find((item) => item.id === "bb-architecture-of-infinity");
+  assert.equal(resonance.retail_price, "199.33");
+  assert.equal(mandala.retail_price, "199.99");
+  assert.equal(resonance.availability, "inquiry");
+  assert.equal(mandala.availability, "inquiry");
+  assert.equal(resonance.inquiry_or_external_link.includes("etsy.com"), false);
+  assert.deepEqual(resonance.detail_images, ["/assets/images/products/details/resonance-in-eight-dimensions.jpg"]);
+  assert.deepEqual(mandala.detail_images, ["/assets/images/products/details/architecture-of-infinity.jpg"]);
+  const viewer = readFileSync(resolve(root, "cloudflare-pages/assets/js/site.js"), "utf8");
+  assert.match(viewer, /window\.BBLightbox/);
+  assert.match(viewer, /data-zoom-in/);
+  const tieDye = readFileSync(resolve(root, "cloudflare-pages/tie-dye/index.html"), "utf8");
+  assert.equal(/href="https:\/\/www\.etsy\.com\/listing\/[^"]+"[^>]*>\s*<img/.test(tieDye), false);
+  assert.equal(mandala.inquiry_or_external_link.includes("etsy.com"), false);
+  const sketchWorks = JSON.parse(readFileSync(resolve(root, "cloudflare-pages/assets/sketchbook/works.json"), "utf8")).works;
+  for (const id of ["the-color-between-worlds", "sky-within", "grit-grin", "static-mischief"]) {
+    assert.ok(sketchWorks.some((work) => work.id === id), id);
+  }
+  const physicalIds = ["mycelial-delirium", "chromatic-rupture", "the-unquiet-interior", "fragments-of-the-unconscious", "anatomy-of-unreason"];
+  for (const id of physicalIds) {
+    assert.equal(sketchWorks.some((work) => work.id === id), false, id);
+  }
+  const works = JSON.parse(readFileSync(resolve(root, "cloudflare-pages/assets/original-fine-art/works.json"), "utf8")).works;
+  assert.deepEqual(works.map((work) => work.id), physicalIds);
+  const anatomy = works.find((work) => work.id === "anatomy-of-unreason");
+  assert.equal(anatomy.saleable, false);
+  assert.equal(anatomy.sku, null);
+  assert.equal(anatomy.availability, "Private collection — not for sale");
+  assert.equal(Object.hasOwn(anatomy, "etsyUrl"), false);
+  const prices = {
+    "mycelial-delirium": "One available · $93.33",
+    "chromatic-rupture": "One available · $133.33",
+    "the-unquiet-interior": "One available · $166.66",
+    "fragments-of-the-unconscious": "One available · $166.66",
+  };
+  for (const [id, availability] of Object.entries(prices)) {
+    const work = works.find((item) => item.id === id);
+    assert.equal(work.saleable, true);
+    assert.equal(work.availability, availability);
+    assert.equal(Object.hasOwn(work, "etsyUrl"), false);
+    assert.match(work.display, /^\/assets\/sketchbook\/display\//);
   }
 });
 
