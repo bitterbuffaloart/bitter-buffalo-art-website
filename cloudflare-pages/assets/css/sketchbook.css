@@ -148,3 +148,6 @@
 @media (prefers-reduced-motion: reduce) {
   .sketch-dialog, .sketch-card img { transition: none; }
 }
+
+/* A closed native dialog must not remain visible because .sketch-dialog uses display:flex. */
+.sketch-dialog:not([open]) { display: none; }
