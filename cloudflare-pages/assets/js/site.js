@@ -26,8 +26,10 @@ const BBLightbox = (() => {
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
   const currentFrames = () => state.slides[state.index]?.frames || [];
   const apply = () => {
-    const rotation = currentFrames()[state.frame]?.rotation || 0;
-    photo.style.transform = `translate(${state.x}px, ${state.y}px) rotate(${rotation}deg) scale(${rotation ? state.scale * 0.75 : state.scale})`;
+    const frame = currentFrames()[state.frame] || {};
+    const rotation = frame.rotation || 0;
+    const flipY = frame.flipY ? -1 : 1;
+    photo.style.transform = `translate(${state.x}px, ${state.y}px) rotate(${rotation}deg) scale(${rotation ? state.scale * 0.75 : state.scale}) scaleY(${flipY})`;
     dialog.classList.toggle("is-zoomed", state.scale > 1);
   };
   const fit = () => {
