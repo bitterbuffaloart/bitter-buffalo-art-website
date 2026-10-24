@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const slideFor = (product) => {
     const parts = String(product.images || "").split("|");
     const large = parts[2] || parts[1] || parts[0];
-    const frames = [{ src: large, alt: product.name }];
+    const rotation = product.id === "bb-resonance-in-eight-dimensions" ? -90 : 0;
+    const frames = [{ src: large, alt: product.name, rotation }];
     if (Array.isArray(product.detail_images)) {
-      for (const src of product.detail_images) frames.push({ src, alt: `${product.name} detail` });
+      for (const src of product.detail_images) frames.push({ src, alt: `${product.name} detail`, rotation });
     }
     const href = product.inquiry_or_external_link || "";
     const faa = typeof product.faa_artwork_url === "string" ? product.faa_artwork_url : "";
@@ -33,6 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const image = document.createElement("img");
     image.src = thumb || display;
     image.alt = product.name;
+    if (product.id === "bb-resonance-in-eight-dimensions") {
+      image.style.transform = "rotate(-90deg) scale(0.75)";
+      image.style.objectFit = "contain";
+    }
     image.width = Number(product.thumb_width) || Number(product.display_width) || 480;
     image.height = Number(product.thumb_height) || Number(product.display_height) || 320;
     const photography = product.category === "photography prints";
