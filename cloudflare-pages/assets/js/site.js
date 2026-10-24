@@ -1,33 +1,3 @@
-// Rotate only a display copy; the original uploaded image files remain unchanged.
-const BBOrientImage = (() => {
-  const cache = new Map();
-  return (src, rotation = 0, flipY = false) => {
-    if (!rotation && !flipY) return Promise.resolve({ src, width: null, height: null });
-    const key = JSON.stringify([src, rotation, flipY]);
-    if (cache.has(key)) return cache.get(key);
-    const job = new Promise((resolve, reject) => {
-      const original = new Image();
-      original.onload = () => {
-        const w = original.naturalWidth, h = original.naturalHeight;
-        const rotated = Math.abs(rotation) % 180 === 90;
-        const canvas = document.createElement("canvas");
-        canvas.width = rotated ? h : w;
-        canvas.height = rotated ? w : h;
-        const ctx = canvas.getContext("2d");
-        if (!ctx) { reject(new Error("Image canvas unavailable")); return; }
-        ctx.translate(canvas.width / 2, canvas.height / 2);
-        ctx.rotate(rotation * Math.PI / 180);
-        ctx.scale(1, flipY ? -1 : 1);
-        ctx.drawImage(original, -w / 2, -h / 2);
-        resolve({ src: canvas.toDataURL("image/jpeg", 0.95), width: canvas.width, height: canvas.height });
-      };
-      original.onerror = reject;
-      original.src = src;
-    });
-    cache.set(key, job);
-    return job;
-  };
-})();
 const BBLightbox = (() => {
   const dialog = document.createElement("dialog");
   dialog.className = "bb-lightbox";
@@ -81,11 +51,6 @@ const BBLightbox = (() => {
       if (frame.fallback && photo.getAttribute("src") !== frame.fallback) photo.src = frame.fallback;
     };
     photo.src = frame.src;
-    if (frame.rotation || frame.flipY) {
-      BBOrientImage(frame.src, frame.rotation || 0, frame.flipY || false).then((result) => {
-        if (currentFrames()[state.frame] === frame && dialog.open) photo.src = result.src;
-      }).catch(() => {});
-    }
     photo.alt = frame.alt || slide.caption || "";
     caption.textContent = slide.caption || "";
     if (slide.purchase && slide.purchase.href) {
