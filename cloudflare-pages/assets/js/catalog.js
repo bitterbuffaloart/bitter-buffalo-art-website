@@ -43,8 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
     image.alt = product.name;
     const { rotation, flipY } = orientation(product);
     if (rotation || flipY) {
-      image.style.transform = `rotate(${rotation}deg) scale(${rotation ? 0.75 : 1}) scaleY(${flipY ? -1 : 1})`;
-      image.style.objectFit = "contain";
+      BBOrientImage(image.src, rotation, flipY).then((result) => {
+        image.src = result.src;
+        image.width = result.width;
+        image.height = result.height;
+      }).catch(() => {});
     }
     image.width = Number(product.thumb_width) || Number(product.display_width) || 480;
     image.height = Number(product.thumb_height) || Number(product.display_height) || 320;
