@@ -1695,3 +1695,34 @@ Live checks after the alias moved, using cache-busting query strings:
 `python working/qa-site.py cloudflare-pages` on this tree reported 107 pages, 516 resources, 84 photographs, and no errors. GitHub verify ran that check and the contact test. `working/test-gallery-regressions.mjs` still expects the guitar price 199.33, so that assertion fails against 166.66. `working/test-site-chrome.mjs` and `working/seo-check.js` still expect the older ten-item header, so they fail on the Home, Shop, and Laser Art pages that now include Original Fine Art. Those test expectations were not edited.
 
 Another push to `main` that includes `cloudflare-pages/` will run the main deploy job and can replace this alias again. `origin/main` was not overwritten. This log commit is not a second production publish. Bramble listing conflicts and the missing Etsy listing IDs for the new studio pieces are unchanged.
+
+## Image orientations and live alias — 2026-10-24 afternoon Mountain Time
+
+The six owner orientations are baked into new JPEG files. The original public photographs were left in place. No camera archive, Etsy listing, Guardian process, or photography archive was modified. Architecture of Infinity was not rotated.
+
+| Product | File stem | Transform |
+| --- | --- | --- |
+| Resonance in Eight Dimensions | resonance-in-eight-dimensions | 90° counterclockwise on thumb, display, large, and detail |
+| Coaster set 08 COASTER-4PC-007 | 08-coaster-4pc-007 | 90° counterclockwise on thumb and display |
+| Coaster set 07 COASTER-4PC-006 | 07-coaster-4pc-006 | 90° counterclockwise on thumb and display |
+| Coaster set 06 COASTER-4PC-005 | 06-coaster-4pc-005 | 90° counterclockwise on thumb and display |
+| Coaster set 05 COASTER-4PC-004 | 05-coaster-4pc-004 | vertical flip on thumb and display |
+| Five-piece set 04 COASTER-5PC-001 | 04-coaster-5pc-001 | vertical flip on thumb and display |
+
+The catalog points at the `-corrected.jpg` files. `BBOrientImage` was removed from `cloudflare-pages/assets/js/site.js` and `cloudflare-pages/assets/js/catalog.js`. Laser Art loads those scripts as `?v=20261024d` so a cached copy of the old rotator cannot turn the new files a second time. Guitar price stays 166.66. Architecture of Infinity stays 199.99 on its original files. Coasters 01–08 stay 33.33. Coasters 01–03 were not retargeted.
+
+Content commit: `43d0dbeec9115d6541a3ab3eaa1b40b171633dad` on `cursor/photography-storefront-pilot-3433`. Local checks before that commit: `python working/qa-site.py cloudflare-pages` reported 107 pages, 530 resources, 84 photographs, and no errors. `node working/test-gallery-regressions.mjs` and `node working/test-contact.mjs` passed. The gallery test now expects guitar price 166.66 and the corrected detail path. `working/test-site-chrome.mjs` and `working/seo-check.js` still expect the ten-item header, so they still fail on Home, Shop, and Laser Art. The deploy workflow does not run those two checks.
+
+First production publish of that commit: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40120083264. Deployment `a3eacd78-138d-46bb-91dd-96068de5ffe1`, https://a3eacd78.bitter-buffalo-art.pages.dev. The custom domain served it. A later rerun replaced it. That rerun is attempt 2 of https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40116523670, updated 2026-10-24T19:51:12Z, branch `main`, commit `fa5789308e2b702d07c6ea4d615292c2f448b895`. Its deploy job ran “Publish verified site to Cloudflare Pages production branch (owner-approved)”. The alias became `f997f57c-32aa-4f5f-94ff-97bf6211ec78`. That deployment’s `/laser-art/` HTML is byte-identical to `origin/main` and includes “listing being prepared”. It does not include the guitar, the mandala, or Original Fine Art. `a0dcf374` is not the alias. A successful Actions run on this branch does not keep the domain on this branch if `main` is published afterward.
+
+The repair republished the same commit. Workflow: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40127568402. verify, record-production, branch-preview, and publish-production succeeded. deploy was skipped. Current production deployment: `93a90af5-a776-4a6b-9233-b46004968a81`, environment production, branch `preview`, https://93a90af5.bitter-buffalo-art.pages.dev. https://bitter-buffalo-art.pages.dev, https://bitterbuffaloart.com, and https://www.bitterbuffaloart.com serve that tree. The custom-domain HTML is the deployment HTML plus the Cloudflare analytics beacon. A read-only record after the republish still listed `93a90af5` as the production deployment.
+
+Live DOM after JavaScript on the custom domain, cache-busted:
+
+- `/laser-art/` rendered 18 catalog figures. Resonance in Eight Dimensions uses `resonance-in-eight-dimensions-corrected.jpg` at 360×480, price $166.66, and is not a canvas data URL. Architecture of Infinity uses `architecture-of-infinity.jpg` at 360×480, price $199.99. Coaster sets 04, 05, 06, 07, and 08 use the corrected files at the new pixel sizes. Coaster set 01 still uses `01-coaster-4pc-001.jpg`. The page does not contain “listing being prepared”.
+- `/sketchbook/` rendered seven loaded images and no broken images: Psychedelic abstract, Fox and sacred geometry, Frog and mushroom, The Sky Within, Grit & Grin, Static Mischief, and The Color Between Worlds. The closed sketch dialog was not open over the grid.
+- `/original-fine-art/` rendered five loaded images and no broken images: Mycelial Delirium, Chromatic Rupture, The Unquiet Interior, Fragments of the Unconscious, and The Anatomy of Unreason. Anatomy remains private collection. No dialog was open over the grid.
+
+On the first alias of this commit, a 390×844 viewport showed Menu, 18 laser cards, no horizontal overflow, and the guitar at 360×480 beside the mandala at $166.66. Screenshots from that check: `C:\Users\bitte\AppData\Local\Temp\cursor\screenshots\live-mobile-laser.png` and `live-mobile-guitar-mandala.png`. The enlarged guitar on that alias opened `/assets/images/products/large/resonance-in-eight-dimensions-corrected.jpg` at 1500×2000. A desktop screenshot after the republish timed out. The republished DOM was checked directly instead.
+
+`origin/main` was not overwritten. Another run of the main deploy job, including a rerun of workflow 40116523670, will replace this alias again. This log commit is not another production publish. Bramble size conflicts and the missing Etsy listing IDs for the six new studio pieces are unchanged.
