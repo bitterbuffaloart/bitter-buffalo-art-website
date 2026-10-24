@@ -1730,3 +1730,26 @@ Live DOM after JavaScript on the custom domain, cache-busted:
 On the first alias of this commit, a 390×844 viewport showed Menu, 18 laser cards, no horizontal overflow, and the guitar at 360×480 beside the mandala at $166.66. Screenshots from that check: `C:\Users\bitte\AppData\Local\Temp\cursor\screenshots\live-mobile-laser.png` and `live-mobile-guitar-mandala.png`. The enlarged guitar on that alias opened `/assets/images/products/large/resonance-in-eight-dimensions-corrected.jpg` at 1500×2000. A desktop screenshot after the republish timed out. The republished DOM was checked directly instead.
 
 `origin/main` was not overwritten. Another run of the main deploy job, including a rerun of workflow 40116523670, will replace this alias again. This log commit is not another production publish. Bramble size conflicts and the missing Etsy listing IDs for the six new studio pieces are unchanged.
+
+## Production rollback — 2026-10-24 2:08 PM Mountain Time
+
+The public site was rolled back to the production deployment that was current at 11:00 AM Mountain Time. No git branch was reset, force-pushed, or rewritten. Newer commits stay on `cursor/photography-storefront-pilot-3433`.
+
+Cloudflare production history, newest production deployment created before 11:00 AM MDT (17:00 UTC):
+
+- `a0dcf374-49d2-4cdf-ba6b-37694049ae7b`, created 2026-10-24T14:51:47Z (8:51 AM MDT), branch `preview`, commit `6fa20603b063af86816d4b9c5388bc2da1db41c8`. Workflow https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40104333119.
+- The next production deployment is `1952861c-1e78-4def-b145-fd253c521826`, created 2026-10-24T17:08:39Z (11:08 AM MDT), commit `fa5789308e2b702d07c6ea4d615292c2f448b895` from `main`. That is the first overwrite after 11:00.
+
+Rollback used `cf pages deployments rollback` against `a0dcf374-49d2-4cdf-ba6b-37694049ae7b`. Cloudflare kept that deployment id and moved the custom-domain aliases back onto it at 2026-10-24T20:08:12Z. https://bitterbuffaloart.com and https://www.bitterbuffaloart.com now alias that deployment. https://bitter-buffalo-art.pages.dev serves the same HTML.
+
+Live checks after the alias moved:
+
+- Home, Shop, Laser Art, Sketchbook, Photography, and Contact returned the 11:00 AM pages. HTML matches `https://a0dcf374.bitter-buffalo-art.pages.dev` aside from Cloudflare’s email-protection rewrite on the contact page.
+- Laser Art rendered 18 figures, 16 Etsy listing links, and no broken images. Resonance in Eight Dimensions and Architecture of Infinity are present. The guitar price on this restored catalog is $199.33. The later $166.66 price is not on this deployment.
+- Sketchbook rendered all seven works with images loaded: Psychedelic abstract, Fox and sacred geometry, Frog and mushroom, The Sky Within, Grit & Grin, Static Mischief, and The Color Between Worlds.
+- Photography opened the portfolio and the featured photograph. Contact opened the general, custom-project, and laser-intake forms.
+- The page does not contain “listing being prepared”.
+
+The later production deployments were not deleted. The orientation tree remains at https://93a90af5.bitter-buffalo-art.pages.dev for commit `43d0dbeec9115d6541a3ab3eaa1b40b171633dad`. The sketchbook-restore tree remains at https://067bf23e.bitter-buffalo-art.pages.dev for commit `0c8149e0d706e1a3871b7a3a2986d45096ec8909`. Development commits stay on this branch.
+
+Another run of the main deploy job, including a rerun of https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40116523670, will replace this alias again. This log update does not publish a new site.
