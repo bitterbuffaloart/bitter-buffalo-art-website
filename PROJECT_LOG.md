@@ -1753,3 +1753,21 @@ Live checks after the alias moved:
 The later production deployments were not deleted. The orientation tree remains at https://93a90af5.bitter-buffalo-art.pages.dev for commit `43d0dbeec9115d6541a3ab3eaa1b40b171633dad`. The sketchbook-restore tree remains at https://067bf23e.bitter-buffalo-art.pages.dev for commit `0c8149e0d706e1a3871b7a3a2986d45096ec8909`. Development commits stay on this branch.
 
 Another run of the main deploy job, including a rerun of https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40116523670, will replace this alias again. This log update does not publish a new site.
+
+## Production recheck — 2026-10-24 2:38 PM Mountain Time
+
+No second rollback was required. A fresh production list still shows `a0dcf374-49d2-4cdf-ba6b-37694049ae7b` as the only deployment with the custom-domain aliases. Its `modified_on` is still 2026-10-24T20:08:12Z. The next older production deployment is the Oct 21 release `ad9de951`. Every production deployment created after 11:00 AM has empty aliases.
+
+https://bitterbuffaloart.com and https://bitter-buffalo-art.pages.dev match https://a0dcf374.bitter-buffalo-art.pages.dev. Page HTML differs from that deployment only by Cloudflare’s analytics newline and, on Contact, the email-protection rewrite. `/assets/data/catalog.json` and `/assets/sketchbook/works.json` are byte-identical. The catalog has 109 products: 87 photography prints, 18 laser pieces, 3 tie-dye, and 1 sketchbook record. Sixteen laser pieces include an Etsy listing URL. Resonance in Eight Dimensions is $199.33. Architecture of Infinity is $199.99.
+
+Checked in a browser on https://bitterbuffaloart.com after JavaScript:
+
+- Home: title “Bitter Buffalo Art | Colorado Photography, Tie-Dye & Laser Art”, heading “Art Born in the High Country”, and the ten-item header including Events.
+- Shop: photography, tie-dye, laser, and Original Fine Art links, plus etsy.com/shop/BitterBuffaloArt.
+- Laser Art: 18 figures, 16 Etsy listing links, zero broken images, no “listing being prepared”, guitar $199.33, mandala $199.99.
+- Sketchbook: all seven works rendered and their thumbnails decoded: Psychedelic abstract, Fox and sacred geometry, Frog and mushroom, The Sky Within, Grit & Grin, Static Mischief, and The Color Between Worlds. The same seven records are on the later preview deployments.
+- Photography: “Eighty-four photographs.” Featured image “When the Mountains Hold Their Breath” loaded at 1400 pixels wide. Inquiry only.
+- Events: Soul Rebel Festival, Questing the WildeRealm, Elevate Love, Union Peak Festival, Till the Break of Dawn: DISCONNECT, and Holiday Kickoff Market. Eight event images loaded.
+- Contact: general, custom-project, and laser-intake forms, with the send button and backcountrytiedye@gmail.com visible.
+
+Later commits, painting photographs, and the orientation preview remain at https://93a90af5.bitter-buffalo-art.pages.dev. Git history was not rewritten. This note does not publish a new deployment.
