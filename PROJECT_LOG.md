@@ -11,7 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-24 10:56 Mountain Time
+## Last confirmed state — 2026-10-24 13:58 Mountain Time
+
+- Latest recorded restore supersedes earlier production summaries: 0c8149e0d706e1a3871b7a3a2986d45096ec8909 via run 40118040363. This check independently confirmed workflow success and HTTP 200 Sketchbook manifest including The Color Between Worlds. See Sketchbook restore below for editor-reported browser checks, test failures, and competing main deployment risk.
 
 - Latest recorded production supersedes the older 91cadfe baseline below: published 6fa20603b063af86816d4b9c5388bc2da1db41c8, workflow 40104333119. See Gallery production publish below for editor-reported browser verification and tests. This check independently confirmed successful workflow jobs; public HTTP requests returned 403, so live content was not independently reverified.
 
@@ -1695,6 +1697,8 @@ Live checks after the alias moved, using cache-busting query strings:
 `python working/qa-site.py cloudflare-pages` on this tree reported 107 pages, 516 resources, 84 photographs, and no errors. GitHub verify ran that check and the contact test. `working/test-gallery-regressions.mjs` still expects the guitar price 199.33, so that assertion fails against 166.66. `working/test-site-chrome.mjs` and `working/seo-check.js` still expect the older ten-item header, so they fail on the Home, Shop, and Laser Art pages that now include Original Fine Art. Those test expectations were not edited.
 
 Another push to `main` that includes `cloudflare-pages/` will run the main deploy job and can replace this alias again. `origin/main` was not overwritten. This log commit is not a second production publish. Bramble listing conflicts and the missing Etsy listing IDs for the new studio pieces are unchanged.
+
+- 2026-10-24 13:58 MT — Reconciliation: branch comparison shows 16 commits since [06e6440](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/commit/06e644073a3086d23f9859b5e20249bfe515ee7a), including corrected laser image assets/catalog references and navigation changes. Existing editor notes report main deployments replaced the domain tree, followed by branch restore 0c8149e. Independently confirmed [restore workflow](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40118040363) verify/record-production/branch-preview/publish-production succeeded, deploy skipped. Fresh https://bitterbuffaloart.com/assets/sketchbook/works.json returned HTTP 200 and includes The Color Between Worlds; prior 403 access limitation did not recur for that URL. No fresh browser/orientation audit or tests run here. Editor reports qa-site/contact passed but gallery-price and header/SEO expectations failed; do not describe all tests as passing. Current guitar price recorded as 166.66. Main deployment can overwrite the alias again: unresolved deployment ownership risk. Bramble conflicts, missing new Etsy IDs, and prior asset/Pinterest/archive blockers persist. Original 21 FAA exact matches and 32 holds unchanged. Next: reconcile deployment ownership and test expectations, then verify galleries/orientation against owner approval. Only PROJECT_LOG.md updated using fresh SHA; no code edits or deployment triggered.
 
 ## Image orientations and live alias — 2026-10-24 afternoon Mountain Time
 
