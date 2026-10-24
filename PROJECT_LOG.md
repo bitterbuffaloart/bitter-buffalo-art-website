@@ -1616,3 +1616,58 @@ This notes commit changes only `PROJECT_LOG.md` and must not be deployed.
 - 2026-10-23 20:03 MT — Check: branch unchanged since [76bd4f5](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/commit/76bd4f5aa61a676a023146366b4fe59a4b5e15b8). Fresh HTTP 200 checks of https://bitterbuffaloart.com/photography/ and https://www.bitterbuffaloart.com/photography/ show Eighty-four photographs; https://bitterbuffaloart.com/assets/data/catalog.json retains 87 photography records, 84 public/three withheld, 16 laser records, and 21 FAA links. Existing [production workflow](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39655799039) still reports successful verify/record-production/branch-preview/publish-production, deploy skipped; recorded deployed baseline remains 91cadfe. No new implementation, tests, visual/orientation audit, local Cursor/archive access, or deployment. Original 32 FAA holds and existing blockers remain unresolved (ornament photo, Union Peak flyer, Bramble sizing, Pinterest setup, archive reconciliation). Next: resolve blockers only with verified source/account evidence. Only PROJECT_LOG.md updated after a fresh SHA read; do not deploy this record.
 
 - 2026-10-24 08:01 MT — Check: branch identical to [3f77fc3](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/commit/3f77fc368512c017578c5c204ea11c78c61698e4); no new implementation. Fresh HTTP 200 checks of https://bitterbuffaloart.com/photography/ and https://www.bitterbuffaloart.com/photography/ show Eighty-four photographs; https://bitterbuffaloart.com/assets/data/catalog.json remains 87 photography records, 84 public/three withheld, 16 laser records, and 21 FAA links. Existing [production workflow](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/39655799039) retains successful verify/record-production/branch-preview/publish-production, deploy skipped; recorded deployed baseline remains 91cadfe. No new test execution, visual/orientation audit, local Cursor/archive access, or deployment. Original 32 FAA holds and blockers (ornament photo, Union Peak flyer, Bramble sizing, Pinterest setup, archive reconciliation) unchanged. Next: resolve blockers using verified source/account evidence. Only PROJECT_LOG.md updated after a fresh SHA read; do not deploy this record.
+
+## Bramble listing check — 2026-10-24 07:32 Mountain Time
+
+No product page, price, size, title, photograph, or Etsy URL was changed. No inventory, sizing, or pricing was changed on Etsy. Nothing was deployed. Photographs were not opened or rewritten.
+
+The live Tie-Dye page at https://bitterbuffaloart.com/tie-dye/ matches `cloudflare-pages/tie-dye/index.html` for these two cards.
+
+Wildfire Bramble, https://www.etsy.com/listing/4599061887/wildfire-bramble-hand-dyed-v-neck-ruffle
+- Website title and image alt: Wildfire Bramble - Hand-Dyed V-Neck Ruffle Dress, Rose and Rust, Medium, Wearable Art
+- Website size line: L US women's letter
+- Website material line: Not named in the listing highlights
+- Website price: $53.33
+- Website note: The listing title says Medium.
+- Buy link is that listing URL.
+
+Midnight Bramble, https://www.etsy.com/listing/4599062615/midnight-bramble-hand-dyed-pink-and
+- Website title and image alt: Midnight Bramble - Hand-Dyed Pink and Black Dress, Large, One of a Kind Wearable Art
+- Website size line: M US women's letter
+- Website material line: Not named in the listing highlights
+- Website price: $53.33
+- Website note: The listing title says Large.
+- Buy link is that listing URL.
+
+The last time those listing pages were read, on 2026-10-20, the Wildfire title and description said Medium while the Etsy size attribute said L, and the Midnight title and description said Large while the Etsy size attribute said M. A new read on 2026-10-24 did not get the listing text. Etsy returned HTTP 403 to a direct request, and the browser stopped on Etsy's bot check (request ID 87091675-08c5-5517, incomplete on the screenshot). Sizes were not guessed, and the material lines were not replaced with a fabric that was not on the page.
+
+A search of `cloudflare-pages` for “finished measurements pending”, “measurements pending”, and “pending” found none of that wording on a product card. The unfinished product sentences on the website are the two “Not named in the listing highlights” lines and the two “The listing title says …” lines, both only on these dresses. The three studio photographs still say “Size is not recorded” because no listing and no measurement are on file. Those sentences were left in place.
+
+Shop Manager still needs a manual pass. Open listing 4599061887 and listing 4599062615 and make the title, the description, and the size attribute name the same size. If either description still says “finished measurements pending”, or still omits the fabric, correct that in Shop Manager. Do not change the website size until that listing page shows one size in the title, the description, and the size attribute.
+
+## Gallery production publish — 2026-10-24 08:51 Mountain Time
+
+The 08:26 commit attempt was blocked. Cursor’s Forge hook `pre-commit-validate.cmd` exited without a decision, and fail-closed rejected the commit. `--no-verify` was not used. The hook was not disabled. The Windows wrapper was then changed so it prints the real Git Bash decision and keeps that exit code. It does not invent an allow result. The next commits recorded `{"permission":"allow"}`.
+
+1Password Environments is not this repository’s secret store. There is no `.1password/environments.toml`. The desktop app and the `op` CLI are not installed. The Windows 1Password plugin hook returns allow and says validation is only supported on macOS and Linux. The Linux script, run in the already-running Ubuntu 26.04 distro, found no 1Password database and stopped before writing a decision. That script was not patched and the plugin was not removed. Production secrets stay the GitHub Actions secrets `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+
+`origin/main` is `5bc678544c0140c9009e190f25f179639c0b86e4`, one root commit with no parent and no merge base with this branch. It was not merged and it was not overwritten. Local `main` was not published. `91cadfe` (“Separate the two peak photographs.”) is an ancestor of the published tree. The documented production path for this branch is a workflow dispatch of `.github/workflows/deploy-pages.yml` with `publish_production` true. The push-to-`main` deploy job stays skipped on this branch.
+
+Published commit: `6fa20603b063af86816d4b9c5388bc2da1db41c8` on `cursor/photography-storefront-pilot-3433`. That merge contains the gallery commits `008be9b` (viewer and Original Fine Art pages), `f5291ab` (display photographs), and `8bd9fc8` (zoom and product photographs), plus the remote log notes through `b0c8bb7`. The push was a fast-forward from `b0c8bb7` to `6fa2060`. No force-push.
+
+Workflow: https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40104333119. verify, record-production, branch-preview, and publish-production succeeded. deploy was skipped. Wrangler 4.151.1 uploaded the production branch `preview` for commit `6fa20603b063af86816d4b9c5388bc2da1db41c8`. Deployment: `a0dcf374`, https://a0dcf374.bitter-buffalo-art.pages.dev. The custom domain serves that tree. Its HTML differs from the deployment URL only by the Cloudflare analytics beacon.
+
+The catalog adds `bb-resonance-in-eight-dimensions` at 199.33 and `bb-architecture-of-infinity` at 199.99. Both use inquiry links and have no Etsy URL. Existing catalog prices were not changed. Coasters 05–08 remain 33.33 with their listing URLs. Original Fine Art has five works. The Anatomy of Unreason stays private, with no SKU and no purchase link. Wildfire Bramble and Midnight Bramble text changed only by the `?v=20261024` cache query on the shared stylesheet and scripts.
+
+Checks on the published tree: `python working/qa-site.py cloudflare-pages` reported 107 pages, 516 resources, 84 photographs, and no errors. Gallery regressions, the ten-item header, SEO, contact, and catalog import passed. Pillow printed a `getdata` deprecation warning. It did not fail the test.
+
+Production checks on https://bitterbuffaloart.com, 2026-10-24 morning Mountain Time:
+
+- Original Fine Art lists Mycelial Delirium ($93.33), Chromatic Rupture ($133.33), The Unquiet Interior ($166.66), Fragments of the Unconscious ($166.66), and The Anatomy of Unreason (private, no inquire link). The viewer opened the 1800×2400 zoom file, moved to the next work, and zoomed to scale 1.4. Sale links go to `/contact/?topic=custom&piece=`, not Etsy.
+- Sketchbook still has The Color Between Worlds, The Sky Within, Grit & Grin, and Static Mischief, and does not list the five physical works. The Sky Within opened in the viewer without leaving the page.
+- Laser Art still lists the recovered rounds, boards, and eight coaster sets, then Resonance in Eight Dimensions and Architecture of Infinity. The guitar detail opened at 3000×4000. Both new pieces inquire. Neither has an Etsy URL.
+- Tie-Dye: the Wildfire photograph opened the viewer and the address stayed on `/tie-dye/`. The separate Buy on Etsy link is listing 4599061887. Midnight Bramble’s Buy link is listing 4599062615. The size and title notes are unchanged.
+- Photography still says eighty-four photographs. The featured photograph opened `/assets/images/portfolio/large/02.jpg` at 1600×1067, with the Fine Art America link separate from the photograph.
+- At a 390×844 viewport the primary nav collapses to Menu. The Mycelial zoom file stayed inside the viewport with `object-fit: contain` and did not overflow. The photography large file did the same.
+
+Outstanding Shop Manager corrections, unchanged by this publish: listing 4599061887 title says Medium while the website size line says L; listing 4599062615 title says Large while the website size line says M. Both material lines say “Not named in the listing highlights.” “finished measurements pending” is not on the website. If that sentence is still in an Etsy description, correct it in Shop Manager. Do not change the website size until a listing page shows one size in the title, the description, and the size attribute. Listing IDs for the six new studio pieces remain unset. This log commit is not a second production publish.
