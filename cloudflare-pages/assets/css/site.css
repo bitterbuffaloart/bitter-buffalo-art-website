@@ -391,6 +391,7 @@ a.catalog-title { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
 }
+.bb-lightbox:not([open]) { display: none; }
 .bb-lightbox::backdrop { background: rgba(28,23,16,.78); }
 .bb-lightbox__bar, .bb-lightbox__meta {
   display: flex;

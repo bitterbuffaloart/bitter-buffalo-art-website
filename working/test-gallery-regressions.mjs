@@ -99,7 +99,7 @@ test("a laser page without a pager keeps every catalog card", () => {
   const resonance = laser.find((item) => item.id === "bb-resonance-in-eight-dimensions");
   const mandala = laser.find((item) => item.id === "bb-architecture-of-infinity");
   assert.equal(resonance.retail_price, "166.66");
-  assert.equal(mandala.retail_price, "199.99");
+  assert.equal(mandala.retail_price, "133.33");
   assert.equal(resonance.availability, "inquiry");
   assert.equal(mandala.availability, "inquiry");
   assert.equal(resonance.inquiry_or_external_link.includes("etsy.com"), false);
@@ -108,6 +108,8 @@ test("a laser page without a pager keeps every catalog card", () => {
   assert.deepEqual(mandala.detail_images, ["/assets/images/products/details/architecture-of-infinity.jpg"]);
   const viewer = readFileSync(resolve(root, "cloudflare-pages/assets/js/site.js"), "utf8");
   assert.equal(viewer.includes("BBOrientImage"), false);
+  const siteCss = readFileSync(resolve(root, "cloudflare-pages/assets/css/site.css"), "utf8");
+  assert.match(siteCss, /\.bb-lightbox:not\(\[open\]\)\s*\{\s*display:\s*none/);
   assert.match(viewer, /window\.BBLightbox/);
   assert.match(viewer, /data-zoom-in/);
   const tieDye = readFileSync(resolve(root, "cloudflare-pages/tie-dye/index.html"), "utf8");
