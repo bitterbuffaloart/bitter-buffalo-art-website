@@ -11,7 +11,9 @@ Read this file before starting website work and update it before ending a work s
 - Tie-dye, laser, and Sketchbook purchase links use corresponding individual Etsy listings.
 - Never store secrets, private customer data, or local private file inventories in this public repository.
 
-## Last confirmed state — 2026-10-24 13:58 Mountain Time
+## Last confirmed state — 2026-10-24 17:00 Mountain Time
+
+- Current production is the recorded rollback to a0dcf374 (6fa2060), superseding restore summaries below. Fresh public HTTP 200 checks confirm seven Sketchbook works, 84-photograph page text, 18 laser records, 21 FAA links, guitar $199.33 and mandala $199.99 using original image paths. Later orientation/gallery/pricing work is preview-only (e5fde096); publish-production was skipped. See rollback and Gallery preview entries below.
 
 - Latest recorded restore supersedes earlier production summaries: 0c8149e0d706e1a3871b7a3a2986d45096ec8909 via run 40118040363. This check independently confirmed workflow success and HTTP 200 Sketchbook manifest including The Color Between Worlds. See Sketchbook restore below for editor-reported browser checks, test failures, and competing main deployment risk.
 
@@ -1804,3 +1806,5 @@ Local browser checks at http://127.0.0.1:8893, then the preview JSON:
 Tests: `qa-site.py` reported 107 pages and no errors. Gallery, contact, print-inquiry, and print-storefront tests passed. `test-site-chrome.mjs` and `seo-check.js` still fail on Home, Shop, and Laser Art because those headers include Original Fine Art ahead of Sketchbook. That navigation was left in place.
 
 This log commit is not a production publish. A rerun of the main deploy can still replace the public alias.
+
+- 2026-10-24 17:00 MT — Reconciliation: eight commits since [be1a106](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/commit/be1a1066d9d432a17a921e1d40fd2140efed8367) change CSS, catalog, gallery test and logs. Editor records production rollback to a0dcf374/6fa2060 and isolated gallery preview. Independently inspected [preview workflow 40133961070](https://github.com/bitterbuffaloart/bitter-buffalo-art-website/actions/runs/40133961070): verify/record-production/branch-preview succeeded; deploy and publish-production skipped. Fresh HTTP 200 https://bitterbuffaloart.com/assets/data/catalog.json confirms 18 laser records, 21 FAA links, guitar 199.33 and mandala 199.99 with original image paths; https://bitterbuffaloart.com/assets/sketchbook/works.json has seven works; https://bitterbuffaloart.com/photography/ says Eighty-four photographs. Preview https://e5fde096.bitter-buffalo-art.pages.dev is recorded with corrected orientations and prices 166.66/133.33, not production. Editor reports qa-site/gallery/contact/print tests pass, chrome/SEO fail; none rerun here. No fresh visual orientation audit or local access. Main overwrite risk, test failures, listing conflicts/IDs and other prior blockers unresolved; original 32 FAA holds unchanged. Next: review preview against owner approval and reconcile deploy ownership before any production promotion. Only PROJECT_LOG.md updated after fresh SHA read; no deployment triggered.
