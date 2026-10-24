@@ -26,7 +26,8 @@ const BBLightbox = (() => {
   const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
   const currentFrames = () => state.slides[state.index]?.frames || [];
   const apply = () => {
-    photo.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+    const rotation = currentFrames()[state.frame]?.rotation || 0;
+    photo.style.transform = `translate(${state.x}px, ${state.y}px) rotate(${rotation}deg) scale(${rotation ? state.scale * 0.75 : state.scale})`;
     dialog.classList.toggle("is-zoomed", state.scale > 1);
   };
   const fit = () => {
