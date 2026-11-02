@@ -376,3 +376,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+(function () {
+  if (document.querySelector("script[data-bb-analytics]")) return;
+  const script = document.createElement("script");
+  script.src = "/assets/js/analytics.js?v=20261101";
+  script.defer = true;
+  script.dataset.bbAnalytics = "1";
+  document.head.append(script);
+})();
