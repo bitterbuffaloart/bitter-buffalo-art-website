@@ -1,0 +1,29 @@
+{
+  "base_commit": "6fa20603b063af86816d4b9c5388bc2da1db41c8",
+  "deployed_commit": "9d8cd7eb672dde7ef1a492ab7913f5388b78f8b6",
+  "runtime_changed_files": [
+    {
+      "path": "cloudflare-pages/assets/data/analytics-config.json",
+      "operation": "ADD",
+      "before_sha256": null,
+      "after_sha256": "578ca0cb61647a784d3cbde2d800f87751daba763d693fffc0aa26c723311a76",
+      "bytes": 288
+    },
+    {
+      "path": "cloudflare-pages/assets/js/analytics.js",
+      "operation": "ADD",
+      "before_sha256": null,
+      "after_sha256": "ed707ef8ddd49cb9e0c46370cb2036b632abeff89f80899e584b4ae1c159e048",
+      "bytes": 6751
+    },
+    {
+      "path": "cloudflare-pages/assets/js/site.js",
+      "operation": "MODIFY",
+      "before_sha256": "bd2f76876d0cd64f50bb43dd5f9ad0fb04eafae9f4b01269ecbbc52b65fd150f",
+      "after_sha256": "3ffcc7792a815e59bf0dc110533bd88cb68acb3fad6f7e11cfd70b79fb976c92",
+      "bytes": 17502
+    }
+  ],
+  "other_runtime_changes": 0,
+  "photography_gallery_navigation_pricing_artwork_changes": false
+}

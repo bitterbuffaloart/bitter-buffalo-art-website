@@ -1,0 +1,149 @@
+{
+  "revision": "GA4 R01",
+  "status": "PRODUCTION_DEPLOYMENT_CONFIRMED_LIVE_TRACKING_VERIFIED",
+  "owner_approval_date": "2026-11-02",
+  "property_id": "551062294",
+  "measurement_id": "G-QHL8LRGK9H",
+  "checked_utc": "2026-11-02T16:23:47.670972+00:00",
+  "production_deployment_id": "4283aa07-6ef7-44cd-bd0f-39547e5bdb66",
+  "production_url": "https://4283aa07.bitter-buffalo-art.pages.dev",
+  "production_branch": "preview",
+  "deployed_commit": "9d8cd7eb672dde7ef1a492ab7913f5388b78f8b6",
+  "stage": {
+    "name": "deploy",
+    "started_on": null,
+    "ended_on": "2026-11-02T16:11:20.946816Z",
+    "status": "success"
+  },
+  "domains": [
+    "bitter-buffalo-art.pages.dev",
+    "bitterbuffaloart.com",
+    "www.bitterbuffaloart.com"
+  ],
+  "uses_functions": true,
+  "compatibility_date": "2026-10-17",
+  "contact_invalid_input": {
+    "status": 400,
+    "rejected_without_email": true
+  },
+  "realtime_debugview": "NOT_VERIFIED_NO_AUTHENTICATED_GOOGLE_ANALYTICS_ACCESS",
+  "source_scope": "Exactly three runtime files; no artwork/gallery/navigation/pricing, Functions source, integration or account setting changes.",
+  "source_unit_tests": "PASS",
+  "source_site_qa": {
+    "pages": 107,
+    "resources": 518,
+    "errors": []
+  },
+  "contact_mock_tests": "PASS_NO_EMAIL_SENT",
+  "public_readback": {
+    "files": 519,
+    "matched": 519,
+    "normalization": "Text CRLF to LF; HTML removes observed Cloudflare Web Analytics/JSD injections and email decoder, decodes Cloudflare-protected email links after matching href and text, and collapses repeated blank lines. No other content removed. Images/binary files compared byte-for-byte."
+  },
+  "browser_checks": {
+    "pass_count": 7,
+    "fail_count": 0
+  },
+  "accepted_live_events": [
+    {
+      "page": "/photography/all/",
+      "event": "page_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/all/",
+      "event": "gallery_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/prints/grand-tetons/",
+      "event": "page_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/prints/grand-tetons/",
+      "event": "artwork_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    }
+  ],
+  "semantic_baseline_comparison": [
+    {
+      "path": "/",
+      "visible_text_same": true,
+      "navigation_same": true,
+      "image_sources_same": true,
+      "google_scripts": 1,
+      "google_configs": 1
+    },
+    {
+      "path": "/photography/",
+      "visible_text_same": true,
+      "navigation_same": true,
+      "image_sources_same": true,
+      "google_scripts": 1,
+      "google_configs": 1
+    },
+    {
+      "path": "/photography/wildlife/",
+      "visible_text_same": true,
+      "navigation_same": true,
+      "image_sources_same": true,
+      "google_scripts": 1,
+      "google_configs": 1
+    }
+  ],
+  "screenshot_artifacts": [
+    {
+      "file": "ga4-browser-baseline/page-2.png",
+      "sha256": "d5f96325f3dcfa0a7238abe06e63eb0a9dbc7cf8e052e2046cdef4fa71a3ab9b",
+      "bytes": 1325669
+    },
+    {
+      "file": "ga4-browser-baseline/page-1.png",
+      "sha256": "0d4a6dab23ef4357f2103b9a67c079032d2a7e7bd69c5309c3cea25bae02b6a9",
+      "bytes": 1424480
+    },
+    {
+      "file": "ga4-browser-baseline/page-0.png",
+      "sha256": "9985e67b23e05e689b14f4a36ec0aa71a05bdb2ae48de00b2e9bfeb2ba7e8f16",
+      "bytes": 357498
+    },
+    {
+      "file": "ga4-browser-production/page-2.png",
+      "sha256": "d5f96325f3dcfa0a7238abe06e63eb0a9dbc7cf8e052e2046cdef4fa71a3ab9b",
+      "bytes": 1325669
+    },
+    {
+      "file": "ga4-browser-production/page-1.png",
+      "sha256": "36c44a6516dcae0d013edb425bcb7cdab8a066e9b3bdcd23d55c1f49419f8f6d",
+      "bytes": 1424503
+    },
+    {
+      "file": "ga4-browser-production/page-0.png",
+      "sha256": "9985e67b23e05e689b14f4a36ec0aa71a05bdb2ae48de00b2e9bfeb2ba7e8f16",
+      "bytes": 357498
+    },
+    {
+      "file": "ga4-browser-interactions/mobile-print.png",
+      "sha256": "9363a05cf188a6a37f8d552800fee9bc7cf6615767390d92339e294d56115db3",
+      "bytes": 50504
+    },
+    {
+      "file": "ga4-browser-interactions/desktop-gallery.png",
+      "sha256": "bccb3b73c8df3cdc825d5c06a225b09e62d882c3038b527efb0d6f72e23ef2ef",
+      "bytes": 1125570
+    }
+  ],
+  "publication_observation": "This session uploaded candidate 618a5d69, pushed the prepared source commit and independently verified production 4283aa07. Production publication occurred concurrently during preflight; no duplicate production upload was performed.",
+  "test_harness_correction": "Initial interaction assertions used the wrong status selector/escaped regex and an assumed zoom factor. Replaced with the actual status element and a functional scale >1 assertion. Runtime source unchanged. Initial report retained.",
+  "limits": [
+    "HTTP 204 confirms collector acceptance; GA Realtime/DebugView processing is not verified.",
+    "Current authenticated GA4 UI/Data API access was unavailable; no credential was requested or added.",
+    "Initial full-site requests encountered transient HTTP 500 responses. Bounded retries completed the final 519/519 readback.",
+    "HTML comparison accounts for Cloudflare Web Analytics/JSD injection and email obfuscation; binary assets compare byte-for-byte."
+  ]
+}

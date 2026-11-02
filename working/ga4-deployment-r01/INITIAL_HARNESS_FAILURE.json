@@ -1,0 +1,134 @@
+{
+  "base": "https://bitterbuffaloart.com",
+  "label": "production-interactions",
+  "checks": [
+    {
+      "name": "Repeated initialization keeps one analytics script, one Google script and one config",
+      "pass": true,
+      "detail": {
+        "analyticsScripts": 1,
+        "googleScripts": 1,
+        "configs": 1,
+        "events": [
+          "page_view",
+          "gallery_view"
+        ]
+      }
+    },
+    {
+      "name": "Gallery pagination stays functional without route/page-view duplication",
+      "pass": false,
+      "detail": {
+        "page1": {
+          "nextEnabled": true,
+          "items": 12
+        },
+        "page2": {
+          "items": 12,
+          "url": "/photography/all/"
+        }
+      }
+    },
+    {
+      "name": "Gallery image viewer opens, zooms and closes",
+      "pass": false,
+      "detail": {
+        "opened": {
+          "open": true,
+          "src": "/assets/images/portfolio/large/13.jpg"
+        },
+        "zoom": "translate(0px, 0px) scale(1.4)",
+        "closed": true
+      }
+    },
+    {
+      "name": "All-photographs page sends one page_view and one gallery_view despite paging/viewer/reinitialization",
+      "pass": true,
+      "detail": [
+        "page_view",
+        "gallery_view"
+      ]
+    },
+    {
+      "name": "Mobile print page and navigation remain functional",
+      "pass": true,
+      "detail": {
+        "overflow": false,
+        "deviceClass": "mobile",
+        "heading": "Stormborn Grand Tetons",
+        "menu": true
+      }
+    },
+    {
+      "name": "Mobile page configures Google once",
+      "pass": true,
+      "detail": {
+        "analyticsScripts": 1,
+        "googleScripts": 1,
+        "configs": 1,
+        "events": [
+          "page_view",
+          "artwork_view"
+        ]
+      }
+    },
+    {
+      "name": "Every tested app event is accepted by the approved GA4 collector",
+      "pass": true,
+      "detail": [
+        {
+          "page": "/photography/all/",
+          "event": "page_view",
+          "measurementId": "G-QHL8LRGK9H",
+          "httpStatus": 204
+        },
+        {
+          "page": "/photography/all/",
+          "event": "gallery_view",
+          "measurementId": "G-QHL8LRGK9H",
+          "httpStatus": 204
+        },
+        {
+          "page": "/photography/prints/grand-tetons/",
+          "event": "page_view",
+          "measurementId": "G-QHL8LRGK9H",
+          "httpStatus": 204
+        },
+        {
+          "page": "/photography/prints/grand-tetons/",
+          "event": "artwork_view",
+          "measurementId": "G-QHL8LRGK9H",
+          "httpStatus": 204
+        }
+      ]
+    }
+  ],
+  "hits": [
+    {
+      "page": "/photography/all/",
+      "event": "page_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/all/",
+      "event": "gallery_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/prints/grand-tetons/",
+      "event": "page_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    },
+    {
+      "page": "/photography/prints/grand-tetons/",
+      "event": "artwork_view",
+      "measurementId": "G-QHL8LRGK9H",
+      "httpStatus": 204
+    }
+  ],
+  "status": "FAIL",
+  "note": "HTTP 204 confirms collector acceptance, not GA Realtime/DebugView visibility. No form was submitted and no external purchase link was followed."
+}

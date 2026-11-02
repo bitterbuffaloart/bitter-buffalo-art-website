@@ -1,0 +1,66 @@
+import fs from 'node:fs';
+import crypto from 'node:crypto';
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const [label='baseline',base='https://bitterbuffaloart.com',out='/tmp/ga4-browser-baseline']=process.argv.slice(2);
+fs.mkdirSync(out,{recursive:true});
+const targets=await (await fetch('http://127.0.0.1:9244/json/list')).json();
+const ws=new WebSocket(targets.find(x=>x.type==='page').webSocketDebuggerUrl);
+await new Promise((res,rej)=>{ws.addEventListener('open',res,{once:true});ws.addEventListener('error',rej,{once:true});});
+let seq=0;const pending=new Map();let requests=[],responses=[],errors=[],current='';
+ws.addEventListener('message',e=>{const m=JSON.parse(e.data);if(m.id){const p=pending.get(m.id);pending.delete(m.id);if(m.error)p?.reject(Error(JSON.stringify(m.error)));else p?.resolve(m.result);return;}const p=m.params||{};
+ if(m.method==='Network.requestWillBeSent')requests.push({id:p.requestId,url:p.request.url,method:p.request.method,postData:p.request.postData||'',page:current});
+ if(m.method==='Network.responseReceived')responses.push({id:p.requestId,url:p.response.url,status:p.response.status,page:current});
+ if(m.method==='Network.loadingFailed')errors.push({id:p.requestId,error:p.errorText,blocked:p.blockedReason,page:current});
+});
+const call=(method,params={})=>new Promise((resolve,reject)=>{const id=++seq;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
+const evaluate=async expression=>{const r=await call('Runtime.evaluate',{expression,returnByValue:true,awaitPromise:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
+await call('Network.enable',{maxPostDataSize:65536});await call('Page.enable');await call('Runtime.enable');await call('Network.setCacheDisabled',{cacheDisabled:true});
+await call('Emulation.setDeviceMetricsOverride',{width:1440,height:1000,deviceScaleFactor:1,mobile:false});
+const collection=q=>q.url.includes('/g/collect')&&q.url.includes('google-analytics.com');
+function eventNames(q){const u=new URL(q.url);return [u.searchParams.get('en'),...q.postData.split('\n').map(l=>new URLSearchParams(l).get('en'))].filter(Boolean);}
+async function navigate(path,expected){
+ current=path;const start=requests.length;
+ await call('Page.navigate',{url:base+path});
+ for(let n=0;n<90;n++){
+  await sleep(250);
+  const observed=requests.slice(start).filter(collection);
+  if(expected.every(en=>observed.some(q=>eventNames(q).includes(en)&&responses.some(r=>r.id===q.id&&r.status===204))))return start;
+ }
+ throw Error('Expected accepted collection events did not arrive for '+path);
+}
+const checks=[];
+const ck=(name,ok,detail)=>{checks.push({name,pass:!!ok,detail});console.log(JSON.stringify({check:name,pass:!!ok}));};
+let begin=await navigate('/photography/all/',['page_view','gallery_view']);
+const counts=()=>evaluate(`(()=>({analyticsScripts:[...document.scripts].filter(s=>s.src.includes('/assets/js/analytics.js')).length,googleScripts:[...document.scripts].filter(s=>s.src.includes('googletagmanager.com/gtag/js')).length,configs:[...dataLayer].filter(v=>v&&v[0]==='config'&&v[1]==='G-QHL8LRGK9H').length,events:BBAnalytics.state.events.map(x=>x.name)}))()`);
+const before=await counts();
+await evaluate(`BBAnalytics.loadGoogle('G-QHL8LRGK9H');BBAnalytics.loadGoogle('G-QHL8LRGK9H');BBAnalytics.boot({measurementId:'G-QHL8LRGK9H'});BBAnalytics.start();true`);
+await sleep(1000);const after=await counts();
+ck('Repeated initialization keeps one analytics script, one Google script and one config',after.analyticsScripts===1&&after.googleScripts===1&&after.configs===1&&JSON.stringify(before.events)===JSON.stringify(after.events),after);
+const page1=await evaluate(`({text:document.querySelector('[data-page-status]')?.textContent,nextEnabled:!document.querySelector('[data-page="next"]').disabled,items:document.querySelectorAll('.catalog-thumb').length})`);
+await evaluate(`document.querySelector('[data-page="next"]').click();true`);await sleep(700);
+const page2=await evaluate(`({text:document.querySelector('[data-page-status]')?.textContent,items:document.querySelectorAll('.catalog-thumb').length,url:location.pathname})`);
+ck('Gallery pagination stays functional without route/page-view duplication',page1.nextEnabled&&page2.text?.includes('Page 2 of 7')&&page2.url==='/photography/all/',{page1,page2});
+await evaluate(`document.querySelector('.catalog-thumb').click();true`);await sleep(700);
+const opened=await evaluate(`({open:document.querySelector('.bb-lightbox').open,src:document.querySelector('.bb-lightbox__photo').getAttribute('src')})`);
+await evaluate(`document.querySelector('.bb-lightbox [data-zoom-in]').click();true`);
+const zoom=await evaluate(`document.querySelector('.bb-lightbox__photo').style.transform`);
+await evaluate(`document.querySelector('.bb-lightbox [data-close]').click();true`);
+const closed=await evaluate(`!document.querySelector('.bb-lightbox').open`);
+ck('Gallery image viewer opens, zooms and closes',opened.open&&Number(zoom.split('scale(')[1]?.split(')')[0])>1&&closed,{opened,zoom,closed});
+await sleep(2000);
+const galleryCollect=requests.slice(begin).filter(collection);const names=galleryCollect.flatMap(eventNames);
+ck('All-photographs page sends one page_view and one gallery_view despite paging/viewer/reinitialization',names.filter(x=>x==='page_view').length===1&&names.filter(x=>x==='gallery_view').length===1,names);
+const shot=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync(out+'/desktop-gallery.png',Buffer.from(shot.data,'base64'));
+await call('Emulation.setDeviceMetricsOverride',{width:390,height:844,deviceScaleFactor:1,mobile:true});
+begin=await navigate('/photography/prints/grand-tetons/',['page_view','artwork_view']);
+const mobile=await evaluate(`({overflow:document.documentElement.scrollWidth>innerWidth,deviceClass:BBAnalytics.state.events.find(x=>x.name==='artwork_view')?.params.device_class,heading:document.querySelector('h1')?.textContent,menu:!!document.querySelector('.nav-toggle')})`);
+await evaluate(`document.querySelector('.nav-toggle').click();true`);
+const menu=await evaluate(`document.querySelector('.nav-toggle').getAttribute('aria-expanded')==='true'`);
+ck('Mobile print page and navigation remain functional',!mobile.overflow&&mobile.deviceClass==='mobile'&&menu,mobile);
+const shot2=await call('Page.captureScreenshot',{format:'png'});fs.writeFileSync(out+'/mobile-print.png',Buffer.from(shot2.data,'base64'));
+await sleep(1500);
+const mobileCounts=await counts();ck('Mobile page configures Google once',mobileCounts.analyticsScripts===1&&mobileCounts.googleScripts===1&&mobileCounts.configs===1,mobileCounts);
+const hits=requests.filter(collection).flatMap(q=>eventNames(q).map(en=>({page:q.page,event:en,measurementId:new URL(q.url).searchParams.get('tid'),httpStatus:responses.find(r=>r.id===q.id)?.status||null})));
+ck('Every tested app event is accepted by the approved GA4 collector',hits.filter(x=>['page_view','gallery_view','artwork_view'].includes(x.event)).every(x=>x.measurementId==='G-QHL8LRGK9H'&&x.httpStatus===204),hits);
+const report={base,label,checks,hits,status:checks.every(x=>x.pass)?'PASS':'FAIL',note:'HTTP 204 confirms collector acceptance, not GA Realtime/DebugView visibility. No form was submitted and no external purchase link was followed.'};
+fs.writeFileSync(out+'/REPORT.json',JSON.stringify(report,null,2));ws.close();process.exitCode=checks.some(x=>!x.pass)?1:0;
