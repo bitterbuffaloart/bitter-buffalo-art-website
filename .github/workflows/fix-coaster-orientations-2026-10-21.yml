@@ -1,0 +1,47 @@
+name: One-time coaster orientation correction
+
+on:
+  push:
+    branches:
+      - repair/coaster-orientations-2026-10-21
+    paths:
+      - .github/workflows/fix-coaster-orientations-2026-10-21.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply-owner-orientations:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image processing dependency
+        run: python -m pip install Pillow==11.3.0
+      - name: Apply six owner-directed corrections once
+        run: python working/fix-coaster-orientations-2026-10-21.py
+      - name: Validate source catalog and static site
+        run: |
+          python working/qa-site.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('working/coaster-orientation-corrections-2026-10-21.json').read_text())
+          assert len(d['catalog_ids']) == 6
+          assert len(d['files']) == 12
+          assert not any(x.startswith(('02-','08-','thumbs/02-','thumbs/08-')) for x in d['files'])
+          print('Six distinct products, twelve revised product images, 02/08 untouched')
+          PY
+      - name: Commit changed images and catalog to isolated repair branch
+        run: |
+          git config user.name "Bitter Buffalo Coaster Repair"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cloudflare-pages/assets/images/products/ cloudflare-pages/assets/data/catalog.json
+          git add working/laser-art-originals/coasters-before-owner-corrections-2026-10-21/ working/coaster-orientation-corrections-2026-10-21.json
+          git commit -m "Apply six owner-approved coaster orientations and preserve originals"
+          git push origin HEAD:repair/coaster-orientations-2026-10-21
