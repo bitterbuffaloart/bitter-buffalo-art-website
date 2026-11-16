@@ -46,4 +46,6 @@ The Data API `runReport` for 2026-10-18 through 2026-11-15 returned 23 users, 26
 
 ## Not promoted
 
-No Cloudflare production deployment was made. The Pages production branch is `preview`. Publishing `main` would deploy this site to that branch. Compare the pull-request preview with `https://bitterbuffaloart.com` before merging.
+No Cloudflare production deployment was made. The Pages production branch is `preview`. Publishing `main` would deploy this site to that branch.
+
+At commit `356cad38a00cb9b5402c0f6c0ed8a7453f1d2bb7`, Wrangler 4.151.1 was not logged in and no `CLOUDFLARE_API_TOKEN` was available, so this session did not upload a preview. GitHub Actions had not created a workflow run for that commit. The Cloudflare, Cursor, and Vercel check suites were queued and had no deployment URL. Compare any later preview URL with `https://bitterbuffaloart.com` before merging.
