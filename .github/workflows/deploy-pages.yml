@@ -2,9 +2,9 @@ name: Deploy Cloudflare Pages
 on:
   push:
     branches: [main]
-    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-print-catalog.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-analytics.mjs', 'working/test-print-catalog.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   pull_request:
-    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-print-catalog.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
+    paths: ['cloudflare-pages/**', 'working/qa-site.py', 'working/test-contact.mjs', 'working/test-analytics.mjs', 'working/test-print-catalog.mjs', 'working/test-lumaprints.mjs', 'working/test-pages-bindings.mjs', 'working/stage-site.mjs', '.github/workflows/deploy-pages.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,6 +26,8 @@ jobs:
           python-version: '3.12'
       - name: Check pages, links, Final 33, and Events
         run: python working/qa-site.py cloudflare-pages
+      - name: Verify GA4 instrumentation and Search Console SEO coverage
+        run: node working/test-analytics.mjs
       - name: Check contact validation and failure handling without sending email
         run: node working/test-contact.mjs
       - name: Check the print catalog publishes only the confirmed price
