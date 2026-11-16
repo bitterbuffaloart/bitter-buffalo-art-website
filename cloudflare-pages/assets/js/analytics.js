@@ -66,18 +66,28 @@
     return null;
   }
 
+  function codedValue(value) {
+    return /^[a-z0-9-]{1,40}$/.test(String(value || "")) ? String(value) : "";
+  }
+
   function inquiryFromForm(form) {
     if (!form || form.querySelector('input[name="website"]')?.value) return null;
     if (typeof form.checkValidity === "function" && !form.checkValidity()) return null;
-    const print = form.hasAttribute("data-print-inquiry");
+    const formType = form.getAttribute ? (form.getAttribute("data-bb-form") || "") : "";
+    const print = (form.hasAttribute && form.hasAttribute("data-print-inquiry")) || formType === "print-inquiry";
     const params = { outcome: "inquiry" };
     if (print) {
       const product = form.querySelector("#print-product");
-      const size = form.querySelector("#print-size");
+      const size = form.querySelector("#print-size") || form.querySelector('select[name="size"]');
       const catalog = form.querySelector('input[name="contact[catalog_id]"]');
-      if (product && product.value) params.product_code = product.value;
-      if (size && size.value) params.size_code = size.value;
+      const photograph = form.querySelector('select[name="photograph"]');
+      const material = form.querySelector('select[name="material"]');
+      const photoNumber = photograph && String(photograph.value || "").match(/^#(\d{1,3})\b/);
+      if (product && codedValue(product.value)) params.product_code = product.value;
+      if (size && codedValue(size.value)) params.size_code = size.value;
+      if (material && codedValue(material.value)) params.material_code = material.value;
       if (catalog && catalog.value && !catalog.value.includes("@")) params.item_id = catalog.value;
+      else if (photoNumber) params.item_id = "photo-" + photoNumber[1];
       return { name: "gallery_print_inquiry", params: params };
     }
     if (form.hasAttribute("data-bb-form")) {
@@ -184,12 +194,13 @@
       record(hit.name, hit.params);
     }, true);
     root.document.addEventListener("click", (event) => {
-      const navLink = event.target && event.target.closest && event.target.closest(".site-nav a[href]");
+      const navLink = event.target && event.target.closest && event.target.closest(".site-nav a[href], .site-footer__nav a[href]");
       if (!navLink) return;
       const destination = new URL(navLink.href, root.location.origin);
       if (destination.origin !== root.location.origin) return;
+      const area = navLink.closest && navLink.closest(".site-footer__nav") ? "footer" : "primary";
       record("navigation_click", {
-        page_path: path, destination_path: destination.pathname, device_class: deviceClass()
+        page_path: path, destination_path: destination.pathname, nav_area: area, device_class: deviceClass()
       });
     }, true);
     observeCatalog(path);
@@ -210,6 +221,7 @@
     collectPage: collectPage,
     classifyClick: classifyClick,
     inquiryFromForm: inquiryFromForm,
+    observeCatalog: observeCatalog,
     trackDeliveredContact: trackDeliveredContact,
     record: record,
     loadGoogle: loadGoogle,

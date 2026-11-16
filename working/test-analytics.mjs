@@ -77,10 +77,65 @@ const routes = ["", "about/", "contact/", "custom/", "events/", "laser-art/",
 const sitemap = readFileSync(resolve(root, "sitemap.xml"), "utf8");
 const robots = readFileSync(resolve(root, "robots.txt"), "utf8");
 assert.match(robots, /Sitemap:\s*https:\/\/bitterbuffaloart\.com\/sitemap\.xml/);
+const redirects = readFileSync(resolve(root, "_redirects"), "utf8");
+for (const rule of ["/pages/blog  /  301", "/original-fine-art/  /sketchbook/  301", "/photography/prints/*  /photography/  301"]) {
+  assert.ok(redirects.includes(rule), "missing redirect " + rule);
+}
 for (const route of routes) {
   const html = readFileSync(resolve(root, route, "index.html"), "utf8");
   assert.match(html, /assets\/js\/site\.js\?v=20261116/);
   assert.match(html, /rel="canonical"/);
   assert.ok(sitemap.includes("https://bitterbuffaloart.com/" + route), "sitemap missing " + route);
 }
-console.log("PASS: GA4 singleton, page-view deduplication, privacy, gallery, Etsy, successful leads, SEO route coverage");
+const fields = {
+  'select[name="photograph"]': { value: "#01 · Grand Tetons" },
+  'select[name="material"]': { value: "metal" },
+  'select[name="size"]': { value: "16x24" },
+  'input[name="name"]': { value: "Clyde Example" },
+  'input[name="email"]': { value: "visitor@example.com" },
+};
+const printForm = {
+  id: "print",
+  querySelector(selector) { return fields[selector] || null; },
+  checkValidity() { return true; },
+  hasAttribute(key) { return key === "data-bb-form"; },
+  getAttribute(key) { return key === "data-bb-form" ? "print-inquiry" : ""; },
+};
+assert.equal(win.BBAnalytics.trackDeliveredContact(printForm), true);
+const printEvent = calls().filter((call) => call[0] === "event" && call[1] === "gallery_print_inquiry").at(-1);
+assert.equal(printEvent[2].item_id, "photo-01");
+assert.equal(printEvent[2].material_code, "metal");
+assert.equal(printEvent[2].size_code, "16x24");
+assert.equal(printEvent[2].name, undefined);
+assert.equal(printEvent[2].email, undefined);
+assert.equal(JSON.stringify(printEvent[2]).includes("visitor@example.com"), false);
+assert.equal(JSON.stringify(printEvent[2]).includes("Grand Tetons"), false);
+
+for (const click of listeners.click || []) {
+  click({ target: { closest(selector) {
+    if (selector.includes(".site-nav")) return { href: "https://bitterbuffaloart.com/laser-art/", closest() { return null; } };
+    return null;
+  } } });
+}
+assert.equal(calls().filter((call) => call[0] === "event" && call[1] === "navigation_click").length, 1);
+
+const observed = [];
+win.IntersectionObserver = class {
+  constructor(callback) { this.callback = callback; }
+  observe(target) { observed.push(target); this.callback([{ isIntersecting: true, intersectionRatio: 1, target }]); }
+  unobserve() {}
+};
+win.document.querySelectorAll = (selector) => selector === ".product-card"
+  ? [{ id: "", querySelector: () => ({ href: "https://www.etsy.com/listing/4595591399/shirt", getAttribute: () => "" }) }]
+  : [];
+win.BBAnalytics.observeCatalog("/tie-dye/");
+assert.equal(calls().filter((call) => call[1] === "product_view" && call[2].product_category === "tie-dye" && call[2].item_id === "4595591399").length, 1);
+win.document.querySelectorAll = (selector) => selector === ".product-card"
+  ? [{ id: "", querySelector: () => ({ href: "https://www.etsy.com/listing/4596951627/board", getAttribute: () => "" }) }]
+  : [];
+win.BBAnalytics.observeCatalog("/laser-art/");
+assert.equal(calls().filter((call) => call[1] === "product_view" && call[2].product_category === "laser-art").length, 1);
+win.BBAnalytics.observeCatalog("/laser-art/");
+assert.equal(calls().filter((call) => call[1] === "product_view" && call[2].product_category === "laser-art").length, 1, "same visible product is counted once");
+
+console.log("PASS: GA4 singleton, page-view deduplication, privacy, gallery, products, Etsy, print inquiry, navigation, successful leads, SEO route coverage");

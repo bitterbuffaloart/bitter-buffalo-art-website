@@ -8,3 +8,8 @@
 /pages/contact  /contact/  301
 /pages/events  /events/  301
 /pages/custom-art  /custom/  301
+/pages/blog  /  301
+/pages/blog/  /  301
+/original-fine-art  /sketchbook/  301
+/original-fine-art/  /sketchbook/  301
+/photography/prints/*  /photography/  301
