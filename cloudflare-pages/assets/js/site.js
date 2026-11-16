@@ -124,6 +124,10 @@ document.addEventListener('DOMContentLoaded', () => {
             status.classList.add('is-ok');
             status.classList.remove('is-err');
           }
+          // Only record a lead after the contact service confirms actual delivery.
+          if (window.BBAnalytics && typeof window.BBAnalytics.trackDeliveredContact === 'function') {
+            window.BBAnalytics.trackDeliveredContact(form);
+          }
           form.reset();
           return;
         }
@@ -143,3 +147,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+
+// All static pages load site.js. Install exactly one analytics bootstrapper sitewide.
+(function loadBBAnalytics() {
+  if (window.BBAnalytics || document.querySelector('script[data-bb-analytics]')) return;
+  const script = document.createElement('script');
+  script.src = '/assets/js/analytics.js?v=20261116';
+  script.async = true;
+  script.dataset.bbAnalytics = '1';
+  document.head.appendChild(script);
+})();
